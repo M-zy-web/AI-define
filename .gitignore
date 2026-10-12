@@ -1,6 +1,5 @@
 # Ignore SAS dataset files
 *.sas7bdat
-*.xpt
 
 # Local backup of original SDTM data
 _sdtm_original_backup/
