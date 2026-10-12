@@ -1,0 +1,488 @@
+# 首版 dm.yaml：m5\datasets\tabulations\sdtm\dm.xpt+m5\datasets\tabulations\sdtm\suppdm.xpt(结构) + xlsx(语义) + 部门值级库 + aCRF(页码) 合成。之后由 AI 维护。
+domain: DM
+label: 人口学
+class: SPECIAL-PURPOSE
+purpose: 列表
+repeating: false
+is_reference_data: false
+structure: 每个受试者一条记录
+sas_dataset: DM
+keys:
+- STUDYID
+- USUBJID
+archive: dm.xpt
+variables:
+  STUDYID:
+    label: 研究标识符
+    type: text
+    length: '8'
+    order: 1
+    key_sequence: 1
+    mandatory: true
+    origin:
+      type: Protocol
+      source: Investigator
+      crf_pages:
+      - '123'
+  DOMAIN:
+    label: 域名缩写
+    type: text
+    length: '2'
+    order: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: DOMAIN
+  USUBJID:
+    label: 受试者唯一标识符
+    type: text
+    length: '23'
+    order: 3
+    key_sequence: 2
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: USUBJID
+  SUBJID:
+    label: 受试者标识符
+    type: text
+    length: '8'
+    order: 4
+    mandatory: true
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '123'
+    comment: DM.SUBJID
+    comment_text: DC.SUBJID
+  RFSTDTC:
+    label: 受试者参照开始日期/时间
+    type: date
+    order: 5
+    mandatory: false
+    origin: {type: Predecessor}
+  RFENDTC:
+    label: 受试者参照结束日期/时间
+    type: date
+    order: 6
+    mandatory: false
+    origin: {type: Predecessor}
+  RFXSTDTC:
+    label: 首次研究治疗日期/时间
+    type: date
+    order: 7
+    mandatory: false
+    origin: {type: Predecessor}
+  RFXENDTC:
+    label: 末次研究治疗日期/时间
+    type: date
+    order: 8
+    mandatory: false
+    origin: {type: Predecessor}
+  RFICDTC:
+    label: 知情同意日期/时间
+    type: date
+    order: 9
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+    comment: DM.RFICDTC
+    comment_text: DC.RFICDTC
+  RFPENDTC:
+    label: 参与结束日期/时间
+    type: date
+    order: 10
+    mandatory: false
+    origin: {type: Predecessor}
+  DTHDTC:
+    label: 死亡日期/时间
+    type: date
+    order: 11
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+    comment: DM.DTHDTC
+    comment_text: DC.DTHDTC
+  DTHFL:
+    label: 死亡标帜
+    type: text
+    length: '1'
+    order: 12
+    mandatory: false
+    origin: {type: Predecessor}
+    codelist: NY_Y
+  SITEID:
+    label: 研究中心标识符
+    type: text
+    length: '5'
+    order: 13
+    mandatory: true
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '123'
+    comment: DM.SITEID
+    comment_text: DC.SITEID
+  INVNAM:
+    label: 研究者姓名
+    type: text
+    length: '15'
+    order: 14
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '123'
+    comment: DM.INVNAM
+    comment_text: DC.INVNAM
+  BRTHDTC:
+    label: 出生日期/时间
+    type: date
+    order: 15
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+    comment: DM.BRTHDTC
+    comment_text: DC.BRTHDTC
+  AGE:
+    label: 年龄
+    type: integer
+    length: '2'
+    order: 16
+    mandatory: false
+    origin: {type: Predecessor}
+  AGEU:
+    label: 年龄单位
+    type: text
+    length: '3'
+    order: 17
+    mandatory: false
+    origin: {type: Predecessor}
+    codelist: AGEU
+  SEX:
+    label: 性别
+    type: text
+    length: '3'
+    order: 18
+    mandatory: true
+    origin: {type: Collected, source: Investigator}
+    codelist: SEX
+    comment: DM.SEX
+    comment_text: DC.SEX
+  RACE:
+    label: 人种
+    type: text
+    length: '9'
+    order: 19
+    mandatory: false
+    origin: {type: Predecessor}
+    codelist: RACE
+  ARMCD:
+    label: 计划分组编码
+    type: text
+    length: '1'
+    order: 20
+    mandatory: false
+    origin: {type: Predecessor}
+    codelist: ARMCD
+  ARM:
+    label: 计划分组描述
+    type: text
+    length: '11'
+    order: 21
+    mandatory: false
+    origin: {type: Predecessor}
+    codelist: ARM
+  ACTARMCD:
+    label: 实际分组编码
+    type: text
+    length: '1'
+    order: 22
+    mandatory: false
+    origin: {type: Predecessor}
+    codelist: ARMCD
+  ACTARM:
+    label: 实际分组描述
+    type: text
+    length: '11'
+    order: 23
+    mandatory: false
+    origin: {type: Predecessor}
+    codelist: ARM
+  ARMNRS:
+    label: 计划或实际分组缺失原因
+    type: text
+    length: '21'
+    order: 24
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    codelist: ARMNULRS
+    comment: DM.ARMNRS
+    comment_text: DC.ARMNRS
+  ACTARMUD:
+    label: 非计划实际分组描述
+    type: text
+    length: '1'
+    order: 25
+    mandatory: false
+    origin: {type: Predecessor}
+    comment: DM.ACTARMUD
+    comment_text: DC.ACTARMUD
+  COUNTRY:
+    label: 国家
+    type: text
+    length: '3'
+    order: 26
+    mandatory: true
+    origin: {type: Predecessor}
+    codelist: ISO3166
+supplemental:
+  domain: SUPPDM
+  label: DM补充修饰语数据集
+  class: 关联数据
+  purpose: 列表
+  repeating: true
+  is_reference_data: false
+  structure: 一个域一个修饰变量一条记录
+  sas_dataset: SUPPDM
+  keys:
+  - STUDYID
+  - RDOMAIN
+  - USUBJID
+  - IDVAR
+  - IDVARVAL
+  - QNAM
+  archive: suppdm.xpt
+  variables:
+    STUDYID:
+      label: 研究标识符
+      type: text
+      length: '8'
+      order: 1
+      mandatory: true
+      key_sequence: 1
+      origin: {type: Protocol, source: Sponsor}
+    RDOMAIN:
+      label: 关联域名缩写
+      type: text
+      length: '2'
+      order: 2
+      mandatory: true
+      key_sequence: 2
+      origin: {type: Assigned, source: Sponsor}
+      codelist: DOMAIN
+    USUBJID:
+      label: 受试者唯一标识符
+      type: text
+      length: '23'
+      order: 3
+      mandatory: true
+      key_sequence: 3
+      origin: {type: Derived, source: Sponsor}
+      method: USUBJID
+    IDVAR:
+      label: 标识变量
+      type: text
+      length: '1'
+      order: 4
+      mandatory: false
+      key_sequence: 4
+      origin: {type: Assigned, source: Sponsor}
+    IDVARVAL:
+      label: 标识变量值
+      type: text
+      length: '1'
+      order: 5
+      mandatory: false
+      key_sequence: 5
+      origin: {type: Assigned, source: Sponsor}
+    QNAM:
+      label: 修饰语变量名称
+      type: text
+      length: '8'
+      order: 6
+      mandatory: true
+      key_sequence: 6
+      origin: {type: Assigned, source: Sponsor}
+    QLABEL:
+      label: 修饰语变量标签
+      type: text
+      length: '27'
+      order: 7
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QVAL:
+      label: 数据值
+      type: text
+      length: '110'
+      order: 8
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+      value_list:
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CETHNIC
+        label: 族裔采集
+        codelist: ETHNICC
+        comment: DM.CETHNIC
+        comment_text: DC.CETHNIC
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '125'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - DSRSF
+        label: 分层因素
+        comment: DM.DSRSF
+        comment_text: DC.DSRSF
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '163'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - DSRSF1
+        label: HR and CDK4/6
+        codelist: DSRSFHR
+        comment: DM.DSRSF1
+        comment_text: DC.DSRSF1
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '163'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - DSRSF2
+        label: 化疗线数
+        codelist: DSRSFLNE
+        comment: DM.DSRSF2
+        comment_text: DC.DSRSF2
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '163'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - RANDID
+        label: 随机号
+        comment: DM.RANDID
+        comment_text: DC.RANDID
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '164'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - REGIME
+        label: 给药方案
+        comment: DM.REGIME
+        comment_text: DC.REGIME
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '164'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - REGIMEN
+        label: 治疗方案
+        codelist: REGIMEN
+        comment: DM.REGIMEN
+        comment_text: DC.REGIMEN
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '163'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - RSTRAT
+        label: 随机系统分层因素
+        comment: DM.RSTRAT
+        comment_text: DC.RSTRAT
+        origin: {type: Collected, source: Investigator}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - TIVERS
+        label: 方案版本
+        comment: DM.TIVERS
+        comment_text: DC.TIVERS
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '163'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - PSUBJID
+        label: 之前的受试者标识符
+        comment: DM.PSUBJID
+        comment_text: DC.PSUBJID
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '125'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CETHNICO
+        label: 其他族裔采集
+        codelist: ETHNICC
+        comment: DM.CETHNICO
+        comment_text: DC.CETHNICO
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '125'
+        mandatory: false
+    QORIG:
+      label: 来源
+      type: text
+      length: '9'
+      order: 9
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QEVAL:
+      label: 评估人员
+      type: text
+      length: '1'
+      order: 10
+      mandatory: false
+      origin: {type: Assigned, source: Sponsor}

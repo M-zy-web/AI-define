@@ -1,0 +1,61 @@
+# 首版 ti.yaml：m5\datasets\tabulations\sdtm\ti.xpt(结构) + xlsx(语义) + 部门值级库 + aCRF(页码) 合成。之后由 AI 维护。
+domain: TI
+label: 试验入选/排除标准
+class: 试验设计
+purpose: 列表
+repeating: false
+is_reference_data: true
+structure: 每个入选/排除标准一条记录
+sas_dataset: TI
+keys:
+- STUDYID
+- IETESTCD
+archive: ti.xpt
+variables:
+  STUDYID:
+    label: 研究标识符
+    type: text
+    length: '8'
+    order: 1
+    key_sequence: 1
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+  DOMAIN:
+    label: 域名缩写
+    type: text
+    length: '2'
+    order: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: DOMAIN
+  IETESTCD:
+    label: 入选/排除标准的简称
+    type: text
+    length: '7'
+    order: 3
+    key_sequence: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+  IETEST:
+    label: 入选/排除标准
+    type: text
+    length: '191'
+    order: 4
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    comment: IETEST
+  IECAT:
+    label: 入选/排除类别
+    type: text
+    length: '12'
+    order: 5
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: IECAT
+  TIVERS:
+    label: 方案版本
+    type: text
+    length: '4'
+    order: 6
+    mandatory: false
+    origin: {type: Protocol, source: Sponsor}

@@ -1,0 +1,88 @@
+# 首版 tv.yaml：m5\datasets\tabulations\sdtm\tv.xpt(结构) + xlsx(语义) + 部门值级库 + aCRF(页码) 合成。之后由 AI 维护。
+domain: TV
+label: 试验访视
+class: 试验设计
+purpose: 列表
+repeating: false
+is_reference_data: true
+structure: 每个分支每个计划访视一条记录
+sas_dataset: TV
+keys:
+- STUDYID
+- ARMCD
+- VISITNUM
+archive: tv.xpt
+variables:
+  STUDYID:
+    label: 研究标识符
+    type: text
+    length: '8'
+    order: 1
+    key_sequence: 1
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+  DOMAIN:
+    label: 域名缩写
+    type: text
+    length: '2'
+    order: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: DOMAIN
+  VISITNUM:
+    label: 访视编号
+    type: float
+    length: '3'
+    order: 3
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    comment: VISITNUM
+  VISIT:
+    label: 访视名称
+    type: text
+    length: '23'
+    order: 4
+    key_sequence: 3
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+    comment: VISIT
+  VISITDY:
+    label: 访视计划研究日
+    type: integer
+    length: '4'
+    order: 5
+    mandatory: false
+    origin: {type: Protocol, source: Sponsor}
+  ARMCD:
+    label: 计划分组编码
+    type: text
+    length: '1'
+    order: 6
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    codelist: ARMCD
+    comment: TV.ARMCD
+  ARM:
+    label: 计划分组描述
+    type: text
+    length: '1'
+    order: 7
+    key_sequence: 2
+    mandatory: false
+    origin: {type: Protocol, source: Sponsor}
+    codelist: ARM
+    comment: TV.ARM
+  TVSTRL:
+    label: 访视开始规则
+    type: text
+    length: '40'
+    order: 8
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+  TVENRL:
+    label: 访视结束规则
+    type: text
+    length: '35'
+    order: 9
+    mandatory: false
+    origin: {type: Protocol, source: Sponsor}

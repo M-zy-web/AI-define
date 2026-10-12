@@ -1,0 +1,371 @@
+# 首版 tr.yaml：m5\datasets\tabulations\sdtm\tr.xpt+m5\datasets\tabulations\sdtm\supptr.xpt(结构) + xlsx(语义) + 部门值级库 + aCRF(页码) 合成。之后由 AI 维护。
+domain: TR
+label: 肿瘤/病灶测量
+class: 发现类
+purpose: 列表
+repeating: true
+is_reference_data: false
+structure: 每个评估者每个受试者每次访视每次肿瘤测量或评估一条记录
+sas_dataset: TR
+keys:
+- USUBJID
+- SUBJID
+- TREVAL
+- TRGRPID
+- TRLNKID
+- TRTESTCD
+- VISITNUM
+- TRDTC
+- TRMETHOD
+- TRREFID
+archive: tr.xpt
+variables:
+  STUDYID:
+    label: 研究标识符
+    type: text
+    length: '8'
+    order: 1
+    key_sequence: 1
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+  DOMAIN:
+    label: 域名缩写
+    type: text
+    length: '2'
+    order: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: DOMAIN
+  USUBJID:
+    label: 受试者唯一标识符
+    type: text
+    length: '23'
+    order: 3
+    key_sequence: 2
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: USUBJID
+  SUBJID:
+    label: 受试者标识符
+    type: text
+    length: '8'
+    order: 4
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+  TRSEQ:
+    label: 序号
+    type: integer
+    length: '3'
+    order: 5
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: SEQ
+  TRGRPID:
+    label: 分组ID
+    type: text
+    length: '10'
+    order: 6
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+  TRREFID:
+    label: 参考ID
+    type: text
+    length: '39'
+    order: 7
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+  TRSPID:
+    label: 申办方定义标识符
+    type: text
+    length: '3'
+    order: 8
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    comment: SPID
+  TRLNKID:
+    label: 链接ID
+    type: text
+    length: '9'
+    order: 9
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+  TRLNKGRP:
+    label: 链接组别
+    type: text
+    length: '17'
+    order: 10
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+  TRTESTCD:
+    label: 肿瘤/病灶评估简称
+    type: text
+    length: '8'
+    order: 11
+    key_sequence: 3
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: TRTESTCD
+  TRTEST:
+    label: 肿瘤/病灶评估名称
+    type: text
+    length: '39'
+    order: 12
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: TRTEST
+  TRORRES:
+    label: 结果或发现-原始单位
+    type: text
+    length: '12'
+    order: 13
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+    codelist: TRPROPRS
+  TRORRESU:
+    label: 原始单位
+    type: text
+    length: '2'
+    order: 14
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+    codelist: TR_UNIT
+  TRSTRESC:
+    label: 字符型结果/发现-标准格式
+    type: text
+    length: '13'
+    order: 15
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    codelist: TRPROPRS
+    method: STRESC
+  TRSTRESN:
+    label: 数值型结果/发现-标准单位
+    type: integer
+    length: '4'
+    order: 16
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    method: STRESN
+  TRSTRESU:
+    label: 标准单位
+    type: text
+    length: '2'
+    order: 17
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    codelist: TR_UNIT
+    method: STRESU
+  TRSTAT:
+    label: 完成状态
+    type: text
+    length: '8'
+    order: 18
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+    codelist: ND
+  TRMETHOD:
+    label: 标识肿瘤/病灶的方法
+    type: text
+    length: '20'
+    order: 19
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+    codelist: TRMETHOD
+  TRLOBXFL:
+    label: 暴露前末次观测标帜
+    type: text
+    length: '1'
+    order: 20
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    codelist: NY_Y
+    method: LOBXFL
+  TREVAL:
+    label: 评估者
+    type: text
+    length: '15'
+    order: 21
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    codelist: TU_EVAL
+  TREVALID:
+    label: 评估者标识符
+    type: text
+    length: '2'
+    order: 22
+    key_sequence: 4
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    codelist: MEDEVAL
+  TRACPTFL:
+    label: 记录接受标帜
+    type: text
+    length: '1'
+    order: 23
+    mandatory: false
+    origin: {type: Collected, source: Vendor}
+    codelist: NY_Y
+  VISITNUM:
+    label: 访视编号
+    type: float
+    length: '5'
+    order: 24
+    key_sequence: 5
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    comment: VISITNUM
+  VISIT:
+    label: 访视名称
+    type: text
+    length: '23'
+    order: 25
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+    comment: VISIT
+  VISITDY:
+    label: 访视计划研究日
+    type: integer
+    length: '3'
+    order: 26
+    mandatory: false
+    origin: {type: Protocol, source: Sponsor}
+  EPOCH:
+    label: 时期
+    type: text
+    length: '9'
+    order: 27
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    codelist: EPOCH
+    method: EPOCH
+  TRDTC:
+    label: 肿瘤/病灶测量的日期/时间
+    type: date
+    order: 28
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+  TRDY:
+    label: 肿瘤/病灶测量的研究日
+    type: integer
+    length: '3'
+    order: 29
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    method: DY
+supplemental:
+  domain: SUPPTR
+  label: TR补充修饰语数据集
+  class: 关联数据
+  purpose: 列表
+  repeating: true
+  is_reference_data: false
+  structure: 一个域一个修饰变量一条记录
+  sas_dataset: SUPPTR
+  keys:
+  - STUDYID
+  - RDOMAIN
+  - USUBJID
+  - IDVAR
+  - IDVARVAL
+  - QNAM
+  archive: supptr.xpt
+  variables:
+    STUDYID:
+      label: 研究标识符
+      type: text
+      length: '8'
+      order: 1
+      mandatory: true
+      key_sequence: 1
+      origin: {type: Protocol, source: Sponsor}
+    RDOMAIN:
+      label: 关联域名缩写
+      type: text
+      length: '2'
+      order: 2
+      mandatory: true
+      key_sequence: 2
+      origin: {type: Assigned, source: Sponsor}
+      codelist: DOMAIN
+    USUBJID:
+      label: 受试者唯一标识符
+      type: text
+      length: '23'
+      order: 3
+      mandatory: true
+      key_sequence: 3
+      origin: {type: Derived, source: Sponsor}
+      method: USUBJID
+    IDVAR:
+      label: 标识变量
+      type: text
+      length: '5'
+      order: 4
+      mandatory: false
+      key_sequence: 4
+      origin: {type: Assigned, source: Sponsor}
+    IDVARVAL:
+      label: 标识变量值
+      type: text
+      length: '3'
+      order: 5
+      mandatory: false
+      key_sequence: 5
+      origin: {type: Assigned, source: Sponsor}
+    QNAM:
+      label: 修饰语变量名称
+      type: text
+      length: '7'
+      order: 6
+      mandatory: true
+      key_sequence: 6
+      origin: {type: Assigned, source: Sponsor}
+    QLABEL:
+      label: 修饰语变量标签
+      type: text
+      length: '21'
+      order: 7
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QVAL:
+      label: 数据值
+      type: text
+      length: '17'
+      order: 8
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+      value_list:
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - TRVISIT
+        label: 原始访视
+        origin: {type: Collected, source: Investigator}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - TRSSYN
+        label: 是否本中心检查
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '176'
+        mandatory: false
+    QORIG:
+      label: 来源
+      type: text
+      length: '9'
+      order: 9
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QEVAL:
+      label: 评估人员
+      type: text
+      length: '1'
+      order: 10
+      mandatory: false
+      origin: {type: Assigned, source: Sponsor}

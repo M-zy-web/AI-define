@@ -1,0 +1,223 @@
+# 首版 ie.yaml：m5\datasets\tabulations\sdtm\ie.xpt+m5\datasets\tabulations\sdtm\suppie.xpt(结构) + xlsx(语义) + 部门值级库 + aCRF(页码) 合成。之后由 AI 维护。
+domain: IE
+label: 不满足的入选/排除标准
+class: 发现类
+purpose: 列表
+repeating: true
+is_reference_data: false
+structure: 每个受试者每条不符合入选\排除标准一条记录
+sas_dataset: IE
+keys:
+- STUDYID
+- USUBJID
+- SUBJID
+- IETESTCD
+archive: ie.xpt
+variables:
+  STUDYID:
+    label: 研究标识符
+    type: text
+    length: '8'
+    order: 1
+    key_sequence: 1
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+  DOMAIN:
+    label: 域名缩写
+    type: text
+    length: '2'
+    order: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: DOMAIN
+  USUBJID:
+    label: 受试者唯一标识符
+    type: text
+    length: '23'
+    order: 3
+    key_sequence: 2
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: USUBJID
+  SUBJID:
+    label: 受试者标识符
+    type: text
+    length: '8'
+    order: 4
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+  IESEQ:
+    label: 序号
+    type: integer
+    length: '1'
+    order: 5
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: SEQ
+  IETESTCD:
+    label: 入选/排除标准简称
+    type: text
+    length: '7'
+    order: 6
+    key_sequence: 3
+    mandatory: true
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '163'
+  IETEST:
+    label: 入选/排除标准
+    type: text
+    length: '178'
+    order: 7
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    comment: IETEST
+  IECAT:
+    label: 入选/排除类别
+    type: text
+    length: '12'
+    order: 8
+    mandatory: true
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '163'
+    codelist: IECAT
+  IEORRES:
+    label: 入选/排除标准原始结果
+    type: text
+    length: '1'
+    order: 9
+    mandatory: true
+    origin: {type: Collected, source: Investigator}
+    codelist: NY_NY
+  IESTRESC:
+    label: 入选/排除标准结果-标准格式
+    type: text
+    length: '1'
+    order: 10
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    codelist: NY_NY
+    method: STRESC
+  EPOCH:
+    label: 时期
+    type: text
+    length: '9'
+    order: 11
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    codelist: EPOCH
+    comment: EPOCH.SCRN
+supplemental:
+  domain: SUPPIE
+  label: IE补充修饰语数据集
+  class: 关联数据
+  purpose: 列表
+  repeating: true
+  is_reference_data: false
+  structure: 一个域一个修饰变量一条记录
+  sas_dataset: SUPPIE
+  keys:
+  - STUDYID
+  - RDOMAIN
+  - USUBJID
+  - IDVAR
+  - IDVARVAL
+  - QNAM
+  archive: suppie.xpt
+  variables:
+    STUDYID:
+      label: 研究标识符
+      type: text
+      length: '8'
+      order: 1
+      mandatory: true
+      key_sequence: 1
+      origin: {type: Protocol, source: Sponsor}
+    RDOMAIN:
+      label: 关联域名缩写
+      type: text
+      length: '2'
+      order: 2
+      mandatory: true
+      key_sequence: 2
+      origin: {type: Assigned, source: Sponsor}
+      codelist: DOMAIN
+    USUBJID:
+      label: 受试者唯一标识符
+      type: text
+      length: '23'
+      order: 3
+      mandatory: true
+      key_sequence: 3
+      origin: {type: Derived, source: Sponsor}
+      method: USUBJID
+    IDVAR:
+      label: 标识变量
+      type: text
+      length: '5'
+      order: 4
+      mandatory: false
+      key_sequence: 4
+      origin: {type: Assigned, source: Sponsor}
+    IDVARVAL:
+      label: 标识变量值
+      type: text
+      length: '1'
+      order: 5
+      mandatory: false
+      key_sequence: 5
+      origin: {type: Assigned, source: Sponsor}
+    QNAM:
+      label: 修饰语变量名称
+      type: text
+      length: '6'
+      order: 6
+      mandatory: true
+      key_sequence: 6
+      origin: {type: Assigned, source: Sponsor}
+    QLABEL:
+      label: 修饰语变量标签
+      type: text
+      length: '33'
+      order: 7
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QVAL:
+      label: 数据值
+      type: text
+      length: '4'
+      order: 8
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+      value_list:
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - TIVERS
+        label: 筛选时使用的方案版本号
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '163'
+        mandatory: false
+    QORIG:
+      label: 来源
+      type: text
+      length: '9'
+      order: 9
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QEVAL:
+      label: 评估人员
+      type: text
+      length: '1'
+      order: 10
+      mandatory: false
+      origin: {type: Assigned, source: Sponsor}

@@ -1,0 +1,432 @@
+# 数据集顺序表：按 SDTM-MSG Class 大类顺序，Class 内按 TOC 行序。
+# Class 顺序: ['TRIAL DESIGN', 'SPECIAL-PURPOSE', 'INTERVENTIONS', 'EVENTS', 'FINDINGS', 'FINDINGS ABOUT', 'RELATIONSHIP', 'STUDY REFERENCE']
+# 来源: study_std\spec-sdtm-SHR-1234-III-301-define.xlsx Sheet=TOC，仅含本次成功生成的 34 个域，保留全部原始字段。
+- dataset: TA
+  Description: Trial Arms
+  DescriptionCN: 试验分组
+  Class: TRIAL DESIGN
+  Structure: One record per planned Element per Arm
+  StructureCN: 每个分支每个计划元素一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, ARMCD, TAETORD
+  Repeating: N
+  IsReferenceData: Y
+  Location: ta.xpt
+  Flag: K
+  HR Notes: 一般情况简单处理，试验设计复杂时，如涉及多个不同剂量的药物联用，由TA leader决定统一做法
+- dataset: TE
+  Description: Trial Elements
+  DescriptionCN: 试验元素
+  Class: TRIAL DESIGN
+  Structure: One record per planned Element
+  StructureCN: 每个计划元素一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, ETCD
+  Repeating: N
+  IsReferenceData: Y
+  Location: te.xpt
+  Flag: K
+- dataset: TI
+  Description: Trial Inclusion/Exclusion Criteria
+  DescriptionCN: 试验入选/排除标准
+  Class: TRIAL DESIGN
+  Structure: One record per I/E criterion
+  StructureCN: 每个入选/排除标准一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, IETESTCD
+  Repeating: N
+  IsReferenceData: Y
+  Location: ti.xpt
+  Flag: K
+- dataset: TS
+  Description: Trial Summary
+  DescriptionCN: 试验概要
+  Class: TRIAL DESIGN
+  Structure: One record per trial summary parameter value
+  StructureCN: 每个试验概要参数值一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, TSPARMCD, TSSEQ
+  Repeating: N
+  IsReferenceData: Y
+  Location: ts.xpt
+  Flag: K
+  HR Notes: 非递交项目、CDE递交项目不做
+- dataset: TV
+  Description: Trial Visits
+  DescriptionCN: 试验访视
+  Class: TRIAL DESIGN
+  Structure: One record per planned Visit per Arm
+  StructureCN: 每个分支每个计划访视一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, ARMCD, VISITNUM
+  Repeating: N
+  IsReferenceData: Y
+  Location: tv.xpt
+  Flag: K
+  HR Notes: '包括所有EDC设计的访视folder，如治疗结束页和研究结束页，无论是否有实际访视
+
+    EDC设计和肿瘤评估拆分处理，做成两组独立的访视；'
+- dataset: DM
+  Description: Demographics
+  DescriptionCN: 人口学
+  Class: SPECIAL-PURPOSE
+  Structure: One record per subject
+  StructureCN: 每个受试者一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID
+  Repeating: N
+  IsReferenceData: N
+  Location: dm.xpt
+  Flag: K
+  StandardOID: SDTM-IG
+  HR Notes: 如果有重复筛选，DC保留完整记录，DM保留末次筛选记录，同时其他domain增加SUBJID用来区分同一受试者的多次筛选结果
+- dataset: DC
+  Description: Demographics as Collected
+  DescriptionCN: 人口学收集
+  Class: SPECIAL-PURPOSE
+  Structure: One record per subject
+  StructureCN: 每个受试者一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID
+  Repeating: N
+  IsReferenceData: N
+  Location: dc.xpt
+  Flag: K
+  HR Notes: 如果有重复筛选，DC保留完整记录，DM保留末次筛选记录，同时其他domain增加SUBJID用来区分同一受试者的多次筛选结果
+- dataset: SE
+  Description: Subject Elements
+  DescriptionCN: 受试者元素
+  Class: SPECIAL-PURPOSE
+  Structure: One record per actual Element per subject
+  StructureCN: 每个受试者每个真实元素一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, TAETORD, SESTDTC
+  Repeating: Y
+  IsReferenceData: N
+  Location: se.xpt
+  Flag: K
+  HR Notes: 仅对ETCD直接赋值，通过ETCD从TA中获取ELEMENT/TAETORD/EPOCH
+- dataset: SV
+  Description: Subject Visits
+  DescriptionCN: 受试者访视
+  Class: SPECIAL-PURPOSE
+  Structure: One record per actual or planned visit per subject
+  StructureCN: 每个受试者每次实际访视一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, VISITNUM
+  Repeating: Y
+  IsReferenceData: N
+  Location: sv.xpt
+  Flag: K
+- dataset: CM
+  Description: Concomitant/Prior Medications
+  DescriptionCN: 既往与合并用药
+  Class: INTERVENTIONS
+  Structure: One record per recorded intervention occurrence or constant-dosing interval per subject
+  StructureCN: 每个受试者每次服药或固定给药间隔一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, CMCAT, CMSCAT, CMTRT, CMSTDTC, CMENDTC, CMSPID, CMGRPID
+  Repeating: Y
+  IsReferenceData: N
+  Location: cm.xpt
+  Flag: K
+- dataset: EC
+  Description: Exposure as Collected
+  DescriptionCN: 暴露采集
+  Class: INTERVENTIONS
+  Structure: One record per protocol-specified study treatment, collected-dosing interval, per subject, per mood
+  StructureCN: 每个受试者每次收集用药间隔一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, ECTRT, ECSTDTC, ECMOOD, ECSPID
+  Repeating: Y
+  IsReferenceData: N
+  Location: ec.xpt
+  Flag: K
+  HR Notes: 设盲项目，对药物的揭盲在EC中处理
+- dataset: EX
+  Description: Exposure
+  DescriptionCN: 暴露
+  Class: INTERVENTIONS
+  Structure: One record per protocol-specified study treatment, constant-dosing interval, per subject
+  StructureCN: 每个受试者每次固定给药间隔一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, EXTRT, EXSTDTC, EXSPID
+  Repeating: Y
+  IsReferenceData: N
+  Location: ex.xpt
+  Flag: K
+- dataset: PR
+  Description: Procedures
+  DescriptionCN: 诊疗操作
+  Class: INTERVENTIONS
+  Structure: One record per recorded procedure per occurrence per subject
+  StructureCN: 每个受试者每个发生的每个诊疗操作一次记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, PRCAT, PRTRT, PRSTDTC, PRENDTC, PRLOC, PRDOSE
+  Repeating: Y
+  IsReferenceData: N
+  Location: pr.xpt
+  Flag: K
+  HR Notes: 所有的肿瘤影像记录均做进PR
+- dataset: AE
+  Description: Adverse Events
+  DescriptionCN: 不良事件
+  Class: EVENTS
+  Structure: One record per adverse event per subject
+  StructureCN: 每个受试者每个不良事件每发生一次一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, AESPID
+  Repeating: Y
+  IsReferenceData: N
+  Location: ae.xpt
+  Flag: K
+  HR Notes: CRF不良事件页面放AE，其他事件放CE
+- dataset: CE
+  Description: Clinical Events
+  DescriptionCN: 临床事件
+  Class: EVENTS
+  Structure: One record per event per subject
+  StructureCN: 每个受试者每个临床事件一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, CETERM, VISITNUM, CESTDTC
+  Repeating: Y
+  IsReferenceData: N
+  Location: ce.xpt
+  Flag: K
+  HR Notes: 建议CE简单处理，如低血糖事件，只做CE和SUPPCE，不拆分domain
+- dataset: DS
+  Description: Disposition
+  DescriptionCN: 受试者分布
+  Class: EVENTS
+  Structure: One record per disposition status or protocol milestone per subject
+  StructureCN: 每个受试者每个分布状态或每一方案里程碑事件一条记录
+  Purpose: Tabulation
+  Keys: USUBJID, SUBJID, DSSTDTC, DSCAT, DSSCAT, DSDECOD
+  Repeating: Y
+  IsReferenceData: N
+  Location: ds.xpt
+  Flag: K
+- dataset: DV
+  Description: Protocol Deviations
+  DescriptionCN: 方案偏离
+  Class: EVENTS
+  Structure: One record per protocol deviation per subject
+  StructureCN: 每个受试者每次方案偏离一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, DVCAT, DVSCAT, DVDECOD, DVSTDTC, DVTERM, DVREFID
+  Repeating: Y
+  IsReferenceData: N
+  Location: dv.xpt
+  Flag: K
+- dataset: MH
+  Description: Medical History
+  DescriptionCN: 病史
+  Class: EVENTS
+  Structure: One record per medical history event per subject
+  StructureCN: 每个受试者每个病史一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, MHCAT, MHTERM, MHDECOD, MHSTDTC, MHENDTC, MHEVDTYP
+  Repeating: Y
+  IsReferenceData: N
+  Location: mh.xpt
+  Flag: K
+- dataset: CV
+  Description: Cardiovascular System Findings
+  DescriptionCN: 心血管系统检查结果
+  Class: FINDINGS
+  Structure: One record per finding or result per time point per visit per subject
+  StructureCN: 每个受试者每次访视每个时间点每次发现或结果一条记录
+  Purpose: Tabulation
+  Keys: USUBJID, SUBJID, CVTESTCD, VISITNUM, VISIT, CVDTC
+  Repeating: Y
+  IsReferenceData: N
+  Location: cv.xpt
+  Flag: K
+- dataset: DD
+  Description: Death Details
+  DescriptionCN: 死亡详情
+  Class: FINDINGS
+  Structure: One record per finding per subject
+  StructureCN: 每个受试者每个发现一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, DDTESTCD, DDDTC
+  Repeating: Y
+  IsReferenceData: N
+  Location: dd.xpt
+  Flag: K
+- dataset: EG
+  Description: ECG Test Results
+  DescriptionCN: 心电图
+  Class: FINDINGS
+  Structure: One record per ECG observation per replicate per time point or one record per ECG observation per beat per visit
+    per subject
+  StructureCN: 每个时间点每个重复的每次心电图观测一条记录，或每个受试者每次访视每次心电图观测一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, EGTESTCD, VISITNUM, EGDTC, EGGRPID
+  Repeating: Y
+  IsReferenceData: N
+  Location: eg.xpt
+  Flag: K
+- dataset: IE
+  Description: Inclusion/Exclusion Criteria Not Met
+  DescriptionCN: 不满足的入选/排除标准
+  Class: FINDINGS
+  Structure: One record per inclusion/exclusion criterion not met per subject
+  StructureCN: 每个受试者每条不符合入选\排除标准一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, IETESTCD
+  Repeating: Y
+  IsReferenceData: N
+  Location: ie.xpt
+  Flag: K
+- dataset: IS
+  Description: Immunogenicity Specimen Assessments
+  DescriptionCN: 免疫原性检测
+  Class: FINDINGS
+  Structure: One record per test per visit per subject
+  StructureCN: 每个受试者每次访视每次检测一条记录
+  Purpose: Tabulation
+  Keys: USUBJID, SUBJID, ISTESTCD, VISITNUM, ISDTC, ISTSTOPO, ISMSCBCE
+  Repeating: Y
+  IsReferenceData: N
+  Location: is.xpt
+  Flag: K
+  HR Notes: 'SDTMIG V3.4相比V3.3变化较大，推荐使用V3.4。
+
+    使用2023-12-15及之后版本SDTM Terminology时，需注意之前属于MBTEST的内容（如抗体检测）已变化至ISTEST'
+- dataset: LB
+  Description: Laboratory Test Results
+  DescriptionCN: 实验室检查
+  Class: FINDINGS
+  Structure: One record per lab test per time point per visit per subject
+  StructureCN: 每个受试者每次访视每个时间点每次实验室检查一条记录
+  Purpose: Tabulation
+  Keys: USUBJID, SUBJID, LBCAT, LBTESTCD, VISITNUM, LBDTC, LBORNRLO, LBORNRHI
+  Repeating: Y
+  IsReferenceData: N
+  Location: lb.xpt
+  Flag: K
+- dataset: MB
+  Description: Microbiology Specimen
+  DescriptionCN: 微生物检测
+  Class: FINDINGS
+  Structure: One record per microbiology specimen finding per time point per visit per subject
+  StructureCN: 每个受试者每次访视每个时间点每次微生物标本发现一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, MBTESTCD, VISITNUM, MBDTC
+  Repeating: Y
+  IsReferenceData: N
+  Location: mb.xpt
+  Flag: K
+- dataset: MI
+  Description: Microscopic Findings
+  DescriptionCN: 显微镜发现
+  Class: FINDINGS
+  Structure: One record per finding per specimen per subject
+  StructureCN: 每个受试者每个样本每个发现一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, MICAT, MITESTCD, MIMETHOD, VISITNUM, MIDTC, MINAM, MIREFID
+  Repeating: Y
+  IsReferenceData: N
+  Location: mi.xpt
+  Flag: K
+- dataset: PC
+  Description: Pharmacokinetics Concentrations
+  DescriptionCN: 药代动力学浓度
+  Class: FINDINGS
+  Structure: One record per sample characteristic or time-point concentration per reference time point or per analyte per
+    subject
+  StructureCN: 每个受试者每个分析物或每个参照时间点每个样本特征或时间点浓度一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, PCTESTCD, VISITNUM, VISIT, PCDTC, PCTPTNUM
+  Repeating: Y
+  IsReferenceData: N
+  Location: pc.xpt
+  Flag: K
+- dataset: PE
+  Description: Physical Examination
+  DescriptionCN: 体格检查
+  Class: FINDINGS
+  Structure: One record per body system or abnormality per visit per subject
+  StructureCN: 每个受试者每次访视每个身体系统或异常一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, PETESTCD, VISITNUM, PEDTC
+  Repeating: Y
+  IsReferenceData: N
+  Location: pe.xpt
+  Flag: K
+  HR Notes: 体格检查仅收集日期，未收集结果时不递交
+- dataset: RP
+  Description: Reproductive System Findings
+  DescriptionCN: 生殖系统发现
+  Class: FINDINGS
+  Structure: One record per finding or result per time point per visit per subject
+  StructureCN: 每个受试者每次访视每个时间点每次发现或结果一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, RPTESTCD, RPDTC, VISITNUM
+  Repeating: Y
+  IsReferenceData: N
+  Location: rp.xpt
+  Flag: K
+- dataset: RS
+  Description: Disease Response and Clin Classification
+  DescriptionCN: 疾病效应/状态评估
+  Class: FINDINGS
+  Structure: One record per response assessment or clinical classification assessment per time point per visit per subject
+    per assessor per medical evaluator
+  StructureCN: 每个医学评估者每次评价每个受试者每次访视每个时间点每次响应评估或临床分类评估一条记录
+  Purpose: Tabulation
+  Keys: USUBJID, SUBJID, RSCAT, RSEVAL, RSTESTCD, VISITNUM, RSLNKGRP, RSDTC
+  Repeating: Y
+  IsReferenceData: N
+  Location: rs.xpt
+  Flag: K
+- dataset: SS
+  Description: Subject Status
+  DescriptionCN: 受试者状态
+  Class: FINDINGS
+  Structure: One record per status per visit per subject
+  StructureCN: 每个受试者每次访视每次状态一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, SSTESTCD, VISITNUM
+  Repeating: Y
+  IsReferenceData: N
+  Location: ss.xpt
+  Flag: K
+- dataset: TR
+  Description: Tumor/Lesion Results
+  DescriptionCN: 肿瘤/病灶测量
+  Class: FINDINGS
+  Structure: One record per tumor measurement/assessment per visit per subject per assessor
+  StructureCN: 每个评估者每个受试者每次访视每次肿瘤测量或评估一条记录
+  Purpose: Tabulation
+  Keys: USUBJID, SUBJID, TREVAL, TRGRPID, TRLNKID, TRTESTCD, VISITNUM, TRDTC, TRMETHOD, TRREFID
+  Repeating: Y
+  IsReferenceData: N
+  Location: tr.xpt
+  Flag: K
+- dataset: TU
+  Description: Tumor/Lesion Identification
+  DescriptionCN: 肿瘤/病灶标识
+  Class: FINDINGS
+  Structure: One record per identified tumor per subject per assessor
+  StructureCN: 每个评估者每个受试者每个肿瘤识别一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, TUEVAL, TULNKID, TUMETHOD, VISITNUM
+  Repeating: Y
+  IsReferenceData: N
+  Location: tu.xpt
+  Flag: K
+  HR Notes: 保留每个病灶最早检出的记录，筛选时不考虑检测方法是否相同
+- dataset: VS
+  Description: Vital Signs
+  DescriptionCN: 生命体征
+  Class: FINDINGS
+  Structure: One record per vital sign measurement per time point per visit per subject
+  StructureCN: 每个受试者每次访视每个时间点每次生命体征测量一条记录
+  Purpose: Tabulation
+  Keys: STUDYID, USUBJID, SUBJID, VSCAT, VSTESTCD, VISITNUM, VSDTC
+  Repeating: Y
+  IsReferenceData: N
+  Location: vs.xpt
+  Flag: K

@@ -1,0 +1,358 @@
+# 首版 tu.yaml：m5\datasets\tabulations\sdtm\tu.xpt+m5\datasets\tabulations\sdtm\supptu.xpt(结构) + xlsx(语义) + 部门值级库 + aCRF(页码) 合成。之后由 AI 维护。
+domain: TU
+label: 肿瘤/病灶标识
+class: 发现类
+purpose: 列表
+repeating: true
+is_reference_data: false
+structure: 每个评估者每个受试者每个肿瘤识别一条记录
+sas_dataset: TU
+keys:
+- STUDYID
+- USUBJID
+- SUBJID
+- TUEVAL
+- TULNKID
+- TUMETHOD
+- VISITNUM
+archive: tu.xpt
+variables:
+  STUDYID:
+    label: 研究标识符
+    type: text
+    length: '8'
+    order: 1
+    key_sequence: 1
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+  DOMAIN:
+    label: 域名缩写
+    type: text
+    length: '2'
+    order: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: DOMAIN
+  USUBJID:
+    label: 受试者唯一标识符
+    type: text
+    length: '23'
+    order: 3
+    key_sequence: 2
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: USUBJID
+  SUBJID:
+    label: 受试者标识符
+    type: text
+    length: '8'
+    order: 4
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+  TUSEQ:
+    label: 序号
+    type: integer
+    length: '2'
+    order: 5
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: SEQ
+  TUREFID:
+    label: 参考ID
+    type: text
+    length: '39'
+    order: 6
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '177'
+  TULNKID:
+    label: 链接ID
+    type: text
+    length: '9'
+    order: 7
+    key_sequence: 4
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+  TULNKGRP:
+    label: 链接组别ID
+    type: text
+    length: '17'
+    order: 8
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+  TUTESTCD:
+    label: 肿瘤/病灶ID简称
+    type: text
+    length: '8'
+    order: 9
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: TUTESTCD
+  TUTEST:
+    label: 肿瘤/病灶ID名称
+    type: text
+    length: '12'
+    order: 10
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: TUTEST
+  TUORRES:
+    label: 肿瘤/病灶ID结果
+    type: text
+    length: '12'
+    order: 11
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    codelist: TUIDRS
+  TUSTRESC:
+    label: 肿瘤/病灶ID结果-标准格式
+    type: text
+    length: '12'
+    order: 12
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    codelist: TUIDRS
+    method: STRESC
+  TUNAM:
+    label: 实验室/供应商名称
+    type: text
+    length: '17'
+    order: 13
+    mandatory: false
+    origin: {type: Protocol, source: Investigator}
+  TULOC:
+    label: 肿瘤/病灶部位
+    type: text
+    length: '34'
+    order: 14
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+    codelist: TU_LOC
+  TUMETHOD:
+    label: 识别的方法
+    type: text
+    length: '20'
+    order: 15
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '176'
+    codelist: TUMETHOD
+    comment: NC
+  TULOBXFL:
+    label: 暴露前末次观测标帜
+    type: text
+    length: '1'
+    order: 16
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    codelist: NY_Y
+    method: LOBXFL
+  TUEVAL:
+    label: 评估者
+    type: text
+    length: '15'
+    order: 17
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    codelist: TU_EVAL
+  TUEVALID:
+    label: 评估者标识符
+    type: text
+    length: '2'
+    order: 18
+    key_sequence: 3
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    codelist: MEDEVAL
+  TUACPTFL:
+    label: 记录接受标帜
+    type: text
+    length: '1'
+    order: 19
+    mandatory: false
+    origin: {type: Collected, source: Vendor}
+    codelist: NY_Y
+  VISITNUM:
+    label: 访视编号
+    type: float
+    length: '5'
+    order: 20
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    comment: VISITNUM
+  VISIT:
+    label: 访视名称
+    type: text
+    length: '23'
+    order: 21
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '176'
+      - '177'
+    comment: VISIT
+  VISITDY:
+    label: 访视计划研究日
+    type: integer
+    length: '3'
+    order: 22
+    mandatory: false
+    origin: {type: Protocol, source: Sponsor}
+  EPOCH:
+    label: 时期
+    type: text
+    length: '9'
+    order: 23
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    codelist: EPOCH
+    method: EPOCH
+  TUDTC:
+    label: 肿瘤/病灶识别的日期/时间
+    type: date
+    order: 24
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '176'
+  TUDY:
+    label: 肿瘤/病灶识别的研究日
+    type: integer
+    length: '3'
+    order: 25
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    method: DY
+supplemental:
+  domain: SUPPTU
+  label: TU补充修饰语数据集
+  class: 关联数据
+  purpose: 列表
+  repeating: true
+  is_reference_data: false
+  structure: 一个域一个修饰变量一条记录
+  sas_dataset: SUPPTU
+  keys:
+  - STUDYID
+  - RDOMAIN
+  - USUBJID
+  - IDVAR
+  - IDVARVAL
+  - QNAM
+  archive: supptu.xpt
+  variables:
+    STUDYID:
+      label: 研究标识符
+      type: text
+      length: '8'
+      order: 1
+      mandatory: true
+      key_sequence: 1
+      origin: {type: Protocol, source: Sponsor}
+    RDOMAIN:
+      label: 关联域名缩写
+      type: text
+      length: '2'
+      order: 2
+      mandatory: true
+      key_sequence: 2
+      origin: {type: Assigned, source: Sponsor}
+      codelist: DOMAIN
+    USUBJID:
+      label: 受试者唯一标识符
+      type: text
+      length: '23'
+      order: 3
+      mandatory: true
+      key_sequence: 3
+      origin: {type: Derived, source: Sponsor}
+      method: USUBJID
+    IDVAR:
+      label: 标识变量
+      type: text
+      length: '5'
+      order: 4
+      mandatory: false
+      key_sequence: 4
+      origin: {type: Assigned, source: Sponsor}
+    IDVARVAL:
+      label: 标识变量值
+      type: text
+      length: '2'
+      order: 5
+      mandatory: false
+      key_sequence: 5
+      origin: {type: Assigned, source: Sponsor}
+    QNAM:
+      label: 修饰语变量名称
+      type: text
+      length: '8'
+      order: 6
+      mandatory: true
+      key_sequence: 6
+      origin: {type: Assigned, source: Sponsor}
+    QLABEL:
+      label: 修饰语变量标签
+      type: text
+      length: '24'
+      order: 7
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QVAL:
+      label: 数据值
+      type: text
+      length: '107'
+      order: 8
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+      value_list:
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - TULOCDTL
+        label: 部位描述
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '177'
+          - '179'
+          - '181'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - TUSSYN
+        label: 是否为本中心检查
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '176'
+        mandatory: false
+    QORIG:
+      label: 来源
+      type: text
+      length: '9'
+      order: 9
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QEVAL:
+      label: 评估人员
+      type: text
+      length: '1'
+      order: 10
+      mandatory: false
+      origin: {type: Assigned, source: Sponsor}

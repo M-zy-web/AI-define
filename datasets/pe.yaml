@@ -1,0 +1,295 @@
+# 首版 pe.yaml：m5\datasets\tabulations\sdtm\pe.xpt+m5\datasets\tabulations\sdtm\supppe.xpt(结构) + xlsx(语义) + 部门值级库 + aCRF(页码) 合成。之后由 AI 维护。
+domain: PE
+label: 体格检查
+class: 发现类
+purpose: 列表
+repeating: true
+is_reference_data: false
+structure: 每个受试者每次访视每个身体系统或异常一条记录
+sas_dataset: PE
+keys:
+- STUDYID
+- USUBJID
+- SUBJID
+- PETESTCD
+- VISITNUM
+- PEDTC
+archive: pe.xpt
+variables:
+  STUDYID:
+    label: 研究标识符
+    type: text
+    length: '8'
+    order: 1
+    key_sequence: 1
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+  DOMAIN:
+    label: 域名缩写
+    type: text
+    length: '2'
+    order: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: DOMAIN
+  USUBJID:
+    label: 受试者唯一标识符
+    type: text
+    length: '23'
+    order: 3
+    key_sequence: 2
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: USUBJID
+  SUBJID:
+    label: 受试者标识符
+    type: text
+    length: '8'
+    order: 4
+    key_sequence: 3
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+  PESEQ:
+    label: 序号
+    type: integer
+    length: '3'
+    order: 5
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: SEQ
+  PESPID:
+    label: 申办方定义标识符
+    type: text
+    length: '3'
+    order: 6
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    comment: SPID
+  PETESTCD:
+    label: 身体系统检查简称
+    type: text
+    length: '8'
+    order: 7
+    key_sequence: 4
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: PETESTCD
+  PETEST:
+    label: 身体系统检查
+    type: text
+    length: '23'
+    order: 8
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: PETEST
+  PEORRES:
+    label: 字面检查结果
+    type: text
+    length: '200'
+    order: 9
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '136'
+    codelist: PEORRES
+  PESTRESC:
+    label: 字符型结果/发现-标准格式
+    type: text
+    length: '6'
+    order: 10
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    codelist: PEORRES
+    method: STRESC
+  PESTAT:
+    label: 完成状态
+    type: text
+    length: '8'
+    order: 11
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+    codelist: ND
+  PELOBXFL:
+    label: 暴露前末次观测标帜
+    type: text
+    length: '1'
+    order: 12
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    codelist: NY_Y
+    method: LOBXFL
+  VISITNUM:
+    label: 访视编号
+    type: float
+    length: '3'
+    order: 13
+    key_sequence: 5
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    comment: VISITNUM
+  VISIT:
+    label: 访视名称
+    type: text
+    length: '19'
+    order: 14
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    comment: VISIT
+  VISITDY:
+    label: 访视计划研究日
+    type: integer
+    length: '3'
+    order: 15
+    mandatory: false
+    origin: {type: Protocol, source: Sponsor}
+  EPOCH:
+    label: 时期
+    type: text
+    length: '9'
+    order: 16
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    codelist: EPOCH
+    method: EPOCH
+  PEDTC:
+    label: 检查的日期/时间
+    type: date
+    order: 17
+    key_sequence: 6
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '136'
+  PEDY:
+    label: 检查的研究日
+    type: integer
+    length: '3'
+    order: 18
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    method: DY
+supplemental:
+  domain: SUPPPE
+  label: PE补充修饰语数据集
+  class: 关联数据
+  purpose: 列表
+  repeating: true
+  is_reference_data: false
+  structure: 一个域一个修饰变量一条记录
+  sas_dataset: SUPPPE
+  keys:
+  - STUDYID
+  - RDOMAIN
+  - USUBJID
+  - IDVAR
+  - IDVARVAL
+  - QNAM
+  archive: supppe.xpt
+  variables:
+    STUDYID:
+      label: 研究标识符
+      type: text
+      length: '8'
+      order: 1
+      mandatory: true
+      key_sequence: 1
+      origin: {type: Protocol, source: Sponsor}
+    RDOMAIN:
+      label: 关联域名缩写
+      type: text
+      length: '2'
+      order: 2
+      mandatory: true
+      key_sequence: 2
+      origin: {type: Assigned, source: Sponsor}
+      codelist: DOMAIN
+    USUBJID:
+      label: 受试者唯一标识符
+      type: text
+      length: '23'
+      order: 3
+      mandatory: true
+      key_sequence: 3
+      origin: {type: Derived, source: Sponsor}
+      method: USUBJID
+    IDVAR:
+      label: 标识变量
+      type: text
+      length: '5'
+      order: 4
+      mandatory: false
+      key_sequence: 4
+      origin: {type: Assigned, source: Sponsor}
+    IDVARVAL:
+      label: 标识变量值
+      type: text
+      length: '3'
+      order: 5
+      mandatory: false
+      key_sequence: 5
+      origin: {type: Assigned, source: Sponsor}
+    QNAM:
+      label: 修饰语变量名称
+      type: text
+      length: '8'
+      order: 6
+      mandatory: true
+      key_sequence: 6
+      origin: {type: Assigned, source: Sponsor}
+    QLABEL:
+      label: 修饰语变量标签
+      type: text
+      length: '19'
+      order: 7
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QVAL:
+      label: 数据值
+      type: text
+      length: '199'
+      order: 8
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+      value_list:
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - PEORRES1
+        label: 字面检查结果1
+        origin: {type: Collected, source: Investigator}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - PEORRES2
+        label: 字面检查结果2
+        origin: {type: Collected, source: Investigator}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - PEORRES3
+        label: 字面检查结果3
+        origin: {type: Collected, source: Investigator}
+        mandatory: false
+    QORIG:
+      label: 来源
+      type: text
+      length: '9'
+      order: 9
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QEVAL:
+      label: 评估人员
+      type: text
+      length: '1'
+      order: 10
+      mandatory: false
+      origin: {type: Assigned, source: Sponsor}

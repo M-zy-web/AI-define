@@ -1,0 +1,647 @@
+# 首版 ts.yaml：m5\datasets\tabulations\sdtm\ts.xpt(结构) + xlsx(语义) + 部门值级库 + aCRF(页码) 合成。之后由 AI 维护。
+domain: TS
+label: 试验概要
+class: 试验设计
+purpose: 列表
+repeating: false
+is_reference_data: true
+structure: 每个试验概要参数值一条记录
+sas_dataset: TS
+keys:
+- STUDYID
+- TSPARMCD
+- TSSEQ
+archive: ts.xpt
+variables:
+  STUDYID:
+    label: 研究标识符
+    type: text
+    length: '8'
+    order: 1
+    key_sequence: 1
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+  DOMAIN:
+    label: 域名缩写
+    type: text
+    length: '2'
+    order: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: DOMAIN
+  TSSEQ:
+    label: 序号
+    type: integer
+    length: '1'
+    order: 3
+    key_sequence: 3
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: SEQ
+  TSGRPID:
+    label: 分组ID
+    type: text
+    length: '21'
+    order: 4
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+  TSPARMCD:
+    label: 试验概要参数简称
+    type: text
+    length: '8'
+    order: 5
+    key_sequence: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: TSPARMCD
+  TSPARM:
+    label: 试验概要参数
+    type: text
+    length: '40'
+    order: 6
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: TSPARM
+  TSVAL:
+    label: 参数值
+    type: text
+    length: '154'
+    order: 7
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    value_list:
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - ACTSUB
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Actual Number of Subjects
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - ADAPT
+      codelist: NY_N
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Adaptive Design
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - ADDON
+      codelist: NY_N
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Added on to Existing Treatments
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - AGEMAX
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Planned Maximum Age of Subjects
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - AGEMIN
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Planned Minimum Age of Subjects
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - COMPTRT
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Comparative Treatment Name
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - DCUTDESC
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Data Cutoff Description
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - DCUTDTC
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Data Cutoff Date
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - EXTTIND
+      codelist: NY_N
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Extension Trial Indicator
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - FCNTRY
+      codelist: ISO3166
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Planned Country of Investigational Sites
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - HLTSUBJI
+      codelist: NY_N
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Healthy Subject Indicator
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - INDIC
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Trial Disease/Condition Indication
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - INTMODEL
+      codelist: INTMODEL
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Intervention Model
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - INTTYPE
+      codelist: INTTYPE
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Intervention Type
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - LENGTH
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Trial Length
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - NARMS
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Planned Number of Arms
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - NCOHORT
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Number of Groups/Cohorts
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - OBJPRIM
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Trial Primary Objective
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - OBJSEC
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Trial Secondary Objective
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - OUTMSPRI
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Primary Outcome Measure
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - OUTMSSEC
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Secondary Outcome Measure
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - PCLAS
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Pharmacologic Class
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - PLANSUB
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Planned Number of Subjects
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - PDPSTIND
+      codelist: NY_N
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Pediatric Postmarket Study Indicator
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - PDSTIND
+      codelist: NY_N
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Pediatric Study Indicator
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - PIPIND
+      codelist: NY_N
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Pediatric Investigation Plan Indicator
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - RANDOM
+      codelist: NY_N
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Trial is Randomized
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - RANDQT
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Randomization Quotient
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - RDIND
+      codelist: NY_N
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Rare Disease Indicator
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - REGID
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Registry Identifier
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - SDTIGVER
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: SDTM IG Version
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - SDTMVER
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: SDTM Version
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - SENDTC
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Study End Date
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - SEXPOP
+      codelist: SEXPOP
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Sex of Participants
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - SPONSOR
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Clinical Study Sponsor
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - SSTDTC
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Study Start Date
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - STOPRULE
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Study Stop Rules
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - STRATFCT
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Stratification Factor
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - STYPE
+      codelist: STYPE
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Study Type
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - TBLIND
+      codelist: TBLIND
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Trial Blinding Schema
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - TCNTRL
+      codelist: TCNTRL
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Control Type
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - TDIGRP
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Diagnosis Group
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - THERAREA
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Therapeutic Area
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - TINDTP
+      codelist: TINDTP
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Trial Intent Type
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - TITLE
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Trial Title
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - TPHASE
+      codelist: TPHASE
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Trial Phase Classification
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - TRT
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Investigational Therapy or Treatment
+    - where:
+      - variable: TSPARMCD
+        comparator: EQ
+        values:
+        - TTYPE
+      codelist: TTYPE
+      label: 参数值
+      origin:
+        type: Protocol
+        source: Sponsor
+      mandatory: false
+      description: Trial Type
+  TSVALNF:
+    label: 缺失参数的填充方式
+    type: text
+    length: '4'
+    order: 8
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+  TSVALCD:
+    label: 参数编码
+    type: text
+    length: '11'
+    order: 9
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+  TSVCDREF:
+    label: 参考术语名称
+    type: text
+    length: '45'
+    order: 10
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+  TSVCDVER:
+    label: 参考术语版本
+    type: text
+    length: '10'
+    order: 11
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}

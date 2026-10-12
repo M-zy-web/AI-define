@@ -1,0 +1,684 @@
+# 首版 cm.yaml：m5\datasets\tabulations\sdtm\cm.xpt+m5\datasets\tabulations\sdtm\suppcm.xpt(结构) + xlsx(语义) + 部门值级库 + aCRF(页码) 合成。之后由 AI 维护。
+domain: CM
+label: 既往与合并用药
+class: 干预类
+purpose: 列表
+repeating: true
+is_reference_data: false
+structure: 每个受试者每次服药或固定给药间隔一条记录
+sas_dataset: CM
+keys:
+- STUDYID
+- USUBJID
+- SUBJID
+- CMCAT
+- CMSCAT
+- CMTRT
+- CMSTDTC
+- CMENDTC
+- CMSPID
+- CMGRPID
+archive: cm.xpt
+variables:
+  STUDYID:
+    label: 研究标识符
+    type: text
+    length: '8'
+    order: 1
+    key_sequence: 1
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+  DOMAIN:
+    label: 域名缩写
+    type: text
+    length: '2'
+    order: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: DOMAIN
+  USUBJID:
+    label: 受试者唯一标识符
+    type: text
+    length: '23'
+    order: 3
+    key_sequence: 2
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: USUBJID
+  SUBJID:
+    label: 受试者标识符
+    type: text
+    length: '8'
+    order: 4
+    key_sequence: 3
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+  CMSEQ:
+    label: 序号
+    type: integer
+    length: '3'
+    order: 5
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: SEQ
+  CMGRPID:
+    label: 分组ID
+    type: text
+    length: '170'
+    order: 6
+    key_sequence: 10
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '133'
+      - '200'
+  CMSPID:
+    label: 申办方定义标识符
+    type: text
+    length: '23'
+    order: 7
+    key_sequence: 9
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    comment: SPID
+  CMLNKID:
+    label: 链接ID
+    type: text
+    length: '3'
+    order: 8
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+  CMTRT:
+    label: 药物或治疗的名称
+    type: text
+    length: '80'
+    order: 9
+    key_sequence: 6
+    mandatory: true
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '133'
+      - '187'
+      - '200'
+  CMDECOD:
+    label: 标准的药物名称
+    type: text
+    length: '200'
+    order: 10
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    comment: WHODRUG
+  CMCAT:
+    label: 药物的类别
+    type: text
+    length: '30'
+    order: 11
+    key_sequence: 4
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    codelist: CMCAT
+  CMSCAT:
+    label: 药物的子类
+    type: text
+    length: '52'
+    order: 12
+    key_sequence: 5
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '133'
+      - '200'
+    codelist: CMSCAT
+  CMINDC:
+    label: 适应症
+    type: text
+    length: '151'
+    order: 13
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '133'
+      - '187'
+    codelist: CMINDC
+  CMCLAS:
+    label: 药物分类
+    type: text
+    length: '64'
+    order: 14
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    comment: WHODRUG
+  CMCLASCD:
+    label: 药物分类编码
+    type: text
+    length: '3'
+    order: 15
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    comment: WHODRUG
+  CMDOSE:
+    label: 每次用药剂量
+    type: integer
+    length: '7'
+    order: 16
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '133'
+      - '187'
+  CMDOSTXT:
+    label: 剂量描述
+    type: text
+    length: '5'
+    order: 17
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '133'
+      - '187'
+  CMDOSU:
+    label: 剂量单位
+    type: text
+    length: '6'
+    order: 18
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '133'
+      - '187'
+    codelist: CM_UNIT
+  CMDOSFRM:
+    label: 剂型
+    type: text
+    length: '12'
+    order: 19
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '188'
+    codelist: CM_FRM
+  CMDOSFRQ:
+    label: 服药频率
+    type: text
+    length: '12'
+    order: 20
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '133'
+      - '188'
+    codelist: CM_FREQ
+  CMROUTE:
+    label: 给药途径
+    type: text
+    length: '17'
+    order: 21
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '188'
+    codelist: CM_ROUTE
+  CMSTDTC:
+    label: 药物开始日期/时间
+    type: date
+    order: 22
+    key_sequence: 7
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '133'
+      - '187'
+      - '200'
+  CMENDTC:
+    label: 药物结束日期/时间
+    type: date
+    order: 23
+    key_sequence: 8
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '133'
+  CMSTDY:
+    label: '药物开始的研究日
+
+      '
+    type: integer
+    length: '4'
+    order: 24
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    method: DY
+  CMENDY:
+    label: '药物结束的研究日
+
+      '
+    type: integer
+    length: '4'
+    order: 25
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    method: DY
+  CMENRTPT:
+    label: 结束时间与参照时点的关系
+    type: text
+    length: '9'
+    order: 26
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+    codelist: STENRF
+    comment: ENRTPT
+  CMENTPT:
+    label: 结束时间的参照时点
+    type: text
+    length: '10'
+    order: 27
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    codelist: ENTPT
+    method: ENTPT
+supplemental:
+  domain: SUPPCM
+  label: CM补充修饰语数据集
+  class: 关联数据
+  purpose: 列表
+  repeating: true
+  is_reference_data: false
+  structure: 一个域一个修饰变量一条记录
+  sas_dataset: SUPPCM
+  keys:
+  - STUDYID
+  - RDOMAIN
+  - USUBJID
+  - IDVAR
+  - IDVARVAL
+  - QNAM
+  archive: suppcm.xpt
+  variables:
+    STUDYID:
+      label: 研究标识符
+      type: text
+      length: '8'
+      order: 1
+      mandatory: true
+      key_sequence: 1
+      origin: {type: Protocol, source: Sponsor}
+    RDOMAIN:
+      label: 关联域名缩写
+      type: text
+      length: '2'
+      order: 2
+      mandatory: true
+      key_sequence: 2
+      origin: {type: Assigned, source: Sponsor}
+      codelist: DOMAIN
+    USUBJID:
+      label: 受试者唯一标识符
+      type: text
+      length: '23'
+      order: 3
+      mandatory: true
+      key_sequence: 3
+      origin: {type: Derived, source: Sponsor}
+      method: USUBJID
+    IDVAR:
+      label: 标识变量
+      type: text
+      length: '5'
+      order: 4
+      mandatory: false
+      key_sequence: 4
+      origin: {type: Assigned, source: Sponsor}
+    IDVARVAL:
+      label: 标识变量值
+      type: text
+      length: '3'
+      order: 5
+      mandatory: false
+      key_sequence: 5
+      origin: {type: Assigned, source: Sponsor}
+    QNAM:
+      label: 修饰语变量名称
+      type: text
+      length: '8'
+      order: 6
+      mandatory: true
+      key_sequence: 6
+      origin: {type: Assigned, source: Sponsor}
+    QLABEL:
+      label: 修饰语变量标签
+      type: text
+      length: '27'
+      order: 7
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QVAL:
+      label: 数据值
+      type: text
+      length: '142'
+      order: 8
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+      value_list:
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - ATC
+        label: 药物类别
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - ATC1
+        label: 药物类别1
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - ATC1CD
+        label: 药物类别1编码
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - ATC2
+        label: 药物类别2
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - ATC2CD
+        label: 药物类别2编码
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - ATC3
+        label: 药物类别3
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - ATC3CD
+        label: 药物类别3编码
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - ATC4
+        label: 药物类别4
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - ATC4CD
+        label: 药物类别4编码
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - ATCCD
+        label: 药物类别编码
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMCOUR
+        label: 总疗程数
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '133'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMOUT
+        label: 治疗结局
+        codelist: CMOUT
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '133'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMPTCD
+        label: 标准的药物名称编码
+        comment: WHODRUG
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - DICTNAME
+        label: 字典名称
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - DICTVER
+        label: 字典版本
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMREAS
+        label: 用药原因
+        codelist: CMREAS
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '187'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMAENO
+        label: 相关AE序号
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '187'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMDOSUO
+        label: 其他单位
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '133'
+          - '187'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMROUTEO
+        label: 其他途径
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '188'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMCYCLE
+        label: 治疗周期
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '187'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMSTTIM
+        label: 治疗时间
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '187'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMMHNO
+        label: 相关既往病史序号
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '187'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMDSFQO
+        label: 其他给药频率
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '133'
+          - '188'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMPDDTC
+        label: 进展日期
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '133'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMTLN
+        label: 治疗线数
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '133'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMDECOD1
+        label: 标准的药物名称1
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMOUTO
+        label: 其他结局
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '133'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - CMSCATO
+        label: 其他类型
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '133'
+        mandatory: false
+    QORIG:
+      label: 来源
+      type: text
+      length: '9'
+      order: 9
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QEVAL:
+      label: 评估人员
+      type: text
+      length: '21'
+      order: 10
+      mandatory: false
+      origin: {type: Assigned, source: Sponsor}

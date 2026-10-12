@@ -1,0 +1,80 @@
+# 首版 ta.yaml：m5\datasets\tabulations\sdtm\ta.xpt(结构) + xlsx(语义) + 部门值级库 + aCRF(页码) 合成。之后由 AI 维护。
+domain: TA
+label: 试验分组
+class: 试验设计
+purpose: 列表
+repeating: false
+is_reference_data: true
+structure: 每个分支每个计划元素一条记录
+sas_dataset: TA
+keys:
+- STUDYID
+- ARMCD
+- TAETORD
+archive: ta.xpt
+variables:
+  STUDYID:
+    label: 研究标识符
+    type: text
+    length: '8'
+    order: 1
+    key_sequence: 1
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+  DOMAIN:
+    label: 域名缩写
+    type: text
+    length: '2'
+    order: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: DOMAIN
+  ARMCD:
+    label: 计划分组编码
+    type: text
+    length: '1'
+    order: 3
+    key_sequence: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: ARMCD
+  ARM:
+    label: 计划分组描述
+    type: text
+    length: '11'
+    order: 4
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+    codelist: ARM
+  TAETORD:
+    label: 组内元素计划顺序
+    type: integer
+    length: '1'
+    order: 5
+    key_sequence: 3
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+  ETCD:
+    label: 元素编码
+    type: text
+    length: '5'
+    order: 6
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: ETCD
+  ELEMENT:
+    label: 元素描述
+    type: text
+    length: '30'
+    order: 7
+    mandatory: false
+    origin: {type: Protocol, source: Sponsor}
+    codelist: ELEMENT
+  EPOCH:
+    label: 时期
+    type: text
+    length: '9'
+    order: 8
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+    codelist: EPOCH

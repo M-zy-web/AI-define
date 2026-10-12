@@ -1,0 +1,433 @@
+# 首版 ex.yaml：m5\datasets\tabulations\sdtm\ex.xpt+m5\datasets\tabulations\sdtm\suppex.xpt(结构) + xlsx(语义) + 部门值级库 + aCRF(页码) 合成。之后由 AI 维护。
+domain: EX
+label: 暴露
+class: 干预类
+purpose: 列表
+repeating: true
+is_reference_data: false
+structure: 每个受试者每次固定给药间隔一条记录
+sas_dataset: EX
+keys:
+- STUDYID
+- USUBJID
+- SUBJID
+- EXTRT
+- EXSTDTC
+- EXSPID
+archive: ex.xpt
+variables:
+  STUDYID:
+    label: 研究标识符
+    type: text
+    length: '8'
+    order: 1
+    key_sequence: 1
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+  DOMAIN:
+    label: 域名缩写
+    type: text
+    length: '2'
+    order: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: DOMAIN
+  USUBJID:
+    label: 受试者唯一标识符
+    type: text
+    length: '23'
+    order: 3
+    key_sequence: 2
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: USUBJID
+  SUBJID:
+    label: 受试者标识符
+    type: text
+    length: '8'
+    order: 4
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+  EXSEQ:
+    label: 序号
+    type: integer
+    length: '2'
+    order: 5
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: SEQ
+  EXSPID:
+    label: 申办方定义标识符
+    type: text
+    length: '12'
+    order: 6
+    mandatory: false
+    origin: {type: Predecessor}
+    comment: SPID
+    comment_text: EC.ECSPID
+  EXTRT:
+    label: 治疗名称
+    type: text
+    length: '33'
+    order: 7
+    key_sequence: 3
+    mandatory: true
+    origin:
+      type: Predecessor
+      source: Investigator
+      crf_pages:
+      - '165'
+      - '166'
+      - '167'
+      - '168'
+      - '169'
+    codelist: CXTRT
+    comment: EX.EXTRT
+    comment_text: EC.ECTRT
+  EXDOSE:
+    label: 剂量
+    type: integer
+    length: '5'
+    order: 8
+    mandatory: false
+    origin: {type: Predecessor}
+  EXDOSTXT:
+    label: 剂量描述
+    type: text
+    length: '1'
+    order: 9
+    mandatory: false
+    origin: {type: Predecessor}
+  EXDOSU:
+    label: 剂量单位
+    type: text
+    length: '2'
+    order: 10
+    mandatory: false
+    origin: {type: Predecessor}
+    codelist: CX_UNIT
+  EXDOSFRM:
+    label: 剂型
+    type: text
+    length: '9'
+    order: 11
+    mandatory: false
+    origin: {type: Predecessor}
+    codelist: CX_FRM
+  EXROUTE:
+    label: 给药途径
+    type: text
+    length: '6'
+    order: 12
+    mandatory: false
+    origin: {type: Predecessor, source: Sponsor}
+    codelist: CX_ROUTE
+    comment: EX.EXROUTE
+    comment_text: EC.ECROUTE
+  EXLOT:
+    label: 批号
+    type: text
+    length: '23'
+    order: 13
+    mandatory: false
+    origin: {type: Predecessor}
+  VISITNUM:
+    label: 访视编号
+    type: float
+    length: '3'
+    order: 14
+    key_sequence: 5
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    comment: VISITNUM
+  VISIT:
+    label: 访视名称
+    type: text
+    length: '5'
+    order: 15
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    comment: VISIT
+  VISITDY:
+    label: 访视计划研究日
+    type: integer
+    length: '3'
+    order: 16
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+  EPOCH:
+    label: 时期
+    type: text
+    length: '9'
+    order: 17
+    mandatory: false
+    origin: {type: Predecessor}
+    codelist: EPOCH
+  EXSTDTC:
+    label: 治疗开始日期/时间
+    type: datetime
+    order: 18
+    key_sequence: 4
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '165'
+      - '166'
+      - '167'
+      - '168'
+      - '169'
+      - '170'
+    comment: EX.EXSTDTC
+    comment_text: EC.ECSTDTC
+  EXENDTC:
+    label: 治疗结束日期/时间
+    type: datetime
+    order: 19
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '165'
+      - '166'
+      - '167'
+      - '168'
+      - '169'
+      - '170'
+    comment: EX.EXENDTC
+    comment_text: EC.ECENDTC
+  EXSTDY:
+    label: 治疗开始的研究日
+    type: integer
+    length: '3'
+    order: 20
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    method: EXSTDY
+  EXENDY:
+    label: 治疗结束的研究日
+    type: integer
+    length: '3'
+    order: 21
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    method: EXENDY
+supplemental:
+  domain: SUPPEX
+  label: EX补充修饰语数据集
+  class: 关联数据
+  purpose: 列表
+  repeating: true
+  is_reference_data: false
+  structure: 一个域一个修饰变量一条记录
+  sas_dataset: SUPPEX
+  keys:
+  - STUDYID
+  - RDOMAIN
+  - USUBJID
+  - IDVAR
+  - IDVARVAL
+  - QNAM
+  archive: suppex.xpt
+  variables:
+    STUDYID:
+      label: 研究标识符
+      type: text
+      length: '8'
+      order: 1
+      mandatory: true
+      key_sequence: 1
+      origin: {type: Protocol, source: Sponsor}
+    RDOMAIN:
+      label: 关联域名缩写
+      type: text
+      length: '2'
+      order: 2
+      mandatory: true
+      key_sequence: 2
+      origin: {type: Assigned, source: Sponsor}
+      codelist: DOMAIN
+    USUBJID:
+      label: 受试者唯一标识符
+      type: text
+      length: '23'
+      order: 3
+      mandatory: true
+      key_sequence: 3
+      origin: {type: Derived, source: Sponsor}
+      method: USUBJID
+    IDVAR:
+      label: 标识变量
+      type: text
+      length: '5'
+      order: 4
+      mandatory: false
+      key_sequence: 4
+      origin: {type: Assigned, source: Sponsor}
+    IDVARVAL:
+      label: 标识变量值
+      type: text
+      length: '2'
+      order: 5
+      mandatory: false
+      key_sequence: 5
+      origin: {type: Assigned, source: Sponsor}
+    QNAM:
+      label: 修饰语变量名称
+      type: text
+      length: '8'
+      order: 6
+      mandatory: true
+      key_sequence: 6
+      origin: {type: Assigned, source: Sponsor}
+    QLABEL:
+      label: 修饰语变量标签
+      type: text
+      length: '39'
+      order: 7
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QVAL:
+      label: 数据值
+      type: text
+      length: '189'
+      order: 8
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+      value_list:
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - EXITRPYN
+        label: 输液是否中断
+        comment: EX.EXITRPYN
+        comment_text: EC.ECITRPYN
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '165'
+          - '166'
+          - '167'
+          - '168'
+          - '169'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - EXPDOSL
+        label: 计划剂量水平
+        comment: EX.EXPDOSL
+        comment_text: IT.SUPPEC.QVAL.ECYN
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '165'
+          - '166'
+          - '170'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - EXPDOSLU
+        label: 计划剂量水平单位
+        comment: EX.EXPDOSLU
+        comment_text: IT.SUPPEC.QVAL.ECYN
+        origin: {type: Collected, source: Investigator}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - EXAENO
+        label: 导致未给药/延迟给药的AE序号
+        comment: EX.EXAENO
+        comment_text: EC.ECAENO
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '165'
+          - '166'
+          - '167'
+          - '168'
+          - '169'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - EXREAS
+        label: 未给药/延迟给药原因
+        codelist: ADJ
+        comment: EX.EXREAS
+        comment_text: EC.ECREASOC
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '165'
+          - '166'
+          - '167'
+          - '168'
+          - '169'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - EXYN
+        label: 是否按照计划给药
+        codelist: DSIADRS
+        comment: EX.EXYN
+        comment_text: EC.ECYN
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '165'
+          - '166'
+          - '167'
+          - '168'
+          - '169'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - EXREASP
+        label: 未计划用药的其他原因
+        comment: EX.EXREASP
+        comment_text: EC.EXREASP
+        origin: {type: Collected, source: Investigator}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - EXREASP1
+        label: 未计划用药的其他原因1
+        comment: EX.EXREASP1
+        comment_text: EC.EXREASP1
+        origin: {type: Collected, source: Investigator}
+        mandatory: false
+    QORIG:
+      label: 来源
+      type: text
+      length: '9'
+      order: 9
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QEVAL:
+      label: 评估人员
+      type: text
+      length: '1'
+      order: 10
+      mandatory: false
+      origin: {type: Assigned, source: Sponsor}

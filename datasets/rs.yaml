@@ -1,0 +1,545 @@
+# 首版 rs.yaml：m5\datasets\tabulations\sdtm\rs.xpt+m5\datasets\tabulations\sdtm\supprs.xpt(结构) + xlsx(语义) + 部门值级库 + aCRF(页码) 合成。之后由 AI 维护。
+domain: RS
+label: 疾病效应/状态评估
+class: 发现类
+purpose: 列表
+repeating: true
+is_reference_data: false
+structure: 每个医学评估者每次评价每个受试者每次访视每个时间点每次响应评估或临床分类评估一条记录
+sas_dataset: RS
+keys:
+- USUBJID
+- SUBJID
+- RSCAT
+- RSEVAL
+- RSTESTCD
+- VISITNUM
+- RSLNKGRP
+- RSDTC
+archive: rs.xpt
+variables:
+  STUDYID:
+    label: 研究标识符
+    type: text
+    length: '8'
+    order: 1
+    key_sequence: 1
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+  DOMAIN:
+    label: 域名缩写
+    type: text
+    length: '2'
+    order: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: DOMAIN
+  USUBJID:
+    label: 受试者唯一标识符
+    type: text
+    length: '23'
+    order: 3
+    key_sequence: 2
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: USUBJID
+  SUBJID:
+    label: 受试者标识符
+    type: text
+    length: '8'
+    order: 4
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+  RSSEQ:
+    label: 序号
+    type: integer
+    length: '3'
+    order: 5
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: SEQ
+  RSREFID:
+    label: 参考ID
+    type: text
+    length: '32'
+    order: 6
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+  RSSPID:
+    label: 申办方定义标识符
+    type: text
+    length: '3'
+    order: 7
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    comment: SPID
+  RSLNKGRP:
+    label: 链接组别ID
+    type: text
+    length: '17'
+    order: 8
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '183'
+  RSTESTCD:
+    label: 评估简称
+    type: text
+    length: '8'
+    order: 9
+    key_sequence: 3
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    value_list:
+    - where:
+      - variable: RSCAT
+        comparator: EQ
+        values:
+        - RECIST 1.1
+      codelist: ONCRTSCD
+      label: 评估简称
+      origin:
+        type: Assigned
+        source: Sponsor
+      mandatory: false
+      description: 评估简称 - 肿瘤反应
+    - where:
+      - variable: RSCAT
+        comparator: EQ
+        values:
+        - ECOG
+      codelist: ECOG1TC
+      label: 评估简称
+      origin:
+        type: Assigned
+        source: Sponsor
+      mandatory: false
+      description: 评估简称 - 临床状态
+  RSTEST:
+    label: 评估名称
+    type: text
+    length: '24'
+    order: 10
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    value_list:
+    - where:
+      - variable: RSCAT
+        comparator: EQ
+        values:
+        - RECIST 1.1
+      codelist: ONCRTS
+      label: 评估名称
+      origin:
+        type: Collected
+        source: Investigator
+      mandatory: false
+      description: 评估名称 - 肿瘤反应
+    - where:
+      - variable: RSCAT
+        comparator: EQ
+        values:
+        - ECOG
+      codelist: ECOG1TN
+      label: 评估名称
+      origin:
+        type: Collected
+        source: Investigator
+      mandatory: false
+      description: 评估名称 - 临床状态
+  RSCAT:
+    label: 评估的类别
+    type: text
+    length: '10'
+    order: 11
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    value_list:
+    - where:
+      - variable: RSCAT
+        comparator: EQ
+        values:
+        - RECIST 1.1
+      codelist: ONCRSCAT
+      label: 评估的类别
+      origin:
+        type: Assigned
+        source: Sponsor
+      mandatory: false
+      description: 评估的类别 - 肿瘤反应
+    - where:
+      - variable: RSCAT
+        comparator: EQ
+        values:
+        - ECOG
+      codelist: CCCAT
+      label: 评估的类别
+      origin:
+        type: Assigned
+        source: Sponsor
+      mandatory: false
+      description: 评估的类别 - 临床状态
+  RSORRES:
+    label: 结果或发现-原始单位
+    type: text
+    length: '13'
+    order: 12
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '183'
+    value_list:
+    - where:
+      - variable: RSTESTCD
+        comparator: IN
+        values:
+        - TRGRESP
+        - NTRGRESP
+        - OVRLRESP
+      label: 结果或发现-原始单位
+      origin:
+        type: Collected
+        source: Investigator
+      mandatory: false
+      description: 结果或发现-原始单位 - 肿瘤反应评价结果
+    - where:
+      - variable: RSTESTCD
+        comparator: EQ
+        values:
+        - NEWLIND
+      label: 结果或发现-原始单位
+      origin:
+        type: Collected
+        source: Investigator
+      mandatory: false
+      description: 结果或发现-原始单位 - 是非应答
+    - where:
+      - variable: RSCAT
+        comparator: EQ
+        values:
+        - ECOG
+      codelist: ECOG101OR
+      label: 结果或发现-原始单位
+      origin:
+        type: Collected
+        source: Investigator
+      mandatory: false
+      description: 结果或发现-原始单位 - 临床状态
+  RSSTRESC:
+    label: 字符型结果/发现-标准格式
+    type: text
+    length: '13'
+    order: 13
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    codelist: ONCRSR
+    method: STRESC.STD
+    value_list:
+    - where:
+      - variable: RSTESTCD
+        comparator: IN
+        values:
+        - TRGRESP
+        - NTRGRESP
+        - OVRLRESP
+      method: STRESC.STD
+      codelist: ONCRSR
+      label: 字符型结果/发现-标准格式
+      origin:
+        type: Derived
+        source: Sponsor
+      mandatory: false
+      description: 字符型结果/发现-标准格式 - 肿瘤反应评价结果
+    - where:
+      - variable: RSTESTCD
+        comparator: EQ
+        values:
+        - NEWLIND
+      method: STRESC.STD
+      codelist: NY_NY
+      label: 字符型结果/发现-标准格式
+      origin:
+        type: Derived
+        source: Sponsor
+      mandatory: false
+      description: 字符型结果/发现-标准格式 - 是非应答
+    - where:
+      - variable: RSCAT
+        comparator: EQ
+        values:
+        - ECOG
+      method: STRESC.STD
+      codelist: ECOG101STR
+      label: 字符型结果/发现-标准格式
+      origin:
+        type: Derived
+        source: Sponsor
+      mandatory: false
+      description: 字符型结果/发现-标准格式 - 临床状态
+  RSSTRESN:
+    label: 数值型结果/发现-标准单位
+    type: integer
+    length: '1'
+    order: 14
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    method: STRESN
+  RSSTAT:
+    label: 完成状态
+    type: text
+    length: '8'
+    order: 15
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+    codelist: ND
+  RSREASND:
+    label: 未做原因
+    type: text
+    length: '5'
+    order: 16
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '183'
+  RSLOBXFL:
+    label: 暴露前末次观测标帜
+    type: text
+    length: '1'
+    order: 17
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    codelist: NY_Y
+    method: LOBXFL
+  RSEVAL:
+    label: 评估者
+    type: text
+    length: '15'
+    order: 18
+    key_sequence: 7
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    codelist: TU_EVAL
+  RSEVALID:
+    label: 评估者标识符
+    type: text
+    length: '2'
+    order: 19
+    key_sequence: 8
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    codelist: MEDEVAL
+  RSACPTFL:
+    label: 记录接受标帜
+    type: text
+    length: '1'
+    order: 20
+    mandatory: false
+    origin: {type: Collected, source: Vendor}
+    codelist: NY_Y
+  VISITNUM:
+    label: 访视编号
+    type: float
+    length: '5'
+    order: 21
+    key_sequence: 4
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+    comment: VISITNUM
+  VISIT:
+    label: 访视名称
+    type: text
+    length: '23'
+    order: 22
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '183'
+    comment: VISIT
+  VISITDY:
+    label: 访视计划研究日
+    type: integer
+    length: '3'
+    order: 23
+    mandatory: false
+    origin: {type: Protocol, source: Sponsor}
+  EPOCH:
+    label: 时期
+    type: text
+    length: '9'
+    order: 24
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    codelist: EPOCH
+    method: EPOCH
+  RSDTC:
+    label: 评估的日期/时间
+    type: date
+    order: 25
+    mandatory: false
+    origin:
+      type: Collected
+      source: Investigator
+      crf_pages:
+      - '162'
+    method: RSDTC
+    value_list:
+    - where:
+      - variable: RSCAT
+        comparator: EQ
+        values:
+        - ECOG
+      label: 评估的日期/时间
+      origin:
+        type: Collected
+        source: Investigator
+      mandatory: false
+      description: 评估的日期/时间 - 临床状态
+  RSDY:
+    label: 评估的研究日
+    type: integer
+    length: '3'
+    order: 26
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    method: DY
+supplemental:
+  domain: SUPPRS
+  label: RS补充修饰语数据集
+  class: 关联数据
+  purpose: 列表
+  repeating: true
+  is_reference_data: false
+  structure: 一个域一个修饰变量一条记录
+  sas_dataset: SUPPRS
+  keys:
+  - STUDYID
+  - RDOMAIN
+  - USUBJID
+  - IDVAR
+  - IDVARVAL
+  - QNAM
+  archive: supprs.xpt
+  variables:
+    STUDYID:
+      label: 研究标识符
+      type: text
+      length: '8'
+      order: 1
+      mandatory: true
+      key_sequence: 1
+      origin: {type: Protocol, source: Sponsor}
+    RDOMAIN:
+      label: 关联域名缩写
+      type: text
+      length: '2'
+      order: 2
+      mandatory: true
+      key_sequence: 2
+      origin: {type: Assigned, source: Sponsor}
+      codelist: DOMAIN
+    USUBJID:
+      label: 受试者唯一标识符
+      type: text
+      length: '23'
+      order: 3
+      mandatory: true
+      key_sequence: 3
+      origin: {type: Derived, source: Sponsor}
+      method: USUBJID
+    IDVAR:
+      label: 标识变量
+      type: text
+      length: '5'
+      order: 4
+      mandatory: false
+      key_sequence: 4
+      origin: {type: Assigned, source: Sponsor}
+    IDVARVAL:
+      label: 标识变量值
+      type: text
+      length: '3'
+      order: 5
+      mandatory: false
+      key_sequence: 5
+      origin: {type: Assigned, source: Sponsor}
+    QNAM:
+      label: 修饰语变量名称
+      type: text
+      length: '7'
+      order: 6
+      mandatory: true
+      key_sequence: 6
+      origin: {type: Assigned, source: Sponsor}
+    QLABEL:
+      label: 修饰语变量标签
+      type: text
+      length: '27'
+      order: 7
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QVAL:
+      label: 数据值
+      type: text
+      length: '98'
+      order: 8
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+      value_list:
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - RSVISIT
+        label: 原始访视(IRC)
+        origin: {type: Collected, source: Vendor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - REASUPD
+        label: 更新评估原因
+        origin: {type: Collected, source: Investigator}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - RSCDTC
+        label: 研究者肿瘤评估日期
+        origin:
+          type: Collected
+          source: Investigator
+          crf_pages:
+          - '183'
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - REASASM
+        label: 阅片结果说明
+        origin: {type: Collected, source: Investigator}
+        mandatory: false
+    QORIG:
+      label: 来源
+      type: text
+      length: '9'
+      order: 9
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QEVAL:
+      label: 评估人员
+      type: text
+      length: '1'
+      order: 10
+      mandatory: false
+      origin: {type: Assigned, source: Sponsor}

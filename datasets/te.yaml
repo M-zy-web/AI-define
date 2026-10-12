@@ -1,0 +1,61 @@
+# 首版 te.yaml：m5\datasets\tabulations\sdtm\te.xpt(结构) + xlsx(语义) + 部门值级库 + aCRF(页码) 合成。之后由 AI 维护。
+domain: TE
+label: 试验元素
+class: 试验设计
+purpose: 列表
+repeating: false
+is_reference_data: true
+structure: 每个计划元素一条记录
+sas_dataset: TE
+keys:
+- STUDYID
+- ETCD
+archive: te.xpt
+variables:
+  STUDYID:
+    label: 研究标识符
+    type: text
+    length: '8'
+    order: 1
+    key_sequence: 1
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+  DOMAIN:
+    label: 域名缩写
+    type: text
+    length: '2'
+    order: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: DOMAIN
+  ETCD:
+    label: 元素编码
+    type: text
+    length: '5'
+    order: 3
+    key_sequence: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: ETCD
+  ELEMENT:
+    label: 元素描述
+    type: text
+    length: '30'
+    order: 4
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+    codelist: ELEMENT
+  TESTRL:
+    label: 元素开始规则
+    type: text
+    length: '108'
+    order: 5
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+  TEENRL:
+    label: 元素结束规则
+    type: text
+    length: '150'
+    order: 6
+    mandatory: false
+    origin: {type: Protocol, source: Sponsor}

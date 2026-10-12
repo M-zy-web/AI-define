@@ -1,0 +1,263 @@
+# 首版 dv.yaml：m5\datasets\tabulations\sdtm\dv.xpt+m5\datasets\tabulations\sdtm\suppdv.xpt(结构) + xlsx(语义) + 部门值级库 + aCRF(页码) 合成。之后由 AI 维护。
+domain: DV
+label: 方案偏离
+class: 事件类
+purpose: 列表
+repeating: true
+is_reference_data: false
+structure: 每个受试者每次方案偏离一条记录
+sas_dataset: DV
+keys:
+- STUDYID
+- USUBJID
+- SUBJID
+- DVCAT
+- DVSCAT
+- DVDECOD
+- DVSTDTC
+- DVTERM
+- DVREFID
+archive: dv.xpt
+variables:
+  STUDYID:
+    label: 研究标识符
+    type: text
+    length: '8'
+    order: 1
+    key_sequence: 1
+    mandatory: true
+    origin: {type: Protocol, source: Sponsor}
+  DOMAIN:
+    label: 域名缩写
+    type: text
+    length: '2'
+    order: 2
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+    codelist: DOMAIN
+  USUBJID:
+    label: 受试者唯一标识符
+    type: text
+    length: '23'
+    order: 3
+    key_sequence: 2
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: USUBJID
+  SUBJID:
+    label: 受试者标识符
+    type: text
+    length: '8'
+    order: 4
+    mandatory: false
+    origin: {type: Collected, source: Investigator}
+  DVSEQ:
+    label: 序号
+    type: integer
+    length: '2'
+    order: 5
+    mandatory: true
+    origin: {type: Derived, source: Sponsor}
+    method: SEQ
+  DVREFID:
+    label: 参考ID
+    type: text
+    length: '12'
+    order: 6
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+  DVTERM:
+    label: 方案偏离术语
+    type: text
+    length: '200'
+    order: 7
+    key_sequence: 3
+    mandatory: true
+    origin: {type: Assigned, source: Sponsor}
+  DVDECOD:
+    label: 方案偏离术语编码
+    type: text
+    length: '123'
+    order: 8
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+  DVCAT:
+    label: 方案偏离的类别
+    type: text
+    length: '15'
+    order: 9
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+  DVSCAT:
+    label: 方案偏离的子类
+    type: text
+    length: '21'
+    order: 10
+    mandatory: false
+    origin: {type: Assigned, source: Sponsor}
+  EPOCH:
+    label: 时期
+    type: text
+    length: '9'
+    order: 11
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    codelist: EPOCH
+    method: EPOCH
+  DVSTDTC:
+    label: 方案偏离开始日期/时间
+    type: date
+    order: 12
+    key_sequence: 4
+    mandatory: false
+    origin: {type: Protocol, source: Investigator}
+  DVENDTC:
+    label: 方案偏离结束日期/时间
+    type: date
+    order: 13
+    mandatory: false
+    origin: {type: Protocol, source: Investigator}
+  DVSTDY:
+    label: 方案偏离开始的研究日
+    type: integer
+    length: '3'
+    order: 14
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    method: DY
+  DVENDY:
+    label: 方案偏离结束的研究日
+    type: integer
+    length: '3'
+    order: 15
+    mandatory: false
+    origin: {type: Derived, source: Sponsor}
+    method: DY
+  DVSER:
+    label: 严重方案偏离
+    type: text
+    length: '7'
+    order: 16
+    mandatory: false
+    origin: {type: Protocol, source: Investigator}
+supplemental:
+  domain: SUPPDV
+  label: DV补充修饰语数据集
+  class: 关联数据
+  purpose: 列表
+  repeating: true
+  is_reference_data: false
+  structure: 一个域一个修饰变量一条记录
+  sas_dataset: SUPPDV
+  keys:
+  - STUDYID
+  - RDOMAIN
+  - USUBJID
+  - IDVAR
+  - IDVARVAL
+  - QNAM
+  archive: suppdv.xpt
+  variables:
+    STUDYID:
+      label: 研究标识符
+      type: text
+      length: '8'
+      order: 1
+      mandatory: true
+      key_sequence: 1
+      origin: {type: Protocol, source: Sponsor}
+    RDOMAIN:
+      label: 关联域名缩写
+      type: text
+      length: '2'
+      order: 2
+      mandatory: true
+      key_sequence: 2
+      origin: {type: Assigned, source: Sponsor}
+      codelist: DOMAIN
+    USUBJID:
+      label: 受试者唯一标识符
+      type: text
+      length: '23'
+      order: 3
+      mandatory: true
+      key_sequence: 3
+      origin: {type: Derived, source: Sponsor}
+      method: USUBJID
+    IDVAR:
+      label: 标识变量
+      type: text
+      length: '5'
+      order: 4
+      mandatory: false
+      key_sequence: 4
+      origin: {type: Assigned, source: Sponsor}
+    IDVARVAL:
+      label: 标识变量值
+      type: text
+      length: '2'
+      order: 5
+      mandatory: false
+      key_sequence: 5
+      origin: {type: Assigned, source: Sponsor}
+    QNAM:
+      label: 修饰语变量名称
+      type: text
+      length: '7'
+      order: 6
+      mandatory: true
+      key_sequence: 6
+      origin: {type: Assigned, source: Sponsor}
+    QLABEL:
+      label: 修饰语变量标签
+      type: text
+      length: '19'
+      order: 7
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QVAL:
+      label: 数据值
+      type: text
+      length: '200'
+      order: 8
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+      value_list:
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - DVTERM1
+        label: 方案偏离术语1
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - DVTERM2
+        label: 方案偏离术语2
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+      - where:
+        - variable: QNAM
+          comparator: EQ
+          values:
+          - DVTERM3
+        label: 方案偏离术语3
+        origin: {type: Assigned, source: Sponsor}
+        mandatory: false
+    QORIG:
+      label: 来源
+      type: text
+      length: '8'
+      order: 9
+      mandatory: true
+      origin: {type: Assigned, source: Sponsor}
+    QEVAL:
+      label: 评估人员
+      type: text
+      length: '21'
+      order: 10
+      mandatory: false
+      origin: {type: Assigned, source: Sponsor}
