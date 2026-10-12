@@ -1,0 +1,985 @@
+# 值级元数据(VLM)提取自 dept_std\valuelevel-studyname_sdtm_v1.1.xlsx(key=VLMOID, 值=值项列表; method 含 MT. 原样; description 双语; 已剔除 QVAL)。where → whereclause-*.yaml。
+VL.APRP.RPORRES:
+- item: TEXT
+  order: 1
+  mandatory: false
+  where: WC.APRP.RPTESTCD.TEXT
+  variable: RPORRES
+  data_type: text
+  origin:
+    type: Collected
+    source: Investigator
+- item: DATE
+  order: 2
+  mandatory: false
+  where: WC.APRP.RPTESTCD.DATE
+  variable: RPORRES
+  data_type: date
+  origin:
+    type: Collected
+    source: Investigator
+  display_format: ISO 8601
+VL.APRP.RPSTRESC:
+- item: TEXTC
+  order: 1
+  mandatory: false
+  where: WC.APRP.RPTESTCD.TEXTC
+  variable: RPSTRESC
+  data_type: text
+  origin:
+    type: Derived
+    source: Sponsor
+  method: MT.STRESC
+- item: DATEC
+  order: 2
+  mandatory: false
+  where: WC.APRP.RPTESTCD.DATEC
+  variable: RPSTRESC
+  data_type: date
+  origin:
+    type: Derived
+    source: Sponsor
+  method: MT.STRESC
+  display_format: ISO 8601
+VL.DS.DSDECOD:
+- item: PMST
+  order: 1
+  mandatory: false
+  where: WC.DS.DSCAT.PMST
+  variable: DSDECOD
+  data_type: text
+  origin:
+    type: Assigned
+    source: Sponsor
+  codelist: PROTMLST
+  description_en: Standardized Disposition Term - Protocol Milestone
+  description_cn: 标准化分布事件术语 - 方案里程碑
+- item: COMP
+  order: 2
+  mandatory: false
+  where: WC.DS.DSCAT.COMP
+  variable: DSDECOD
+  data_type: text
+  origin:
+    type: Assigned
+    source: Sponsor
+  codelist: NCOMPLT
+  description_en: Standardized Disposition Term - Disposition Event
+  description_cn: 标准化分布事件术语 - 受试者分布事件
+VL.EG.EGORRES:
+- item: ECG1
+  order: 1
+  mandatory: false
+  where: WC.EG.EGORRES.ECG1
+  variable: EGORRES
+  data_type: text
+  origin:
+    type: Collected
+    source: Investigator
+- item: ECG3
+  order: 2
+  mandatory: false
+  where: WC.EG.EGORRES.ECG3
+  variable: EGORRES
+  data_type: integer
+  origin:
+    type: Collected
+    source: Investigator
+VL.EG.EGSTRESC:
+- item: ECG1
+  order: 1
+  mandatory: false
+  where: WC.EG.EGSTRESC.ECG1
+  variable: EGSTRESC
+  data_type: text
+  origin:
+    type: Derived
+    source: Sponsor
+  method: MT.STRESC
+- item: ECG2
+  order: 2
+  mandatory: false
+  where: WC.EG.EGSTRESC.ECG2
+  variable: EGSTRESC
+  data_type: float
+  origin:
+    type: Derived
+    source: Sponsor
+  method: MT.QTCFSTRESC
+  significant_digits: 8
+- item: ECG3
+  order: 3
+  mandatory: false
+  where: WC.EG.EGSTRESC.ECG3
+  variable: EGSTRESC
+  data_type: integer
+  origin:
+    type: Derived
+    source: Sponsor
+  method: MT.STRESC
+VL.RP.RPORRES:
+- item: TEXT
+  order: 1
+  mandatory: false
+  where: WC.RP.RPTESTCD.TEXT
+  variable: RPORRES
+  data_type: text
+  origin:
+    type: Collected
+    source: Investigator
+- item: DATE
+  order: 2
+  mandatory: false
+  where: WC.RP.RPTESTCD.DATE
+  variable: RPORRES
+  data_type: date
+  origin:
+    type: Collected
+    source: Investigator
+  display_format: ISO 8601
+VL.RP.RPSTRESC:
+- item: TEXTC
+  order: 1
+  mandatory: false
+  where: WC.RP.RPTESTCD.TEXTC
+  variable: RPSTRESC
+  data_type: text
+  origin:
+    type: Derived
+    source: Sponsor
+  method: MT.STRESC
+- item: DATEC
+  order: 2
+  mandatory: false
+  where: WC.RP.RPTESTCD.DATEC
+  variable: RPSTRESC
+  data_type: date
+  origin:
+    type: Derived
+    source: Sponsor
+  method: MT.STRESC
+  display_format: ISO 8601
+VL.RS.RSCAT:
+- item: ONCRSCAT
+  order: 1
+  mandatory: false
+  where: WC.RS.RSCAT.ONCRSCAT.RSCAT
+  variable: RSCAT
+  data_type: text
+  origin:
+    type: Assigned
+    source: Sponsor
+  codelist: ONCRSCAT
+  description_en: Category for Assessment - Oncology Response
+  description_cn: 评估的类别 - 肿瘤反应
+- item: CCCAT
+  order: 2
+  mandatory: false
+  where: WC.RS.RSCAT.CCCAT.RSCAT
+  variable: RSCAT
+  data_type: text
+  origin:
+    type: Assigned
+    source: Sponsor
+  codelist: CCCAT
+  description_en: Category for Assessment - Clinical Classification
+  description_cn: 评估的类别 - 临床状态
+VL.RS.RSDTC:
+- item: ONCRSR
+  order: 1
+  mandatory: false
+  where: WC.RS.RSTESTCD.ONCRSR.RSDTC
+  variable: RSDTC
+  data_type: date
+  origin:
+    type: Derived
+    source: Sponsor
+  method: MT.RSDTC
+  description_en: Date/Time of Assessment - Oncology Response
+  description_cn: 评估的日期/时间 - 肿瘤反应
+  display_format: ISO 8601
+- item: CCCAT
+  order: 2
+  mandatory: false
+  where: WC.RS.RSCAT.CCCAT.RSDTC
+  variable: RSDTC
+  data_type: date
+  origin:
+    type: Collected
+    source: Investigator
+  description_en: Date/Time of Assessment - Clinical Classification
+  description_cn: 评估的日期/时间 - 临床状态
+  display_format: ISO 8601
+VL.RS.RSORRES:
+- item: ONCRSR
+  order: 1
+  mandatory: false
+  where: WC.RS.RSTESTCD.ONCRSR.RSORRES
+  variable: RSORRES
+  data_type: text
+  origin:
+    type: Collected
+    source: Investigator
+  description_en: Result or Finding in Original Units - Oncology Response Assessment Result
+  description_cn: 结果或发现-原始单位 - 肿瘤反应评价结果
+- item: NY
+  order: 2
+  mandatory: false
+  where: WC.RS.RSTESTCD.NY.RSORRES
+  variable: RSORRES
+  data_type: text
+  origin:
+    type: Collected
+    source: Investigator
+  description_en: Result or Finding in Original Units - No Yes Response
+  description_cn: 结果或发现-原始单位 - 是非应答
+- item: CCCAT
+  order: 3
+  mandatory: false
+  where: WC.RS.RSCAT.CCCAT.RSORRES
+  variable: RSORRES
+  data_type: text
+  origin:
+    type: Collected
+    source: Investigator
+  codelist: ECOG101OR
+  description_en: Result or Finding in Original Units - Clinical Classification
+  description_cn: 结果或发现-原始单位 - 临床状态
+VL.RS.RSSTRESC:
+- item: ONCRSR
+  order: 1
+  mandatory: false
+  where: WC.RS.RSTESTCD.ONCRSR.RSSTRESC
+  variable: RSSTRESC
+  data_type: text
+  origin:
+    type: Derived
+    source: Sponsor
+  codelist: ONCRSR
+  method: MT.STRESC.STD
+  description_en: Character Result/Finding in Std Format - Oncology Response Assessment Result
+  description_cn: 字符型结果/发现-标准格式 - 肿瘤反应评价结果
+- item: NY
+  order: 2
+  mandatory: false
+  where: WC.RS.RSTESTCD.NY.RSSTRESC
+  variable: RSSTRESC
+  data_type: text
+  origin:
+    type: Derived
+    source: Sponsor
+  codelist: NY_NY
+  method: MT.STRESC.STD
+  description_en: Character Result/Finding in Std Format - No Yes Response
+  description_cn: 字符型结果/发现-标准格式 - 是非应答
+- item: CCCAT
+  order: 3
+  mandatory: false
+  where: WC.RS.RSCAT.CCCAT.RSSTRESC
+  variable: RSSTRESC
+  data_type: text
+  origin:
+    type: Derived
+    source: Sponsor
+  codelist: ECOG101STR
+  method: MT.STRESC.STD
+  description_en: Character Result/Finding in Std Format - Clinical Classification
+  description_cn: 字符型结果/发现-标准格式 - 临床状态
+VL.RS.RSTEST:
+- item: ONCRSCAT
+  order: 1
+  mandatory: false
+  where: WC.RS.RSCAT.ONCRSCAT.RSTEST
+  variable: RSTEST
+  data_type: text
+  origin:
+    type: Collected
+    source: Investigator
+  codelist: ONCRTS
+  description_en: Assessment Name - Oncology Response
+  description_cn: 评估名称 - 肿瘤反应
+- item: CCCAT
+  order: 2
+  mandatory: false
+  where: WC.RS.RSCAT.CCCAT.RSTEST
+  variable: RSTEST
+  data_type: text
+  origin:
+    type: Collected
+    source: Investigator
+  codelist: ECOG1TN
+  description_en: Assessment Name - Clinical Classification
+  description_cn: 评估名称 - 临床状态
+VL.RS.RSTESTCD:
+- item: ONCRSCAT
+  order: 1
+  mandatory: false
+  where: WC.RS.RSCAT.ONCRSCAT.RSTESTCD
+  variable: RSTESTCD
+  data_type: text
+  origin:
+    type: Assigned
+    source: Sponsor
+  codelist: ONCRTSCD
+  description_en: Assessment Short Name - Oncology Response
+  description_cn: 评估简称 - 肿瘤反应
+- item: CCCAT
+  order: 2
+  mandatory: false
+  where: WC.RS.RSCAT.CCCAT.RSTESTCD
+  variable: RSTESTCD
+  data_type: text
+  origin:
+    type: Assigned
+    source: Sponsor
+  codelist: ECOG1TC
+  description_en: Assessment Short Name - Clinical Classification
+  description_cn: 评估简称 - 临床状态
+VL.SE.SEENDTC:
+- item: SCRN
+  order: 1
+  mandatory: false
+  where: WC.SE.ETCD.SCRN
+  variable: SEENDTC
+  data_type: date
+  origin:
+    type: Derived
+    source: Sponsor
+  method: MT.SEENDTC.SCRN
+- item: TRT
+  order: 2
+  mandatory: false
+  where: WC.SE.ETCD.TRT
+  variable: SEENDTC
+  data_type: date
+  origin:
+    type: Derived
+    source: Sponsor
+  method: MT.SEENDTC.TRT
+- item: FU
+  order: 3
+  mandatory: false
+  where: WC.SE.ETCD.FU
+  variable: SEENDTC
+  data_type: date
+  origin:
+    type: Derived
+    source: Sponsor
+  method: MT.SEENDTC.FU
+VL.SE.SESTDTC:
+- item: SCRN
+  order: 1
+  mandatory: false
+  where: WC.SE.ETCD.SCRN
+  variable: SESTDTC
+  data_type: date
+  origin:
+    type: Derived
+    source: Sponsor
+  method: MT.SESTDTC.SCRN
+- item: TRT
+  order: 2
+  mandatory: false
+  where: WC.SE.ETCD.TRT
+  variable: SESTDTC
+  data_type: date
+  origin:
+    type: Derived
+    source: Sponsor
+  method: MT.SESTDTC.TRT
+- item: FU
+  order: 3
+  mandatory: false
+  where: WC.SE.ETCD.FU
+  variable: SESTDTC
+  data_type: date
+  origin:
+    type: Derived
+    source: Sponsor
+  method: MT.SESTDTC.FU
+VL.TS.TSVAL:
+- item: ACTSUB
+  order: 1
+  mandatory: false
+  where: WC.TS.TSPARMCD.ACTSUB
+  variable: TSVAL
+  data_type: integer
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Actual Number of Subjects
+  description_cn: Actual Number of Subjects
+- item: ADAPT
+  order: 2
+  mandatory: false
+  where: WC.TS.TSPARMCD.ADAPT
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: NY_N
+  description_en: Adaptive Design
+  description_cn: Adaptive Design
+- item: ADDON
+  order: 3
+  mandatory: false
+  where: WC.TS.TSPARMCD.ADDON
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: NY_N
+  description_en: Added on to Existing Treatments
+  description_cn: Added on to Existing Treatments
+- item: AGEMAX
+  order: 4
+  mandatory: false
+  where: WC.TS.TSPARMCD.AGEMAX
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Planned Maximum Age of Subjects
+  description_cn: Planned Maximum Age of Subjects
+- item: AGEMIN
+  order: 5
+  mandatory: false
+  where: WC.TS.TSPARMCD.AGEMIN
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Planned Minimum Age of Subjects
+  description_cn: Planned Minimum Age of Subjects
+- item: COMPTRT
+  order: 6
+  mandatory: false
+  where: WC.TS.TSPARMCD.COMPTRT
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Comparative Treatment Name
+  description_cn: Comparative Treatment Name
+- item: CURTRT
+  order: 7
+  mandatory: false
+  where: WC.TS.TSPARMCD.CURTRT
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Current Therapy or Treatment
+  description_cn: Current Therapy or Treatment
+- item: DCUTDESC
+  order: 8
+  mandatory: false
+  where: WC.TS.TSPARMCD.DCUTDESC
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Data Cutoff Description
+  description_cn: Data Cutoff Description
+- item: DCUTDTC
+  order: 9
+  mandatory: false
+  where: WC.TS.TSPARMCD.DCUTDTC
+  variable: TSVAL
+  data_type: date
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Data Cutoff Date
+  description_cn: Data Cutoff Date
+  display_format: ISO 8601
+- item: EXTTIND
+  order: 10
+  mandatory: false
+  where: WC.TS.TSPARMCD.EXTTIND
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: NY_N
+  description_en: Extension Trial Indicator
+  description_cn: Extension Trial Indicator
+- item: FCNTRY
+  order: 11
+  mandatory: false
+  where: WC.TS.TSPARMCD.FCNTRY
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: ISO3166
+  description_en: Planned Country of Investigational Sites
+  description_cn: Planned Country of Investigational Sites
+- item: HLTSUBJI
+  order: 12
+  mandatory: false
+  where: WC.TS.TSPARMCD.HLTSUBJI
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: NY_N
+  description_en: Healthy Subject Indicator
+  description_cn: Healthy Subject Indicator
+- item: INDIC
+  order: 13
+  mandatory: false
+  where: WC.TS.TSPARMCD.INDIC
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Trial Disease/Condition Indication
+  description_cn: Trial Disease/Condition Indication
+- item: INTMODEL
+  order: 14
+  mandatory: false
+  where: WC.TS.TSPARMCD.INTMODEL
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: INTMODEL
+  description_en: Intervention Model
+  description_cn: Intervention Model
+- item: INTTYPE
+  order: 15
+  mandatory: false
+  where: WC.TS.TSPARMCD.INTTYPE
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: INTTYPE
+  description_en: Intervention Type
+  description_cn: Intervention Type
+- item: LENGTH
+  order: 16
+  mandatory: false
+  where: WC.TS.TSPARMCD.LENGTH
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Trial Length
+  description_cn: Trial Length
+- item: NARMS
+  order: 17
+  mandatory: false
+  where: WC.TS.TSPARMCD.NARMS
+  variable: TSVAL
+  data_type: integer
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Planned Number of Arms
+  description_cn: Planned Number of Arms
+- item: NCOHORT
+  order: 18
+  mandatory: false
+  where: WC.TS.TSPARMCD.NCOHORT
+  variable: TSVAL
+  data_type: integer
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Number of Groups/Cohorts
+  description_cn: Number of Groups/Cohorts
+- item: OBJPRIM
+  order: 19
+  mandatory: false
+  where: WC.TS.TSPARMCD.OBJPRIM
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Trial Primary Objective
+  description_cn: Trial Primary Objective
+- item: OBJSEC
+  order: 20
+  mandatory: false
+  where: WC.TS.TSPARMCD.OBJSEC
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Trial Secondary Objective
+  description_cn: Trial Secondary Objective
+- item: OBJEXP
+  order: 21
+  mandatory: false
+  where: WC.TS.TSPARMCD.OBJEXP
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Trial Exploratory Objective
+  description_cn: Trial Exploratory Objective
+- item: OUTMSPRI
+  order: 22
+  mandatory: false
+  where: WC.TS.TSPARMCD.OUTMSPRI
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Primary Outcome Measure
+  description_cn: Primary Outcome Measure
+- item: OUTMSSEC
+  order: 23
+  mandatory: false
+  where: WC.TS.TSPARMCD.OUTMSSEC
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Secondary Outcome Measure
+  description_cn: Secondary Outcome Measure
+- item: OUTMSEXP
+  order: 24
+  mandatory: false
+  where: WC.TS.TSPARMCD.OUTMSEXP
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Exploratory Outcome Measure
+  description_cn: Exploratory Outcome Measure
+- item: PCLAS
+  order: 25
+  mandatory: false
+  where: WC.TS.TSPARMCD.PCLAS
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Pharmacologic Class
+  description_cn: Pharmacologic Class
+- item: PLANSUB
+  order: 26
+  mandatory: false
+  where: WC.TS.TSPARMCD.PLANSUB
+  variable: TSVAL
+  data_type: integer
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Planned Number of Subjects
+  description_cn: Planned Number of Subjects
+- item: PDPSTIND
+  order: 27
+  mandatory: false
+  where: WC.TS.TSPARMCD.PDPSTIND
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: NY_N
+  description_en: Pediatric Postmarket Study Indicator
+  description_cn: Pediatric Postmarket Study Indicator
+- item: PDSTIND
+  order: 28
+  mandatory: false
+  where: WC.TS.TSPARMCD.PDSTIND
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: NY_N
+  description_en: Pediatric Study Indicator
+  description_cn: Pediatric Study Indicator
+- item: PIPIND
+  order: 29
+  mandatory: false
+  where: WC.TS.TSPARMCD.PIPIND
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: NY_N
+  description_en: Pediatric Investigation Plan Indicator
+  description_cn: Pediatric Investigation Plan Indicator
+- item: RANDOM
+  order: 30
+  mandatory: false
+  where: WC.TS.TSPARMCD.RANDOM
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: NY_N
+  description_en: Trial is Randomized
+  description_cn: Trial is Randomized
+- item: RANDQT
+  order: 31
+  mandatory: false
+  where: WC.TS.TSPARMCD.RANDQT
+  variable: TSVAL
+  data_type: integer
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Randomization Quotient
+  description_cn: Randomization Quotient
+- item: RDIND
+  order: 32
+  mandatory: false
+  where: WC.TS.TSPARMCD.RDIND
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: NY_N
+  description_en: Rare Disease Indicator
+  description_cn: Rare Disease Indicator
+- item: REGID
+  order: 33
+  mandatory: false
+  where: WC.TS.TSPARMCD.REGID
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Registry Identifier
+  description_cn: Registry Identifier
+- item: SDTIGVER
+  order: 34
+  mandatory: false
+  where: WC.TS.TSPARMCD.SDTIGVER
+  variable: TSVAL
+  data_type: float
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: SDTM IG Version
+  description_cn: SDTM IG Version
+  significant_digits: 1
+- item: SDTMVER
+  order: 35
+  mandatory: false
+  where: WC.TS.TSPARMCD.SDTMVER
+  variable: TSVAL
+  data_type: float
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: SDTM Version
+  description_cn: SDTM Version
+  significant_digits: 1
+- item: SENDTC
+  order: 36
+  mandatory: false
+  where: WC.TS.TSPARMCD.SENDTC
+  variable: TSVAL
+  data_type: date
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Study End Date
+  description_cn: Study End Date
+  display_format: ISO 8601
+- item: SEXPOP
+  order: 37
+  mandatory: false
+  where: WC.TS.TSPARMCD.SEXPOP
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: SEXPOP
+  description_en: Sex of Participants
+  description_cn: Sex of Participants
+- item: SPONSOR
+  order: 38
+  mandatory: false
+  where: WC.TS.TSPARMCD.SPONSOR
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Clinical Study Sponsor
+  description_cn: Clinical Study Sponsor
+- item: SSTDTC
+  order: 39
+  mandatory: false
+  where: WC.TS.TSPARMCD.SSTDTC
+  variable: TSVAL
+  data_type: date
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Study Start Date
+  description_cn: Study Start Date
+  display_format: ISO 8601
+- item: STOPRULE
+  order: 40
+  mandatory: false
+  where: WC.TS.TSPARMCD.STOPRULE
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Study Stop Rules
+  description_cn: Study Stop Rules
+- item: STRATFCT
+  order: 41
+  mandatory: false
+  where: WC.TS.TSPARMCD.STRATFCT
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Stratification Factor
+  description_cn: Stratification Factor
+- item: STYPE
+  order: 42
+  mandatory: false
+  where: WC.TS.TSPARMCD.STYPE
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: STYPE
+  description_en: Study Type
+  description_cn: Study Type
+- item: TBLIND
+  order: 43
+  mandatory: false
+  where: WC.TS.TSPARMCD.TBLIND
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: TBLIND
+  description_en: Trial Blinding Schema
+  description_cn: Trial Blinding Schema
+- item: TCNTRL
+  order: 44
+  mandatory: false
+  where: WC.TS.TSPARMCD.TCNTRL
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: TCNTRL
+  description_en: Control Type
+  description_cn: Control Type
+- item: TDIGRP
+  order: 45
+  mandatory: false
+  where: WC.TS.TSPARMCD.TDIGRP
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Diagnosis Group
+  description_cn: Diagnosis Group
+- item: THERAREA
+  order: 46
+  mandatory: false
+  where: WC.TS.TSPARMCD.THERAREA
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Therapeutic Area
+  description_cn: Therapeutic Area
+- item: TINDTP
+  order: 47
+  mandatory: false
+  where: WC.TS.TSPARMCD.TINDTP
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: TINDTP
+  description_en: Trial Intent Type
+  description_cn: Trial Intent Type
+- item: TITLE
+  order: 48
+  mandatory: false
+  where: WC.TS.TSPARMCD.TITLE
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Trial Title
+  description_cn: Trial Title
+- item: TPHASE
+  order: 49
+  mandatory: false
+  where: WC.TS.TSPARMCD.TPHASE
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: TPHASE
+  description_en: Trial Phase Classification
+  description_cn: Trial Phase Classification
+- item: TRT
+  order: 50
+  mandatory: false
+  where: WC.TS.TSPARMCD.TRT
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  description_en: Investigational Therapy or Treatment
+  description_cn: Investigational Therapy or Treatment
+- item: TTYPE
+  order: 51
+  mandatory: false
+  where: WC.TS.TSPARMCD.TTYPE
+  variable: TSVAL
+  data_type: text
+  origin:
+    type: Protocol
+    source: Sponsor
+  codelist: TTYPE
+  description_en: Trial Type
+  description_cn: Trial Type

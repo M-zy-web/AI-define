@@ -1,0 +1,305 @@
+# 部门级 computation methods 全量提取自 dept_std\computation-methods-studyname_sdtm_v1.1.xlsx(key = MethodOID 去 'MT.')。项目层面按 datasets/*.yaml 的 method 引用筛选。
+AETRTEM:
+  name_en: Algorithm to derive AETRTEM
+  name_cn: AETRTEM的计算方式
+  type: Computation
+  description_en: 'Set to "Y" if AESTDTC >=: DM.RFXSTDTC > "", or both AESTDTC and AEENDTC are missing, or AESTDTC is missing and AEENDTC >=: DM.RFXSTDTC > "". Set to "N" otherwise.'
+  description_cn: '若AESTDTC >=: DM.RFXSTDTC > ""，或AESTDTC和AEENDTC均缺失，或AESTDTC缺失且AEENDTC >=: DM.RFXSTDTC > ""，赋值为“Y”，否则赋值为“N”。'
+AGE:
+  name_en: Algorithm to derive AGE
+  name_cn: AGE的计算方式
+  type: Computation
+  description_en: Calculate using subject's Informed Consent Date and Birth Date.
+  description_cn: 使用受试者知情同意书签署日期和出生日期计算。
+APID:
+  name_en: Algorithm to derive APID
+  name_cn: APID的计算方式
+  type: Computation
+  description_en: Concatenation of STUDYID, SITEID, SUBJID, "AP" with "-". Use the last SUBJID for subject with multiple screenings.
+  description_cn: 合并STUDYID、SITEID、SUBJID、"AP"并用“-”隔开。对于重复筛选的受试者使用最后一次筛选的SUBJID。
+ARMNRS:
+  name_en: Algorithm to derive ARMNRS
+  name_cn: ARMNRS的计算方式
+  type: Computation
+  description_en: If subject's Eligibility Status in Enrollment page is "Screen Failure" then set to "SCREEN FAILURE", or if DM.RFSTDTC is null then set to "ASSIGNED, NOT TREATED".
+  description_cn: 若受试者入组信息页中筛选结果为“筛选失败”则赋值为“筛选失败”；否则若DM.RFSTDTC值为空则赋值为“已分组，未治疗”。
+BLFL:
+  name_en: Algorithm to derive BLFL
+  name_cn: BLFL的计算方式
+  type: Computation
+  description_en: Set to "Y" for last record with non-null original result on or before DM.RFSTDTC. Null otherwise.
+  description_cn: 对DM.RFSTDTC之前或当天的末次非缺失原始结果设置为"Y"，否则赋空值。
+DTHFL:
+  name_en: Algorithm to derive DTHFL
+  name_cn: DTHFL的计算方式
+  type: Computation
+  description_en: Set to "Y" if DM.DTHDTC is populated.
+  description_cn: 若生成了DM.DTHDTC则赋值为“Y”。
+DY:
+  name_en: Algorithm to derive DY
+  name_cn: DY的计算方式
+  type: Computation
+  description_en: Study day relative to DM.RFSTDTC. Date - DM.RFSTDTC + 1 if on or after DM.RFSTDTC. Date - DM.RFSTDTC if date precedes DM.RFSTDTC.
+  description_cn: 相对于DM.RFSTDTC的研究日。若日期等于或晚于DM.RFSTDTC, 则为日期 - DM.RFSTDTC + 1。若日期早于DM.RFSTDTC, 则为日期 - DM.RFSTDTC。
+EGSTRESC.QTCF:
+  name_en: Algorithm to derive EGSTRESC.QTCF
+  name_cn: EGSTRESC.QTCF的计算方式
+  type: Computation
+  description_en: 'QTCF=QT (msec)/(RR^0.33)
+
+    RR=60/Heart Rate (beats/min).'
+  description_cn: 'QTCF=QT (msec)/(RR^0.33)
+
+    RR=60/心率 (次/min)。'
+ENTPT:
+  name_en: Algorithm to derive ENTPT
+  name_cn: ENTPT的计算方式
+  type: Computation
+  description_en: Equal to DM.RFPENDTC for the subject if --ENRTPT is not missing.
+  description_cn: 当--ENRTPT有值时，等于受试者DM.RFPENDTC。
+EPOCH:
+  name_en: Algorithm to derive EPOCH
+  name_cn: EPOCH的计算方式
+  type: Computation
+  description_en: SE.EPOCH where date >= SE.SESTDTC and date < SE.SEENDTC.
+  description_cn: 日期 >= SE.SESTDTC且日期 < SE.SEENDTC对应的SE.EPOCH。
+IEORRES:
+  name_en: Algorithm to derive IEORRES
+  name_cn: IEORRES的计算方式
+  type: Computation
+  description_en: Set to "N" if IECAT = "INCLUSION", "Y" if IECAT = "EXCLUSION".
+  description_cn: 若IECAT = “入选标准”则赋值为“N”，若IECAT = “排除标准”则赋值为“Y”。
+LBSTNRHI:
+  name_en: Algorithm to derive LBSTNRHI
+  name_cn: LBSTNRHI的计算方式
+  type: Computation
+  description_en: Equal to LBORNRHI in standard units.
+  description_cn: LBORNRHI在标准单位下的取值。
+LBSTNRLO:
+  name_en: Algorithm to derive LBSTNRLO
+  name_cn: LBSTNRLO的计算方式
+  type: Computation
+  description_en: Equal to LBORNRLO in standard units.
+  description_cn: LBORNRLO在标准单位下的取值。
+LBSTRESC:
+  name_en: Algorithm to derive LBSTRESC
+  name_cn: LBSTRESC的计算方式
+  type: Computation
+  description_en: Equal to LBORRES in standard units.
+  description_cn: LBORRES在标准单位下的取值。
+LOBXFL:
+  name_en: Algorithm to derive LOBXFL
+  name_cn: LOBXFL的计算方式
+  type: Computation
+  description_en: Set to "Y" for last record with non-null original result on or before DM.RFXSTDTC. Null otherwise.
+  description_cn: 对DM.RFXSTDTC之前或当天的末次非缺失原始结果赋值为“Y”，否则赋空值。
+NRIND:
+  name_en: Algorithm to derive NRIND
+  name_cn: NRIND的计算方式
+  type: Computation
+  description_en: Set to "NORMAL" if . < --STNRLO <= --STRESN <= --STNRHI, "LOW" if . < --STRESN < --STNRLO, "HIGH" if --STRESN > --STNRHI > ..
+  description_cn: '若. < --STNRLO <= --STRESN <= --STNRHI则赋值为“正常”，
+
+    若. < --STRESN < --STNRLO则赋值为“低”，
+
+    若--STRESN > --STNRHI > .则赋值为“高”。'
+RDEVID:
+  name_en: Algorithm to derive RDEVID
+  name_cn: RDEVID的计算方式
+  type: Computation
+  description_en: pending
+  description_cn: pending
+RFCENDTC:
+  name_en: Algorithm to derive RFCENDTC
+  name_cn: RFCENDTC的计算方式
+  type: Computation
+  description_en: The last date/time of exposure to any protocol-specified challenge agent, equal to the earliest value of AG. AGENDTC.
+  description_cn: 任意试验方案指定激发剂的末次暴露日期/时间，等于最早的AG. AGENDTC。
+RFCSTDTC:
+  name_en: Algorithm to derive RFCSTDTC
+  name_cn: RFCSTDTC的计算方式
+  type: Computation
+  description_en: The first date/time  of exposure to any protocol-specified challenge agent, equal to the earliest value of AG. AGSTDTC.
+  description_cn: 任意试验方案指定激发剂的首次暴露日期/时间，等于最早的AG. AGSTDTC。
+RFENDTC:
+  name_en: Algorithm to derive RFENDTC
+  name_cn: RFENDTC的计算方式
+  type: Computation
+  description_en: The date/time when subject was determined to have ended study treatment. Null for screen failures or unassigned subjects.
+  description_cn: 研究治疗的研究者判断的治疗结束日期。若受试者筛选失败或未分组则值为空。
+RFPENDTC:
+  name_en: Algorithm to derive RFPENDTC
+  name_cn: RFPENDTC的计算方式
+  type: Computation
+  description_en: The latest date collected for subject across datasets.
+  description_cn: 受试者在所有数据集中收集到的最晚日期。
+RFSTDTC:
+  name_en: Algorithm to derive RFSTDTC
+  name_cn: RFSTDTC的计算方式
+  type: Computation
+  description_en: The date/time when subject was first exposed to study treatment. Null for screen failures or unassigned subjects.
+  description_cn: 研究治疗的首次暴露日期/时间。若受试者筛选失败或未分组则值为空。
+RFXENDTC:
+  name_en: Algorithm to derive RFXENDTC
+  name_cn: RFXENDTC的计算方式
+  type: Computation
+  description_en: The last date/time of exposure to any protocol-specified treatment, equal to the latest value of EX.EXENDTC.
+  description_cn: 任意试验方案指定治疗的末次暴露日期/时间，等于最晚的EX.EXENDTC。
+RFXSTDTC:
+  name_en: Algorithm to derive RFXSTDTC
+  name_cn: RFXSTDTC的计算方式
+  type: Computation
+  description_en: The first date/time of exposure to any protocol-specified treatment, equal to the earliest value of EX.EXSTDTC.
+  description_cn: 任意试验方案指定治疗的首次暴露日期/时间，等于最早的EX.EXSTDTC。
+RSDTC:
+  name_en: Algorithm to derive RSDTC
+  name_cn: RSDTC的计算方式
+  type: Computation
+  description_en: pending
+  description_cn: pending
+RSUBJID:
+  name_en: Algorithm to derive RSUBJID
+  name_cn: RSUBJID的计算方式
+  type: Computation
+  description_en: Subjid in DM/DC who have related with person in RP
+  description_cn: DM/DC中与RP中的人有关联的受试者
+SEENDTC:
+  name_en: Algorithm to derive SEENDTC
+  name_cn: SEENDTC的计算方式
+  type: Computation
+  description_en: Equal to the start of the next Element.
+  description_cn: 下一个元素的开始的日期。
+SEENDTC.FU:
+  name_en: Algorithm to derive SEENDTC.FU
+  name_cn: SEENDTC.FU的计算方式
+  type: Computation
+  description_en: Date of End of Participation
+  description_cn: 最后参与试验日期
+SEENDTC.SCRN:
+  name_en: Algorithm to derive SEENDTC.SCRN
+  name_cn: SEENDTC.SCRN的计算方式
+  type: Computation
+  description_en: First administration of investigational product
+  description_cn: 首次给药日期
+SEENDTC.TRT:
+  name_en: Algorithm to derive SEENDTC.TRT
+  name_cn: SEENDTC.TRT的计算方式
+  type: Computation
+  description_en: End of Treatment Date
+  description_cn: 治疗结束日期
+SEQ:
+  name_en: Algorithm to derive SEQ
+  name_cn: SEQ的计算方式
+  type: Computation
+  description_en: Unique sequence number within a subject, sorted in ascending order by the key variables in the dataset, restarting at 1 and increments by 1 for every subject.
+  description_cn: 受试者的唯一序号，按照数据集内关键变量升序排序，从1开始以1递增。
+SESTDTC:
+  name_en: Algorithm to derive SESTDTC
+  name_cn: SESTDTC的计算方式
+  type: Computation
+  description_en: Equal to the date for that subject which exists in the data for the defined start of the Element.
+  description_cn: 受试者在数据中定义的元素开始的日期。
+SESTDTC.FU:
+  name_en: Algorithm to derive SESTDTC.FU
+  name_cn: SESTDTC.FU的计算方式
+  type: Computation
+  description_en: End of Treatment Date
+  description_cn: 治疗结束日期
+SESTDTC.SCRN:
+  name_en: Algorithm to derive SESTDTC.SCRN
+  name_cn: SESTDTC.SCRN的计算方式
+  type: Computation
+  description_en: Study informed consent date
+  description_cn: 签署知情同意日期
+SESTDTC.TRT:
+  name_en: Algorithm to derive SESTDTC.TRT
+  name_cn: SESTDTC.TRT的计算方式
+  type: Computation
+  description_en: First administration of investigational product
+  description_cn: 首次给药日期
+STNRHI:
+  name_en: Algorithm to derive STNRHI
+  name_cn: STNRHI的计算方式
+  type: Computation
+  description_en: Equal to --ORNRHI.
+  description_cn: 等于--ORNRHI。
+STNRLO:
+  name_en: Algorithm to derive STNRLO
+  name_cn: STNRLO的计算方式
+  type: Computation
+  description_en: Equal to --ORNRLO.
+  description_cn: 等于--ORNRLO。
+STRESC:
+  name_en: Algorithm to derive STRESC
+  name_cn: STRESC的计算方式
+  type: Computation
+  description_en: Equal to --ORRES.
+  description_cn: 等于--ORRES。
+STRESC.STD:
+  name_en: Algorithm to derive STRESC.STD
+  name_cn: STRESC.STD的计算方式
+  type: Computation
+  description_en: Standardized --ORRES.
+  description_cn: 标准格式的--ORRES。
+STRESN:
+  name_en: Algorithm to derive STRESN
+  name_cn: STRESN的计算方式
+  type: Computation
+  description_en: Copied in numeric format from --STRESC.
+  description_cn: --STRESC的数值型取值。
+STRESU:
+  name_en: Algorithm to derive STRESU
+  name_cn: STRESU的计算方式
+  type: Computation
+  description_en: Equal to --ORRESU.
+  description_cn: 等于--ORRESU。
+STTPT:
+  name_en: Algorithm to derive STTPT
+  name_cn: STTPT的计算方式
+  type: Computation
+  description_en: Equal to DM.RFPENDTC for the subject if --STRTPT is not missing.
+  description_cn: 当--STRTPT有值时，等于受试者DM.RFPENDTC。
+SV.VISIT:
+  name_en: Algorithm to derive SV.VISIT
+  name_cn: SV.VISIT的计算方式
+  type: Computation
+  description_en: For scheduled visits, equal to the collected visit name; for unscheduled visits, equal to the concatenation of the latest scheduled SV.VISIT, "Unscheduled", the unscheduled VISITNUM with
+    "_".
+  description_cn: 对于计划内访视，等于收集的访视名称；对于计划外访视，合并最近一次计划内访视SV.VISIT、“计划外访视”、计划外访视编号并用“_”隔开。
+SV.VISITNUM:
+  name_en: Algorithm to derive SV.VISITNUM
+  name_cn: SV.VISITNUM的计算方式
+  type: Computation
+  description_en: For scheduled visits, equal to the TV.VISITNUM of corresponding VISIT; for unscheduled visits, sorted in ascending order by SV.SVSTDTC, restarting at the TV.VISITNUM of the latest scheduled
+    VISIT and increments by 0.01.
+  description_cn: 对于计划内访视，等于VISIT对应的TV.VISITNUM；对于计划外访视，按SV.SVSTDTC升序排序，从最近一次计划内访视VISIT对应的TV.VISITNUM开始以0.01递增。
+SVENDTC:
+  name_en: Algorithm to derive SVENDTC
+  name_cn: SVENDTC的计算方式
+  type: Computation
+  description_en: The latest date/time of a visit across all datasets.
+  description_cn: 所有数据集中同一访视的最晚日期/时间。
+SVSTDTC:
+  name_en: Algorithm to derive SVSTDTC
+  name_cn: SVSTDTC的计算方式
+  type: Computation
+  description_en: The earlist date/time of a visit across all datasets. Equal to DM.RFICDTC for Screening visit.
+  description_cn: 所有数据集中同一访视的最早日期/时间。对于筛选期访视，等于DM.RFICDTC。
+SVUPDES:
+  name_en: Algorithm to derive SVUPDES
+  name_cn: SVUPDES的计算方式
+  type: Computation
+  description_en: For unscheduled visits, equal to the concatenation of capitalized dataset names of raw data with ", ".
+  description_cn: 对于计划外访视，合并大写格式的原始数据集名称并用“, ”隔开。
+TRT:
+  name_en: Algorithm to derive TRT
+  name_cn: TRT的计算方式
+  type: Computation
+  description_en: Derived by matching blind code and kit number.
+  description_cn: 根据盲底及药物编号匹配得到。
+USUBJID:
+  name_en: Algorithm to derive USUBJID
+  name_cn: USUBJID的计算方式
+  type: Computation
+  description_en: Concatenation of STUDYID, SITEID, SUBJID with "-". Use the last SUBJID for subject with multiple screenings.
+  description_cn: 合并STUDYID、SITEID、SUBJID并用“-”隔开。对于重复筛选的受试者使用最后一次筛选的SUBJID。

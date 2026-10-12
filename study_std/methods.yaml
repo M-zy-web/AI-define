@@ -1,0 +1,137 @@
+# 项目级 methods (language=CN, 从 34 个 domain yaml 收集变量级+值级引用, 在 dept_std\computation-methods-studyname_sdtm_v1.1.yaml 中取子集)。
+AETRTEM:
+  name: AETRTEM的计算方式
+  type: Computation
+  description: '若AESTDTC >=: DM.RFXSTDTC > ""，或AESTDTC和AEENDTC均缺失，或AESTDTC缺失且AEENDTC >=: DM.RFXSTDTC > ""，赋值为“Y”，否则赋值为“N”。'
+AGE:
+  name: AGE的计算方式
+  type: Computation
+  description: 使用受试者知情同意书签署日期和出生日期计算。
+DTHFL:
+  name: DTHFL的计算方式
+  type: Computation
+  description: 若生成了DM.DTHDTC则赋值为“Y”。
+DY:
+  name: DY的计算方式
+  type: Computation
+  description: 相对于DM.RFSTDTC的研究日。若日期等于或晚于DM.RFSTDTC, 则为日期 - DM.RFSTDTC + 1。若日期早于DM.RFSTDTC, 则为日期 - DM.RFSTDTC。
+ENTPT:
+  name: ENTPT的计算方式
+  type: Computation
+  description: 当--ENRTPT有值时，等于受试者DM.RFPENDTC。
+EPOCH:
+  name: EPOCH的计算方式
+  type: Computation
+  description: 日期 >= SE.SESTDTC且日期 < SE.SEENDTC对应的SE.EPOCH。
+LBSTNRHI:
+  name: LBSTNRHI的计算方式
+  type: Computation
+  description: LBORNRHI在标准单位下的取值。
+LBSTNRLO:
+  name: LBSTNRLO的计算方式
+  type: Computation
+  description: LBORNRLO在标准单位下的取值。
+LBSTRESC:
+  name: LBSTRESC的计算方式
+  type: Computation
+  description: LBORRES在标准单位下的取值。
+LOBXFL:
+  name: LOBXFL的计算方式
+  type: Computation
+  description: 对DM.RFXSTDTC之前或当天的末次非缺失原始结果赋值为“Y”，否则赋空值。
+NRIND:
+  name: NRIND的计算方式
+  type: Computation
+  description: '若. < --STNRLO <= --STRESN <= --STNRHI则赋值为“正常”，
+
+    若. < --STRESN < --STNRLO则赋值为“低”，
+
+    若--STRESN > --STNRHI > .则赋值为“高”。'
+RFENDTC:
+  name: RFENDTC的计算方式
+  type: Computation
+  description: 研究治疗的研究者判断的治疗结束日期。若受试者筛选失败或未分组则值为空。
+RFPENDTC:
+  name: RFPENDTC的计算方式
+  type: Computation
+  description: 受试者在所有数据集中收集到的最晚日期。
+RFSTDTC:
+  name: RFSTDTC的计算方式
+  type: Computation
+  description: 研究治疗的首次暴露日期/时间。若受试者筛选失败或未分组则值为空。
+RFXENDTC:
+  name: RFXENDTC的计算方式
+  type: Computation
+  description: 任意试验方案指定治疗的末次暴露日期/时间，等于最晚的EX.EXENDTC。
+RFXSTDTC:
+  name: RFXSTDTC的计算方式
+  type: Computation
+  description: 任意试验方案指定治疗的首次暴露日期/时间，等于最早的EX.EXSTDTC。
+RSDTC:
+  name: RSDTC的计算方式
+  type: Computation
+  description: pending
+SEENDTC:
+  name: SEENDTC的计算方式
+  type: Computation
+  description: 下一个元素的开始的日期。
+SEENDTC.FU:
+  name: SEENDTC.FU的计算方式
+  type: Computation
+  description: 最后参与试验日期
+SEENDTC.SCRN:
+  name: SEENDTC.SCRN的计算方式
+  type: Computation
+  description: 首次给药日期
+SEQ:
+  name: SEQ的计算方式
+  type: Computation
+  description: 受试者的唯一序号，按照数据集内关键变量升序排序，从1开始以1递增。
+SESTDTC:
+  name: SESTDTC的计算方式
+  type: Computation
+  description: 受试者在数据中定义的元素开始的日期。
+SESTDTC.FU:
+  name: SESTDTC.FU的计算方式
+  type: Computation
+  description: 治疗结束日期
+SESTDTC.SCRN:
+  name: SESTDTC.SCRN的计算方式
+  type: Computation
+  description: 签署知情同意日期
+STRESC:
+  name: STRESC的计算方式
+  type: Computation
+  description: 等于--ORRES。
+STRESC.STD:
+  name: STRESC.STD的计算方式
+  type: Computation
+  description: 标准格式的--ORRES。
+STRESN:
+  name: STRESN的计算方式
+  type: Computation
+  description: --STRESC的数值型取值。
+STRESU:
+  name: STRESU的计算方式
+  type: Computation
+  description: 等于--ORRESU。
+SV.VISIT:
+  name: SV.VISIT的计算方式
+  type: Computation
+  description: 对于计划内访视，等于收集的访视名称；对于计划外访视，合并最近一次计划内访视SV.VISIT、“计划外访视”、计划外访视编号并用“_”隔开。
+SV.VISITNUM:
+  name: SV.VISITNUM的计算方式
+  type: Computation
+  description: 对于计划内访视，等于VISIT对应的TV.VISITNUM；对于计划外访视，按SV.SVSTDTC升序排序，从最近一次计划内访视VISIT对应的TV.VISITNUM开始以0.01递增。
+SVENDTC:
+  name: SVENDTC的计算方式
+  type: Computation
+  description: 所有数据集中同一访视的最晚日期/时间。
+SVUPDES:
+  name: SVUPDES的计算方式
+  type: Computation
+  description: 对于计划外访视，合并大写格式的原始数据集名称并用“, ”隔开。
+USUBJID:
+  name: USUBJID的计算方式
+  type: Computation
+  description: 合并STUDYID、SITEID、SUBJID并用“-”隔开。对于重复筛选的受试者使用最后一次筛选的SUBJID。

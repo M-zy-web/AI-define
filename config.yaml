@@ -1,0 +1,43 @@
+﻿# ============================================================================
+#  项目配置 (config.yaml)
+# ============================================================================
+
+# 输出语言: CN = 中文 (xml:lang="zh") | EN = 英文 (xml:lang="en")
+language: CN
+
+# 研究号（用于 study.yaml / OID 拼接等）
+study_id: SHR-1234-III-301
+
+# XPT 文件目录（acrf.pdf 也放在这个目录下）
+sdtm_dir: 'm5\datasets\tabulations\sdtm'
+
+# 部门级标准库文件所在目录（xlsx 读入、yaml 输出均在此目录下）
+dept_dir: dept_std
+
+# ---------- 部门级标准库文件（升版时改这里） ----------
+dept_files:
+  # CDISC 标准术语包 (build_ct_yaml 的输入)
+  sdtm_ct_xlsx: SDTM_CT_2024-09-27.xlsx
+  # 部门级计算方法库 (extract_methods 的输入)
+  methods_xlsx: computation-methods-studyname_sdtm_v1.1.xlsx
+  # 部门级值级元数据 + WhereClause (extract_vlm / extract_wc 的输入)
+  valuelevel_xlsx: valuelevel-studyname_sdtm_v1.1.xlsx
+  # 部门级注释库 (extract_comments 的输入)
+  comments_xlsx: comments-studyname_sdtm_v1.1.xlsx
+
+# 项目层提取产物目录（study_std/ 下含所有项目层 yaml 中间产物）
+study_dir: study_std
+
+# ---------- 项目专属文件（换研究时改这里） ----------
+study_files:
+  # 项目层 SDTM 规格书 (build_domain_yaml 的输入)
+  spec_xlsx: spec-sdtm-SHR-1234-III-301-define.xlsx
+  # 项目层标准码表（含研究标记列 X）(extract_stdcl 的输入)
+  stdcl_xlsx: standard-codelist-SHR-1234-III-301_for_define.xlsx
+  # 注释版 aCRF PDF (extract_acrf 的输入)
+  acrf_pdf: acrf.pdf
+
+# ---------- 最终产物 ----------
+output_files:
+  define_xml: define.xml    # 唯一放工作目录的最终产物
+  datasets_dir: datasets    # 各域 yaml 目录

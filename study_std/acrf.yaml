@@ -1,0 +1,756 @@
+# 从 aCRF 注释提取的 变量→页码 映射(权威来源)。供生成 yaml 时填 origin.crf_pages。
+AE:
+  AEACN:
+  - 185
+  AECONTRT:
+  - 185
+  AEENDTC:
+  - 185
+  AEOUT:
+  - 185
+  AEREL:
+  - 185
+  AESCONG:
+  - 186
+  AESDISAB:
+  - 186
+  AESDTH:
+  - 186
+  AESER:
+  - 186
+  AESHOSP:
+  - 186
+  AESLIFE:
+  - 186
+  AESMIE:
+  - 186
+  AESTDTC:
+  - 185
+  AETERM:
+  - 185
+  AETOXGR:
+  - 185
+CE:
+  CEENDTC:
+  - 205
+  - 206
+  CESTDTC:
+  - 205
+  - 206
+  CETERM:
+  - 205
+  - 206
+  CETOXGR:
+  - 205
+  - 206
+CM:
+  CMDOSE:
+  - 133
+  - 187
+  CMDOSFRM:
+  - 188
+  CMDOSFRQ:
+  - 133
+  - 188
+  CMDOSTXT:
+  - 133
+  - 187
+  CMDOSU:
+  - 133
+  - 187
+  CMENDNC:
+  - 187
+  CMENDTC:
+  - 133
+  CMGRPID:
+  - 133
+  - 200
+  CMINDC:
+  - 133
+  - 187
+  CMROUTE:
+  - 188
+  CMSCAT:
+  - 133
+  - 200
+  CMSTDTC:
+  - 133
+  - 187
+  - 200
+  CMTRT:
+  - 133
+  - 187
+  - 200
+CV:
+  CVCLSIG:
+  - 160
+  CVDTC:
+  - 160
+  CVMETHOD:
+  - 160
+  CVORRESU:
+  - 160
+DM:
+  INVNAM:
+  - 123
+  SITEID:
+  - 123
+  STUDYID:
+  - 123
+  SUBJID:
+  - 123
+DS:
+  DDDTC:
+  - 202
+  DDORRES:
+  - 202
+  DSDTC:
+  - 164
+  - 190
+  - 191
+  - 192
+  - 193
+  - 194
+  - 195
+  - 202
+  - 207
+  DSSCAT:
+  - 190
+  - 191
+  - 192
+  - 193
+  - 194
+  - 195
+  DSSTDTC:
+  - 164
+  - 190
+  - 191
+  - 192
+  - 193
+  - 194
+  - 195
+  - 207
+  DSTERM:
+  - 190
+  - 191
+  - 192
+  - 193
+  - 194
+  - 195
+  - 202
+  DTHDTC:
+  - 202
+EG:
+  EGDTC:
+  - 156
+  - 157
+  - 158
+  - 159
+  EGORRES:
+  - 156
+  - 157
+  - 158
+  - 159
+  EGORRESU:
+  - 156
+  - 157
+  - 158
+  - 159
+EX:
+  ECENDTC:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+  - 170
+  ECLOT:
+  - 165
+  ECREASOC:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+  ECSTDTC:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+  - 170
+  ECTRT:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+  EXENDTC:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+  - 170
+  EXSTDTC:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+  - 170
+  EXTRT:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+IE:
+  DSTERM:
+  - 163
+  IECAT:
+  - 163
+  IETESTCD:
+  - 163
+IS:
+  ISDTC:
+  - 171
+LB:
+  LBCLSIG:
+  - 140
+  - 142
+  - 145
+  - 147
+  - 148
+  - 150
+  - 151
+  - 152
+  LBDTC:
+  - 140
+  - 142
+  - 145
+  - 147
+  - 148
+  - 150
+  - 151
+  - 152
+  - 161
+  LBNAM:
+  - 140
+  - 142
+  - 145
+  - 147
+  - 148
+  - 150
+  - 151
+  - 152
+  LBORNRHI:
+  - 140
+  - 142
+  - 145
+  - 147
+  - 148
+  - 150
+  - 151
+  - 152
+  LBORNRLO:
+  - 140
+  - 142
+  - 145
+  - 147
+  - 148
+  - 150
+  - 151
+  - 152
+  LBORRES:
+  - 140
+  - 142
+  - 145
+  - 147
+  - 148
+  - 150
+  - 151
+  - 152
+  - 161
+  LBORRESU:
+  - 140
+  - 142
+  - 145
+  - 147
+  - 148
+  - 150
+  - 151
+  - 152
+  LBSPEC:
+  - 161
+MB:
+  MBDTC:
+  - 153
+  - 154
+  - 155
+  MBNAM:
+  - 154
+  - 155
+  MBORNRHI:
+  - 154
+  - 155
+  MBORNRLO:
+  - 154
+  - 155
+  MBORRES:
+  - 153
+  - 154
+  - 155
+  MBORRESU:
+  - 154
+  - 155
+MH:
+  MHENDTC:
+  - 130
+  MHSTDTC:
+  - 126
+  - 130
+  MHTERM:
+  - 130
+MI:
+  MIDTC:
+  - 128
+  - 129
+  MILOC:
+  - 128
+  - 129
+PC:
+  PCDTC:
+  - 172
+  - 173
+  - 174
+  - 175
+  PCTPT:
+  - 172
+  - 173
+  - 175
+PE:
+  PEDTC:
+  - 136
+  PEORRES:
+  - 136
+PR:
+  CMENDTC:
+  - 135
+  CMSTDTC:
+  - 135
+  CMTRT:
+  - 135
+  PRDOSTXT:
+  - 132
+  - 196
+  PRDOSU:
+  - 132
+  - 196
+  PRENDTC:
+  - 132
+  - 135
+  - 189
+  - 196
+  - 198
+  - 201
+  PRINDC:
+  - 131
+  - 132
+  - 189
+  - 196
+  - 197
+  - 199
+  PRLOC:
+  - 131
+  - 132
+  - 196
+  - 197
+  - 199
+  PRSTDTC:
+  - 131
+  - 132
+  - 135
+  - 189
+  - 196
+  - 197
+  - 198
+  - 199
+  - 201
+  PRTRT:
+  - 131
+  - 135
+  - 189
+  - 197
+  - 199
+  - 201
+RS:
+  RSDTC:
+  - 162
+  RSLNKGRP:
+  - 183
+  RSORRES:
+  - 183
+  RSREASND:
+  - 183
+  VISIT:
+  - 183
+SS:
+  SSDTC:
+  - 204
+  SSORRES:
+  - 204
+SUPPAE:
+  AEACNC:
+  - 185
+  AEACNE:
+  - 185
+  AEACNG:
+  - 185
+  AEACNP:
+  - 185
+  AEACNPA:
+  - 185
+  AERELC:
+  - 186
+  AERELE:
+  - 186
+  AERELG:
+  - 186
+  AERELP:
+  - 186
+  AERELPA:
+  - 186
+  AESI:
+  - 186
+  AESOSP:
+  - 186
+  EXTRT:
+  - 185
+SUPPCE:
+  FAAENO:
+  - 205
+  - 206
+SUPPCM:
+  CMAENO:
+  - 187
+  CMCOUR:
+  - 133
+  CMCYCLE:
+  - 187
+  CMDOSUO:
+  - 133
+  - 187
+  CMDSFMO:
+  - 188
+  CMDSFQO:
+  - 133
+  - 188
+  CMMHNO:
+  - 187
+  CMOUT:
+  - 133
+  CMOUTO:
+  - 133
+  CMPDDTC:
+  - 133
+  CMREAS:
+  - 187
+  CMROUTEO:
+  - 188
+  CMSCATO:
+  - 133
+  CMSTTIM:
+  - 187
+  CMTLN:
+  - 133
+  CMTLNSP:
+  - 133
+SUPPCV:
+  CVDESC:
+  - 160
+SUPPDC:
+  CETHNIC:
+  - 125
+  CETHNICO:
+  - 125
+  DSRSF:
+  - 163
+  DSRSF1:
+  - 163
+  DSRSF2:
+  - 163
+  PSUBJID:
+  - 125
+  RANDID:
+  - 164
+  REGIME:
+  - 164
+  REGIMEN:
+  - 163
+  TIVERS:
+  - 163
+SUPPDD:
+  DTHREASO:
+  - 202
+SUPPDM:
+  CETHNIC:
+  - 125
+  CETHNICO:
+  - 125
+  DSRSF:
+  - 163
+  DSRSF1:
+  - 163
+  DSRSF2:
+  - 163
+  PSUBJID:
+  - 125
+  RANDID:
+  - 164
+  REGIME:
+  - 164
+  REGIMEN:
+  - 163
+  TIVERS:
+  - 163
+SUPPDS:
+  DTHREAS:
+  - 202
+  DTHREASO:
+  - 202
+SUPPEC:
+  ECAENO:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+  ECITRP:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+  ECITRPSP:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+  ECITRPYN:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+  ECLNUM:
+  - 170
+  ECLNUMU:
+  - 170
+  ECLYN:
+  - 170
+  ECONUM:
+  - 170
+  ECONUMU:
+  - 170
+  ECOYN:
+  - 170
+  ECYN:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+SUPPEG:
+  EGDESC:
+  - 156
+  - 157
+  - 158
+  - 159
+SUPPEX:
+  EXAENO:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+  EXITRP:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+  EXITRPSP:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+  EXITRPYN:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+  EXLNUM:
+  - 170
+  EXLNUMU:
+  - 170
+  EXLYN:
+  - 170
+  EXONUM:
+  - 170
+  EXONUMU:
+  - 170
+  EXOYN:
+  - 170
+  EXPDOSEO:
+  - 165
+  EXPDOSL:
+  - 165
+  - 166
+  - 170
+  EXREAS:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+  EXYN:
+  - 165
+  - 166
+  - 167
+  - 168
+  - 169
+SUPPIE:
+  TIVERS:
+  - 163
+SUPPMH:
+  MHCT:
+  - 127
+  MHFPDDTC:
+  - 127
+  MHHG:
+  - 126
+  MHLCT:
+  - 127
+  MHLPDDTC:
+  - 127
+  MHRM:
+  - 127
+  MHTNMM:
+  - 126
+  MHTNMN:
+  - 126
+  MHTNMT:
+  - 126
+SUPPPR:
+  PRAENO:
+  - 189
+  PRINDCO:
+  - 131
+  - 132
+  - 196
+  - 197
+  - 199
+  PRLOCO:
+  - 131
+  - 132
+  - 196
+  - 197
+  - 198
+  - 199
+  PRMHNO:
+  - 189
+  PRMORRES:
+  - 135
+  PRREAS:
+  - 189
+  PRTLYN:
+  - 196
+  - 198
+  PRTORRES:
+  - 132
+  - 135
+  PRTRTO:
+  - 135
+  PRYN:
+  - 135
+SUPPRP:
+  AESER:
+  - 203
+  RPCWHO:
+  - 203
+  RPDESC:
+  - 203
+SUPPRS:
+  RSCDTC:
+  - 183
+SUPPTR:
+  TRMETHDO:
+  - 176
+  TRSSYN:
+  - 176
+SUPPTU:
+  TULOCDTL:
+  - 177
+  - 179
+  - 181
+  TUMETHDO:
+  - 176
+  TUSSYN:
+  - 176
+SV:
+  SVSTDTC:
+  - 124
+TU:
+  PRENDTC:
+  - 176
+  PRLNKGRP:
+  - 176
+  PRSTDTC:
+  - 176
+  PRTRT:
+  - 176
+  TRDTC:
+  - 176
+  TRLNKGRP:
+  - 176
+  TRMETHOD:
+  - 176
+  TRREFID:
+  - 177
+  TUDTC:
+  - 176
+  TUMETHOD:
+  - 176
+  TUREFID:
+  - 177
+  VISIT:
+  - 176
+  - 177
+VS:
+  BRTHDTC:
+  - 125
+  DSDTC:
+  - 125
+  DSSTDTC:
+  - 125
+  RFICDTC:
+  - 125
+  SEX:
+  - 125
+  VSDTC:
+  - 137
+  - 138
+  - 139
+  VSORRES:
+  - 137
+  - 138
+  - 139
+  VSORRESU:
+  - 125
+  - 137
+  - 138
+  - 139

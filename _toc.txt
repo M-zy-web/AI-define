@@ -1,0 +1,16 @@
+﻿python : Traceback (most recent call last):
+所在位置 行:1 字符: 1
++ python -u _toc_inspect.py 2>&1 | Out-File -Encoding utf8 _toc.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last) 
+   ::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\chenqx\Desktop\ai-define-master\ai-define-master\_toc_inspect.
+py", line 5, in <module>
+    doc = fitz.open(dst)
+  File "C:\Python_396\lib\site-packages\pymupdf\__init__.py", line 2975, in __i
+nit__
+    raise FileNotFoundError(f"no such file: '{filename}'")
+pymupdf.FileNotFoundError: no such file: 'c:\Users\chenqx\Desktop\ai-define-mas
+ter\ai-define-master\m5\datasets\tabulations\sdtm\acrf_new.pdf'

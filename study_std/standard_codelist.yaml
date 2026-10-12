@@ -1,0 +1,6274 @@
+# 项目层面标准码表库提取(仅项目标记列 SHR_1234_III_301=X 的行)。中/英文提交值↔NCI 桥 + 码表中文名 + 码表级NCI + 可扩展性。
+ISO3166:
+  name_en: ISO3166
+  name_cn: ISO3166
+  type: external
+  dictionary: ISO 3166-1 Alpha-3
+  version: '2013-11-15'
+  href: https://www.iso.org/obp/ui/#search
+DRUGDICT:
+  name_en: Drug Dictionary
+  name_cn: 药物字典
+  type: external
+  dictionary: WHODRUG
+  version: GLOBALB3Mar23
+  href: https://who-umc.org/whodrug/whodrug-global/
+MEDDRACT:
+  name_en: Dictionary Name
+  name_cn: 字典名称
+  type: external
+  dictionary: MEDDRA
+  version: '28.0'
+  href: https://www.meddra.org
+CTCAE:
+  name_en: Common Terminology Criteria for Adverse Events
+  name_cn: 不良事件通用术语评价标准
+  type: external
+  dictionary: CTCAE
+  version: '5.0'
+  href: https://ctep.cancer.gov/protocoldevelopment/electronic_applications/ctc.htm#ctc_60
+ISO21090:
+  name_en: ISO21090
+  name_cn: ISO21090
+  type: external
+  dictionary: ISO 21090 NullFlavor enumeration
+  version: 2011-02
+  href: https://www.iso.org/standard/35646.html
+ACN:
+  name_en: Action Taken with Study Treatment
+  name_cn: 对研究治疗采取的措施
+  nci_code: C66767
+  extensible: false
+  items:
+  - value_cn: 剂量不变
+    value_en: Dose Not Changed
+    decode_en: DOSE NOT CHANGED
+    decode_cn: 剂量不变
+    nci_code: C49504
+  - value_cn: 剂量减少
+    value_en: Dose Reduced
+    decode_en: DOSE REDUCED
+    decode_cn: 剂量减少
+    nci_code: C49505
+  - value_cn: 暂停用药
+    value_en: Drug Interrupted
+    decode_en: DRUG INTERRUPTED
+    decode_cn: 暂停用药
+    nci_code: C49501
+  - value_cn: 永久停药
+    value_en: Drug Withdrawn
+    decode_en: DRUG WITHDRAWN
+    decode_cn: 永久停药
+    nci_code: C49502
+  - value_cn: 不适用
+    value_en: Not Applicable
+    decode_en: NOT APPLICABLE
+    decode_cn: 不适用
+    nci_code: C48660
+AGEU:
+  name_en: Age Unit
+  name_cn: 年龄单位
+  nci_code: C66781
+  items:
+  - value_cn: 岁
+    value_en: Years
+    decode_en: YEARS
+    decode_cn: 岁
+    nci_code: C29848
+BRDGMOOD:
+  name_en: BRIDG Activity Mood
+  name_cn: BRIDG活动方式
+  nci_code: C125923
+  items:
+  - value_cn: 实际
+    value_en: PERFORMED
+    decode_en: PERFORMED
+    decode_cn: 实际
+    nci_code: C38000
+  - value_cn: 计划
+    value_en: SCHEDULED
+    decode_en: SCHEDULED
+    decode_cn: 计划
+    nci_code: C125937
+CMCAT:
+  name_en: Category for Medication
+  name_cn: 药物分类
+  items:
+  - value_cn: 既往及合并用药
+    value_en: Prior and Concomitant Medication
+    decode_en: Prior and Concomitant Medication
+    decode_cn: 既往及合并用药
+  - value_cn: 系统性抗肿瘤治疗史
+    value_en: Prior Cancer Systemic Therapy
+    decode_en: Prior Cancer Systemic Therapy
+    decode_cn: 系统性抗肿瘤治疗史
+  - value_cn: 后续系统性抗肿瘤治疗
+    value_en: Follow-Up Cancer Systemic Therapy
+    decode_en: Follow-Up Cancer Systemic Therapy
+    decode_cn: 后续系统性抗肿瘤治疗
+  - value_cn: 局部治疗史
+    value_en: Prior Locoregional Therapy
+    decode_en: Prior Locoregional Therapy
+    decode_cn: 局部治疗史
+CVTEST:
+  name_en: Cardiovascular Test Name
+  name_cn: 心血管检查名称
+  nci_code: C101846
+  items:
+  - value_cn: 左心室射血分数
+    value_en: Left Ventricular Ejection Fraction
+    decode_en: Left Ventricular Ejection Fraction
+    decode_cn: 左心室射血分数
+    nci_code: C99524
+CVTESTCD:
+  name_en: Cardiovascular Test Code
+  name_cn: 心血管检查代码
+  nci_code: C101847
+  items:
+  - value_cn: 左心室射血分数
+    value_en: Left Ventricular Ejection Fraction
+    decode_en: LVEF
+    decode_cn: LVEF
+    nci_code: C99524
+DOMAIN:
+  name_en: SDTM域缩写
+  name_cn: SDTM域缩写
+  nci_code: C66734
+  items:
+  - value_cn: 不良事件
+    value_en: Adverse Events
+    decode_en: AE
+    decode_cn: AE
+    nci_code: C49562
+  - value_cn: 临床事件
+    value_en: Clinical Events
+    decode_en: CE
+    decode_cn: CE
+    nci_code: C85441
+  - value_cn: 既往及合并用药
+    value_en: Concomitant/Prior Medications
+    decode_en: CM
+    decode_cn: CM
+    nci_code: C49568
+  - value_cn: 备注
+    value_en: Comments
+    decode_en: CO
+    decode_cn: CO
+    nci_code: C49569
+  - value_cn: 心血管系统检查结果
+    value_en: Cardiovascular System Findings
+    decode_en: CV
+    decode_cn: CV
+    nci_code: C102605
+  - value_cn: 死亡详情
+    value_en: Death Details
+    decode_en: DD
+    decode_cn: DD
+    nci_code: C95087
+  - value_cn: 人口学
+    value_en: Demographics
+    decode_en: DM
+    decode_cn: DM
+    nci_code: C49572
+  - value_cn: 人口学收集
+    value_en: Demographics as Collected
+    decode_en: DC
+    decode_cn: DC
+  - value_cn: 受试者分布
+    value_en: Disposition
+    decode_en: DS
+    decode_cn: DS
+    nci_code: C49576
+  - value_cn: 方案偏离
+    value_en: Protocal Deviations
+    decode_en: DV
+    decode_cn: DV
+    nci_code: C49585
+  - value_cn: 心电图
+    value_en: ECG Test Results
+    decode_en: EG
+    decode_cn: EG
+    nci_code: C49626
+  - value_cn: 暴露采集
+    value_en: Exposure as Collected
+    decode_en: EC
+    decode_cn: EC
+    nci_code: C117466
+  - value_cn: 暴露
+    value_en: Exposure
+    decode_en: EX
+    decode_cn: EX
+    nci_code: C49587
+  - value_cn: 不满足的入选/排除标准
+    value_en: Inclusion/Exclusion Criteria Not Met
+    decode_en: IE
+    decode_cn: IE
+    nci_code: C61536
+  - value_cn: 免疫原性检测
+    value_en: Immunogenicity Specimen Assessments
+    decode_en: IS
+    decode_cn: IS
+    nci_code: C112320
+  - value_cn: 实验室检查
+    value_en: Laboratory Test Results
+    decode_en: LB
+    decode_cn: LB
+    nci_code: C49592
+  - value_cn: 微生物检测
+    value_en: Microbiology Specimen
+    decode_en: MB
+    decode_cn: MB
+    nci_code: C49602
+  - value_cn: 病史
+    value_en: Medical History
+    decode_en: MH
+    decode_cn: MH
+    nci_code: C49603
+  - value_cn: 显微镜发现
+    value_en: Microscopic Findings
+    decode_en: MI
+    decode_cn: MI
+    nci_code: C95095
+  - value_cn: 药代动力学浓度
+    value_en: Pharmacokinetics Concentrations
+    decode_en: PC
+    decode_cn: PC
+    nci_code: C49606
+  - value_cn: 体格检查
+    value_en: Physical Examination
+    decode_en: PE
+    decode_cn: PE
+    nci_code: C49608
+  - value_cn: 诊疗操作
+    value_en: Procedures
+    decode_en: PR
+    decode_cn: PR
+    nci_code: C102700
+  - value_cn: 疾病效应/状态评估
+    value_en: Disease Response and Clin Classification
+    decode_en: RS
+    decode_cn: RS
+    nci_code: C107097
+  - value_cn: 受试者元素
+    value_en: Subject Elements
+    decode_en: SE
+    decode_cn: SE
+    nci_code: C49616
+  - value_cn: 受试者状态
+    value_en: Subject Status
+    decode_en: SS
+    decode_cn: SS
+    nci_code: C117655
+  - value_cn: 受试者访视
+    value_en: Subject Visits
+    decode_en: SV
+    decode_cn: SV
+    nci_code: C49617
+  - value_cn: 试验入选/排除标准
+    value_en: Trial Inclusion/Exclusion Criteria
+    decode_en: TI
+    decode_cn: TI
+    nci_code: C49620
+  - value_cn: 试验访视
+    value_en: Trial Visits
+    decode_en: TV
+    decode_cn: TV
+    nci_code: C49621
+  - value_cn: 试验概要
+    value_en: Trial Summary
+    decode_en: TS
+    decode_cn: TS
+    nci_code: C53483
+  - value_cn: 试验分组
+    value_en: Trial Arms
+    decode_en: TA
+    decode_cn: TA
+    nci_code: C49618
+  - value_cn: 试验元素
+    value_en: Trial Elements
+    decode_en: TE
+    decode_cn: TE
+    nci_code: C49619
+  - value_cn: 肿瘤结果
+    value_en: Tumor/Lesion Results
+    decode_en: TR
+    decode_cn: TR
+    nci_code: C106578
+  - value_cn: 肿瘤识别
+    value_en: Tumor/Lesion Identification
+    decode_en: TU
+    decode_cn: TU
+    nci_code: C106577
+  - value_cn: 生命体征
+    value_en: Vital Signs
+    decode_en: VS
+    decode_cn: VS
+    nci_code: C49622
+  - value_cn: 生殖系统发现
+    value_en: Reproductive System Findings
+    decode_en: RP
+    decode_cn: RP
+DSCAT:
+  name_en: Category for Disposition Event
+  name_cn: 受试者分布事件类别
+  nci_code: C74558
+  extensible: false
+  items:
+  - value_cn: 受试者分布事件
+    value_en: DISPOSITION EVENT
+    decode_en: DISPOSITION EVENT
+    decode_cn: 受试者分布事件
+    nci_code: C74590
+  - value_cn: 方案里程碑
+    value_en: PROTOCOL MILESTONE
+    decode_en: PROTOCOL MILESTONE
+    decode_cn: 方案里程碑
+    nci_code: C74588
+DSSCAT:
+  name_en: Subcategory for Disposition Event
+  name_cn: 受试者分布事件子类
+  extensible: true
+  items:
+  - value_cn: 卡培他滨
+    value_en: Capecitabine
+    decode_en: CAPECITABINE
+    decode_cn: 卡培他滨
+  - value_cn: 研究结束
+    value_en: END OF STUDY
+    decode_en: END OF STUDY
+    decode_cn: 研究结束
+  - value_cn: 入组
+    value_en: ENROLLMENT
+    decode_en: ENROLLMENT
+    decode_cn: 入组
+  - value_cn: 艾立布林
+    value_en: Eribulin
+    decode_en: ERIBULIN
+    decode_cn: 艾立布林
+  - value_cn: 吉西他滨
+    value_en: Gemcitabine
+    decode_en: GEMCITABINE
+    decode_cn: 吉西他滨
+  - value_cn: 紫杉醇
+    value_en: Paclitaxel
+    decode_en: PACLITAXEL
+    decode_cn: 紫杉醇
+  - value_cn: 白蛋白结合紫杉醇
+    value_en: Paclitaxel for Injection (Albumin Bound)
+    decode_en: PACLITAXEL FOR INJECTION (ALBUMIN BOUND)
+    decode_cn: 注射用紫杉醇(白蛋白结合型)
+  - value_cn: 疾病进展后
+    value_en: Post Progression
+    decode_en: POST PROGRESSION
+    decode_cn: 疾病进展后
+  - value_cn: SHR-A1811
+    value_en: SHR-A1811
+    decode_en: SHR-A1811
+    decode_cn: SHR-A1811
+  - value_cn: 研究参与
+    value_en: STUDY PARTICIPATION
+    decode_en: STUDY PARTICIPATION
+    decode_cn: 研究参与
+    nci_code: C170569
+DTHDX:
+  name_en: SDTM Death Diagnosis and Details Test Name
+  name_cn: 死亡诊断和细节名称
+  nci_code: C116107
+  items:
+  - value_cn: 主要死亡原因
+    value_en: Primary Cause of Death
+    decode_en: Primary Cause of Death
+    decode_cn: 主要死亡原因
+    nci_code: C99531
+DTHDXCD:
+  name_en: SDTM Death Diagnosis and Details Test Code
+  name_cn: 死亡诊断和细节代码
+  nci_code: C116108
+  items:
+  - value_cn: 主要死亡原因
+    value_en: Primary Cause of Death
+    decode_en: PRCDTH
+    decode_cn: PRCDTH
+    nci_code: C99531
+DTYPE:
+  name_en: Derivation Type
+  name_cn: 衍生类型
+  nci_code: C81224
+  items:
+  - value_cn: AVERAGE
+    value_en: AVERAGE
+    decode_en: AVERAGE
+    decode_cn: AVERAGE
+    nci_code: C81209
+  - value_cn: WORST
+    value_en: WORST
+    decode_en: WORST
+    decode_cn: WORST
+    nci_code: C81203
+ECOG1TC:
+  name_en: Eastern Cooperative Oncology Group Performance Status Clinical Classification Test Code
+  name_cn: 东部肿瘤协作组体能状态问卷代码
+  nci_code: C101815
+  items:
+  - value_cn: 体力状况评分值
+    value_en: ECOG1-Performance Status
+    decode_en: ECOG101
+    decode_cn: ECOG101
+    nci_code: C102408
+ECOG1TN:
+  name_en: Eastern Cooperative Oncology Group Performance Status Clinical Classification Test Name
+  name_cn: 东部肿瘤协作组体能状态问卷名称
+  nci_code: C101816
+  items:
+  - value_cn: 体力状况评分值
+    value_en: ECOG1-Performance Status
+    decode_en: ECOG1-Performance Status
+    decode_cn: 体力状况评分值
+    nci_code: C102408
+EGMETHOD:
+  name_en: ECG Test Method
+  name_cn: 心电图检查方法
+  nci_code: C71151
+  items:
+  - value_cn: 12导联心电图
+    value_en: 12 LEAD STANDARD
+    decode_en: 12 LEAD STANDARD
+    decode_cn: 12导联心电图
+    nci_code: C71102
+EGTEST:
+  name_en: ECG Test Name
+  name_cn: 心电图检查名称
+  nci_code: C71152
+  extensible: true
+  items:
+  - value_cn: 心率
+    value_en: Heart Rate
+    decode_en: Heart Rate
+    decode_cn: 心率
+  - value_cn: PR间期
+    value_en: PR
+    decode_en: PR
+    decode_cn: PR
+  - value_cn: QT间期
+    value_en: QT
+    decode_en: QT
+    decode_cn: QT
+  - value_cn: QTcF间期(汇总)
+    value_en: QTcF
+    decode_en: QTcF Interval, Aggregate
+    decode_cn: QTcF间期(汇总)
+    nci_code: C117787
+  - value_cn: 临床意义
+    value_en: Interpretation
+    decode_en: Interpretation
+    decode_cn: 临床意义
+    nci_code: C41255
+EGTESTCD:
+  name_en: ECG Test Code
+  name_cn: 心电图检查代码
+  nci_code: C71153
+  extensible: true
+  items:
+  - value_cn: 心率
+    value_en: Heart Rate
+    decode_en: EGHR
+    decode_cn: EGHR
+  - value_cn: PR间期
+    value_en: PR
+    decode_en: PR
+    decode_cn: PR
+  - value_cn: QT间期
+    value_en: QT
+    decode_en: QT
+    decode_cn: QT
+  - value_cn: QTcF间期(汇总)
+    value_en: QTcF Interval, Aggregate
+    decode_en: QTCFAG
+    decode_cn: QTCFAG
+    nci_code: C117786
+  - value_cn: 临床意义
+    value_en: Interpretation
+    decode_en: INTP
+    decode_cn: INTP
+    nci_code: C41255
+EPOCH:
+  name_en: Epoch
+  name_cn: 时期
+  nci_code: C99079
+  items:
+  - value_cn: 筛选期
+    value_en: SCREENING
+    decode_en: SCREENING
+    decode_cn: 筛选期
+    nci_code: C202487
+  - value_cn: 治疗期
+    value_en: TREATMENT
+    decode_en: TREATMENT
+    decode_cn: 治疗期
+    nci_code: C101526
+  - value_cn: 随访期
+    value_en: FOLLOW-UP
+    decode_en: FOLLOW-UP
+    decode_cn: 随访期
+    nci_code: C202578
+ETHNICC:
+  name_en: Ethnicity As Collected
+  name_cn: 收集族群
+  nci_code: C128690
+  items:
+  - value_cn: 汉族
+    value_en: Han
+    decode_en: HAN
+    decode_cn: 汉族
+    nci_code: C158158
+  - value_cn: 侗族
+    value_en: Dong minority
+    decode_en: DONG
+    decode_cn: 侗族
+  - value_cn: 回族
+    value_en: Hui ethnic group
+    decode_en: HUI
+    decode_cn: 回族
+  - value_cn: 回族
+    value_en: Hui nationality
+    decode_en: HUI
+    decode_cn: 回族
+  - value_cn: 满族
+    value_en: Man
+    decode_en: MAN
+    decode_cn: 满族
+  - value_cn: 回族
+    value_en: The Hui nationality
+    decode_en: HUI
+    decode_cn: 回族
+  - value_cn: 藏族
+    value_en: The Zang nationality
+    decode_en: ZANG
+    decode_cn: 藏族
+  - value_cn: 壮族
+    value_en: The Zhuang nationality
+    decode_en: ZHUANG
+    decode_cn: 壮族
+  - value_cn: 土家族
+    value_en: Tujia
+    decode_en: TUJIA
+    decode_cn: 土家族
+  - value_cn: 瑶族
+    value_en: Yao nationality
+    decode_en: YAO
+    decode_cn: 瑶族
+  - value_cn: 壮族
+    value_en: ZHUANG
+    decode_en: ZHUANG
+    decode_cn: 壮族
+  - value_cn: 壮族
+    value_en: Zhuang
+    decode_en: ZHUANG
+    decode_cn: 壮族
+  - value_cn: 苗族
+    value_en: miao
+    decode_en: MIAO
+    decode_cn: 苗族
+  - value_cn: 苗族
+    value_en: the Miao nationality
+    decode_en: MIAO
+    decode_cn: 苗族
+  - value_cn: 壮族
+    value_en: the Zhuang nationality
+    decode_en: ZHUANG
+    decode_cn: 壮族
+  - value_cn: 土家族
+    value_en: tujia
+    decode_en: TUJIA
+    decode_cn: 土家族
+  - value_cn: 壮族
+    value_en: zhuang
+    decode_en: ZHUANG
+    decode_cn: 壮族
+  - value_cn: 其他
+    value_en: Other
+    decode_en: OTHER
+    decode_cn: 其他
+FRM:
+  name_en: Pharmaceutical Dosage Form
+  name_cn: 剂型
+  nci_code: C66726
+  items:
+  - value_cn: 片剂
+    value_en: Tablet
+    decode_en: TABLET
+    decode_cn: 片剂
+    nci_code: C42998
+  - value_cn: 胶囊
+    value_en: Capsule
+    decode_en: CAPSULE
+    decode_cn: 胶囊
+    nci_code: C25158
+  - value_cn: 软膏
+    value_en: Ointment
+    decode_en: OINTMENT
+    decode_cn: 软膏
+    nci_code: C42966
+  - value_cn: 喷雾
+    value_en: Spray
+    decode_en: SPRAY
+    decode_cn: 喷雾
+    nci_code: C42989
+  - value_cn: 粉针剂
+    value_en: Powder-injection
+    decode_en: POWDER-INJECTION
+    decode_cn: 粉针剂
+  - value_cn: 注射液
+    value_en: Injection
+    decode_en: INJECTION
+    decode_cn: 注射液
+    nci_code: C42946
+  - value_cn: 混悬剂
+    value_en: Suspension
+    decode_en: SUSPENSION
+    decode_cn: 混悬剂
+    nci_code: C42994
+  - value_cn: 栓剂
+    value_en: Suppository
+    decode_en: SUPPOSITORY
+    decode_cn: 栓剂
+    nci_code: C42993
+  - value_cn: 散剂
+    value_en: Powder
+    decode_en: POWDER
+    decode_cn: 散剂
+    nci_code: C42972
+  - value_cn: 颗粒剂
+    value_en: Granula
+    decode_en: GRANULE
+    decode_cn: 颗粒剂
+    nci_code: C42938
+  - value_cn: 滴丸
+    value_en: Dripping pill
+    decode_en: DRIPPING PILL
+    decode_cn: 滴丸
+  - value_cn: 其他
+    value_en: Other
+    decode_en: OTHER
+    decode_cn: 其他
+  - value_cn: 液体制剂
+    decode_en: LIQUID
+    decode_cn: 液体制剂
+    nci_code: C42953
+  - value_cn: 乳膏
+    value_en: Cream
+    decode_en: CREAM
+    decode_cn: 乳膏
+    nci_code: C28944
+IECAT:
+  name_en: Category for Inclusion/Exclusion
+  name_cn: 入选/排除标准类别
+  nci_code: C66797
+  extensible: false
+  items:
+  - value_cn: 入选标准
+    value_en: Inclusion Criteria
+    decode_en: INCLUSION
+    decode_cn: 入选标准
+    nci_code: C25532
+    order: 1
+  - value_cn: 排除标准
+    value_en: Exclusion Criteria
+    decode_en: EXCLUSION
+    decode_cn: 排除标准
+    nci_code: C25370
+    order: 2
+ISTEST:
+  name_en: Immunogenicity Specimen Assessments Test Name
+  name_cn: 免疫原性检测名称
+  nci_code: C120526
+  items:
+  - value_cn: 结合抗药抗体
+    value_en: Binding Antidrug Antibody
+    decode_en: Binding Antidrug Antibody
+    decode_cn: 结合抗药抗体
+    nci_code: C147272
+  - value_cn: 中和结合抗药抗体
+    value_en: Neutralizing Binding Antidrug Antibody
+    decode_en: Neutralizing Binding Antidrug Antibody
+    decode_cn: 中和结合抗药抗体
+    nci_code: C147273
+  - value_cn: 免疫检测
+    value_en: Immunogenicity Test
+    decode_en: Immunogenicity Test
+    decode_cn: 免疫检测
+ISTESTCD:
+  name_en: Immunogenicity Specimen Assessments Test Code
+  name_cn: 免疫原性检测代码
+  nci_code: C120525
+  items:
+  - value_cn: 结合抗药抗体
+    value_en: Binding Antidrug Antibody
+    decode_en: ADA_BAB
+    decode_cn: ADA_BAB
+    nci_code: C147272
+  - value_cn: 中和结合抗药抗体
+    value_en: Neutralizing Binding Antidrug Antibody
+    decode_en: ADA_NAB
+    decode_cn: ADA_NAB
+    nci_code: C147273
+  - value_cn: 免疫检测
+    value_en: Immunogenicity Test
+    decode_en: ISALL
+    decode_cn: ISALL
+LBCAT:
+  name_en: Category of Laboratory Test
+  name_cn: 实验室检查分类
+  extensible: true
+  items:
+  - value_cn: 24h尿蛋白定量
+    value_en: 24-hour Urine Protein
+    decode_en: 24h Urine Protein
+    decode_cn: 24h尿蛋白定量
+  - value_cn: 甲状腺功能
+    value_en: Thyroid Function
+    decode_en: Thyroid Function
+    decode_cn: 甲状腺功能
+  - value_cn: 尿常规
+    value_en: Urinalysis
+    decode_en: Urinalysis
+    decode_cn: 尿液分析
+  - value_cn: 凝血功能
+    value_en: Coagulation
+    decode_en: Coagulation
+    decode_cn: 凝血功能
+  - value_cn: 血常规
+    value_en: Hematology
+    decode_en: Hematology
+    decode_cn: 血常规
+  - value_cn: 血生化
+    value_en: Biochemistry
+    decode_en: Biochemistry
+    decode_cn: 血生化
+  - value_cn: 心肌酶谱
+    value_en: CK-MB
+    decode_en: Myocardial enzyme spectrum
+    decode_cn: 心肌酶谱
+  - value_cn: 大便潜血
+    value_en: Stool Analysis
+    decode_en: Stool Analysis
+    decode_cn: 大便潜血
+  - value_cn: 妊娠试验
+    decode_cn: 妊娠试验
+LBTEST:
+  name_en: Laboratory Test Name
+  name_cn: 实验室检查名称
+  nci_code: C67154
+  items:
+  - value_cn: 白细胞计数
+    value_en: Leukocytes
+    decode_en: Leukocytes
+    decode_cn: 白细胞计数
+    nci_code: C51948
+  - value_cn: 红细胞计数
+    value_en: Erythrocytes
+    decode_en: Erythrocytes
+    decode_cn: 红细胞计数
+    nci_code: C51946
+  - value_cn: 血红蛋白
+    value_en: Hemoglobin
+    decode_en: Hemoglobin
+    decode_cn: 血红蛋白
+    nci_code: C64848
+  - value_cn: 血小板计数
+    value_en: Platelets
+    decode_en: Platelets
+    decode_cn: 血小板计数
+    nci_code: C51951
+  - value_cn: 中性粒细胞绝对值
+    value_en: Neutrophils
+    decode_en: Neutrophils
+    decode_cn: 中性粒细胞绝对值
+    nci_code: C63321
+  - value_cn: 淋巴细胞绝对值
+    value_en: Lymphocytes
+    decode_en: Lymphocytes
+    decode_cn: 淋巴细胞绝对值
+    nci_code: C51949
+  - value_cn: 单核细胞绝对值
+    value_en: Monocytes
+    decode_en: Monocytes
+    decode_cn: 单核细胞绝对值
+    nci_code: C64823
+  - value_cn: 嗜酸性粒细胞绝对值
+    value_en: Eosinophils
+    decode_en: Eosinophils
+    decode_cn: 嗜酸性粒细胞绝对值
+    nci_code: C64550
+  - value_cn: 嗜碱性粒细胞绝对值
+    value_en: Basophils
+    decode_en: Basophils
+    decode_cn: 嗜碱性粒细胞绝对值
+    nci_code: C64470
+  - value_cn: 红细胞比容
+    value_en: Hematocrit
+    decode_en: Hematocrit
+    decode_cn: 红细胞压积
+    nci_code: C64796
+  - value_cn: 血清天门冬氨酸氨基转移酶
+    value_en: Aspartate Aminotransferase
+    decode_en: Aspartate Aminotransferase
+    decode_cn: 天门冬氨酸氨基转移酶
+    nci_code: C64467
+  - value_cn: 血清丙氨酸氨基转移酶
+    value_en: Alanine Aminotransferase
+    decode_en: Alanine Aminotransferase
+    decode_cn: 丙氨酸氨基转移酶
+    nci_code: C64433
+  - value_cn: 血清碱性磷酸酶
+    value_en: Alkaline Phosphatase
+    decode_en: Alkaline Phosphatase
+    decode_cn: 碱性磷酸酶
+    nci_code: C64432
+  - value_cn: 血清乳酸脱氢酶
+    value_en: Lactate Dehydrogenase
+    decode_en: Lactate Dehydrogenase
+    decode_cn: 乳酸脱氢酶
+    nci_code: C64855
+  - value_cn: 血清γ-谷氨酰基转肽酶
+    value_en: Gamma Glutamyl Transferase
+    decode_en: Gamma Glutamyl Transferase
+    decode_cn: 谷氨酰转肽酶
+    nci_code: C64847
+  - value_cn: 血清淀粉酶
+    value_en: Amylase
+    decode_en: Amylase
+    decode_cn: 淀粉酶
+    nci_code: C64434
+  - value_cn: 血清脂肪酶
+    value_en: Lipase
+    decode_en: Lipase
+    decode_cn: 脂肪酶
+    nci_code: C117748
+  - value_cn: 血清肌酸激酶
+    value_en: Creatine Kinase
+    decode_en: Creatine Kinase
+    decode_cn: 肌酸激酶
+    nci_code: C64489
+  - value_cn: 血清肌酸激酶同工酶
+    value_en: Creatine Kinase MB
+    decode_en: Creatine Kinase MB
+    decode_cn: 肌酸激酶同工酶
+    nci_code: C64491
+  - value_cn: 血清总蛋白
+    value_en: Protein
+    decode_en: Protein
+    decode_cn: 蛋白质
+    nci_code: C64858
+  - value_cn: 血清白蛋白
+    value_en: Albumin
+    decode_en: Albumin
+    decode_cn: 白蛋白
+    nci_code: C64431
+  - value_cn: 血清总胆红素
+    value_en: Bilirubin
+    decode_en: Bilirubin
+    decode_cn: 总胆红素
+    nci_code: C38037
+  - value_cn: 血清直接胆红素
+    value_en: Direct Bilirubin
+    decode_en: Direct Bilirubin
+    decode_cn: 直接胆红素
+    nci_code: C64481
+  - value_cn: 血清间接胆红素
+    value_en: Indirect Bilirubin
+    decode_en: Indirect Bilirubin
+    decode_cn: 间接胆红素
+    nci_code: C64483
+  - value_cn: 尿素氮
+    value_en: Urea nitrogen
+    decode_en: Urea Nitrogen
+    decode_cn: 尿素氮
+    nci_code: C125949
+  - value_cn: 血清尿素
+    value_en: Urea
+    decode_en: Urea
+    decode_cn: 尿素
+    nci_code: C64815
+  - value_cn: 血清肌酐
+    value_en: Creatinine
+    decode_en: Creatinine
+    decode_cn: 肌酐
+    nci_code: C64547
+  - value_cn: 尿酸
+    value_en: Urate
+    decode_en: Urate
+    decode_cn: 尿酸
+    nci_code: C64814
+  - value_cn: 血清总胆固醇
+    value_en: Cholesterol
+    decode_en: Cholesterol
+    decode_cn: 胆固醇
+    nci_code: C105586
+  - value_cn: 血清甘油三酯
+    value_en: Triglycerides
+    decode_en: Triglycerides
+    decode_cn: 甘油三酯
+    nci_code: C64812
+  - value_cn: 葡萄糖
+    value_en: Glucose
+    decode_en: Glucose
+    decode_cn: 葡萄糖
+    nci_code: C105585
+  - value_cn: 血清钠
+    value_en: Sodium
+    decode_en: Sodium
+    decode_cn: 钠
+    nci_code: C64809
+  - value_cn: 血清总钙
+    value_en: Calcium
+    decode_en: Calcium
+    decode_cn: 钙
+    nci_code: C64488
+  - value_cn: 血清无机磷
+    value_en: Phosphate
+    decode_en: Phosphate
+    decode_cn: 磷
+    nci_code: C64857
+  - value_cn: 血清镁
+    value_en: Magnesium
+    decode_en: Magnesium
+    decode_cn: 镁
+    nci_code: C64840
+  - value_cn: 血清钾
+    value_en: Potassium
+    decode_en: Potassium
+    decode_cn: 钾
+    nci_code: C64853
+  - value_cn: 氯
+    value_en: Chloride
+    decode_en: Chloride
+    decode_cn: 氯
+    nci_code: C64854
+  - value_cn: 肌钙蛋白T
+    value_en: Troponin T
+    decode_en: Troponin T
+    decode_cn: 肌钙蛋白T
+    nci_code: C74750
+  - value_cn: 肌钙蛋白I
+    value_en: Troponin I
+    decode_en: Troponin I
+    decode_cn: 肌钙蛋白I
+    nci_code: C74749
+  - value_cn: 超敏肌钙蛋白T
+    value_en: Troponin T_HS
+    decode_en: Hypersensitive Troponin T
+    decode_cn: 超敏肌钙蛋白T
+    nci_code: C74750
+  - value_cn: 超敏肌钙蛋白I
+    value_en: Troponin I_HS
+    decode_en: Hypersensitive Troponin I
+    decode_cn: 超敏肌钙蛋白I
+    nci_code: C74749
+  - value_cn: 脑钠肽
+    value_en: Brain Natriuretic Peptide
+    decode_en: Brain Natriuretic Peptide
+    decode_cn: 脑钠肽
+    nci_code: C74735
+  - value_cn: 氨基末端脑钠尿肽
+    value_en: N-Terminal ProB-type Natriuretic Peptide
+    decode_en: N-Terminal ProB-type Natriuretic Peptide
+    decode_cn: 氨基末端脑钠尿肽
+    nci_code: C96610
+  - value_cn: 凝血酶原时间
+    value_en: Prothrombin Time
+    decode_en: Prothrombin Time
+    decode_cn: 凝血酶原时间
+    nci_code: C62656
+  - value_cn: 国际标准化比值
+    value_en: Prothrombin Intl. Normalized Ratio
+    decode_en: Prothrombin Intl. Normalized Ratio
+    decode_cn: 国际标准化比值
+    nci_code: C64805
+  - value_cn: 活化部分凝血活酶时间
+    value_en: Activated Partial Thromboplastin Time
+    decode_en: Activated Partial Thromboplastin Time
+    decode_cn: 活化部分凝血活酶时间
+    nci_code: C38462
+  - value_cn: 纤维蛋白原
+    value_en: Fibrinogen
+    decode_en: Fibrinogen
+    decode_cn: 纤维蛋白原
+    nci_code: C64606
+  - value_cn: 凝血酶时间
+    value_en: Thrombin Time
+    decode_en: Thrombin Time
+    decode_cn: 凝血酶时间
+    nci_code: C80365
+  - value_cn: 三碘甲状腺原氨酸
+    value_en: Triiodothyronine
+    decode_en: Triiodothyronine
+    decode_cn: 三碘甲状腺原氨酸
+    nci_code: C74747
+  - value_cn: 甲状腺素
+    value_en: Thyroxine
+    decode_en: Thyroxine
+    decode_cn: 甲状腺激素
+    nci_code: C74794
+  - value_cn: 游离三碘甲状腺原氨酸
+    value_en: Triiodothyronine, Free
+    decode_en: Triiodothyronine, Free
+    decode_cn: 游离三碘甲状腺原氨酸
+    nci_code: C74787
+  - value_cn: 游离甲状腺素
+    value_en: Thyroxine, Free
+    decode_en: Thyroxine, Free
+    decode_cn: 游离甲状腺素
+    nci_code: C74786
+  - value_cn: 促甲状腺激素
+    value_en: Thyrotropin
+    decode_en: Thyrotropin
+    decode_cn: 促甲状腺激素
+    nci_code: C64813
+  - value_cn: 大便潜血
+    value_en: Faecal Occult Blood
+    decode_en: Occult Blood
+    decode_cn: 潜血
+    nci_code: C74686
+  - value_cn: 绒毛膜促性腺激素
+    value_en: Choriogonadotropin Beta
+    decode_en: Choriogonadotropin Beta
+    decode_cn: 绒毛膜促性腺激素
+    nci_code: C64851
+  - value_cn: 尿pH值
+    value_en: pH_U
+    decode_en: pH
+    decode_cn: pH
+    nci_code: C45997
+  - value_cn: 尿蛋白
+    value_en: Protein_U
+    decode_en: Protein
+    decode_cn: 蛋白质
+    nci_code: C64858
+  - value_cn: 尿葡萄糖
+    value_en: Glucose_U
+    decode_en: Glucose
+    decode_cn: 葡萄糖
+    nci_code: C105585
+  - value_cn: 尿酮体
+    value_en: Ketones_U
+    decode_en: Ketone
+    decode_cn: 酮体
+    nci_code: C64854
+  - value_cn: 尿胆原
+    value_en: Urobilinogen
+    decode_en: Urobilinogen
+    decode_cn: 尿胆原
+    nci_code: C64816
+  - value_cn: 尿胆原
+    value_en: Urobilinogen_U
+    decode_en: Urobilinogen
+    decode_cn: 尿胆原
+  - value_cn: 尿潜血
+    value_en: Occult Blood_U
+    decode_en: 'Occult Blood '
+    decode_cn: 潜血
+    nci_code: C74686
+  - value_cn: 尿胆红素
+    value_en: Bilirubin_U
+    decode_en: Bilirubin
+    decode_cn: 总胆红素
+    nci_code: C38037
+  - value_cn: 尿比重
+    value_en: Specific Gravity
+    decode_en: Specific Gravity
+    decode_cn: 尿比重
+    nci_code: C64832
+  - value_cn: 尿比重
+    value_en: Specific Gravity_U
+    decode_en: Specific Gravity
+    decode_cn: 尿比重
+    nci_code: C64832
+  - value_cn: 尿亚硝酸盐
+    value_en: Nitrite_U
+    decode_en: Nitrite
+    decode_cn: 亚硝酸盐
+    nci_code: C64810
+  - value_cn: 尿白细胞
+    value_en: Leukocytes_U
+    decode_en: Leukocytes
+    decode_cn: 白细胞计数
+    nci_code: C51948
+  - value_cn: 尿红细胞
+    value_en: Erythrocytes_U
+    decode_en: Erythrocytes
+    decode_cn: 红细胞计数
+    nci_code: C51946
+  - value_cn: 尿磷
+    value_en: Phosphate
+    decode_en: Phosphate
+    decode_cn: 磷
+    nci_code: C64857
+  - value_cn: 24h尿蛋白
+    value_en: Protein_U24
+    decode_en: Protein
+    decode_cn: 蛋白质
+    nci_code: C64858
+MEDEVAL:
+  name_en: Medical Evaluator Code
+  name_cn: 评估人员代码
+  extensible: true
+  items:
+  - value_cn: R1
+    value_en: R1
+    decode_en: R1
+    decode_cn: R1
+  - value_cn: R2
+    value_en: R2
+    decode_en: R2
+    decode_cn: R2
+LBTESTCD:
+  name_en: Laboratory Test Code
+  name_cn: 实验室检查代码
+  nci_code: C65047
+  items:
+  - value_cn: 白细胞计数
+    value_en: Leukocytes
+    decode_en: WBC
+    decode_cn: WBC
+    nci_code: C51948
+  - value_cn: 红细胞计数
+    value_en: Erythrocytes
+    decode_en: RBC
+    decode_cn: RBC
+    nci_code: C51946
+  - value_cn: 血红蛋白
+    value_en: Hemoglobin
+    decode_en: HGB
+    decode_cn: HGB
+    nci_code: C64848
+  - value_cn: 血小板计数
+    value_en: Platelets
+    decode_en: PLAT
+    decode_cn: PLAT
+    nci_code: C51951
+  - value_cn: 中性粒细胞绝对值
+    value_en: Neutrophils
+    decode_en: NEUT
+    decode_cn: NEUT
+    nci_code: C63321
+  - value_cn: 淋巴细胞绝对值
+    value_en: Lymphocytes
+    decode_en: LYM
+    decode_cn: LYM
+    nci_code: C51949
+  - value_cn: 单核细胞绝对值
+    value_en: Monocytes
+    decode_en: MONO
+    decode_cn: MONO
+    nci_code: C64823
+  - value_cn: 嗜酸性粒细胞绝对值
+    value_en: Eosinophils
+    decode_en: EOS
+    decode_cn: EOS
+    nci_code: C64550
+  - value_cn: 嗜碱性粒细胞绝对值
+    value_en: Basophils
+    decode_en: BASO
+    decode_cn: BASO
+    nci_code: C64470
+  - value_cn: 红细胞压积
+    value_en: Hematocrit
+    decode_en: HCT
+    decode_cn: HCT
+    nci_code: C64796
+  - value_cn: 天门冬氨酸氨基转移酶
+    value_en: Aspartate Aminotransferase
+    decode_en: AST
+    decode_cn: AST
+    nci_code: C64467
+  - value_cn: 丙氨酸氨基转移酶
+    value_en: Alanine Aminotransferase
+    decode_en: ALT
+    decode_cn: ALT
+    nci_code: C64433
+  - value_cn: 碱性磷酸酶
+    value_en: Alkaline Phosphatase
+    decode_en: ALP
+    decode_cn: ALP
+    nci_code: C64432
+  - value_cn: 乳酸脱氢酶
+    value_en: Lactate Dehydrogenase
+    decode_en: LDH
+    decode_cn: LDH
+    nci_code: C64855
+  - value_cn: 谷氨酰转肽酶
+    value_en: Gamma Glutamyl Transferase
+    decode_en: GGT
+    decode_cn: GGT
+    nci_code: C64847
+  - value_cn: 淀粉酶
+    value_en: Amylase
+    decode_en: AMYLASE
+    decode_cn: AMYLASE
+    nci_code: C64434
+  - value_cn: 脂肪酶
+    value_en: Lipase
+    decode_en: LIPASET
+    decode_cn: LIPASET
+    nci_code: C117748
+  - value_cn: 肌酸激酶
+    value_en: Creatine Kinase
+    decode_en: CK
+    decode_cn: CK
+    nci_code: C64489
+  - value_cn: 肌酸激酶同工酶
+    value_en: Creatine Kinase MB
+    decode_en: CKMB
+    decode_cn: CKMB
+    nci_code: C64491
+  - value_cn: 蛋白质
+    value_en: Protein
+    decode_en: PROT
+    decode_cn: PROT
+    nci_code: C64858
+  - value_cn: 白蛋白
+    value_en: Albumin
+    decode_en: ALB
+    decode_cn: ALB
+    nci_code: C64431
+  - value_cn: 总胆红素
+    value_en: Bilirubin
+    decode_en: BILI
+    decode_cn: BILI
+    nci_code: C38037
+  - value_cn: 直接胆红素
+    value_en: Direct Bilirubin
+    decode_en: BILDIR
+    decode_cn: BILDIR
+    nci_code: C64481
+  - value_cn: 间接胆红素
+    value_en: Indirect Bilirubin
+    decode_en: BILIND
+    decode_cn: BILIND
+    nci_code: C64483
+  - value_cn: 尿素氮
+    value_en: Urea Nitrogen
+    decode_en: UREAN
+    decode_cn: UREAN
+    nci_code: C125949
+  - value_cn: 尿素
+    value_en: Urea
+    decode_en: UREA
+    decode_cn: UREA
+    nci_code: C64815
+  - value_cn: 肌酐
+    value_en: Creatinine
+    decode_en: CREAT
+    decode_cn: CREAT
+    nci_code: C64547
+  - value_cn: 尿酸
+    value_en: Urate
+    decode_en: URATE
+    decode_cn: URATE
+    nci_code: C64814
+  - value_cn: 胆固醇
+    value_en: Cholesterol
+    decode_en: CHOL
+    decode_cn: CHOL
+    nci_code: C105586
+  - value_cn: 甘油三酯
+    value_en: Triglycerides
+    decode_en: TRIG
+    decode_cn: TRIG
+    nci_code: C64812
+  - value_cn: 葡萄糖
+    value_en: Glucose
+    decode_en: GLUC
+    decode_cn: GLUC
+    nci_code: C105585
+  - value_cn: 钠
+    value_en: Sodium
+    decode_en: SODIUM
+    decode_cn: SODIUM
+    nci_code: C64809
+  - value_cn: 氯
+    value_en: Chloride
+    decode_en: CL
+    decode_cn: CL
+    nci_code: C64495
+  - value_cn: 钙
+    value_en: Calcium
+    decode_en: CA
+    decode_cn: CA
+    nci_code: C64488
+  - value_cn: 磷
+    value_en: Phosphate
+    decode_en: PHOS
+    decode_cn: PHOS
+    nci_code: C64857
+  - value_cn: 钾
+    value_en: Potassium
+    decode_en: K
+    decode_cn: K
+  - value_cn: 镁
+    value_en: Magnesium
+    decode_en: MG
+    decode_cn: MG
+    nci_code: C64840
+  - value_cn: 肌钙蛋白T
+    value_en: Troponin T
+    decode_en: TROPONT
+    decode_cn: TROPONT
+    nci_code: C74750
+  - value_cn: 肌钙蛋白I
+    value_en: Troponin I
+    decode_en: TROPONI
+    decode_cn: TROPONI
+    nci_code: C74749
+  - value_cn: 超敏肌钙蛋白T
+    value_en: Hypersensitive Troponin T
+    decode_en: HTROPONT
+    decode_cn: HTROPONT
+    nci_code: C74750
+  - value_cn: 超敏肌钙蛋白I
+    value_en: Hypersensitive Troponin I
+    decode_en: HTROPONI
+    decode_cn: HTROPONI
+    nci_code: C74749
+  - value_cn: 脑钠肽
+    value_en: Brain Natriuretic Peptide
+    decode_en: BNP
+    decode_cn: BNP
+    nci_code: C74735
+  - value_cn: 氨基末端脑钠尿肽
+    value_en: N-Terminal ProB-type Natriuretic Peptide
+    decode_en: BNPPRONT
+    decode_cn: BNPPRONT
+    nci_code: C96610
+  - value_cn: 凝血酶原时间
+    value_en: Prothrombin Time
+    decode_en: PT
+    decode_cn: PT
+    nci_code: C62656
+  - value_cn: 国际标准化比值
+    value_en: Prothrombin Intl. Normalized Ratio
+    decode_en: INR
+    decode_cn: INR
+    nci_code: C64805
+  - value_cn: 活化部分凝血活酶时间
+    value_en: Activated Partial Thromboplastin Time
+    decode_en: APTT
+    decode_cn: APTT
+    nci_code: C38462
+  - value_cn: 纤维蛋白原
+    value_en: Fibrinogen
+    decode_en: FIBRINO
+    decode_cn: FIBRINO
+    nci_code: C64606
+  - value_cn: 凝血酶时间
+    value_en: Thrombin Time
+    decode_en: TT
+    decode_cn: TT
+    nci_code: C80365
+  - value_cn: 三碘甲状腺原氨酸
+    value_en: Triiodothyronine
+    decode_en: T3
+    decode_cn: T3
+    nci_code: C74747
+  - value_cn: 甲状腺激素
+    value_en: Thyroxine
+    decode_en: T4
+    decode_cn: T4
+    nci_code: C74794
+  - value_cn: 游离三碘甲状腺原氨酸
+    value_en: Triiodothyronine, Free
+    decode_en: T3FR
+    decode_cn: T3FR
+    nci_code: C74787
+  - value_cn: 游离甲状腺素
+    value_en: Thyroxine, Free
+    decode_en: T4FR
+    decode_cn: T4FR
+    nci_code: C74786
+  - value_cn: 促甲状腺激素
+    value_en: Thyrotropin
+    decode_en: TSH
+    decode_cn: TSH
+    nci_code: C64813
+  - value_cn: 潜血
+    value_en: Occult Blood
+    decode_en: OCCBLD
+    decode_cn: OCCBLD
+    nci_code: C74686
+  - value_cn: 绒毛膜促性腺激素
+    value_en: Choriogonadotropin Beta
+    decode_en: HCG
+    decode_cn: HCG
+    nci_code: C64851
+  - value_cn: pH
+    value_en: pH
+    decode_en: PH
+    decode_cn: PH
+    nci_code: C45997
+  - value_cn: 酮体
+    value_en: Ketone
+    decode_en: KETONE
+    decode_cn: KETONE
+  - value_cn: 尿胆原
+    value_en: Urobilinogen
+    decode_en: UROBIL
+    decode_cn: UROBIL
+    nci_code: C64816
+  - value_cn: 尿比重
+    value_en: Specific Gravity
+    decode_en: SPGRAV
+    decode_cn: SPGRAV
+    nci_code: C64832
+  - value_cn: 亚硝酸盐
+    value_en: Nitrite
+    decode_en: NITRITE
+    decode_cn: NITRITE
+    nci_code: C64810
+MBCAT:
+  name_en: Category for Microbiology
+  name_cn: 微生物检查分类
+  items:
+  - value_cn: 病毒检测
+    value_en: Virology
+    decode_en: Virology
+    decode_cn: 病毒检测
+  - value_cn: 乙型肝炎病毒定量检测
+    value_en: Hepatitis B DNA
+    decode_en: Hepatitis B DNA
+    decode_cn: 乙型肝炎病毒定量检测
+  - value_cn: 丙型肝炎病毒定量检测
+    value_en: Hepatitis C RNA
+    decode_en: Hepatitis C RNA
+    decode_cn: 丙型肝炎病毒定量检测
+MBTEST:
+  name_en: Microbiology Test Name
+  name_cn: 微生物检查名称
+  extensible: true
+  items:
+  - value_cn: 乙肝病毒表面抗原(HBsAg)
+    value_en: Hepatitis B Virus Surface Antigen
+    decode_en: Hepatitis B Virus Surface Antigen
+    decode_cn: 乙肝病毒表面抗原
+  - value_cn: 乙肝病毒表面抗体(HBsAb)
+    value_en: Hepatitis B Virus Surface Antibody
+    decode_en: Hepatitis B Virus Surface Antibody
+    decode_cn: 乙肝病毒表面抗体
+  - value_cn: HBEAG
+    value_en: Hepatitis B Virus e Antigen
+    decode_en: Hepatitis B Virus e Antigen
+    decode_cn: 乙肝病毒e抗原
+  - value_cn: 乙肝病毒e抗体(HBeAb)
+    value_en: Hepatitis B Virus e Antibody
+    decode_en: Hepatitis B Virus e Antibody
+    decode_cn: 乙肝病毒e抗体
+  - value_cn: 乙肝病毒核心抗体(HBcAb)
+    value_en: Hepatitis B Virus Core Antibody
+    decode_en: Hepatitis B Virus Core Antibody
+    decode_cn: 乙肝病毒核心抗体
+  - value_cn: 人类免疫缺陷病毒抗体
+    value_en: HIV Antibody
+    decode_en: HIV Antibody
+    decode_cn: 人类免疫缺陷病毒抗体
+  - value_cn: 乙肝病毒DNA
+    value_en: Hepatitis B Virus DNA
+    decode_en: Hepatitis B Virus DNA
+    decode_cn: 乙型肝炎病毒DNA
+  - value_cn: 丙型肝炎病毒RNA
+    decode_cn: 丙型肝炎病毒RNA
+  - value_cn: 丙型肝炎病毒抗体
+    decode_cn: 丙型肝炎病毒抗体
+MBTESTCD:
+  name_en: Microbiology Test Code
+  name_cn: 微生物检查代码
+  extensible: true
+  items:
+  - value_cn: 乙肝病毒表面抗原
+    value_en: Hepatitis B Virus Surface Antigen
+    decode_en: HBSAG
+    decode_cn: HBSAG
+  - value_cn: 乙肝病毒表面抗体
+    value_en: Hepatitis B Virus Surface Antibody
+    decode_en: HBSAB
+    decode_cn: HBSAB
+  - value_cn: 乙肝病毒e抗原
+    value_en: Hepatitis B Virus e Antigen
+    decode_en: HBEAG
+    decode_cn: HBEAG
+  - value_cn: 乙肝病毒e抗体
+    value_en: Hepatitis B Virus e Antibody
+    decode_en: HBEAB
+    decode_cn: HBEAB
+  - value_cn: 乙肝病毒核心抗体
+    value_en: Hepatitis B Virus Core Antibody
+    decode_en: HBCAB
+    decode_cn: HBCAB
+  - value_cn: 抗丙型肝炎病毒抗体
+    value_en: Hepatitis C Virus Antibody
+    decode_en: HCAB
+    decode_cn: HCAB
+  - value_cn: 人类免疫缺陷病毒抗体
+    value_en: HIV Antibody
+    decode_en: HIVAB
+    decode_cn: HIVAB
+  - value_cn: HBV DNA
+    value_en: Hepatitis B Virus DNA
+    decode_en: HBDNA
+    decode_cn: HBDNA
+  - value_cn: 丙型肝炎病毒RNA
+    decode_en: HCRNA
+    decode_cn: HCRNA
+MHCAT:
+  name_en: Category for Medical History
+  name_cn: 既往病史分类
+  items:
+  - value_cn: 既往病史
+    value_en: Medical History
+    decode_en: Medical History
+    decode_cn: 既往病史
+  - value_cn: 肿瘤诊断
+    value_en: Tumor Diagnosis
+    decode_en: Tumor Diagnosis
+    decode_cn: 肿瘤诊断
+MHEDTTYP:
+  name_en: Medical History Event Date Type
+  name_cn: 既往病史日期类型
+  nci_code: C124301
+  items:
+  - value_cn: 诊断
+    value_en: DIAGNOSIS
+    decode_en: DIAGNOSIS
+    decode_cn: 诊断
+    nci_code: C15220
+MITS:
+  name_en: Microscopic Findings Test Name
+  name_cn: 微观发现检测名称
+  nci_code: C132262
+  extensible: false
+  items:
+  - value_cn: HER2 result (ISH)
+    value_en: HER2 result (ISH)
+    decode_en: Human Epidermal Growth Factor Receptor 2
+    decode_cn: 人表皮生长因子受体-2
+    nci_code: C112312
+  - value_cn: HER2 result (IHC)
+    value_en: HER2 result (IHC)
+    decode_en: Human Epidermal Growth Factor Receptor 2
+    decode_cn: 人表皮生长因子受体-2
+    nci_code: C112312
+  - value_cn: ER result
+    value_en: ER result
+    decode_en: Estrogen Receptor
+    decode_cn: 雌激素受体状态(ER)
+    nci_code: C112274
+  - value_cn: PR result
+    value_en: PR result
+    decode_en: Progesterone Receptor
+    decode_cn: 孕激素受体状态(PR)
+    nci_code: C117846
+MITSCD:
+  name_en: Microscopic Findings Test Code
+  name_cn: 微观发现检测代码
+  nci_code: C132263
+  extensible: false
+  items:
+  - value_cn: 人表皮生长因子受体-2
+    value_en: Human Epidermal Growth Factor Receptor 2
+    decode_en: HER2
+    decode_cn: HER2
+    nci_code: C112312
+  - value_cn: 雌激素受体状态(ER)
+    value_en: Estrogen Receptor
+    decode_en: ESTRCPT
+    decode_cn: ESTRCPT
+    nci_code: C112274
+  - value_cn: 孕激素受体状态(PR)
+    value_en: Progesterone Receptor
+    decode_en: PROGESTR
+    decode_cn: PROGESTR
+    nci_code: C117846
+NCOMPLT:
+  name_en: Completion/Reason for Non-Completion
+  name_cn: 完成或未完成原因
+  nci_code: C66727
+  items:
+  - value_cn: 不良事件
+    value_en: Adverse Event
+    decode_en: ADVERSE EVENT
+    decode_cn: 不良事件
+    nci_code: C41331
+  - value_cn: 失访
+    value_en: Lost to Follow-up
+    decode_en: LOST TO FOLLOW-UP
+    decode_cn: 失访
+    nci_code: C48227
+  - value_cn: 受试者要求退出
+    value_en: Withdrawal by Subject
+    decode_en: WITHDRAWAL BY SUBJECT
+    decode_cn: 受试者要求退出
+    nci_code: C49634
+  - value_cn: 临床进展
+    value_en: Clinical Progression
+    decode_en: CLINICAL PROGRESSION
+    decode_cn: 临床进展
+  - value_cn: 影像学进展
+    value_en: Imaging Progression
+    decode_en: IMAGING PROGRESSION
+    decode_cn: 影像学进展
+  - value_cn: 死亡
+    value_en: Death
+    decode_en: DEATH
+    decode_cn: 死亡
+    nci_code: C28554
+  - value_cn: 研究者判断
+    value_en: Physician Decision
+    decode_en: PHYSICIAN DECISION
+    decode_cn: 研究者判断
+    nci_code: C48250
+  - value_cn: 其他
+    value_en: Other
+    decode_en: OTHER
+    decode_cn: 其他
+    nci_code: C17649
+  - value_cn: 筛选失败
+    value_en: SCREEN FAILURE
+    decode_en: SCREEN FAILURE
+    decode_cn: 筛选失败
+ND:
+  name_en: Not Done
+  name_cn: 未查
+  nci_code: C66789
+  extensible: false
+  items:
+  - value_cn: 未查
+    value_en: NOT DONE
+    decode_en: NOT DONE
+    decode_cn: NOT DONE
+    nci_code: C49484
+NRIND:
+  name_en: Reference Range Indicator
+  name_cn: 相比参考范围
+  nci_code: C78736
+  items:
+  - value_cn: LOW
+    value_en: LOW
+    decode_en: LOW
+    decode_cn: LOW
+    nci_code: C78801
+  - value_cn: NORMAL
+    value_en: NORMAL
+    decode_en: NORMAL
+    decode_cn: NORMAL
+    nci_code: C78727
+  - value_cn: HIGH
+    value_en: HIGH
+    decode_en: HIGH
+    decode_cn: HIGH
+    nci_code: C78800
+NY:
+  name_en: No Yes Response
+  name_cn: 是非应答
+  nci_code: C66742
+  extensible: false
+  items:
+  - value_cn: Y
+    value_en: 'Yes'
+    decode_en: Y
+    decode_cn: Y
+    nci_code: C49488
+  - value_cn: N
+    value_en: 'No'
+    decode_en: N
+    decode_cn: N
+    nci_code: C49487
+  - value_cn: NA
+    value_en: Not Applicable
+    decode_en: NA
+    decode_cn: NA
+    nci_code: C48660
+  - value_cn: UNKNOWN
+    value_en: Unknown
+    decode_en: UNKNOWN
+    decode_cn: UNKNOWN
+    nci_code: C17998
+NY_Y:
+  name_en: No Yes Response, Subset for Yes
+  name_cn: 是非应答（是的子集）
+  nci_code: C66742
+  extensible: false
+  items:
+  - value_cn: Y
+    value_en: 'Yes'
+    decode_en: Y
+    decode_cn: Y
+    nci_code: C49488
+ONCRSCAT:
+  name_en: Category of Oncology Response Assessment
+  name_cn: 肿瘤反应评价分类
+  nci_code: C124298
+  items:
+  - value_cn: RECIST 1.1
+    value_en: RECIST 1.1
+    decode_en: RECIST 1.1
+    decode_cn: RECIST 1.1
+    nci_code: C124415
+ONCRSR:
+  name_en: Oncology Response Assessment Result
+  name_cn: 肿瘤反应评价结果
+  nci_code: C96785
+  items:
+  - value_cn: 完全缓解(CR)
+    value_en: CR
+    decode_en: CR
+    decode_cn: CR
+    nci_code: C4870
+  - value_cn: 部分缓解(PR)
+    value_en: PR
+    decode_en: PR
+    decode_cn: PR
+    nci_code: C18058
+  - value_cn: 疾病稳定(SD)
+    value_en: SD
+    decode_en: SD
+    decode_cn: SD
+    nci_code: C18213
+  - value_cn: 疾病进展(PD)
+    value_en: PD
+    decode_en: PD
+    decode_cn: PD
+    nci_code: C35571
+  - value_cn: 无法评估(NE)
+    value_en: NE
+    decode_en: NE
+    decode_cn: NE
+    nci_code: C62222
+  - value_cn: 基线无靶病灶(NED)
+    value_en: NED
+    decode_en: NED
+    decode_cn: NED
+    nci_code: C40413
+  - value_cn: 非完全缓解/非疾病进展(非CR/非PD)
+    value_en: Non-CR/Non-PD
+    decode_en: NON-CR/NON-PD
+    decode_cn: NON-CR/NON-PD
+    nci_code: C96700
+  - value_cn: 明确的
+    value_en: Unequivocal
+    decode_en: UNEQUIVOCAL
+    decode_cn: UNEQUIVOCAL
+    nci_code: C123645
+  - value_cn: 模糊的
+    value_en: Equivocal
+    decode_en: EQUIVOCAL
+    decode_cn: EQUIVOCAL
+    nci_code: C86071
+ONCRTS:
+  name_en: Oncology Response Assessment Test Name
+  name_cn: 肿瘤反应评价名称
+  nci_code: C96781
+  items:
+  - value_cn: 新病灶进展
+    value_en: New Lesion Progression
+    decode_en: New Lesion Progression
+    decode_cn: 新病灶进展
+    nci_code: C103420
+  - value_cn: 新病灶指标
+    value_en: New Lesion Indicator
+    decode_en: New Lesion Indicator
+    decode_cn: 新病灶指标
+    nci_code: C142362
+  - value_cn: 非靶病灶疗效评估
+    value_en: Non-target Response
+    decode_en: Non-target Response
+    decode_cn: 非靶病灶疗效评估
+    nci_code: C94535
+  - value_cn: 整体疗效评估
+    value_en: Overall Response
+    decode_en: Overall Response
+    decode_cn: 整体疗效评估
+    nci_code: C96613
+  - value_cn: 靶病灶疗效评估
+    value_en: Target Response
+    decode_en: Target Response
+    decode_cn: 靶病灶疗效评估
+    nci_code: C94534
+  - value_cn: 最佳总疗效
+    value_en: Best Overall Response
+    decode_en: Best Overall Response
+    decode_cn: 最佳总疗效
+    nci_code: C94536
+ONCRTSCD:
+  name_en: Oncology Response Assessment Test Code
+  name_cn: 肿瘤反应评价代码
+  nci_code: C96782
+  items:
+  - value_cn: 新病灶进展
+    value_en: New Lesion Progression
+    decode_en: NEWLPROG
+    decode_cn: NEWLPROG
+    nci_code: C103420
+  - value_cn: 新病灶指标
+    value_en: New Lesion Indicator
+    decode_en: NEWLIND
+    decode_cn: NEWLIND
+    nci_code: C142362
+  - value_cn: 非靶病灶疗效评估
+    value_en: Non-target Response
+    decode_en: NTRGRESP
+    decode_cn: NTRGRESP
+    nci_code: C94535
+  - value_cn: 整体疗效评估
+    value_en: Overall Response
+    decode_en: OVRLRESP
+    decode_cn: OVRLRESP
+    nci_code: C96613
+  - value_cn: 靶病灶疗效评估
+    value_en: Target Response
+    decode_en: TRGRESP
+    decode_cn: TRGRESP
+    nci_code: C94534
+  - value_cn: 最佳总疗效
+    value_en: Best Overall Response
+    decode_en: BESTRESP
+    decode_cn: BESTRESP
+    nci_code: C94536
+OUT:
+  name_en: Outcome of Event
+  name_cn: 事件转归
+  nci_code: C66768
+  extensible: false
+  items:
+  - value_cn: 未恢复/未解决
+    value_en: Not Recovered/Not Resolved
+    decode_en: NOT RECOVERED/NOT RESOLVED
+    decode_cn: 未恢复/未解决
+    nci_code: C49494
+  - value_cn: 恢复/解决
+    value_en: Recovered/Resolved
+    decode_en: RECOVERED/RESOLVED
+    decode_cn: 恢复/解决
+    nci_code: C49498
+  - value_cn: 恢复/解决有后遗症
+    value_en: Recovered/Resolved with Sequelae
+    decode_en: RECOVERED/RESOLVED WITH SEQUELAE
+    decode_cn: 恢复/解决有后遗症
+    nci_code: C49495
+  - value_cn: 恢复中
+    value_en: Recovering/Resolving
+    decode_en: RECOVERING/RESOLVING
+    decode_cn: 恢复中
+    nci_code: C49496
+  - value_cn: 死亡
+    value_en: Fatal
+    decode_en: FATAL
+    decode_cn: 死亡
+    nci_code: C48275
+  - value_cn: 未知
+    value_en: Unknown
+    decode_en: UNKNOWN
+    decode_cn: 未知
+    nci_code: C17998
+PETEST:
+  name_en: Physical Examination Test Name
+  name_cn: 身体检查名称
+  items:
+  - value_cn: 一般状况
+    value_en: General Status
+    decode_en: General Status
+    decode_cn: 一般状况
+  - value_cn: 眼睛
+    value_en: Eyes
+    decode_en: Eyes
+    decode_cn: 眼睛
+  - value_cn: 皮肤
+    value_en: Skin
+    decode_en: Skin
+    decode_cn: 皮肤
+  - value_cn: 淋巴结
+    value_en: Lymph Node
+    decode_en: Lymph Node
+    decode_cn: 淋巴结
+  - value_cn: 头颈部
+    value_en: Head and Neck
+    decode_en: Head and Neck
+    decode_cn: 头颈部
+  - value_cn: 胸部(心脏和肺脏)
+    value_en: Chest (Heart and Lungs)
+    decode_en: Chest (Heart and Lungs)
+    decode_cn: 胸部(心脏和肺脏)
+  - value_cn: 腹部
+    value_en: Abdomen
+    decode_en: Abdomen
+    decode_cn: 腹部
+  - value_cn: 肌肉骨骼
+    value_en: Musculoskeletal
+    decode_en: Musculoskeletal
+    decode_cn: 肌肉骨骼
+  - value_cn: 精神状况
+    value_en: Mental Status
+    decode_en: Mental Status
+    decode_cn: 精神状况
+  - value_cn: 呼吸系统
+    value_en: Respiratory System
+    decode_en: Respiratory System
+    decode_cn: 呼吸系统
+  - value_cn: 心血管系统
+    value_en: Cardiovascular System
+    decode_en: Cardiovascular System
+    decode_cn: 心血管系统
+PETESTCD:
+  name_en: Physical Examination Test Code
+  name_cn: 身体检查代码
+  items:
+  - value_cn: 一般状况
+    value_en: General Status
+    decode_en: GENESTAT
+    decode_cn: GENESTAT
+  - value_cn: 眼睛
+    value_en: Eyes
+    decode_en: EYES
+    decode_cn: EYES
+  - value_cn: 皮肤
+    value_en: Skin
+    decode_en: SKIN
+    decode_cn: SKIN
+  - value_cn: 淋巴结
+    value_en: Lymph Node
+    decode_en: LYMPHNOD
+    decode_cn: LYMPHNOD
+  - value_cn: 头颈部
+    value_en: Head and Neck
+    decode_en: HEADNECK
+    decode_cn: HEADNECK
+  - value_cn: 胸部(心脏和肺脏)
+    value_en: Chest (Heart and Lungs)
+    decode_en: CHEST
+    decode_cn: CHEST
+  - value_cn: 腹部
+    value_en: Abdomen
+    decode_en: ABDOMEN
+    decode_cn: ABDOMEN
+  - value_cn: 肌肉骨骼
+    value_en: Musculoskeletal
+    decode_en: MUSCUL
+    decode_cn: MUSCUL
+  - value_cn: 精神状况
+    value_en: Mental Status
+    decode_en: MENTSTAT
+    decode_cn: MENTSTAT
+  - value_cn: 呼吸系统
+    value_en: Respiratory System
+    decode_en: RESPSYS
+    decode_cn: RESPSYS
+  - value_cn: 心血管系统
+    value_en: Cardiovascular System
+    decode_en: CARDSYS
+    decode_cn: CARDSYS
+  - value_cn: 生殖泌尿系统
+    value_en: Urogenital System
+    decode_en: URGESYS
+    decode_cn: URGESYS
+PROTMLST:
+  name_en: Protocol Milestone
+  name_cn: 方案里程碑
+  nci_code: C114118
+  items:
+  - value_cn: 签署知情同意书
+    value_en: INFORMED CONSENT OBTAINED
+    decode_en: INFORMED CONSENT OBTAINED
+    decode_cn: 签署知情同意书
+    nci_code: C16735
+  - value_cn: 入组
+    value_en: ENTERED INTO TRIAL
+    decode_en: ENTERED INTO TRIAL
+    decode_cn: 入组
+    nci_code: C161417
+  - value_cn: 随机化
+    value_en: RANDOMIZED
+    decode_en: RANDOMIZED
+    decode_cn: 随机化
+    nci_code: C114209
+RACE:
+  name_en: Race
+  name_cn: 种族
+  nci_code: C74457
+  extensible: false
+  items:
+  - value_cn: 亚洲人
+    value_en: Asian
+    decode_en: ASIAN
+    decode_cn: 亚洲人
+    nci_code: C41260
+ROUTE:
+  name_en: Route of Administration Response
+  name_cn: 给药途径
+  nci_code: C66729
+  items:
+  - value_cn: 口服
+    value_en: Oral (PO)
+    decode_en: ORAL
+    decode_cn: 口服
+    nci_code: C38288
+  - value_cn: 静脉
+    value_en: Intravenous
+    decode_en: INTRAVENOUS
+    decode_cn: 静脉
+    nci_code: C38276
+  - value_cn: 呼吸道(吸入)
+    value_en: Respiratory (Inhalation)
+    decode_en: RESPIRATORY (INHALATION)
+    decode_cn: 呼吸道(吸入)
+    nci_code: C38216
+  - value_cn: 肌内
+    value_en: Intramuscular (IM)
+    decode_en: INTRAMUSCULAR
+    decode_cn: 肌内
+    nci_code: C28161
+  - value_cn: 皮下
+    value_en: Subcutaneous (SC)
+    decode_en: SUBCUTANEOUS
+    decode_cn: 皮下
+    nci_code: C38299
+  - value_cn: 鼻腔
+    value_en: Nasal (IN)
+    decode_en: NASAL
+    decode_cn: 鼻腔
+    nci_code: C38284
+  - value_cn: 局部
+    value_en: Topical (TO)
+    decode_en: TOPICAL
+    decode_cn: 局部
+    nci_code: C38304
+  - value_cn: 舌下
+    value_en: Sublingual (SL)
+    decode_en: SUBLINGUAL
+    decode_cn: 舌下
+    nci_code: C38300
+  - value_cn: 直肠
+    value_en: Rectal
+    decode_en: RECTAL
+    decode_cn: 直肠
+    nci_code: C38295
+  - value_cn: 阴道
+    value_en: Vaginal
+    decode_en: VAGINAL
+    decode_cn: 阴道
+    nci_code: C38313
+  - value_cn: 病灶内
+    value_en: Intralesional
+    decode_en: INTRALESIONAL
+    decode_cn: 病灶内
+    nci_code: C38250
+  - value_cn: 腹膜内
+    value_en: Intraperitoneal
+    decode_en: INTRAPERITONEAL
+    decode_cn: 腹膜内
+    nci_code: C38258
+  - value_cn: 眼内
+    value_en: Intraocular
+    decode_en: INTRAOCULAR
+    decode_cn: 眼内
+    nci_code: C38255
+  - value_cn: 其他
+    value_en: Other
+    decode_en: OTHER
+    decode_cn: 其他
+  - value_cn: 透皮
+    value_en: Transdermal (DE)
+    decode_en: TRANSDERMAL
+    decode_cn: 透皮
+    nci_code: C38305
+RPTEST:
+  name_en: Reproductive System Findings Test Name
+  name_cn: 生殖系统检查名称
+  nci_code: C106478
+  items:
+  - value_cn: 生育能力
+    value_en: Childbearing Potential
+    decode_en: Childbearing Potential
+    decode_cn: 生育能力
+    nci_code: C106508
+RPTESTCD:
+  name_en: Reproductive System Findings Test Code
+  name_cn: 生殖系统检查代码
+  nci_code: C106479
+  items:
+  - value_cn: 生育能力
+    value_en: Childbearing Potential
+    decode_en: CHILDPOT
+    decode_cn: CHILDPOT
+    nci_code: C106508
+SEX:
+  name_en: Sex
+  name_cn: 性别
+  nci_code: C66731
+  items:
+  - value_cn: 女
+    value_en: Female
+    decode_en: F
+    decode_cn: 女
+    nci_code: C16576
+SPECCOND:
+  name_en: Specimen Condition
+  name_cn: 样本状态
+  nci_code: C78733
+  items:
+  - value_cn: 石蜡包埋
+    value_en: PARAFFIN-EMBEDDED
+    decode_en: PARAFFIN-EMBEDDED
+    decode_cn: 石蜡包埋
+    nci_code: C19597
+SSTATRS:
+  name_en: Subject Status Response
+  name_cn: 受试者状态
+  nci_code: C124304
+  items:
+  - value_cn: 生存
+    value_en: Alive
+    decode_en: ALIVE
+    decode_cn: 生存
+    nci_code: C37987
+  - value_cn: 死亡
+    value_en: Dead
+    decode_en: DEAD
+    decode_cn: 死亡
+    nci_code: C28554
+  - value_cn: 失访
+    value_en: Lost to Follow-up
+    decode_en: Lost to Follow-up
+    decode_cn: 失访
+    nci_code: C17998
+SSTEST:
+  name_en: Subject Status Test Name
+  name_cn: 受试者状态评估名称
+  nci_code: C124306
+  items:
+  - value_cn: 生存状态
+    value_en: Survival Status
+    decode_en: Survival Status
+    decode_cn: 生存状态
+    nci_code: C25717
+SSTESTCD:
+  name_en: Subject Status Test Code
+  name_cn: 受试者状态评估简称
+  nci_code: C124305
+  items:
+  - value_cn: SURVSTAT
+    value_en: Survival Status
+    decode_en: SURVSTAT
+    decode_cn: SURVSTAT
+    nci_code: C25717
+STENRF:
+  name_en: Relation to Reference Period
+  name_cn: 与参考时间的关系
+  nci_code: C66728
+  extensible: false
+  items:
+  - value_cn: 仍持续
+    value_en: ONGOING
+    decode_en: ONGOING
+    decode_cn: 仍持续
+    nci_code: C53279
+TRPROPRS:
+  name_en: Tumor or Lesion Properties Test Result
+  name_cn: 肿瘤/损伤性质结果
+  nci_code: C124309
+  items:
+  - value_cn: 消失
+    value_en: Absent
+    decode_en: ABSENT
+    decode_cn: 消失
+    nci_code: C48190
+  - value_cn: 存在
+    value_en: Present
+    decode_en: PRESENT
+    decode_cn: 存在
+    nci_code: C25626
+  - value_cn: 无法确定
+    value_en: Equivocal
+    decode_en: EQUIVOCAL
+    decode_cn: 无法确定
+    nci_code: C86071
+  - value_cn: 进展
+    value_en: Unequivocal Progression
+    decode_en: UNEQUIVOCAL
+    decode_cn: 进展
+    nci_code: C123645
+TRTEST:
+  name_en: Tumor or Lesion Properties Test Name
+  name_cn: 肿瘤/损伤评估名称
+  nci_code: C96778
+  items:
+  - value_cn: 直径
+    value_en: Diameter
+    decode_en: Diameter
+    decode_cn: 直径
+    nci_code: C25285
+  - value_cn: 直径之和
+    value_en: Sum of Diameter
+    decode_en: Sum of Diameter
+    decode_cn: 直径之和
+    nci_code: C96631
+  - value_cn: 肿瘤状态
+    value_en: Tumor State
+    decode_en: Tumor State
+    decode_cn: 肿瘤状态
+    nci_code: C96643
+  - value_cn: 与最低点SOD相比的绝对变化
+    value_en: Absolute Change Nadir in Sum of Diam
+    decode_en: Absolute Change Nadir in Sum of Diam
+    decode_cn: 与最低点SOD相比的绝对变化
+    nci_code: C112218
+  - value_cn: 与基线SOD的百分比变化
+    value_en: Percent Change Baseline in Sum of Diam
+    decode_en: Percent Change Baseline in Sum of Diam
+    decode_cn: 与基线SOD的百分比变化
+    nci_code: C112370
+  - value_cn: 非结节靶病灶直径之和
+    value_en: Sum Diameters of Non Lymph Node Tumors
+    decode_en: Sum Diameters of Non Lymph Node Tumors
+    decode_cn: 非结节靶病灶直径之和
+    nci_code: C103441
+  - value_cn: 最低点直径之和
+    value_en: Nadir SOD
+    decode_en: Nadir SOD
+    decode_cn: 最低点直径之和
+  - value_cn: 单个非靶病灶评估
+    value_en: Single Non-target lesion efficacy
+    decode_en: Single Non-target lesion efficacy
+    decode_cn: 单个非靶病灶评估
+  - value_cn: 结节靶病灶直径之和
+    value_en: Sum Diameters of Lymph Node Tumors
+    decode_en: Sum Diameters of Lymph Node Tumors
+    decode_cn: 结节靶病灶直径之和
+  - value_cn: 相对于SOD最低点的百分比变化
+    value_en: Percent Change Nadir in Sum of Diam
+    decode_en: Percent Change Nadir in Sum of Diam
+    decode_cn: 相对于SOD最低点的百分比变化
+    nci_code: C112373
+TRTESTCD:
+  name_en: Tumor or Lesion Properties Test Code
+  name_cn: 肿瘤/损伤评估代码
+  nci_code: C96779
+  items:
+  - value_cn: 直径
+    value_en: Diameter
+    decode_en: DIAMETER
+    decode_cn: DIAMETER
+    nci_code: C25285
+  - value_cn: 直径之和
+    value_en: Sum of Diameter
+    decode_en: SUMDIAM
+    decode_cn: SUMDIAM
+    nci_code: C96631
+  - value_cn: 肿瘤状态
+    value_en: Tumor State
+    decode_en: TUMSTATE
+    decode_cn: TUMSTATE
+    nci_code: C96643
+  - value_cn: 与最低点SOD相比的绝对变化
+    value_en: Absolute Change Nadir in Sum of Diam
+    decode_en: ACNSD
+    decode_cn: ACNSD
+    nci_code: C112218
+  - value_cn: 与基线SOD的百分比变化
+    value_en: Percent Change Baseline in Sum of Diam
+    decode_en: PCBSD
+    decode_cn: PCBSD
+    nci_code: C112370
+  - value_cn: 非结节靶病灶直径之和
+    value_en: Sum Diameters of Non Lymph Node Tumors
+    decode_en: SUMNLNLD
+    decode_cn: SUMNLNLD
+    nci_code: C103441
+  - value_cn: 最低点直径之和
+    value_en: Nadir SOD
+    decode_en: NSD
+    decode_cn: NSD
+  - value_cn: 单个非靶病灶评估
+    value_en: Single Non-target lesion efficacy
+    decode_en: SNTLEF
+    decode_cn: SNTLEF
+  - value_cn: 结节靶病灶直径之和
+    value_en: Sum Diameters of Lymph Node Tumors
+    decode_en: SUMLNLD
+    decode_cn: SUMLNLD
+  - value_cn: 相对于SOD最低点的百分比变化
+    value_en: Percent Change Nadir in Sum of Diam
+    decode_en: PCNSD
+    decode_cn: PCNSD
+    nci_code: C112373
+TUIDRS:
+  name_en: Tumor or Lesion Identification Test Results
+  name_cn: 肿瘤/损伤ID结果
+  nci_code: C123650
+  items:
+  - value_cn: 靶病灶
+    value_en: TARGET
+    decode_en: TARGET
+    decode_cn: 靶病灶
+    nci_code: C94520
+  - value_cn: 非靶病灶
+    value_en: NON-TARGET
+    decode_en: NON-TARGET
+    decode_cn: 非靶病灶
+    nci_code: C94521
+  - value_cn: 新病灶
+    value_en: NEW
+    decode_en: NEW
+    decode_cn: 新病灶
+    nci_code: C94522
+TUTEST:
+  name_en: Tumor or Lesion Identification Test Name
+  name_cn: 肿瘤/损伤ID名称
+  nci_code: C96783
+  items:
+  - value_cn: 肿瘤识别
+    value_en: Tumor Identification
+    decode_en: Tumor Identification
+    decode_cn: 肿瘤识别
+    nci_code: C94523
+  - value_cn: 肿瘤分裂
+    value_en: Tumor Split
+    decode_en: Tumor Split
+    decode_cn: 肿瘤分裂
+    nci_code: C96642
+TUTESTCD:
+  name_en: Tumor or Lesion Identification Test Code
+  name_cn: 肿瘤/损伤ID简称
+  nci_code: C96784
+  items:
+  - value_cn: 肿瘤识别
+    value_en: Tumor Identification
+    decode_en: TUMIDENT
+    decode_cn: TUMIDENT
+    nci_code: C94523
+  - value_cn: 肿瘤分裂
+    value_en: Tumor Split
+    decode_en: TUSPLIT
+    decode_cn: TUSPLIT
+    nci_code: C96642
+UNIT:
+  name_en: Unit
+  name_cn: 单位
+  nci_code: C71620
+  items:
+  - value_cn: 天
+    value_en: Days
+    decode_en: DAYS
+    decode_cn: 天
+    nci_code: C25301
+VSCAT:
+  name_en: Category for Vital Sign
+  name_cn: 生命体征分类
+  extensible: true
+  items:
+  - value_cn: 氧饱和度
+    value_en: Oxygen Saturation
+    decode_en: Oxygen Saturation
+    decode_cn: 氧饱和度
+  - value_cn: 生命体征
+    value_en: Vital Signs
+    decode_en: Vital Signs
+    decode_cn: 生命体征
+  - value_cn: 体重
+    value_en: Weight
+    decode_en: Weight
+    decode_cn: 体重
+  - value_cn: 身高
+    value_en: Height
+    decode_en: Height
+    decode_cn: 身高
+VSRESU:
+  name_en: Units for Vital Signs Results
+  name_cn: 生命体征结果单位
+  nci_code: C66770
+  items:
+  - value_cn: cm
+    value_en: cm
+    decode_en: cm
+    decode_cn: cm
+    nci_code: C49668
+  - value_cn: kg
+    value_en: kg
+    decode_en: kg
+    decode_cn: kg
+    nci_code: C28252
+  - value_cn: C
+    value_en: C
+    decode_en: C
+    decode_cn: C
+    nci_code: C42559
+  - value_cn: beats/min
+    value_en: beats/min
+    decode_en: beats/min
+    decode_cn: beats/min
+    nci_code: C49673
+  - value_cn: breaths/min
+    value_en: breaths/min
+    decode_en: breaths/min
+    decode_cn: breaths/min
+    nci_code: C49674
+  - value_cn: mmHg
+    value_en: mmHg
+    decode_en: mmHg
+    decode_cn: mmHg
+    nci_code: C49670
+  - value_cn: '%'
+    value_en: '%'
+    decode_en: '%'
+    decode_cn: '%'
+    nci_code: C25613
+VSTEST:
+  name_en: Vital Signs Test Name
+  name_cn: 生命体征检查名称
+  nci_code: C67153
+  items:
+  - value_cn: 身高
+    value_en: Height
+    decode_en: Height
+    decode_cn: 身高
+    nci_code: C25347
+  - value_cn: 体重
+    value_en: Weight
+    decode_en: Weight
+    decode_cn: 体重
+    nci_code: C25208
+  - value_cn: 体温
+    value_en: Temperature
+    decode_en: Temperature
+    decode_cn: 体温
+    nci_code: C174446
+  - value_cn: 脉搏
+    value_en: Pulse Rate
+    decode_en: Pulse Rate
+    decode_cn: 脉搏
+    nci_code: C49676
+  - value_cn: 呼吸频率
+    value_en: Respiratory Rate
+    decode_en: Respiratory Rate
+    decode_cn: 呼吸频率
+    nci_code: C49678
+  - value_cn: 舒张压
+    value_en: Diastolic Blood Pressure
+    decode_en: Diastolic Blood Pressure
+    decode_cn: 舒张压
+    nci_code: C25299
+  - value_cn: 收缩压
+    value_en: Systolic Blood Pressure
+    decode_en: Systolic Blood Pressure
+    decode_cn: 收缩压
+    nci_code: C25298
+  - value_cn: 血氧饱和度
+    value_en: Oxygen Saturation
+    decode_en: Oxygen Saturation
+    decode_cn: 氧饱和度
+    nci_code: C60832
+VSTESTCD:
+  name_en: Vital Signs Test Code
+  name_cn: 生命体征检查代码
+  nci_code: C66741
+  items:
+  - value_cn: 身高
+    value_en: Height
+    decode_en: HEIGHT
+    decode_cn: HEIGHT
+    nci_code: C25347
+  - value_cn: 体重
+    value_en: Weight
+    decode_en: WEIGHT
+    decode_cn: WEIGHT
+    nci_code: C25208
+  - value_cn: 体温
+    value_en: Temperature
+    decode_en: TEMP
+    decode_cn: TEMP
+    nci_code: C174446
+  - value_cn: 脉搏
+    value_en: Pulse Rate
+    decode_en: PULSE
+    decode_cn: PULSE
+    nci_code: C49676
+  - value_cn: 呼吸频率
+    value_en: Respiratory Rate
+    decode_en: RESP
+    decode_cn: RESP
+    nci_code: C49678
+  - value_cn: 舒张压
+    value_en: Diastolic Blood Pressure
+    decode_en: DIABP
+    decode_cn: DIABP
+    nci_code: C25299
+  - value_cn: 收缩压
+    value_en: Systolic Blood Pressure
+    decode_en: SYSBP
+    decode_cn: SYSBP
+    nci_code: C25298
+  - value_cn: 氧饱和度
+    value_en: Oxygen Saturation
+    decode_en: OXYSAT
+    decode_cn: OXYSAT
+    nci_code: C60832
+AEREL:
+  name_en: Causality
+  name_cn: 因果关系
+  items:
+  - value_cn: 肯定有关
+    value_en: Related
+    decode_en: RELATED
+    decode_cn: 肯定有关
+  - value_cn: 可能有关
+    value_en: Possibly Related
+    decode_en: POSSIBLY RELATED
+    decode_cn: 可能有关
+  - value_cn: 可能无关
+    value_en: Unlikely Related
+    decode_en: UNLIKELY RELATED
+    decode_cn: 可能无关
+  - value_cn: 肯定无关
+    value_en: Not Related
+    decode_en: NOT RELATED
+    decode_cn: 肯定无关
+  - value_cn: 无法判定
+    value_en: Unassessable
+    decode_en: UNASSESSABLE
+    decode_cn: 无法判定
+SEXPOP:
+  name_en: 参加者性别
+  name_cn: 参加者性别
+  nci_code: C66732
+  extensible: false
+  items:
+  - value_cn: F
+    value_en: F
+    decode_en: F
+    decode_cn: F
+    nci_code: C16576
+TBLIND:
+  name_en: 试验盲态计划
+  name_cn: 试验盲态计划
+  nci_code: C66735
+  items:
+  - value_cn: OPEN LABEL
+    value_en: OPEN LABEL
+    decode_en: OPEN LABEL
+    decode_cn: OPEN LABEL
+    nci_code: C49659
+TCNTRL:
+  name_en: 对照类型
+  name_cn: 对照类型
+  nci_code: C66785
+  items:
+  - value_cn: ACTIVE
+    value_en: ACTIVE
+    decode_en: ACTIVE
+    decode_cn: ACTIVE
+    nci_code: C49649
+TINDTP:
+  name_en: 试验目标类型
+  name_cn: 试验目标类型
+  nci_code: C66736
+  items:
+  - value_cn: TREATMENT
+    value_en: TREATMENT
+    decode_en: TREATMENT
+    decode_cn: TREATMENT
+    nci_code: C49656
+'TPHASE ':
+  name_en: 试验阶段
+  name_cn: 试验阶段
+  nci_code: C66737
+  items:
+  - value_cn: PHASE III TRIAL
+    value_en: PHASE III TRIAL
+    decode_en: PHASE III TRIAL
+    decode_cn: PHASE III TRIAL
+    nci_code: C15602
+TTYPE:
+  name_en: 试验类型
+  name_cn: 试验类型
+  nci_code: C66739
+  items:
+  - value_cn: EFFICACY
+    value_en: EFFICACY
+    decode_en: EFFICACY
+    decode_cn: EFFICACY
+    nci_code: C49666
+  - value_cn: IMMUNOGENICITY
+    value_en: IMMUNOGENICITY
+    decode_en: IMMUNOGENICITY
+    decode_cn: IMMUNOGENICITY
+    nci_code: C120842
+  - value_cn: PHARMACOKINETIC
+    value_en: PHARMACOKINETIC
+    decode_en: PHARMACOKINETIC
+    decode_cn: PHARMACOKINETIC
+    nci_code: C49663
+  - value_cn: SAFETY
+    value_en: SAFETY
+    decode_en: SAFETY
+    decode_cn: SAFETY
+    nci_code: C49667
+  - value_cn: TOLERABILITY
+    value_en: TOLERABILITY
+    decode_en: TOLERABILITY
+    decode_cn: TOLERABILITY
+    nci_code: C98791
+INTMODEL:
+  name_en: 干预模型
+  name_cn: 干预模型
+  nci_code: C99076
+  items:
+  - value_cn: PARALLEL
+    value_en: PARALLEL
+    decode_en: PARALLEL
+    decode_cn: PARALLEL
+    nci_code: C82639
+STYPE:
+  name_en: 研究类型
+  name_cn: 研究类型
+  nci_code: C99077
+  items:
+  - value_cn: INTERVENTIONAL
+    value_en: INTERVENTIONAL
+    decode_en: INTERVENTIONAL
+    decode_cn: INTERVENTIONAL
+    nci_code: C98388
+INTTYPE:
+  name_en: 干预类型
+  name_cn: 干预类型
+  nci_code: C99078
+  items:
+  - value_cn: BIOLOGIC
+    value_en: BIOLOGIC
+    decode_en: BIOLOGIC
+    decode_cn: BIOLOGIC
+    nci_code: C307
+  - value_cn: DRUG
+    value_en: DRUG
+    decode_en: DRUG
+    decode_cn: DRUG
+    nci_code: C1909
+PRCAT:
+  name_en: Category of Procedures
+  name_cn: 步骤分类
+  extensible: true
+  items:
+  - value_cn: 局部治疗史
+    value_en: Prior Locoregional Therapy
+    decode_en: Prior Locoregional Therapy
+    decode_cn: 局部治疗史
+  - value_cn: 放疗史
+    value_en: Prior Cancer Radiotherapy
+    decode_en: Prior Cancer Radiotherapy
+    decode_cn: 放疗史
+  - value_cn: 肿瘤手术史
+    value_en: Prior Cancer Surgery
+    decode_en: Prior Cancer Surgery
+    decode_cn: 肿瘤手术史
+  - value_cn: 合并放疗
+    value_en: On Study Cancer Radiotherapy
+    decode_en: On Study Cancer Radiotherapy
+    decode_cn: 合并放疗
+  - value_cn: 合并肿瘤手术
+    value_en: On Study Cancer Surgery
+    decode_en: On Study Cancer Surgery
+    decode_cn: 合并肿瘤手术
+  - value_cn: 后续放疗
+    value_en: Follow-Up Cancer Radiotherapy
+    decode_en: Follow-Up Cancer Radiotherapy
+    decode_cn: 后续放疗
+  - value_cn: 后续肿瘤手术
+    value_en: Follow-Up Cancer Surgery
+    decode_en: Follow-Up Cancer Surgery
+    decode_cn: 后续肿瘤手术
+  - value_cn: 后续局部治疗
+    value_en: Follow-Up Locoregional Therapy
+    decode_en: Follow-Up Locoregional Therapy
+    decode_cn: 后续局部治疗
+  - value_cn: 既往及合并非药物治疗/操作
+    value_en: Prior and Concomitant Procedure
+    decode_en: Prior and Concomitant Procedure
+    decode_cn: 既往及合并非药物治疗/操作
+  - value_cn: 肿瘤影像学
+    decode_cn: 肿瘤影像学
+MHHG:
+  name_en: First Histological Grading
+  name_cn: 首次组织学分级
+  extensible: true
+  items:
+  - value_cn: I
+    decode_cn: I
+  - value_cn: II
+    decode_cn: II
+  - value_cn: III
+    decode_cn: III
+  - value_cn: 未知
+    decode_cn: 未知
+CLICT:
+  name_en: Clinical Stage
+  name_cn: 临床分期
+  extensible: true
+  items:
+  - value_cn: Tx
+    decode_cn: Tx
+  - value_cn: T0
+    decode_cn: T0
+  - value_cn: Tis
+    decode_cn: Tis
+  - value_cn: T1
+    decode_cn: T1
+  - value_cn: T1mi
+    decode_cn: T1mi
+  - value_cn: T1a
+    decode_cn: T1a
+  - value_cn: T1b
+    decode_cn: T1b
+  - value_cn: T1c
+    decode_cn: T1c
+  - value_cn: T2
+    decode_cn: T2
+  - value_cn: T3
+    decode_cn: T3
+  - value_cn: T4
+    decode_cn: T4
+  - value_cn: T4a
+    decode_cn: T4a
+  - value_cn: T4b
+    decode_cn: T4b
+  - value_cn: T4c
+    decode_cn: T4c
+  - value_cn: T4d
+    decode_cn: T4d
+  - value_cn: 未知
+    decode_cn: 未知
+ARMNULRS:
+  name_en: Arm Null Reason
+  name_cn: 未分组原因
+  nci_code: C142179
+  items:
+  - value_cn: 已分组，未治疗
+    value_en: ASSIGNED, NOT TREATED
+    decode_en: ASSIGNED, NOT TREATED
+    decode_cn: 已分组，未治疗
+    nci_code: C142238
+  - value_cn: 未分组
+    value_en: NOT ASSIGNED
+    decode_en: NOT ASSIGNED
+    decode_cn: 未分组
+    nci_code: C142239
+  - value_cn: 筛选失败
+    value_en: SCREEN FAILURE
+    decode_en: SCREEN FAILURE
+    decode_cn: 筛选失败
+    nci_code: C49628
+  - value_cn: 非计划分组
+    value_en: UNPLANNED TREATMENT
+    decode_en: UNPLANNED TREATMENT
+    decode_cn: 非计划分组
+    nci_code: C142240
+MBTSTDTL:
+  name_en: Measurement, Test or Examination Detail
+  name_cn: 测量，检测或检查详情
+  items:
+  - value_cn: 测定
+    value_en: DETECTION
+    decode_en: DETECTION
+    decode_cn: 测定
+  - value_cn: 病毒载量
+    value_en: VIRAL LOAD
+    decode_en: VIRAL LOAD
+    decode_cn: 病毒载量
+MICAT:
+  name_en: Category for Microscopic Finding
+  name_cn: 显微镜发现的类别
+  extensible: true
+  items:
+  - value_cn: 病理
+    value_en: Pathology
+    decode_en: Pathology
+    decode_cn: 病理
+NY_NY:
+  name_en: No Yes Response, Subset for Yes/No
+  name_cn: 是非应答（是/否的子集）
+  nci_code: C66742
+  extensible: false
+  items:
+  - value_cn: Y
+    value_en: 'Yes'
+    decode_en: Y
+    decode_cn: Y
+    nci_code: C49488
+  - value_cn: N
+    value_en: 'No'
+    decode_en: N
+    decode_cn: N
+    nci_code: C49487
+NY_N:
+  name_en: 是非应答（否的子集）
+  name_cn: 是非应答（否的子集）
+  nci_code: C66742
+  extensible: false
+  items:
+  - value_cn: 否
+    value_en: 否
+    decode_en: N
+    decode_cn: N
+    nci_code: C49487
+ECOG101STR:
+  name_en: Eastern Cooperative Oncology Group Performance Status Clinical Classification STRESC for ECOG101 TN/TC
+  name_cn: ECOG评分结果
+  nci_code: C179944
+  extensible: false
+  items:
+  - value_cn: 0分
+    value_en: '0'
+    decode_en: '0'
+    decode_cn: '0'
+    nci_code: C180255
+    order: 1
+  - value_cn: 1分
+    value_en: '1'
+    decode_en: '1'
+    decode_cn: '1'
+    nci_code: C180256
+    order: 2
+  - value_cn: 2分
+    value_en: '2'
+    decode_en: '2'
+    decode_cn: '2'
+    nci_code: C180257
+    order: 3
+  - value_cn: 3分
+    value_en: '3'
+    decode_en: '3'
+    decode_cn: '3'
+    nci_code: C180258
+    order: 4
+  - value_cn: 4分
+    value_en: '4'
+    decode_en: '4'
+    decode_cn: '4'
+    nci_code: C180259
+    order: 5
+  - value_cn: 5分
+    value_en: '5'
+    decode_en: '5'
+    decode_cn: '5'
+    nci_code: C180260
+    order: 6
+ECOG101OR:
+  name_en: Eastern Cooperative Oncology Group Performance Status Clinical Classification ORRES for ECOG101 TN/TC
+  name_cn: ECOG原始评分结果
+  nci_code: C179943
+  extensible: false
+  items:
+  - value_cn: 0分-无症状，完全主动活动，及能够进行无限制的活动
+    value_en: 0-Fully active, able to carry on all pre-disease performance without restriction
+    decode_en: Fully active, able to carry on all pre-disease performance without restriction
+    decode_cn: 无症状，完全主动活动，及能够进行无限制的活动
+    nci_code: C180249
+    order: 1
+  - value_cn: 1分-有症状，完全能行走，但重体力活动受限，能从事轻的或以坐为主的工作，如轻微家务、办公室工作
+    value_en: 1-Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature, e.g., light house work, office work
+    decode_en: Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature, e.g., light house work, office work
+    decode_cn: 有症状，完全能行走，但重体力活动受限，能从事轻的或以坐为主的工作，如轻微家务、办公室工作
+    nci_code: C180250
+    order: 2
+  - value_cn: 2分-有症状，能行走，生活可自理，但不能进行任何的体力活动，约有50%以上的时间清醒（白天卧床时间<50%）
+    value_en: 2-Ambulatory and capable of all selfcare but unable to carry out any work activities. Up and about more than 50% of waking hours
+    decode_en: Ambulatory and capable of all selfcare but unable to carry out any work activities. Up and about more than 50% of waking hours
+    decode_cn: 有症状，能行走，生活可自理，但不能进行任何的体力活动，约有50%以上的时间清醒（白天卧床时间<50%）
+    nci_code: C180251
+    order: 3
+  - value_cn: 3分-有症状，有限的生活自理能力，清醒时间卧床或坐椅>50%，但尚未卧床不起
+    value_en: 3-Capable of only limited selfcare, confined to bed or chair more than 50% of waking hours
+    decode_en: Capable of only limited selfcare, confined to bed or chair more than 50% of waking hours
+    decode_cn: 有症状，有限的生活自理能力，清醒时间卧床或坐椅>50%，但尚未卧床不起
+    nci_code: C180252
+    order: 4
+  - value_cn: 4分-完全失去功能，生活完全不能自理，卧床不起
+    value_en: 4-Completely disabled. Cannot carry on any selfcare. Totally confined to bed or chair
+    decode_en: Completely disabled. Cannot carry on any selfcare. Totally confined to bed or chair
+    decode_cn: 完全失去功能，生活完全不能自理，卧床不起
+    nci_code: C180253
+    order: 5
+  - value_cn: 5分-死亡
+    value_en: 5-Dead
+    decode_en: Dead
+    decode_cn: 死亡
+    nci_code: C180254
+    order: 6
+MBFTSDTL:
+  name_en: Measurement, Test or Examination Detail
+  name_cn: 测量，检测或检查详情
+  nci_code: C174225
+  items:
+  - value_cn: 测定
+    value_en: DETECTION
+    decode_en: DETECTION
+    decode_cn: 测定
+    nci_code: C174330
+  - value_cn: 病毒载量
+    value_en: VIRAL LOAD
+    decode_en: VIRAL LOAD
+    decode_cn: 病毒载量
+    nci_code: C174331
+QEVAL:
+  name_en: Evaluator, Subset for SUPP
+  name_cn: 评估者（SUPP子集）
+  nci_code: C78735
+  items:
+  - value_cn: 临床试验申办方
+    value_en: CLINICAL STUDY SPONSOR
+    decode_en: CLINICAL STUDY SPONSOR
+    decode_cn: 临床试验申办方
+    nci_code: C70793
+ARM:
+  name_en: Arm
+  name_cn: 分组
+  extensible: true
+  items:
+  - value_cn: Albumin-Bound Paclitaxel (28 day cycle)
+    value_en: Albumin-Bound Paclitaxel (28 day cycle)
+    decode_en: Albumin-Bound Paclitaxel (28 day cycle)
+    decode_cn: Albumin-Bound Paclitaxel (28 day cycle)
+  - value_cn: Albumin-Bound Paclitaxel (21 day cycle D1D8)
+    value_en: Albumin-Bound Paclitaxel (21 day cycle D1D8)
+    decode_en: Albumin-Bound Paclitaxel (21 day cycle D1D8)
+    decode_cn: Albumin-Bound Paclitaxel (21 day cycle D1D8)
+  - value_cn: Albumin-Bound Paclitaxel 260mg/m2 Q3W
+    value_en: Albumin-Bound Paclitaxel 260mg/m2 Q3W
+    decode_en: Albumin-Bound Paclitaxel 260mg/m2 Q3W
+    decode_cn: Albumin-Bound Paclitaxel 260mg/m2 Q3W
+  - value_cn: Capecitabine
+    value_en: Capecitabine
+    decode_en: Capecitabine
+    decode_cn: Capecitabine
+  - value_cn: Eribulin
+    value_en: Eribulin
+    decode_en: Eribulin
+    decode_cn: Eribulin
+  - value_cn: Gemcitabine
+    value_en: Gemcitabine
+    decode_en: Gemcitabine
+    decode_cn: Gemcitabine
+  - value_cn: Gemcitabine TIM
+    value_en: Gemcitabine TIM
+    decode_en: Gemcitabine TIM
+    decode_cn: Gemcitabine TIM
+  - value_cn: Paclitaxel 175mg/m2 Q3W
+    value_en: Paclitaxel 175mg/m2 Q3W
+    decode_en: Paclitaxel 175mg/m2 Q3W
+    decode_cn: Paclitaxel 175mg/m2 Q3W
+  - value_cn: Paclitaxel 80mg/m2 QS
+    value_en: Paclitaxel 80mg/m2 QS
+    decode_en: Paclitaxel 80mg/m2 QS
+    decode_cn: Paclitaxel 80mg/m2 QS
+  - value_cn: SHR-A1811 6.4mg/kg Q3W
+    value_en: SHR-A1811 6.4mg/kg Q3W
+    decode_en: SHR-A1811 6.4mg/kg Q3W
+    decode_cn: SHR-A1811 6.4mg/kg Q3W
+ARMCD:
+  name_en: Arm Code
+  name_cn: 分组代码
+  extensible: true
+  items:
+  - value_cn: AP28
+    value_en: Albumin-Bound Paclitaxel (28 day cycle)
+    decode_en: Albumin-Bound Paclitaxel (28 day cycle)
+    decode_cn: AP28
+  - value_cn: AP21D1D8
+    value_en: Albumin-Bound Paclitaxel (21 day cycle D1D8)
+    decode_en: Albumin-Bound Paclitaxel (21 day cycle D1D8)
+    decode_cn: AP21D1D8
+  - value_cn: AP21D1
+    value_en: Albumin-Bound Paclitaxel 260mg/m2 Q3W
+    decode_en: Albumin-Bound Paclitaxel 260mg/m2 Q3W
+    decode_cn: AP21D1
+  - value_cn: CAPE
+    value_en: Capecitabine
+    decode_en: Capecitabine
+    decode_cn: CAPE
+  - value_cn: ERIB
+    value_en: Eribulin
+    decode_en: Eribulin
+    decode_cn: ERIB
+  - value_cn: GEM21
+    value_en: Gemcitabine
+    decode_en: Gemcitabine
+    decode_cn: GEM21
+  - value_cn: GEM28
+    value_en: Gemcitabine TIM
+    decode_en: Gemcitabine TIM
+    decode_cn: GEM28
+  - value_cn: PA21
+    value_en: Paclitaxel 175mg/m2 Q3W
+    decode_en: Paclitaxel 175mg/m2 Q3W
+    decode_cn: PA21
+  - value_cn: PA7
+    value_en: Paclitaxel 80mg/m2 QS
+    decode_en: Paclitaxel 80mg/m2 QS
+    decode_cn: PA7
+  - value_cn: A1811
+    value_en: SHR-A1811 6.4mg/kg Q3W
+    decode_en: SHR-A1811 6.4mg/kg Q3W
+    decode_cn: A1811
+DSRSFHR:
+  name_en: HR and CDK4/6(EDC)
+  name_cn: 分层因素(EDC)
+  extensible: true
+  items:
+  - value_cn: HR和CDK4/6 (HR+(接受过 CDK4/6抑制剂治疗))
+    value_en: HR and CDK4/6 (HR+(Have received CDK4/6 inhibitor treatment))
+    decode_en: HR and CDK4/6 (HR+(Have received CDK4/6 inhibitor treatment))
+    decode_cn: HR和CDK4/6 (HR+(接受过 CDK4/6抑制剂治疗))
+  - value_cn: HR和CDK4/6 (HR-)
+    value_en: HR and CDK4/6 (HR-)
+    decode_en: HR and CDK4/6 (HR-)
+    decode_cn: HR和CDK4/6 (HR-)
+  - value_cn: HR和CDK4/6(HR+(未接受过 CDK4/6抑制剂治疗))
+    value_en: HR and CDK4/6 (HR+(Have not received CDK4/6 inhibitor treatment))
+    decode_en: HR and CDK4/6 (HR+(Have not received CDK4/6 inhibitor treatment))
+    decode_cn: HR和CDK4/6(HR+(未接受过 CDK4/6抑制剂治疗))
+DSRSFLNE:
+  name_en: Line Of Chemotherapy(EDC)
+  name_cn: 化疗线数
+  extensible: true
+  items:
+  - value_cn: 化疗线(0)
+    value_en: Line Of Chemotherapy (0)
+    decode_en: Line Of Chemotherapy (0)
+    decode_cn: 化疗线(0)
+  - value_cn: 化疗线(1)
+    value_en: Line Of Chemotherapy (1)
+    decode_en: Line Of Chemotherapy (1)
+    decode_cn: 化疗线(1)
+REGIMEN:
+  name_en: Therapy or Treatment
+  name_cn: 治疗方案
+  extensible: true
+  items:
+  - value_cn: SHR-A1811
+    value_en: SHR-A1811
+    decode_en: SHR-A1811
+    decode_cn: SHR-A1811
+  - value_cn: 卡培他滨
+    value_en: Capecitabine
+    decode_en: Capecitabine
+    decode_cn: 卡培他滨
+  - value_cn: 艾立布林
+    value_en: Eribulin
+    decode_en: Eribulin
+    decode_cn: 艾立布林
+  - value_cn: 吉西他滨(28天周期)
+    value_en: Gemcitabine(28 day cycle)
+    decode_en: Gemcitabine(28 day cycle)
+    decode_cn: 吉西他滨(28天周期)
+  - value_cn: 吉西他滨(21天周期)
+    value_en: Gemcitabine(21 day cycle)
+    decode_en: Gemcitabine(21 day cycle)
+    decode_cn: 吉西他滨(21天周期)
+  - value_cn: 白蛋白结合紫杉醇(21天周期D1D8)
+    value_en: Paclitaxel Albumin Bound(21 day cycle D1D8)
+    decode_en: Paclitaxel Albumin Bound(21 day cycle D1D8)
+    decode_cn: 白蛋白结合紫杉醇(21天周期D1D8)
+  - value_cn: 白蛋白结合紫杉醇(21天周期D1)
+    value_en: Paclitaxel Albumin Bound(21 day cycle D1)
+    decode_en: Paclitaxel Albumin Bound(21 day cycle D1)
+    decode_cn: 白蛋白结合紫杉醇(21天周期D1)
+  - value_cn: 白蛋白结合紫杉醇(28天周期)
+    value_en: Paclitaxel Albumin Bound(28 day cycle)
+    decode_en: Paclitaxel Albumin Bound(28 day cycle)
+    decode_cn: 白蛋白结合紫杉醇(28天周期)
+  - value_cn: 紫杉醇(21天周期)
+    value_en: Paclitaxel(21 day cycle)
+    decode_en: Paclitaxel(21 day cycle)
+    decode_cn: 紫杉醇(21天周期)
+  - value_cn: 紫杉醇(21天周期D1D8D15)
+    value_en: Paclitaxel(21 day cycle D1D8D15)
+    decode_en: Paclitaxel(21 day cycle D1D8D15)
+    decode_cn: 紫杉醇(21天周期D1D8D15)
+ELEMENT:
+  name_en: Treatment Element
+  name_cn: 元素描述
+  extensible: true
+  items:
+  - value_cn: 白蛋白结合紫杉醇(28天周期)
+    value_en: Albumin-Bound Paclitaxel (28 day cycle)
+    decode_en: Albumin-Bound Paclitaxel (28 day cycle)
+    decode_cn: 白蛋白结合紫杉醇(28天周期)
+  - value_cn: 白蛋白结合紫杉醇(21天周期D1D8)
+    value_en: Albumin-Bound Paclitaxel (21 day cycle D1D8)
+    decode_en: Albumin-Bound Paclitaxel (21 day cycle D1D8)
+    decode_cn: 白蛋白结合紫杉醇(21天周期D1D8)
+  - value_cn: 白蛋白结合紫杉醇(21天周期D1)
+    value_en: Albumin-Bound Paclitaxel 260mg/m2 Q3W
+    decode_en: Albumin-Bound Paclitaxel 260mg/m2 Q3W
+    decode_cn: 白蛋白结合紫杉醇(21天周期D1)
+  - value_cn: 卡培他滨
+    value_en: Capecitabine
+    decode_en: Capecitabine
+    decode_cn: 卡培他滨
+  - value_cn: 艾立布林
+    value_en: Eribulin
+    decode_en: Eribulin
+    decode_cn: 艾立布林
+  - value_cn: 随访
+    value_en: Follow-up
+    decode_en: Follow-up
+    decode_cn: 随访
+  - value_cn: 吉西他滨(21天周期)
+    value_en: Gemcitabine
+    decode_en: Gemcitabine
+    decode_cn: 吉西他滨(21天周期)
+  - value_cn: 吉西他滨(28天周期)
+    value_en: Gemcitabine TIM
+    decode_en: Gemcitabine TIM
+    decode_cn: 吉西他滨(28天周期)
+  - value_cn: 紫杉醇(21天周期D1D8D15)
+    value_en: Paclitaxel 175mg/m2 Q3W
+    decode_en: Paclitaxel 175mg/m2 Q3W
+    decode_cn: 紫杉醇(21天周期D1D8D15)
+  - value_cn: 紫杉醇(21天周期)
+    value_en: Paclitaxel 80mg/m2 QS
+    decode_en: Paclitaxel 80mg/m2 QS
+    decode_cn: 紫杉醇(21天周期)
+  - value_cn: SHR-A1811
+    value_en: SHR-A1811 6.4mg/kg Q3W
+    decode_en: SHR-A1811 6.4mg/kg Q3W
+    decode_cn: SHR-A1811
+  - value_cn: 筛选
+    value_en: Screen
+    decode_en: Screen
+    decode_cn: 筛选
+ETCD:
+  name_en: Element Code
+  name_cn: 元素编码
+  extensible: true
+  items:
+  - value_cn: AP28
+    value_en: Albumin-Bound Paclitaxel (28 day cycle)
+    decode_en: Albumin-Bound Paclitaxel (28 day cycle)
+    decode_cn: AP28
+  - value_cn: AP21D1D8
+    value_en: Albumin-Bound Paclitaxel (21 day cycle D1D8)
+    decode_en: Albumin-Bound Paclitaxel (21 day cycle D1D8)
+    decode_cn: AP21D1D8
+  - value_cn: AP21D1
+    value_en: Albumin-Bound Paclitaxel 260mg/m2 Q3W
+    decode_en: Albumin-Bound Paclitaxel 260mg/m2 Q3W
+    decode_cn: AP21D1
+  - value_cn: CAPE
+    value_en: Capecitabine
+    decode_en: Capecitabine
+    decode_cn: CAPE
+  - value_cn: ERIB
+    value_en: Eribulin
+    decode_en: Eribulin
+    decode_cn: ERIB
+  - value_cn: FU
+    value_en: Follow-up
+    decode_en: Follow-up
+    decode_cn: FU
+  - value_cn: GEM21
+    value_en: Gemcitabine
+    decode_en: Gemcitabine
+    decode_cn: GEM21
+  - value_cn: GEM28
+    value_en: Gemcitabine TIM
+    decode_en: Gemcitabine TIM
+    decode_cn: GEM28
+  - value_cn: PA21
+    value_en: Paclitaxel 175mg/m2 Q3W
+    decode_en: Paclitaxel 175mg/m2 Q3W
+    decode_cn: PA21
+  - value_cn: PA7
+    value_en: Paclitaxel 80mg/m2 QS
+    decode_en: Paclitaxel 80mg/m2 QS
+    decode_cn: PA7
+  - value_cn: A1811
+    value_en: SHR-A1811 6.4mg/kg Q3W
+    decode_en: SHR-A1811 6.4mg/kg Q3W
+    decode_cn: A1811
+  - value_cn: SCRN
+    value_en: Screen
+    decode_en: Screen
+    decode_cn: SCRN
+DTHRS:
+  name_en: Death Reasons in DS
+  name_cn: 死亡原因
+  extensible: true
+  items:
+  - value_cn: 不良事件
+    value_en: Adverse Event
+    decode_en: Adverse Event
+    decode_cn: 不良事件
+  - value_cn: 其他
+    value_en: Other
+    decode_en: Other
+    decode_cn: 其他
+  - value_cn: 疾病进展
+    value_en: Progressive Disease
+    decode_en: Progressive Disease
+    decode_cn: 疾病进展
+CXTRT:
+  name_en: Exposure Treatment
+  name_cn: 研究用药
+  extensible: false
+  items:
+  - value_cn: 卡培他滨
+    value_en: Capecitabine
+    decode_en: Capecitabine
+    decode_cn: 卡培他滨
+  - value_cn: 艾立布林
+    value_en: Eribulin
+    decode_en: Eribulin
+    decode_cn: 艾立布林
+  - value_cn: 吉西他滨
+    value_en: Gemcitabine
+    decode_en: Gemcitabine
+    decode_cn: 吉西他滨
+  - value_cn: 紫杉醇
+    value_en: Paclitaxel
+    decode_en: Paclitaxel
+    decode_cn: 紫杉醇
+  - value_cn: 注射用紫杉醇(白蛋白结合型)
+    value_en: Paclitaxel for Injection (Albumin Bound)
+    decode_en: Paclitaxel for Injection (Albumin Bound)
+    decode_cn: 注射用紫杉醇(白蛋白结合型)
+  - value_cn: SHR-A1811
+    value_en: SHR-A1811
+    decode_en: SHR-A1811
+    decode_cn: SHR-A1811
+CX_UNIT:
+  name_en: Exposure Unit
+  name_cn: 药物暴露单位
+  items:
+  - value_cn: mg
+    value_en: mg
+    decode_en: mg
+    decode_cn: mg
+  - value_cn: mg/m2
+    value_en: mg/m2
+    decode_en: mg/m2
+    decode_cn: mg/m2
+CX_ROUTE:
+  name_en: Route of Administration Response
+  name_cn: 给药途径
+  nci_code: C66729
+  items:
+  - value_cn: 口服
+    value_en: ORAL
+    decode_en: ORAL
+    decode_cn: 口服
+  - value_cn: 输液
+    value_en: INTRAVENOUS DRIP
+    decode_en: INTRAVENOUS DRIP
+    decode_cn: 输液
+  - value_cn: 静脉
+    value_en: INTRAVENOUS
+    decode_en: INTRAVENOUS
+    decode_cn: 静脉
+CX_FRM:
+  name_en: Pharmaceutical Dosage Form
+  name_cn: 剂型
+  nci_code: C66726
+  items:
+  - value_cn: 片剂
+    value_en: TABLET
+    decode_en: TABLET
+    decode_cn: 片剂
+  - value_cn: 粉针剂
+    value_en: POWDER-INJECTION
+    decode_en: POWDER-INJECTION
+    decode_cn: 粉针剂
+  - value_cn: 注射液
+    value_en: INJECTION
+    decode_en: INJECTION
+    decode_cn: 注射液
+ADJ:
+  name_en: Dose Adjustment
+  name_cn: 剂量调节原因
+  extensible: true
+  items:
+  - value_cn: 不良事件
+    value_en: Adverse Event
+    decode_en: Adverse Event
+    decode_cn: 不良事件
+  - value_cn: 其他
+    value_en: Other
+    decode_en: Other
+    decode_cn: 其他
+DSIADRS:
+  name_en: Unplan Administratioin Reason
+  name_cn: 延迟/未给药原因
+  extensible: true
+  items:
+  - value_cn: 未给药
+    value_en: Not Taken
+    decode_en: Not Taken
+    decode_cn: 未给药
+  - value_cn: 延迟给药
+    value_en: Delayed Administration
+    decode_en: Delayed Administration
+    decode_cn: 延迟给药
+CMINDC:
+  name_en: Treatment Setting
+  name_cn: CM治疗方案设置
+  extensible: true
+  items:
+  - value_cn: 新辅助
+    value_en: Neoadjuvant
+    decode_en: Neoadjuvant
+    decode_cn: 新辅助
+  - value_cn: 辅助
+    value_en: Adjuvant
+    decode_en: Adjuvant
+    decode_cn: 辅助
+  - value_cn: 晚期/转移性
+    value_en: Advanced/Metastatic
+    decode_en: Advanced/Metastatic
+    decode_cn: 晚期/转移性
+CMSCAT:
+  name_en: Type of Treatment
+  name_cn: 药物类型
+  extensible: true
+  items:
+  - value_cn: 化疗
+    value_en: Chemotherapy
+    decode_en: Chemotherapy
+    decode_cn: 化疗
+  - value_cn: 辅助化疗期间或辅助化疗后6个月内进展
+    value_en: Progression druing or within 6 months after adjuvant chemotherapy
+    decode_en: Progression druing or within 6 months after adjuvant chemotherapy
+    decode_cn: 辅助化疗期间或辅助化疗后6个月内进展
+  - value_cn: 新辅助化疗期间或新辅助化疗后6个月内进展
+    value_en: Progression during or within 6 months after neoadjuvant chemotherapy
+    decode_en: Progression during or within 6 months after neoadjuvant chemotherapy
+    decode_cn: 新辅助化疗期间或新辅助化疗后6个月内进展
+  - value_cn: 内分泌治疗
+    value_en: Endocrine Therapy
+    decode_en: Endocrine Therapy
+    decode_cn: 内分泌治疗
+  - value_cn: 辅助内分泌治疗后24个月内进展
+    value_en: Progression within 24 months after adjuvant endocrine therapy
+    decode_en: Progression within 24 months after adjuvant endocrine therapy
+    decode_cn: 辅助内分泌治疗后24个月内进展
+  - value_cn: 免疫治疗
+    value_en: Immunotherapy
+    decode_en: Immunotherapy
+    decode_cn: 免疫治疗
+  - value_cn: 靶向治疗(CDK4/6)
+    value_en: Targeted Therapy(CDK4/6)
+    decode_en: Targeted Therapy(CDK4/6)
+    decode_cn: 靶向治疗(CDK4/6)
+  - value_cn: 靶向治疗
+    value_en: Targeted Therapy
+    decode_en: Targeted Therapy
+    decode_cn: 靶向治疗
+  - value_cn: 其他靶向治疗
+    value_en: Other Targeted Therapy
+    decode_en: Other Targeted Therapy
+    decode_cn: 其他靶向治疗
+  - value_cn: 其他
+    value_en: Other
+    decode_en: Other
+    decode_cn: 其他
+  - value_cn: HER2 ADC
+    value_en: HER2 ADC
+    decode_en: HER2 ADC
+    decode_cn: HER2 ADC
+  - value_cn: TROP2 ADC
+    value_en: TROP2 ADC
+    decode_en: TROP2 ADC
+    decode_cn: TROP2 ADC
+  - value_cn: 其他ADC
+    value_en: Other ADC
+    decode_en: Other ADC
+    decode_cn: 其他ADC
+CM_UNIT:
+  name_en: CM Unit
+  name_cn: CM单位
+  nci_code: C71620
+  items:
+  - value_cn: mg
+    value_en: mg
+    decode_en: mg
+    decode_cn: mg
+    nci_code: C28253
+  - value_cn: ug
+    value_en: ug
+    decode_en: ug
+    decode_cn: ug
+    nci_code: C48152
+  - value_cn: mL
+    value_en: mL
+    decode_en: mL
+    decode_cn: mL
+    nci_code: C28254
+  - value_cn: g
+    value_en: g
+    decode_en: g
+    decode_cn: g
+    nci_code: C48155
+  - value_cn: IU
+    value_en: IU
+    decode_en: IU
+    decode_cn: IU
+    nci_code: C48579
+  - value_cn: kg/m2
+    value_en: kg/m2
+    decode_en: kg/m2
+    decode_cn: kg/m2
+    nci_code: C49671
+  - value_cn: mg/m2
+    value_en: mg/m2
+    decode_en: mg/m2
+    decode_cn: mg/m2
+  - value_cn: mg/kg
+    value_en: mg/kg
+    decode_en: mg/kg
+    decode_cn: mg/kg
+  - value_cn: 片
+    value_en: Tablet
+    decode_en: TABLET
+    decode_cn: 片
+    nci_code: C48542
+  - value_cn: 胶囊
+    value_en: Capsule
+    decode_en: CAPSULE
+    decode_cn: 胶囊
+    nci_code: C48480
+  - value_cn: 吸
+    value_en: Inhalant
+    decode_en: INHALATION
+    decode_cn: 吸
+    nci_code: C48501
+  - value_cn: 滴
+    value_en: Drop
+    decode_en: DROP
+    decode_cn: 滴
+    nci_code: C69441
+  - value_cn: 其他
+    value_en: Other
+    decode_en: OTHER
+    decode_cn: 其他
+  - value_cn: mL
+    value_en: mL
+    decode_en: mL
+    decode_cn: mL
+    nci_code: C28254
+  - value_cn: g
+    value_en: g
+    decode_en: g
+    decode_cn: g
+    nci_code: C48155
+CM_ROUTE:
+  name_en: Route of Administration Response
+  name_cn: CM给药途径
+  nci_code: C66729
+  items:
+  - value_cn: 口服
+    value_en: Oral (PO)
+    decode_en: ORAL
+    decode_cn: 口服
+    nci_code: C38288
+  - value_cn: 局部
+    value_en: Topical (TO)
+    decode_en: TOPICAL
+    decode_cn: 局部
+    nci_code: C38304
+  - value_cn: 皮下
+    value_en: Subcutaneous (SC)
+    decode_en: SUBCUTANEOUS
+    decode_cn: 皮下
+    nci_code: C38299
+  - value_cn: 透皮
+    value_en: Transdermal (DE)
+    decode_en: TRANSDERMAL
+    decode_cn: 透皮
+    nci_code: C38305
+  - value_cn: 眼内
+    value_en: Intraocular
+    decode_en: INTRAOCULAR
+    decode_cn: 眼内
+    nci_code: C38255
+  - value_cn: 肌内
+    value_en: Intramuscular (IM)
+    decode_en: INTRAMUSCULAR
+    decode_cn: 肌内
+    nci_code: C28161
+  - value_cn: 呼吸道(吸入)
+    value_en: Respiratory (Inhalation)
+    decode_en: RESPIRATORY (INHALATION)
+    decode_cn: 呼吸道(吸入)
+    nci_code: C38216
+  - value_cn: 病灶内
+    value_en: Intralesional
+    decode_en: INTRALESIONAL
+    decode_cn: 病灶内
+    nci_code: C38250
+  - value_cn: 腹膜内
+    value_en: Intraperitoneal
+    decode_en: INTRAPERITONEAL
+    decode_cn: 腹膜内
+    nci_code: C38258
+  - value_cn: 鼻腔
+    value_en: Nasal (IN)
+    decode_en: NASAL
+    decode_cn: 鼻腔
+    nci_code: C38284
+  - value_cn: 阴道
+    value_en: Per Vaginal (PV)
+    decode_en: VAGINAL
+    decode_cn: 阴道
+    nci_code: C38313
+  - value_cn: 直肠
+    value_en: Per Rectal (PR)
+    decode_en: RECTAL
+    decode_cn: 直肠
+    nci_code: C38295
+  - value_cn: 舌下
+    value_en: Sublingual (SL)
+    decode_en: SUBLINGUAL
+    decode_cn: 舌下
+    nci_code: C38300
+  - value_cn: 静脉
+    value_en: Intravenous (IV)
+    decode_en: INTRAVENOUS
+    decode_cn: 静脉
+    nci_code: C38276
+  - value_cn: 其他
+    value_en: Other
+    decode_en: OTHER
+    decode_cn: 其他
+CM_FRM:
+  name_en: Pharmaceutical Dosage Form
+  name_cn: CM剂型
+  nci_code: C66726
+  items:
+  - value_cn: 片剂
+    value_en: Tablet
+    decode_en: TABLET
+    decode_cn: 片剂
+    nci_code: C42998
+  - value_cn: 胶囊
+    value_en: Capsule
+    decode_en: CAPSULE
+    decode_cn: 胶囊
+    nci_code: C25158
+  - value_cn: 软膏
+    value_en: Ointment
+    decode_en: OINTMENT
+    decode_cn: 软膏
+    nci_code: C42966
+  - value_cn: 喷雾
+    value_en: Spray
+    decode_en: SPRAY
+    decode_cn: 喷雾
+    nci_code: C42989
+  - value_cn: 粉针剂
+    value_en: Powder-injection
+    decode_en: POWDER-INJECTION
+    decode_cn: 粉针剂
+  - value_cn: 注射液
+    value_en: Injection
+    decode_en: INJECTION
+    decode_cn: 注射液
+    nci_code: C42946
+  - value_cn: 混悬剂
+    value_en: Suspension
+    decode_en: SUSPENSION
+    decode_cn: 混悬剂
+    nci_code: C42994
+  - value_cn: 栓剂
+    value_en: Suppository
+    decode_en: SUPPOSITORY
+    decode_cn: 栓剂
+    nci_code: C42993
+  - value_cn: 散剂
+    value_en: Powder
+    decode_en: POWDER
+    decode_cn: 散剂
+    nci_code: C42972
+  - value_cn: 颗粒剂
+    value_en: Granula
+    decode_en: GRANULE
+    decode_cn: 颗粒剂
+    nci_code: C42938
+  - value_cn: 滴丸
+    value_en: Dripping Pill
+    decode_en: DRIPPING PILL
+    decode_cn: 滴丸
+  - value_cn: 液体制剂
+    value_en: Liquid
+    decode_en: LIQUID
+    decode_cn: 液体制剂
+    nci_code: C42953
+  - value_cn: 乳膏
+    value_en: Cream
+    decode_en: CREAM
+    decode_cn: 乳膏
+    nci_code: C28944
+  - value_cn: 其他
+    value_en: Other
+    decode_en: OTHER
+    decode_cn: 其他
+CM_FREQ:
+  name_en: Frequency
+  name_cn: CM频率
+  nci_code: C71113
+  items:
+  - value_cn: 每天一次(QD)
+    value_en: Daily (QD)
+    decode_en: QD
+    decode_cn: 每天一次
+    nci_code: C25473
+  - value_cn: 每天两次(BID)
+    value_en: Twice Daily (BID)
+    decode_en: BID
+    decode_cn: 每天两次
+    nci_code: C64496
+  - value_cn: 每天三次(TID)
+    value_en: Three Times Daily (TID)
+    decode_en: TID
+    decode_cn: 每天三次
+    nci_code: C64527
+  - value_cn: 每天四次(QID)
+    value_en: Four Times Daily (QID)
+    decode_en: QID
+    decode_cn: 每天四次
+    nci_code: C64530
+  - value_cn: 每隔一天一次(QOD)
+    value_en: Every Other Day (QOD)
+    decode_en: QOD
+    decode_cn: 隔天一次
+    nci_code: C64525
+  - value_cn: 每周一次(QS)
+    value_en: Once Weekly (QS)
+    decode_en: '1 TIME PER WEEK '
+    decode_cn: 每周一次
+    nci_code: C64526
+  - value_cn: 每周两次(BIS)
+    value_en: Twice Weekly (BIS)
+    decode_en: 2 TIMES PER WEEK
+    decode_cn: 每周两次
+    nci_code: C64497
+  - value_cn: 每周三次(TIS)
+    value_en: Three Times Weekly (TIS)
+    decode_en: 3 TIMES PER WEEK
+    decode_cn: 每周三次
+    nci_code: C64528
+  - value_cn: 每周四次(QIS)
+    value_en: Four Times Weekly (QIS)
+    decode_en: 4 TIMES PER WEEK
+    decode_cn: 每周四次
+    nci_code: C64531
+  - value_cn: 每两周一次(Q2S)
+    value_en: Every 2 Weeks (Q2S)
+    decode_en: EVERY 2 WEEKS
+    decode_cn: 两周一次
+    nci_code: C71127
+  - value_cn: 每三周一次(Q3S)
+    value_en: Every 3 Weeks (Q3S)
+    decode_en: EVERY 3 WEEKS
+    decode_cn: 三周一次
+    nci_code: C64535
+  - value_cn: 每四周一次(Q4S)
+    value_en: Every 4 Weeks (Q4S)
+    decode_en: EVERY 4 WEEKS
+    decode_cn: 四周一次
+    nci_code: C64529
+  - value_cn: 每月一次(QM)
+    value_en: Monthly (QM)
+    decode_en: QM
+    decode_cn: 每月一次
+    nci_code: C64498
+  - value_cn: 一次 (ONCE)
+    value_en: ONCE
+    decode_en: ONCE
+    decode_cn: 一次
+    nci_code: C64576
+  - value_cn: 根据需要(PRN)
+    value_en: As Needed (PRN)
+    decode_en: PRN
+    decode_cn: 根据所需
+    nci_code: C64499
+  - value_cn: 其他
+    value_en: Other
+    decode_en: OTHER
+    decode_cn: 其他
+CMOUT:
+  name_en: Outcome of the Treatment
+  name_cn: 治疗结局
+  extensible: true
+  items:
+  - value_cn: 进展
+    value_en: Progressive Disease
+    decode_en: Progressive Disease
+    decode_cn: 进展
+  - value_cn: 出现不耐受的毒性
+    value_en: Toxicity Intolerance
+    decode_en: Toxicity Intolerance
+    decode_cn: 出现不耐受的毒性
+  - value_cn: 完成治疗
+    value_en: Treatment Completed
+    decode_en: Treatment Completed
+    decode_cn: 完成治疗
+  - value_cn: 未知
+    value_en: Unknown
+    decode_en: Unknown
+    decode_cn: 未知
+    nci_code: C17998
+  - value_cn: 其他
+    value_en: Other
+    decode_en: Other
+    decode_cn: 其他
+CMREAS:
+  name_en: Reasons for Medication
+  name_cn: 用药原因
+  extensible: true
+  items:
+  - value_cn: 不良事件
+    value_en: Adverse Event
+    decode_en: Adverse Event
+    decode_cn: 不良事件
+  - value_cn: 既往病史
+    value_en: Medical History
+    decode_en: Medical History
+    decode_cn: 既往病史
+  - value_cn: 升白一级预防
+    value_en: Primary prevention with G-CSF
+    decode_en: Primary prevention with G-CSF
+    decode_cn: 升白一级预防
+  - value_cn: 升白二级预防
+    value_en: Secondary prevention with G-CSF
+    decode_en: Secondary prevention with G-CSF
+    decode_cn: 升白二级预防
+  - value_cn: 其他
+    value_en: Other
+    decode_en: Other
+    decode_cn: 其他
+PRINDC:
+  name_en: Indication
+  name_cn: 适应症
+  extensible: true
+  items:
+  - value_cn: 根治
+    value_en: Curative
+    decode_en: Curative
+    decode_cn: 根治
+  - value_cn: 姑息
+    value_en: Palliative
+    decode_en: Palliative
+    decode_cn: 姑息
+  - value_cn: 其他
+    value_en: Other
+    decode_en: Other
+    decode_cn: 其他
+  - value_cn: 新辅助
+    value_en: Neoadjuvant
+    decode_en: Neoadjuvant
+    decode_cn: 新辅助
+  - value_cn: 辅助
+    value_en: Adjuvant
+    decode_en: Adjuvant
+    decode_cn: 辅助
+PR_LOC:
+  name_en: Location of Procedure
+  name_cn: 诊疗操作部位
+  nci_code: C74456
+  items:
+  - value_cn: 脑
+    value_en: Brain
+    decode_en: BRAIN
+    decode_cn: 脑
+    nci_code: C12439
+  - value_cn: 食管
+    value_en: Esophagus
+    decode_en: ESOPHAGUS
+    decode_cn: 食管
+    nci_code: C12389
+  - value_cn: 胃
+    value_en: Stomach
+    decode_en: STOMACH
+    decode_cn: 胃
+    nci_code: C12391
+  - value_cn: 小肠
+    value_en: Small Intestine
+    decode_en: SMALL INTESTINE
+    decode_cn: 小肠
+    nci_code: C12386
+  - value_cn: 结肠
+    value_en: Colon
+    decode_en: COLON
+    decode_cn: 结肠
+    nci_code: C12382
+  - value_cn: 直肠
+    value_en: Rectum
+    decode_en: RECTUM
+    decode_cn: 直肠
+    nci_code: C12390
+  - value_cn: 肝
+    value_en: Liver
+    decode_en: LIVER
+    decode_cn: 肝
+    nci_code: C12392
+  - value_cn: 胆囊
+    value_en: Gallbladder
+    decode_en: GALLBLADDER
+    decode_cn: 胆囊
+    nci_code: C12377
+  - value_cn: 胆管
+    value_en: Bile Duct
+    decode_en: BILE DUCT
+    decode_cn: 胆管
+    nci_code: C12376
+  - value_cn: 胰腺
+    value_en: Pancreas
+    decode_en: PANCREAS
+    decode_cn: 胰腺
+    nci_code: C12393
+  - value_cn: 肺
+    value_en: Lung
+    decode_en: LUNG
+    decode_cn: 肺
+    nci_code: C12468
+  - value_cn: 气管
+    value_en: Trachea
+    decode_en: TRACHEA
+    decode_cn: 气管
+    nci_code: C12428
+  - value_cn: 胸部
+    value_en: Breast
+    decode_en: BREAST
+    decode_cn: 胸部
+    nci_code: C12971
+  - value_cn: 乳腺
+    value_en: Mammary Gland
+    decode_en: MAMMARY GLAND
+    decode_cn: 乳腺
+    nci_code: C12367
+  - value_cn: 卵巢
+    value_en: Ovary
+    decode_en: OVARY
+    decode_cn: 卵巢
+    nci_code: C12404
+  - value_cn: 输卵管
+    value_en: Fallopian Tube
+    decode_en: FALLOPIAN TUBE
+    decode_cn: 输卵管
+    nci_code: C12403
+  - value_cn: 子宫
+    value_en: Uterus
+    decode_en: UTERUS
+    decode_cn: 子宫
+    nci_code: C12405
+  - value_cn: 子宫颈
+    value_en: Cervix Uteri
+    decode_en: CERVIX UTERI
+    decode_cn: 子宫颈
+    nci_code: C12311
+  - value_cn: 阴道
+    value_en: Vagina
+    decode_en: VAGINA
+    decode_cn: 阴道
+    nci_code: C12407
+  - value_cn: 肾
+    value_en: Kidney
+    decode_en: KIDNEY
+    decode_cn: 肾
+    nci_code: C12415
+  - value_cn: 输尿管
+    value_en: Ureter
+    decode_en: URETER
+    decode_cn: 输尿管
+    nci_code: C12416
+  - value_cn: 膀胱
+    value_en: Bladder
+    decode_en: BLADDER
+    decode_cn: 膀胱
+    nci_code: C12414
+  - value_cn: 前列腺
+    value_en: Prostate Gland
+    decode_en: PROSTATE GLAND
+    decode_cn: 前列腺
+    nci_code: C12410
+  - value_cn: 尿道
+    value_en: Urethra
+    decode_en: URETHRA
+    decode_cn: 尿道
+    nci_code: C12417
+  - value_cn: 甲状腺
+    value_en: Thyroid Gland
+    decode_en: THYROID GLAND
+    decode_cn: 甲状腺
+    nci_code: C12400
+  - value_cn: 肾上腺
+    value_en: Adrenal Gland
+    decode_en: ADRENAL GLAND
+    decode_cn: 肾上腺
+    nci_code: C12666
+  - value_cn: 睾丸
+    value_en: Testis
+    decode_en: TESTIS
+    decode_cn: 睾丸
+    nci_code: C12412
+  - value_cn: 脾
+    value_en: Spleen
+    decode_en: SPLEEN
+    decode_cn: 脾
+    nci_code: C12432
+  - value_cn: 淋巴结
+    value_en: Lymph Node
+    decode_en: LYMPH NODE
+    decode_cn: 淋巴结
+    nci_code: C12745
+  - value_cn: 心包膜
+    value_en: Pericardium
+    decode_en: PERICARDIUM
+    decode_cn: 心包膜
+    nci_code: C13005
+  - value_cn: 胸膜
+    value_en: Pleura
+    decode_en: PLEURA
+    decode_cn: 胸膜
+    nci_code: C12469
+  - value_cn: 腹膜
+    value_en: Peritoneum
+    decode_en: PERITONEUM
+    decode_cn: 腹膜
+    nci_code: C12770
+  - value_cn: 心包积液
+    value_en: Pericardial Effusion
+    decode_en: PERICARDIAL EFFUSION
+    decode_cn: 心包积液
+  - value_cn: 胸腔积液
+    value_en: Pleural Effusion
+    decode_en: PLEURAL EFFUSION
+    decode_cn: 胸腔积液
+  - value_cn: 胸腔积液
+    value_en: Pleural effusion
+    decode_en: PLEURAL EFFUSION
+    decode_cn: 胸腔积液
+  - value_cn: 腹腔积液
+    value_en: Peritoneal Effusion
+    decode_en: PERITONEAL EFFUSION
+    decode_cn: 腹腔积液
+  - value_cn: 骨
+    value_en: Bone
+    decode_en: BONE
+    decode_cn: 骨
+    nci_code: C12366
+  - value_cn: 骨髓
+    value_en: Bone Marrow
+    decode_en: BONE MARROW
+    decode_cn: 骨髓
+    nci_code: C12431
+  - value_cn: 软组织
+    value_en: Soft Tissue
+    decode_en: SOFT TISSUE
+    decode_cn: 软组织
+    nci_code: C12471
+  - value_cn: 皮肤
+    value_en: Skin
+    decode_en: SKIN
+    decode_cn: 皮肤
+    nci_code: C12470
+  - value_cn: 多个
+    value_en: MULTIPLE
+    decode_en: MULTIPLE
+    decode_cn: 多个
+  - value_cn: 其他
+    value_en: Other
+    decode_en: OTHER
+    decode_cn: 其他
+PR_UNIT:
+  name_en: Dose Units
+  name_cn: 剂量单位
+  nci_code: C71620
+  items:
+  - value_cn: Gy
+    value_en: Gy
+    decode_en: Gy
+    decode_cn: Gy
+    nci_code: C18063
+  - value_cn: cGy
+    value_en: cGy
+    decode_en: cGy
+    decode_cn: cGy
+    nci_code: C64693
+  - value_cn: 未知
+    value_en: Unknown
+    decode_en: Unknown
+    decode_cn: 未知
+PRTORRES:
+  name_en: Response Assessment
+  name_cn: 肿瘤疗效
+  extensible: true
+  items:
+  - value_cn: 完全缓解(CR)
+    value_en: 完全缓解(CR)
+    decode_en: CR
+    decode_cn: 完全缓解(CR)
+  - value_cn: 部分缓解(PR)
+    value_en: 部分缓解(PR)
+    decode_en: PR
+    decode_cn: 部分缓解(PR)
+  - value_cn: 疾病稳定(SD)
+    value_en: 疾病稳定(SD)
+    decode_en: SD
+    decode_cn: 疾病稳定(SD)
+  - value_cn: 非完全缓解/非疾病进展(非CR/非PD)
+    value_en: 非完全缓解/非疾病进展(非CR/非PD)
+    decode_en: Non-CR/Non-PD
+    decode_cn: 非完全缓解/非疾病进展(非CR/非PD)
+  - value_cn: 疾病进展(PD)
+    value_en: 疾病进展(PD)
+    decode_en: PD
+    decode_cn: 疾病进展(PD)
+  - value_cn: 无法评估(NE)
+    value_en: 无法评估(NE)
+    decode_en: NE
+    decode_cn: 无法评估(NE)
+  - value_cn: 未知
+    value_en: Unknown
+    decode_en: Unknown
+    decode_cn: 未知
+PRMORRES:
+  name_en: Ablation Response
+  name_cn: 消融疗效
+  extensible: true
+  items:
+  - value_cn: 未知
+    value_en: Unknown
+    decode_en: Unknown
+    decode_cn: 未知
+PRTRT:
+  name_en: Reported Name of Procedure
+  name_cn: 诊疗操作名称
+  extensible: true
+  items:
+  - value_cn: 放疗
+    value_en: Radiotherapy
+    decode_en: Radiotherapy
+    decode_cn: 放疗
+  - value_cn: 放疗
+    value_en: RADIOTHERAPY
+    decode_en: Radiotherapy
+    decode_cn: 放疗
+  - value_cn: 肝动脉化疗栓塞(TACE)
+    value_en: Transarterial Chemoembolization (TACE)
+    decode_en: Transarterial Chemoembolization (TACE)
+    decode_cn: 肝动脉化疗栓塞(TACE)
+  - value_cn: 肝动脉灌注化疗(TAI)
+    value_en: Transhepatic Arterial Infusion (TAI)
+    decode_en: Transhepatic Arterial Infusion (TAI)
+    decode_cn: 肝动脉灌注化疗(TAI)
+  - value_cn: 肝动脉栓塞(TAE)
+    value_en: Transarterial Embolization (TAE)
+    decode_en: Transarterial Embolization (TAE)
+    decode_cn: 肝动脉栓塞(TAE)
+  - value_cn: 射频消融(RFA)
+    value_en: Radiofrequency Ablation (RFA)
+    decode_en: Radiofrequency Ablation (RFA)
+    decode_cn: 射频消融(RFA)
+  - value_cn: 微波消融(MWA)
+    value_en: Microwave Ablation (MWA)
+    decode_en: Microwave Ablation (MWA)
+    decode_cn: 微波消融(MWA)
+  - value_cn: 无水乙醇注射(PEI)
+    value_en: Percutaneous Ethanol Injection (PEI)
+    decode_en: Percutaneous Ethanol Injection (PEI)
+    decode_cn: 无水乙醇注射(PEI)
+  - value_cn: 冷冻治疗(CRA)
+    value_en: Cryoablation (CRA)
+    decode_en: Cryoablation (CRA)
+    decode_cn: 冷冻治疗(CRA)
+  - value_cn: 高功率超声聚焦消融(HIFU)
+    value_en: High Power Focused Ultrasound Ablation (HIFU)
+    decode_en: High Power Focused Ultrasound Ablation (HIFU)
+    decode_cn: 高功率超声聚焦消融(HIFU)
+  - value_cn: 放射粒子植入
+    value_en: Radioactive Seed Implantation
+    decode_en: Radioactive Seed Implantation
+    decode_cn: 放射粒子植入
+  - value_cn: CT平扫
+    value_en: CT Scan without Contrast
+    decode_en: CT Scan without Contrast
+    decode_cn: CT平扫
+  - value_cn: CT增强
+    value_en: Contrast Enhanced CT Scan
+    decode_en: Contrast Enhanced CT Scan
+    decode_cn: CT增强
+  - value_cn: MRI平扫
+    value_en: MRI without Contrast
+    decode_en: MRI without Contrast
+    decode_cn: MRI平扫
+  - value_cn: MRI增强
+    value_en: Contrast Enhanced MRI
+    decode_en: Contrast Enhanced MRI
+    decode_cn: MRI增强
+  - value_cn: 骨扫描
+    value_en: Bone Scan
+    decode_en: Bone Scan
+    decode_cn: 骨扫描
+  - value_cn: 其他
+    value_en: Other
+    decode_en: Other
+    decode_cn: 其他
+PRREAS:
+  name_en: Reason for Treatment
+  name_cn: 治疗原因
+  extensible: true
+  items:
+  - value_cn: 不良事件
+    value_en: Adverse Event
+    decode_en: Adverse Event
+    decode_cn: 不良事件
+  - value_cn: 既往病史
+    value_en: Medical History
+    decode_en: Medical History
+    decode_cn: 既往病史
+  - value_cn: 其他
+    value_en: Other
+    decode_en: Other
+    decode_cn: 其他
+MHTERM:
+  name_en: Reported Term for the Medical History
+  name_cn: 病史报告术语
+  extensible: true
+  items:
+  - value_cn: 乳腺癌
+    value_en: BREAST CANCER
+    decode_en: BREAST CANCER
+    decode_cn: 乳腺癌
+MHTNMUN:
+  name_en: TNM Staging
+  name_cn: TNM分期
+  extensible: true
+  items:
+  - value_cn: Nx
+    value_en: Nx
+    decode_en: Nx
+    decode_cn: Nx
+  - value_cn: N0
+    value_en: N0
+    decode_en: N0
+    decode_cn: N0
+  - value_cn: N1
+    value_en: N1
+    decode_en: N1
+    decode_cn: N1
+  - value_cn: N1mi
+    value_en: N1mi
+    decode_en: N1mi
+    decode_cn: N1mi
+  - value_cn: N1a
+    value_en: N1a
+    decode_en: N1a
+    decode_cn: N1a
+  - value_cn: N1b
+    value_en: N1b
+    decode_en: N1b
+    decode_cn: N1b
+  - value_cn: N1c
+    value_en: N1c
+    decode_en: N1c
+    decode_cn: N1c
+  - value_cn: N2
+    value_en: N2
+    decode_en: N2
+    decode_cn: N2
+  - value_cn: N2a
+    value_en: N2a
+    decode_en: N2a
+    decode_cn: N2a
+  - value_cn: N2b
+    value_en: N2b
+    decode_en: N2b
+    decode_cn: N2b
+  - value_cn: N3
+    value_en: N3
+    decode_en: N3
+    decode_cn: N3
+  - value_cn: N3a
+    value_en: N3a
+    decode_en: N3a
+    decode_cn: N3a
+  - value_cn: N3b
+    value_en: N3b
+    decode_en: N3b
+    decode_cn: N3b
+  - value_cn: N3c
+    value_en: N3c
+    decode_en: N3c
+    decode_cn: N3c
+  - value_cn: Tx
+    value_en: Tx
+    decode_en: Tx
+    decode_cn: Tx
+  - value_cn: T0
+    value_en: T0
+    decode_en: T0
+    decode_cn: T0
+  - value_cn: Tis
+    value_en: Tis
+    decode_en: Tis
+    decode_cn: Tis
+  - value_cn: T1
+    value_en: T1
+    decode_en: T1
+    decode_cn: T1
+  - value_cn: T1mi
+    value_en: T1mi
+    decode_en: T1mi
+    decode_cn: T1mi
+  - value_cn: T1a
+    value_en: T1a
+    decode_en: T1a
+    decode_cn: T1a
+  - value_cn: T1b
+    value_en: T1b
+    decode_en: T1b
+    decode_cn: T1b
+  - value_cn: T1c
+    value_en: T1c
+    decode_en: T1c
+    decode_cn: T1c
+  - value_cn: T2
+    value_en: T2
+    decode_en: T2
+    decode_cn: T2
+  - value_cn: T3
+    value_en: T3
+    decode_en: T3
+    decode_cn: T3
+  - value_cn: T4
+    value_en: T4
+    decode_en: T4
+    decode_cn: T4
+  - value_cn: T4a
+    value_en: T4a
+    decode_en: T4a
+    decode_cn: T4a
+  - value_cn: T4b
+    value_en: T4b
+    decode_en: T4b
+    decode_cn: T4b
+  - value_cn: T4c
+    value_en: T4c
+    decode_en: T4c
+    decode_cn: T4c
+  - value_cn: T4d
+    value_en: T4d
+    decode_en: T4d
+    decode_cn: T4d
+  - value_cn: T4d
+    value_en: M0
+    decode_en: T4d
+    decode_cn: T4d
+  - value_cn: T4d
+    value_en: M1
+    decode_en: T4d
+    decode_cn: T4d
+  - value_cn: 未知
+    value_en: 未知
+    decode_en: 未知
+    decode_cn: 未知
+MHRM:
+  name_en: Any Recurrence/Metastasis
+  name_cn: 复发/转移情况
+  extensible: true
+  items:
+  - value_cn: 转移
+    value_en: Metastasis
+    decode_en: Metastasis
+    decode_cn: 转移
+  - value_cn: 无
+    value_en: 'No'
+    decode_en: 'No'
+    decode_cn: 无
+  - value_cn: 复发
+    value_en: Recurrence
+    decode_en: Recurrence
+    decode_cn: 复发
+  - value_cn: 复发和转移
+    value_en: Recurrence and Metastasis
+    decode_en: Recurrence and Metastasis
+    decode_cn: 复发和转移
+CECAT:
+  name_en: Category for the Clinical Event
+  name_cn: 临床事件的类别
+  extensible: true
+  items:
+  - value_cn: 输液相关反应
+    value_en: Infusion Related Reaction
+    decode_en: Infusion Related Reaction
+    decode_cn: 输液相关反应
+  - value_cn: 输液部位反应
+    value_en: Infusion Site Reaction
+    decode_en: Infusion Site Reaction
+    decode_cn: 输液部位反应
+CETOXGR:
+  name_en: Standard Toxicity Grade
+  name_cn: 标准毒性等级
+  extensible: true
+  items:
+  - value_cn: '1'
+    value_en: '1'
+    decode_en: '1'
+    decode_cn: '1'
+  - value_cn: '2'
+    value_en: '2'
+    decode_en: '2'
+    decode_cn: '2'
+  - value_cn: '3'
+    value_en: '3'
+    decode_en: '3'
+    decode_cn: '3'
+  - value_cn: '4'
+    value_en: '4'
+    decode_en: '4'
+    decode_cn: '4'
+  - value_cn: '5'
+    value_en: '5'
+    decode_en: '5'
+    decode_cn: '5'
+CVMETHOD:
+  name_en: Method
+  name_cn: CV方法
+  nci_code: C85492
+  items:
+  - value_cn: 超声心动图
+    value_en: Echocardiography
+    decode_en: ECHOCARDIOGRAPHY
+    decode_cn: 超声心动图
+    nci_code: C16525
+  - value_cn: 心脏放射性核素扫描
+    value_en: Radionuclide Ventriculogram Scan
+    decode_en: MUGA
+    decode_cn: 心脏放射性核素扫描
+    nci_code: C38073
+CV_UNIT:
+  name_en: Unit
+  name_cn: CV单位
+  nci_code: C71620
+  items:
+  - value_cn: '%'
+    value_en: '%'
+    decode_en: '%'
+    decode_cn: '%'
+    nci_code: C25613
+EG_UNIT:
+  name_en: Unit
+  name_cn: EG单位
+  nci_code: C71620
+  items:
+  - value_cn: beats/min
+    value_en: beats/min
+    decode_en: beats/min
+    decode_cn: beats/min
+    nci_code: C49673
+  - value_cn: msec
+    value_en: msec
+    decode_en: ms
+    decode_cn: ms
+    nci_code: C41140
+EGORRES:
+  name_en: Result or Finding in Original Units
+  name_cn: 结果或发现-原始单位
+  extensible: true
+  items:
+  - value_cn: 异常有临床意义
+    value_en: Abnormal, Clinically Significant
+    decode_en: Abnormal, Clinically Significant
+    decode_cn: 异常有临床意义
+  - value_cn: 异常无临床意义
+    value_en: Abnormal, Not Clinically Significant
+    decode_en: Abnormal, Not Clinically Significant
+    decode_cn: 异常无临床意义
+  - value_cn: 正常
+    value_en: Normal
+    decode_en: Normal
+    decode_cn: 正常
+IS_UNIT:
+  name_en: Unit
+  name_cn: IS单位
+  extensible: true
+  items:
+  - value_cn: 滴
+    value_en: titer
+    decode_en: titer
+    decode_cn: 滴
+ISORRES:
+  name_en: Results or Findings in Original Units
+  name_cn: 结果或发现结果
+  extensible: true
+  items:
+  - value_cn: 阴性
+    value_en: negative
+    decode_en: negative
+    decode_cn: 阴性
+  - value_cn: 阳性
+    value_en: positive
+    decode_en: positive
+    decode_cn: 阳性
+ISTSTOPO:
+  name_en: Test Operational Objective
+  name_cn: 检测操作目的
+  items:
+  - value_en: CONFIRM
+    decode_en: CONFIRM
+  - value_en: QUANTIFY
+    decode_en: QUANTIFY
+  - value_en: SCREEN
+    decode_en: SCREEN
+LBCLSIG:
+  name_en: Clinically Significant, Collected
+  name_cn: 临床意义采集
+  extensible: true
+  items:
+  - value_cn: 正常
+    value_en: Normal
+    decode_en: Normal
+    decode_cn: 正常
+  - value_cn: 异常无临床意义
+    value_en: Abnormal, Not Clinically Significant
+    decode_en: Abnormal, Not Clinically Significant
+    decode_cn: 异常无临床意义
+  - value_cn: 异常有临床意义
+    value_en: Abnormal, Clinically Significant
+    decode_en: Abnormal, Clinically Significant
+    decode_cn: 异常有临床意义
+LBSPECTY:
+  name_en: Specimen Type
+  name_cn: 样本种类
+  extensible: true
+  items:
+  - value_cn: 血样
+    value_en: BLOOD
+    decode_en: BLOOD
+    decode_cn: 血样
+  - value_cn: 血浆
+    value_en: PLASMA
+    decode_en: PLASMA
+    decode_cn: 血浆
+  - value_cn: 血清
+    value_en: SERUM
+    decode_en: SERUM
+    decode_cn: 血清
+  - value_cn: 粪便
+    value_en: STOOL
+    decode_en: STOOL
+    decode_cn: 粪便
+  - value_cn: 尿样
+    value_en: URINE
+    decode_en: URINE
+    decode_cn: 尿样
+MB_UNIT:
+  name_en: Unit
+  name_cn: MB单位
+  nci_code: C71620
+  items:
+  - value_cn: IU/mL
+    value_en: IU/mL
+    decode_en: IU/mL
+    decode_cn: IU/mL
+    nci_code: C67377
+  - value_cn: copies/mL
+    value_en: copies/mL
+    decode_en: copies/mL
+    decode_cn: copies/mL
+    nci_code: C100900
+MBORRES:
+  name_en: Result or Finding in Original Units
+  name_cn: 结果或发现
+  extensible: true
+  items:
+  - value_cn: 阴性
+    value_en: Negative
+    decode_en: Negative
+    decode_cn: 阴性
+  - value_cn: 阳性
+    value_en: Positive
+    decode_en: Positive
+    decode_cn: 阳性
+MISPECTY:
+  name_en: Microscopic Finding Specimen Type
+  name_cn: 显微镜发现样本类别
+  extensible: true
+  items:
+  - value_cn: 肿瘤组织
+    value_en: TUMOR TISSUE
+    decode_en: TUMOR TISSUE
+    decode_cn: 肿瘤组织
+MI_LOC:
+  name_en: Microscopic Finding Test Location
+  name_cn: 显微镜发现检测位置
+  extensible: true
+  items:
+  - value_cn: 复发/转移病灶
+    value_en: Recurrent/Metastatic Lesion
+    decode_en: Recurrent/Metastatic Lesion
+    decode_cn: 复发/转移病灶
+  - value_cn: 原发病灶
+    value_en: Primary Lesion
+    decode_en: Primary Lesion
+    decode_cn: 原发病灶
+MIMETHOD:
+  name_en: Microscopic Finding Test Methold
+  name_cn: 显微镜发现样本方法
+  extensible: true
+  items:
+  - value_cn: IHC
+    value_en: IHC
+    decode_en: IHC
+    decode_cn: IHC
+  - value_cn: ISH
+    value_en: ISH
+    decode_en: ISH
+    decode_cn: ISH
+ENTPT:
+  name_en: End Reference Time Point
+  name_cn: 结束时间的参照时点
+  extensible: true
+  items:
+  - value_cn: 末次生存日期
+    value_en: LAST ALIVE DATE
+    decode_en: LAST ALIVE DATE
+    decode_cn: 末次生存日期
+PCSPECTY:
+  name_en: PC Specimen Type
+  name_cn: PC样本种类
+  extensible: true
+  items:
+  - value_cn: 血浆
+    value_en: PLASMA
+    decode_en: PLASMA
+    decode_cn: 血浆
+  - value_cn: 血清
+    value_en: SERUM
+    decode_en: SERUM
+    decode_cn: 血清
+PC_UNIT:
+  name_en: PC Original Unit
+  name_cn: PC原始单位
+  extensible: true
+  items:
+  - value_cn: ng/mL
+    value_en: ng/mL
+    decode_en: ug/L
+    decode_cn: ug/L
+  - value_cn: μg/mL
+    value_en: μg/mL
+    decode_en: μg/mL
+    decode_cn: μg/mL
+PC_SUNIT:
+  name_en: PC Standard Unit
+  name_cn: PC标准单位
+  extensible: true
+  items:
+  - value_cn: ug/L
+    value_en: ug/L
+    decode_en: ug/L
+    decode_cn: ug/L
+  - value_cn: μg/mL
+    value_en: μg/mL
+    decode_en: μg/mL
+    decode_cn: μg/mL
+PCTPT:
+  name_en: Planned Time Point Name
+  name_cn: 计划时点名称
+  extensible: true
+  items:
+  - value_cn: 给药后2h
+    value_en: 2h Post Dose
+    decode_en: 2h Post Dose
+    decode_cn: 给药后2h
+  - value_cn: 给药前2h
+    value_en: 2h Pre Dose
+    decode_en: 2h Pre Dose
+    decode_cn: 给药前2h
+  - value_cn: 给药后5min
+    value_en: 5min Post Dose
+    decode_en: 5min Post Dose
+    decode_cn: 给药后5min
+PEORRES:
+  name_en: Verbatim Examination Finding
+  name_cn: 字面检查结果
+  extensible: true
+  items:
+  - value_cn: 正常
+    value_en: Normal
+    decode_en: Normal
+    decode_cn: 正常
+  - value_cn: 异常
+    value_en: Abnormal
+    decode_en: Abnormal
+    decode_cn: 异常
+  - value_cn: 未查
+    value_en: Not Done
+    decode_en: Not Done
+    decode_cn: 未查
+TU_LOC:
+  name_en: Anatomical Location
+  name_cn: 肿瘤影像解剖学位置
+  nci_code: C74456
+  items:
+  - value_cn: 脑
+    value_en: Brain
+    decode_en: BRAIN
+    decode_cn: 脑
+    nci_code: C12439
+  - value_cn: 食管
+    value_en: Esophagus
+    decode_en: ESOPHAGUS
+    decode_cn: 食管
+    nci_code: C12389
+  - value_cn: 胃
+    value_en: Stomach
+    decode_en: STOMACH
+    decode_cn: 胃
+    nci_code: C12391
+  - value_cn: 小肠
+    value_en: Small Intestine
+    decode_en: SMALL INTESTINE
+    decode_cn: 小肠
+    nci_code: C12386
+  - value_cn: 结肠
+    value_en: Colon
+    decode_en: COLON
+    decode_cn: 结肠
+    nci_code: C12382
+  - value_cn: 直肠
+    value_en: Rectum
+    decode_en: RECTUM
+    decode_cn: 直肠
+    nci_code: C12390
+  - value_cn: 肝
+    value_en: Liver
+    decode_en: LIVER
+    decode_cn: 肝
+    nci_code: C12392
+  - value_cn: 胆囊
+    value_en: Gallbladder
+    decode_en: GALLBLADDER
+    decode_cn: 胆囊
+    nci_code: C12377
+  - value_cn: 胆管
+    value_en: Bile Duct
+    decode_en: BILE DUCT
+    decode_cn: 胆管
+    nci_code: C12376
+  - value_cn: 胰腺
+    value_en: Pancreas
+    decode_en: PANCREAS
+    decode_cn: 胰腺
+    nci_code: C12393
+  - value_cn: 肺
+    value_en: Lung
+    decode_en: LUNG
+    decode_cn: 肺
+    nci_code: C12468
+  - value_cn: 气管
+    value_en: Trachea
+    decode_en: TRACHEA
+    decode_cn: 气管
+    nci_code: C12428
+  - value_cn: 乳腺
+    value_en: Mammary Gland
+    decode_en: MAMMARY GLAND
+    decode_cn: 乳腺
+    nci_code: C12367
+  - value_cn: 卵巢
+    value_en: Ovary
+    decode_en: OVARY
+    decode_cn: 卵巢
+    nci_code: C12404
+  - value_cn: 输卵管
+    value_en: Fallopian Tube
+    decode_en: FALLOPIAN TUBE
+    decode_cn: 输卵管
+    nci_code: C12403
+  - value_cn: 子宫
+    value_en: Uterus
+    decode_en: UTERUS
+    decode_cn: 子宫
+    nci_code: C12405
+  - value_cn: 子宫颈
+    value_en: Cervix Uteri
+    decode_en: CERVIX UTERI
+    decode_cn: 子宫颈
+    nci_code: C12311
+  - value_cn: 阴道
+    value_en: Vagina
+    decode_en: VAGINA
+    decode_cn: 阴道
+    nci_code: C12407
+  - value_cn: 肾
+    value_en: Kidney
+    decode_en: KIDNEY
+    decode_cn: 肾
+    nci_code: C12415
+  - value_cn: 输尿管
+    value_en: Ureter
+    decode_en: URETER
+    decode_cn: 输尿管
+    nci_code: C12416
+  - value_cn: 膀胱
+    value_en: Bladder
+    decode_en: BLADDER
+    decode_cn: 膀胱
+    nci_code: C12414
+  - value_cn: 前列腺
+    value_en: Prostate Gland
+    decode_en: PROSTATE GLAND
+    decode_cn: 前列腺
+    nci_code: C12410
+  - value_cn: 尿道
+    value_en: Urethra
+    decode_en: URETHRA
+    decode_cn: 尿道
+    nci_code: C12417
+  - value_cn: 甲状腺
+    value_en: Thyroid Gland
+    decode_en: THYROID GLAND
+    decode_cn: 甲状腺
+    nci_code: C12400
+  - value_cn: 肾上腺
+    value_en: Adrenal Gland
+    decode_en: ADRENAL GLAND
+    decode_cn: 肾上腺
+    nci_code: C12666
+  - value_cn: 睾丸
+    value_en: Testis
+    decode_en: TESTIS
+    decode_cn: 睾丸
+    nci_code: C12412
+  - value_cn: 脾
+    value_en: Spleen
+    decode_en: SPLEEN
+    decode_cn: 脾
+    nci_code: C12432
+  - value_cn: 淋巴结
+    value_en: Lymph Node
+    decode_en: LYMPH NODE
+    decode_cn: 淋巴结
+    nci_code: C12745
+  - value_cn: 心包膜
+    value_en: Pericardium
+    decode_en: PERICARDIUM
+    decode_cn: 心包膜
+    nci_code: C13005
+  - value_cn: 胸膜
+    value_en: Pleura
+    decode_en: PLEURA
+    decode_cn: 胸膜
+    nci_code: C12469
+  - value_cn: 腹膜
+    value_en: Peritoneum
+    decode_en: PERITONEUM
+    decode_cn: 腹膜
+    nci_code: C12770
+  - value_cn: 心包积液
+    value_en: Pericardial Effusion
+    decode_en: PERICARDIAL EFFUSION
+    decode_cn: 心包积液
+  - value_cn: 胸腔积液
+    value_en: Pleural Effusion
+    decode_en: PLEURAL EFFUSION
+    decode_cn: 胸腔积液
+  - value_cn: 腹腔积液
+    value_en: Peritoneal Effusion
+    decode_en: PERITONEAL EFFUSION
+    decode_cn: 腹腔积液
+  - value_cn: 骨
+    value_en: Bone
+    decode_en: BONE
+    decode_cn: 骨
+    nci_code: C12366
+  - value_cn: 软组织
+    value_en: Soft Tissue
+    decode_en: SOFT TISSUE
+    decode_cn: 软组织
+    nci_code: C12471
+  - value_cn: 皮肤
+    value_en: Skin
+    decode_en: SKIN
+    decode_cn: 皮肤
+    nci_code: C12470
+  - value_cn: 其他
+    value_en: Other
+    decode_en: OTHER
+    decode_cn: 其他
+TUMETHOD:
+  name_en: Method
+  name_cn: 肿瘤影像学方法
+  nci_code: C85492
+  extensible: true
+  items:
+  - value_cn: 骨扫描
+    value_en: Bone Scan
+    decode_en: BONE SCAN
+    decode_cn: 骨扫描
+  - value_cn: 常规CT
+    value_en: CT Scan
+    decode_en: CT SCAN
+    decode_cn: 常规CT
+    nci_code: C17204
+  - value_cn: CT平扫
+    value_en: CT Scan without Contrast
+    decode_en: CT SCAN WITHOUT CONTRAST
+    decode_cn: CT平扫
+    nci_code: C137806
+  - value_cn: CT增强
+    value_en: Contrast Enhanced CT Scan
+    decode_en: CONTRAST ENHANCED CT SCAN
+    decode_cn: CT增强
+    nci_code: C137805
+  - value_cn: MRI
+    value_en: MRI
+    decode_en: MRI
+    decode_cn: MRI
+    nci_code: C16809
+  - value_cn: MRI平扫
+    value_en: MRI without Contrast
+    decode_en: MRI WITHOUT CONTRAST
+    decode_cn: MRI平扫
+    nci_code: C114184
+  - value_cn: MRI增强
+    value_en: Contrast Enhanced MRI
+    decode_en: CONTRAST ENHANCED MRI
+    decode_cn: MRI增强
+    nci_code: C46087
+  - value_cn: BoneScan,CT SCAN
+    value_en: BoneScan,CT SCAN
+    decode_en: BoneScan,CT SCAN
+    decode_cn: BoneScan,CT SCAN
+  - value_cn: BoneScan,CT SCAN,MRI
+    value_en: BoneScan,CT SCAN,MRI
+    decode_en: BoneScan,CT SCAN,MRI
+    decode_cn: BoneScan,CT SCAN,MRI
+  - value_cn: BoneScan,MRI
+    value_en: BoneScan,MRI
+    decode_en: BoneScan,MRI
+    decode_cn: BoneScan,MRI
+  - value_cn: CT SCAN,MRI
+    value_en: CT SCAN,MRI
+    decode_en: CT SCAN,MRI
+    decode_cn: CT SCAN,MRI
+  - value_cn: CT SCAN,MRI,PET
+    value_en: CT SCAN,MRI,PET
+    decode_en: CT SCAN,MRI,PET
+    decode_cn: CT SCAN,MRI,PET
+TU_EVAL:
+  name_en: Evaluator
+  name_cn: 影像学评估者
+  nci_code: C78735
+  items:
+  - value_cn: 研究者
+    value_en: INVESTIGATOR
+    decode_en: INVESTIGATOR
+    decode_cn: 研究者
+    nci_code: C25936
+  - value_cn: 独立评估员
+    value_en: INDEPENDENT ASSESSOR
+    decode_en: INDEPENDENT ASSESSOR
+    decode_cn: 独立评估员
+    nci_code: C78720
+TR_UNIT:
+  name_en: Unit
+  name_cn: TR单位
+  nci_code: C71620
+  items:
+  - value_cn: mm
+    value_en: mm
+    decode_en: mm
+    decode_cn: mm
+    nci_code: C28251
+  - value_cn: '%'
+    value_en: '%'
+    decode_en: '%'
+    decode_cn: '%'
+    nci_code: C25613
+TRMETHOD:
+  name_en: Method
+  name_cn: 肿瘤方法
+  nci_code: C85492
+  extensible: true
+  items:
+  - value_cn: 骨扫描
+    value_en: Bone Scan
+    decode_en: BONE SCAN
+    decode_cn: 骨扫描
+  - value_cn: 常规CT
+    value_en: CT Scan
+    decode_en: CT SCAN
+    decode_cn: 常规CT
+    nci_code: C17204
+  - value_cn: CT平扫
+    value_en: CT Scan without Contrast
+    decode_en: CT SCAN WITHOUT CONTRAST
+    decode_cn: CT平扫
+    nci_code: C137806
+  - value_cn: CT增强
+    value_en: Contrast Enhanced CT Scan
+    decode_en: CONTRAST ENHANCED CT SCAN
+    decode_cn: CT增强
+    nci_code: C137805
+  - value_cn: 其他
+    value_en: 其他
+    decode_en: 其他
+    decode_cn: 其他
+    nci_code: C16809
+  - value_cn: MRI平扫
+    value_en: MRI without Contrast
+    decode_en: MRI WITHOUT CONTRAST
+    decode_cn: MRI平扫
+    nci_code: C114184
+  - value_cn: MRI增强
+    value_en: Contrast Enhanced MRI
+    decode_en: CONTRAST ENHANCED MRI
+    decode_cn: MRI增强
+    nci_code: C46087
+MIORRES:
+  name_en: Microscopic Original Value
+  name_cn: 微观发现原始结果
+  extensible: true
+  items:
+  - value_cn: 未知
+    value_en: Unknown
+    decode_en: Unknown
+    decode_cn: 未知
+  - value_cn: 未做
+    value_en: Not Done
+    decode_en: Not Done
+    decode_cn: 未做
+  - value_cn: 阴性
+    value_en: Negative
+    decode_en: Negative
+    decode_cn: 阴性
+  - value_cn: 阳性
+    value_en: Positive
+    decode_en: Positive
+    decode_cn: 阳性
+MISTRESC:
+  name_en: Microscopic Standard Value
+  name_cn: 微观发现标准结果
+  extensible: true
+  items:
+  - value_cn: 阴性
+    value_en: Negative
+    decode_en: Negative
+    decode_cn: 阴性
+  - value_cn: 阳性
+    value_en: Positive
+    decode_en: Positive
+    decode_cn: 阳性
+  - value_cn: 未知
+    value_en: Unknown
+    decode_en: Unknown
+    decode_cn: 未知
+TSPARM:
+  name_en: 试验概要参数名称
+  name_cn: 试验概要参数名称
+  extensible: true
+  items:
+  - value_cn: Actual Number of Subjects
+    value_en: Actual Number of Subjects
+    decode_en: Actual Number of Subjects
+    decode_cn: Actual Number of Subjects
+  - value_cn: Adaptive Design
+    value_en: Adaptive Design
+    decode_en: Adaptive Design
+    decode_cn: Adaptive Design
+  - value_cn: Added on to Existing Treatments
+    value_en: Added on to Existing Treatments
+    decode_en: Added on to Existing Treatments
+    decode_cn: Added on to Existing Treatments
+  - value_cn: Clinical Study Sponsor
+    value_en: Clinical Study Sponsor
+    decode_en: Clinical Study Sponsor
+    decode_cn: Clinical Study Sponsor
+  - value_cn: Comparative Treatment Name
+    value_en: Comparative Treatment Name
+    decode_en: Comparative Treatment Name
+    decode_cn: Comparative Treatment Name
+  - value_cn: Confirmed Response Minimum Duration
+    value_en: Confirmed Response Minimum Duration
+    decode_en: Confirmed Response Minimum Duration
+    decode_cn: Confirmed Response Minimum Duration
+  - value_cn: Control Type
+    value_en: Control Type
+    decode_en: Control Type
+    decode_cn: Control Type
+  - value_cn: Data Cutoff Date
+    value_en: Data Cutoff Date
+    decode_en: Data Cutoff Date
+    decode_cn: Data Cutoff Date
+  - value_cn: Data Cutoff Description
+    value_en: Data Cutoff Description
+    decode_en: Data Cutoff Description
+    decode_cn: Data Cutoff Description
+  - value_cn: Diagnosis Group
+    value_en: Diagnosis Group
+    decode_en: Diagnosis Group
+    decode_cn: Diagnosis Group
+  - value_cn: Extension Trial Indicator
+    value_en: Extension Trial Indicator
+    decode_en: Extension Trial Indicator
+    decode_cn: Extension Trial Indicator
+  - value_cn: FDA Technical Specification
+    value_en: FDA Technical Specification
+    decode_en: FDA Technical Specification
+    decode_cn: FDA Technical Specification
+  - value_cn: Healthy Subject Indicator
+    value_en: Healthy Subject Indicator
+    decode_en: Healthy Subject Indicator
+    decode_cn: Healthy Subject Indicator
+  - value_cn: Intervention Model
+    value_en: Intervention Model
+    decode_en: Intervention Model
+    decode_cn: Intervention Model
+  - value_cn: Intervention Type
+    value_en: Intervention Type
+    decode_en: Intervention Type
+    decode_cn: Intervention Type
+  - value_cn: Investigational Therapy or Treatment
+    value_en: Investigational Therapy or Treatment
+    decode_en: Investigational Therapy or Treatment
+    decode_cn: Investigational Therapy or Treatment
+  - value_cn: Number of Groups/Cohorts
+    value_en: Number of Groups/Cohorts
+    decode_en: Number of Groups/Cohorts
+    decode_cn: Number of Groups/Cohorts
+  - value_cn: Ongoing Study Indicator
+    value_en: Ongoing Study Indicator
+    decode_en: Ongoing Study Indicator
+    decode_cn: Ongoing Study Indicator
+  - value_cn: Other Outcome Measure
+    value_en: Other Outcome Measure
+    decode_en: Other Outcome Measure
+    decode_cn: Other Outcome Measure
+  - value_cn: Pediatric Investigation Plan Indicator
+    value_en: Pediatric Investigation Plan Indicator
+    decode_en: Pediatric Investigation Plan Indicator
+    decode_cn: Pediatric Investigation Plan Indicator
+  - value_cn: Pediatric Postmarket Study Indicator
+    value_en: Pediatric Postmarket Study Indicator
+    decode_en: Pediatric Postmarket Study Indicator
+    decode_cn: Pediatric Postmarket Study Indicator
+  - value_cn: Pediatric Study Indicator
+    value_en: Pediatric Study Indicator
+    decode_en: Pediatric Study Indicator
+    decode_cn: Pediatric Study Indicator
+  - value_cn: Pharmacologic Class
+    value_en: Pharmacologic Class
+    decode_en: Pharmacologic Class
+    decode_cn: Pharmacologic Class
+  - value_cn: Planned Country of Investigational Sites
+    value_en: Planned Country of Investigational Sites
+    decode_en: Planned Country of Investigational Sites
+    decode_cn: Planned Country of Investigational Sites
+  - value_cn: Planned Maximum Age of Subjects
+    value_en: Planned Maximum Age of Subjects
+    decode_en: Planned Maximum Age of Subjects
+    decode_cn: Planned Maximum Age of Subjects
+  - value_cn: Planned Minimum Age of Subjects
+    value_en: Planned Minimum Age of Subjects
+    decode_en: Planned Minimum Age of Subjects
+    decode_cn: Planned Minimum Age of Subjects
+  - value_cn: Planned Number of Arms
+    value_en: Planned Number of Arms
+    decode_en: Planned Number of Arms
+    decode_cn: Planned Number of Arms
+  - value_cn: Planned Number of Subjects
+    value_en: Planned Number of Subjects
+    decode_en: Planned Number of Subjects
+    decode_cn: Planned Number of Subjects
+  - value_cn: Primary Outcome Measure
+    value_en: Primary Outcome Measure
+    decode_en: Primary Outcome Measure
+    decode_cn: Primary Outcome Measure
+  - value_cn: Randomization Quotient
+    value_en: Randomization Quotient
+    decode_en: Randomization Quotient
+    decode_cn: Randomization Quotient
+  - value_cn: Rare Disease Indicator
+    value_en: Rare Disease Indicator
+    decode_en: Rare Disease Indicator
+    decode_cn: Rare Disease Indicator
+  - value_cn: Registry Identifier
+    value_en: Registry Identifier
+    decode_en: Registry Identifier
+    decode_cn: Registry Identifier
+  - value_cn: SDTM IG Version
+    value_en: SDTM IG Version
+    decode_en: SDTM IG Version
+    decode_cn: SDTM IG Version
+  - value_cn: SDTM Version
+    value_en: SDTM Version
+    decode_en: SDTM Version
+    decode_cn: SDTM Version
+  - value_cn: Secondary Outcome Measure
+    value_en: Secondary Outcome Measure
+    decode_en: Secondary Outcome Measure
+    decode_cn: Secondary Outcome Measure
+  - value_cn: Sex of Participants
+    value_en: Sex of Participants
+    decode_en: Sex of Participants
+    decode_cn: Sex of Participants
+  - value_cn: Stable Disease Minimum Duration
+    value_en: Stable Disease Minimum Duration
+    decode_en: Stable Disease Minimum Duration
+    decode_cn: Stable Disease Minimum Duration
+  - value_cn: Stratification Factor
+    value_en: Stratification Factor
+    decode_en: Stratification Factor
+    decode_cn: Stratification Factor
+  - value_cn: Study End Date
+    value_en: Study End Date
+    decode_en: Study End Date
+    decode_cn: Study End Date
+  - value_cn: Study Start Date
+    value_en: Study Start Date
+    decode_en: Study Start Date
+    decode_cn: Study Start Date
+  - value_cn: Study Stop Rules
+    value_en: Study Stop Rules
+    decode_en: Study Stop Rules
+    decode_cn: Study Stop Rules
+  - value_cn: Study Type
+    value_en: Study Type
+    decode_en: Study Type
+    decode_cn: Study Type
+  - value_cn: Therapeutic Area
+    value_en: Therapeutic Area
+    decode_en: Therapeutic Area
+    decode_cn: Therapeutic Area
+  - value_cn: Trial Blinding Schema
+    value_en: Trial Blinding Schema
+    decode_en: Trial Blinding Schema
+    decode_cn: Trial Blinding Schema
+  - value_cn: Trial Disease/Condition Indication
+    value_en: Trial Disease/Condition Indication
+    decode_en: Trial Disease/Condition Indication
+    decode_cn: Trial Disease/Condition Indication
+  - value_cn: Trial Intent Type
+    value_en: Trial Intent Type
+    decode_en: Trial Intent Type
+    decode_cn: Trial Intent Type
+  - value_cn: Trial Is Randomized
+    value_en: Trial Is Randomized
+    decode_en: Trial Is Randomized
+    decode_cn: Trial Is Randomized
+  - value_cn: Trial Length
+    value_en: Trial Length
+    decode_en: Trial Length
+    decode_cn: Trial Length
+  - value_cn: Trial Phase Classification
+    value_en: Trial Phase Classification
+    decode_en: Trial Phase Classification
+    decode_cn: Trial Phase Classification
+  - value_cn: Trial Primary Objective
+    value_en: Trial Primary Objective
+    decode_en: Trial Primary Objective
+    decode_cn: Trial Primary Objective
+  - value_cn: Trial Secondary Objective
+    value_en: Trial Secondary Objective
+    decode_en: Trial Secondary Objective
+    decode_cn: Trial Secondary Objective
+  - value_cn: Trial Title
+    value_en: Trial Title
+    decode_en: Trial Title
+    decode_cn: Trial Title
+  - value_cn: Trial Type
+    value_en: Trial Type
+    decode_en: Trial Type
+    decode_cn: Trial Type
+TSPARMCD:
+  name_en: 试验概要参数代码
+  name_cn: 试验概要参数代码
+  extensible: true
+  items:
+  - value_cn: Actual Number of Subjects
+    value_en: Actual Number of Subjects
+    decode_en: ACTSUB
+    decode_cn: ACTSUB
+  - value_cn: Adaptive Design
+    value_en: Adaptive Design
+    decode_en: ADAPT
+    decode_cn: ADAPT
+  - value_cn: Added on to Existing Treatments
+    value_en: Added on to Existing Treatments
+    decode_en: ADDON
+    decode_cn: ADDON
+  - value_cn: Clinical Study Sponsor
+    value_en: Clinical Study Sponsor
+    decode_en: AGEMAX
+    decode_cn: AGEMAX
+  - value_cn: Comparative Treatment Name
+    value_en: Comparative Treatment Name
+    decode_en: AGEMIN
+    decode_cn: AGEMIN
+  - value_cn: Confirmed Response Minimum Duration
+    value_en: Confirmed Response Minimum Duration
+    decode_en: COMPTRT
+    decode_cn: COMPTRT
+  - value_cn: Control Type
+    value_en: Control Type
+    decode_en: CRMDUR
+    decode_cn: CRMDUR
+  - value_cn: Data Cutoff Date
+    value_en: Data Cutoff Date
+    decode_en: DCUTDESC
+    decode_cn: DCUTDESC
+  - value_cn: Data Cutoff Description
+    value_en: Data Cutoff Description
+    decode_en: DCUTDTC
+    decode_cn: DCUTDTC
+  - value_cn: Diagnosis Group
+    value_en: Diagnosis Group
+    decode_en: EXTTIND
+    decode_cn: EXTTIND
+  - value_cn: Extension Trial Indicator
+    value_en: Extension Trial Indicator
+    decode_en: FCNTRY
+    decode_cn: FCNTRY
+  - value_cn: FDA Technical Specification
+    value_en: FDA Technical Specification
+    decode_en: FDATCHSP
+    decode_cn: FDATCHSP
+  - value_cn: Healthy Subject Indicator
+    value_en: Healthy Subject Indicator
+    decode_en: HLTSUBJI
+    decode_cn: HLTSUBJI
+  - value_cn: Intervention Model
+    value_en: Intervention Model
+    decode_en: INDIC
+    decode_cn: INDIC
+  - value_cn: Intervention Type
+    value_en: Intervention Type
+    decode_en: INTMODEL
+    decode_cn: INTMODEL
+  - value_cn: Investigational Therapy or Treatment
+    value_en: Investigational Therapy or Treatment
+    decode_en: INTTYPE
+    decode_cn: INTTYPE
+  - value_cn: Number of Groups/Cohorts
+    value_en: Number of Groups/Cohorts
+    decode_en: LENGTH
+    decode_cn: LENGTH
+  - value_cn: Ongoing Study Indicator
+    value_en: Ongoing Study Indicator
+    decode_en: NARMS
+    decode_cn: NARMS
+  - value_cn: Other Outcome Measure
+    value_en: Other Outcome Measure
+    decode_en: NCOHORT
+    decode_cn: NCOHORT
+  - value_cn: Pediatric Investigation Plan Indicator
+    value_en: Pediatric Investigation Plan Indicator
+    decode_en: OBJPRIM
+    decode_cn: OBJPRIM
+  - value_cn: Pediatric Postmarket Study Indicator
+    value_en: Pediatric Postmarket Study Indicator
+    decode_en: OBJSEC
+    decode_cn: OBJSEC
+  - value_cn: Pediatric Study Indicator
+    value_en: Pediatric Study Indicator
+    decode_en: ONGOSIND
+    decode_cn: ONGOSIND
+  - value_cn: Pharmacologic Class
+    value_en: Pharmacologic Class
+    decode_en: OUTMSOTH
+    decode_cn: OUTMSOTH
+  - value_cn: Planned Country of Investigational Sites
+    value_en: Planned Country of Investigational Sites
+    decode_en: OUTMSPRI
+    decode_cn: OUTMSPRI
+  - value_cn: Planned Maximum Age of Subjects
+    value_en: Planned Maximum Age of Subjects
+    decode_en: OUTMSSEC
+    decode_cn: OUTMSSEC
+  - value_cn: Planned Minimum Age of Subjects
+    value_en: Planned Minimum Age of Subjects
+    decode_en: PCLAS
+    decode_cn: PCLAS
+  - value_cn: Planned Number of Arms
+    value_en: Planned Number of Arms
+    decode_en: PDPSTIND
+    decode_cn: PDPSTIND
+  - value_cn: Planned Number of Subjects
+    value_en: Planned Number of Subjects
+    decode_en: PDSTIND
+    decode_cn: PDSTIND
+  - value_cn: Primary Outcome Measure
+    value_en: Primary Outcome Measure
+    decode_en: PIPIND
+    decode_cn: PIPIND
+  - value_cn: Randomization Quotient
+    value_en: Randomization Quotient
+    decode_en: PLANSUB
+    decode_cn: PLANSUB
+  - value_cn: Rare Disease Indicator
+    value_en: Rare Disease Indicator
+    decode_en: RANDOM
+    decode_cn: RANDOM
+  - value_cn: Registry Identifier
+    value_en: Registry Identifier
+    decode_en: RANDQT
+    decode_cn: RANDQT
+  - value_cn: SDTM IG Version
+    value_en: SDTM IG Version
+    decode_en: RDIND
+    decode_cn: RDIND
+  - value_cn: SDTM Version
+    value_en: SDTM Version
+    decode_en: REGID
+    decode_cn: REGID
+  - value_cn: Secondary Outcome Measure
+    value_en: Secondary Outcome Measure
+    decode_en: SDMDUR
+    decode_cn: SDMDUR
+  - value_cn: Sex of Participants
+    value_en: Sex of Participants
+    decode_en: SDTIGVER
+    decode_cn: SDTIGVER
+  - value_cn: Stable Disease Minimum Duration
+    value_en: Stable Disease Minimum Duration
+    decode_en: SDTMVER
+    decode_cn: SDTMVER
+  - value_cn: Stratification Factor
+    value_en: Stratification Factor
+    decode_en: SENDTC
+    decode_cn: SENDTC
+  - value_cn: Study End Date
+    value_en: Study End Date
+    decode_en: SEXPOP
+    decode_cn: SEXPOP
+  - value_cn: Study Start Date
+    value_en: Study Start Date
+    decode_en: SPONSOR
+    decode_cn: SPONSOR
+  - value_cn: Study Stop Rules
+    value_en: Study Stop Rules
+    decode_en: SSTDTC
+    decode_cn: SSTDTC
+  - value_cn: Study Type
+    value_en: Study Type
+    decode_en: STOPRULE
+    decode_cn: STOPRULE
+  - value_cn: Therapeutic Area
+    value_en: Therapeutic Area
+    decode_en: STRATFCT
+    decode_cn: STRATFCT
+  - value_cn: Trial Blinding Schema
+    value_en: Trial Blinding Schema
+    decode_en: STYPE
+    decode_cn: STYPE
+  - value_cn: Trial Disease/Condition Indication
+    value_en: Trial Disease/Condition Indication
+    decode_en: TBLIND
+    decode_cn: TBLIND
+  - value_cn: Trial Intent Type
+    value_en: Trial Intent Type
+    decode_en: TCNTRL
+    decode_cn: TCNTRL
+  - value_cn: Trial Is Randomized
+    value_en: Trial Is Randomized
+    decode_en: TDIGRP
+    decode_cn: TDIGRP
+  - value_cn: Trial Length
+    value_en: Trial Length
+    decode_en: THERAREA
+    decode_cn: THERAREA
+  - value_cn: Trial Phase Classification
+    value_en: Trial Phase Classification
+    decode_en: TINDTP
+    decode_cn: TINDTP
+  - value_cn: Trial Primary Objective
+    value_en: Trial Primary Objective
+    decode_en: TITLE
+    decode_cn: TITLE
+  - value_cn: Trial Secondary Objective
+    value_en: Trial Secondary Objective
+    decode_en: TPHASE
+    decode_cn: TPHASE
+  - value_cn: Trial Title
+    value_en: Trial Title
+    decode_en: TRT
+    decode_cn: TRT
+  - value_cn: Trial Type
+    value_en: Trial Type
+    decode_en: TTYPE
+    decode_cn: TTYPE
+CCCAT:
+  name_en: Category of Clinical Classification
+  name_cn: 临床分类类别
+  nci_code: C118971
+  items:
+  - value_cn: ECOG
+    value_en: ECOG
+    decode_en: ECOG
+    decode_cn: ECOG
+    nci_code: C102116
+PCTPTNUM:
+  name_en: Planned Time Point Name(N)
+  name_cn: 计划时点名称(N)
+  extensible: true
+  items:
+  - value_cn: 给药后2h
+    value_en: 2h Post Dose
+    decode_en: '3'
+    decode_cn: '3'
+  - value_cn: 给药前2h
+    value_en: 2h Pre Dose
+    decode_en: '1'
+    decode_cn: '1'
+  - value_cn: 给药后5min
+    value_en: 5min Post Dose
+    decode_en: '2'
+    decode_cn: '2'
+TCMPARM:
+  name_en: Time to Concomitant/Prior Medications Parameter Test Name
+  name_cn: 合并用药时间参数名称
+  extensible: true
+  items:
+  - value_cn: 第一周期未使用升白一级预防
+    value_en: 第一周期未使用升白一级预防
+    decode_en: 第一周期未使用升白一级预防
+    decode_cn: 第一周期未使用升白一级预防
+  - value_cn: 第一周期内中性粒细胞计数降低
+    value_en: 第一周期内中性粒细胞计数降低
+    decode_en: 第一周期内中性粒细胞计数降低
+    decode_cn: 第一周期内中性粒细胞计数降低
+  - value_cn: 第一周期内中性粒细胞计数降低导致暂停用药
+    value_en: 第一周期内中性粒细胞计数降低导致暂停用药
+    decode_en: 第一周期内中性粒细胞计数降低导致暂停用药
+    decode_cn: 第一周期内中性粒细胞计数降低导致暂停用药
+  - value_cn: 第一周期内中性粒细胞计数降低导致剂量减少
+    value_en: 第一周期内中性粒细胞计数降低导致剂量减少
+    decode_en: 第一周期内中性粒细胞计数降低导致剂量减少
+    decode_cn: 第一周期内中性粒细胞计数降低导致剂量减少
+  - value_cn: 第一周期内中性粒细胞计数降低导致永久停药
+    value_en: 第一周期内中性粒细胞计数降低导致永久停药
+    decode_en: 第一周期内中性粒细胞计数降低导致永久停药
+    decode_cn: 第一周期内中性粒细胞计数降低导致永久停药
+  - value_cn: 第一周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+    value_en: 第一周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+    decode_en: 第一周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+    decode_cn: 第一周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+  - value_cn: 第一周期内>=3级中性粒细胞计数降低
+    value_en: 第一周期内>=3级中性粒细胞计数降低
+    decode_en: 第一周期内>=3级中性粒细胞计数降低
+    decode_cn: 第一周期内>=3级中性粒细胞计数降低
+  - value_cn: 第一周期内>=3级中性粒细胞计数降低导致暂停用药
+    value_en: 第一周期内>=3级中性粒细胞计数降低导致暂停用药
+    decode_en: 第一周期内>=3级中性粒细胞计数降低导致暂停用药
+    decode_cn: 第一周期内>=3级中性粒细胞计数降低导致暂停用药
+  - value_cn: 第一周期内>=3级中性粒细胞计数降低导致剂量减少
+    value_en: 第一周期内>=3级中性粒细胞计数降低导致剂量减少
+    decode_en: 第一周期内>=3级中性粒细胞计数降低导致剂量减少
+    decode_cn: 第一周期内>=3级中性粒细胞计数降低导致剂量减少
+  - value_cn: 第一周期内>=3级中性粒细胞计数降低导致永久停药
+    value_en: 第一周期内>=3级中性粒细胞计数降低导致永久停药
+    decode_en: 第一周期内>=3级中性粒细胞计数降低导致永久停药
+    decode_cn: 第一周期内>=3级中性粒细胞计数降低导致永久停药
+  - value_cn: 第一周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+    value_en: 第一周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+    decode_en: 第一周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+    decode_cn: 第一周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+  - value_cn: 第一周期内4级中性粒细胞计数降低
+    value_en: 第一周期内4级中性粒细胞计数降低
+    decode_en: 第一周期内4级中性粒细胞计数降低
+    decode_cn: 第一周期内4级中性粒细胞计数降低
+  - value_cn: 第一周期内4级中性粒细胞计数降低导致暂停用药
+    value_en: 第一周期内4级中性粒细胞计数降低导致暂停用药
+    decode_en: 第一周期内4级中性粒细胞计数降低导致暂停用药
+    decode_cn: 第一周期内4级中性粒细胞计数降低导致暂停用药
+  - value_cn: 第一周期内4级中性粒细胞计数降低导致剂量减少
+    value_en: 第一周期内4级中性粒细胞计数降低导致剂量减少
+    decode_en: 第一周期内4级中性粒细胞计数降低导致剂量减少
+    decode_cn: 第一周期内4级中性粒细胞计数降低导致剂量减少
+  - value_cn: 第一周期内4级中性粒细胞计数降低导致永久停药
+    value_en: 第一周期内4级中性粒细胞计数降低导致永久停药
+    decode_en: 第一周期内4级中性粒细胞计数降低导致永久停药
+    decode_cn: 第一周期内4级中性粒细胞计数降低导致永久停药
+  - value_cn: 第一周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+    value_en: 第一周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+    decode_en: 第一周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+    decode_cn: 第一周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+  - value_cn: 第一周期内发热性中性粒细胞减少症
+    value_en: 第一周期内发热性中性粒细胞减少症
+    decode_en: 第一周期内发热性中性粒细胞减少症
+    decode_cn: 第一周期内发热性中性粒细胞减少症
+  - value_cn: 第一周期内发热性中性粒细胞减少症导致暂停用药
+    value_en: 第一周期内发热性中性粒细胞减少症导致暂停用药
+    decode_en: 第一周期内发热性中性粒细胞减少症导致暂停用药
+    decode_cn: 第一周期内发热性中性粒细胞减少症导致暂停用药
+  - value_cn: 第一周期内发热性中性粒细胞减少症导致剂量减少
+    value_en: 第一周期内发热性中性粒细胞减少症导致剂量减少
+    decode_en: 第一周期内发热性中性粒细胞减少症导致剂量减少
+    decode_cn: 第一周期内发热性中性粒细胞减少症导致剂量减少
+  - value_cn: 第一周期内发热性中性粒细胞减少症导致永久停药
+    value_en: 第一周期内发热性中性粒细胞减少症导致永久停药
+    decode_en: 第一周期内发热性中性粒细胞减少症导致永久停药
+    decode_cn: 第一周期内发热性中性粒细胞减少症导致永久停药
+  - value_cn: 第一周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+    value_en: 第一周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+    decode_en: 第一周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+    decode_cn: 第一周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+  - value_cn: 第一周期使用升白一级预防
+    value_en: 第一周期使用升白一级预防
+    decode_en: 第一周期使用升白一级预防
+    decode_cn: 第一周期使用升白一级预防
+  - value_cn: 首次给药结束后<48小时使用升白一级预防
+    value_en: 首次给药结束后<48小时使用升白一级预防
+    decode_en: 首次给药结束后<48小时使用升白一级预防
+    decode_cn: 首次给药结束后<48小时使用升白一级预防
+  - value_cn: 首次给药结束后48-72小时使用升白一级预防
+    value_en: 首次给药结束后48-72小时使用升白一级预防
+    decode_en: 首次给药结束后48-72小时使用升白一级预防
+    decode_cn: 首次给药结束后48-72小时使用升白一级预防
+  - value_cn: 首次给药结束后>72小时使用升白一级预防
+    value_en: 首次给药结束后>72小时使用升白一级预防
+    decode_en: 首次给药结束后>72小时使用升白一级预防
+    decode_cn: 首次给药结束后>72小时使用升白一级预防
+  - value_cn: 前4个周期均在给药结束后>72小时使用预防性升白药物
+    value_en: 前4个周期均在给药结束后>72小时使用预防性升白药物
+    decode_en: 前4个周期均在给药结束后>72小时使用预防性升白药物
+    decode_cn: 前4个周期均在给药结束后>72小时使用预防性升白药物
+  - value_cn: 前4个周期内中性粒细胞计数降低
+    value_en: 前4个周期内中性粒细胞计数降低
+    decode_en: 前4个周期内中性粒细胞计数降低
+    decode_cn: 前4个周期内中性粒细胞计数降低
+  - value_cn: 前4个周期内中性粒细胞计数降低导致暂停用药
+    value_en: 前4个周期内中性粒细胞计数降低导致暂停用药
+    decode_en: 前4个周期内中性粒细胞计数降低导致暂停用药
+    decode_cn: 前4个周期内中性粒细胞计数降低导致暂停用药
+  - value_cn: 前4个周期内中性粒细胞计数降低导致剂量减少
+    value_en: 前4个周期内中性粒细胞计数降低导致剂量减少
+    decode_en: 前4个周期内中性粒细胞计数降低导致剂量减少
+    decode_cn: 前4个周期内中性粒细胞计数降低导致剂量减少
+  - value_cn: 前4个周期内中性粒细胞计数降低导致永久停药
+    value_en: 前4个周期内中性粒细胞计数降低导致永久停药
+    decode_en: 前4个周期内中性粒细胞计数降低导致永久停药
+    decode_cn: 前4个周期内中性粒细胞计数降低导致永久停药
+  - value_cn: 前4个周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+    value_en: 前4个周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+    decode_en: 前4个周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+    decode_cn: 前4个周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+  - value_cn: 前4个周期内>=3级中性粒细胞计数降低
+    value_en: 前4个周期内>=3级中性粒细胞计数降低
+    decode_en: 前4个周期内>=3级中性粒细胞计数降低
+    decode_cn: 前4个周期内>=3级中性粒细胞计数降低
+  - value_cn: 前4个周期内>=3级中性粒细胞计数降低导致暂停用药
+    value_en: 前4个周期内>=3级中性粒细胞计数降低导致暂停用药
+    decode_en: 前4个周期内>=3级中性粒细胞计数降低导致暂停用药
+    decode_cn: 前4个周期内>=3级中性粒细胞计数降低导致暂停用药
+  - value_cn: 前4个周期内>=3级中性粒细胞计数降低导致剂量减少
+    value_en: 前4个周期内>=3级中性粒细胞计数降低导致剂量减少
+    decode_en: 前4个周期内>=3级中性粒细胞计数降低导致剂量减少
+    decode_cn: 前4个周期内>=3级中性粒细胞计数降低导致剂量减少
+  - value_cn: 前4个周期内>=3级中性粒细胞计数降低导致永久停药
+    value_en: 前4个周期内>=3级中性粒细胞计数降低导致永久停药
+    decode_en: 前4个周期内>=3级中性粒细胞计数降低导致永久停药
+    decode_cn: 前4个周期内>=3级中性粒细胞计数降低导致永久停药
+  - value_cn: 前4个周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+    value_en: 前4个周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+    decode_en: 前4个周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+    decode_cn: 前4个周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+  - value_cn: 前4个周期内4级中性粒细胞计数降低
+    value_en: 前4个周期内4级中性粒细胞计数降低
+    decode_en: 前4个周期内4级中性粒细胞计数降低
+    decode_cn: 前4个周期内4级中性粒细胞计数降低
+  - value_cn: 前4个周期内4级中性粒细胞计数降低导致暂停用药
+    value_en: 前4个周期内4级中性粒细胞计数降低导致暂停用药
+    decode_en: 前4个周期内4级中性粒细胞计数降低导致暂停用药
+    decode_cn: 前4个周期内4级中性粒细胞计数降低导致暂停用药
+  - value_cn: 前4个周期内4级中性粒细胞计数降低导致剂量减少
+    value_en: 前4个周期内4级中性粒细胞计数降低导致剂量减少
+    decode_en: 前4个周期内4级中性粒细胞计数降低导致剂量减少
+    decode_cn: 前4个周期内4级中性粒细胞计数降低导致剂量减少
+  - value_cn: 前4个周期内4级中性粒细胞计数降低导致永久停药
+    value_en: 前4个周期内4级中性粒细胞计数降低导致永久停药
+    decode_en: 前4个周期内4级中性粒细胞计数降低导致永久停药
+    decode_cn: 前4个周期内4级中性粒细胞计数降低导致永久停药
+  - value_cn: 前4个周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+    value_en: 前4个周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+    decode_en: 前4个周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+    decode_cn: 前4个周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+  - value_cn: 前4个周期内发热性中性粒细胞减少症
+    value_en: 前4个周期内发热性中性粒细胞减少症
+    decode_en: 前4个周期内发热性中性粒细胞减少症
+    decode_cn: 前4个周期内发热性中性粒细胞减少症
+  - value_cn: 前4个周期内发热性中性粒细胞减少症导致暂停用药
+    value_en: 前4个周期内发热性中性粒细胞减少症导致暂停用药
+    decode_en: 前4个周期内发热性中性粒细胞减少症导致暂停用药
+    decode_cn: 前4个周期内发热性中性粒细胞减少症导致暂停用药
+  - value_cn: 前4个周期内发热性中性粒细胞减少症导致剂量减少
+    value_en: 前4个周期内发热性中性粒细胞减少症导致剂量减少
+    decode_en: 前4个周期内发热性中性粒细胞减少症导致剂量减少
+    decode_cn: 前4个周期内发热性中性粒细胞减少症导致剂量减少
+  - value_cn: 前4个周期内发热性中性粒细胞减少症导致永久停药
+    value_en: 前4个周期内发热性中性粒细胞减少症导致永久停药
+    decode_en: 前4个周期内发热性中性粒细胞减少症导致永久停药
+    decode_cn: 前4个周期内发热性中性粒细胞减少症导致永久停药
+  - value_cn: 前4个周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+    value_en: 前4个周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+    decode_en: 前4个周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+    decode_cn: 前4个周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+  - value_cn: 总共使用预防升白药物的周期数
+    value_en: 总共使用预防升白药物的周期数
+    decode_en: 总共使用预防升白药物的周期数
+    decode_cn: 总共使用预防升白药物的周期数
+TCMPARCD:
+  name_en: Time to Concomitant/Prior Medications Parameter Test Code
+  name_cn: 合并用药时间参数代码
+  extensible: true
+  items:
+  - value_cn: 第一周期未使用升白一级预防
+    value_en: 第一周期未使用升白一级预防
+    decode_en: GCSF0A
+    decode_cn: GCSF0A
+  - value_cn: 第一周期内中性粒细胞计数降低
+    value_en: 第一周期内中性粒细胞计数降低
+    decode_en: CTN01A
+    decode_cn: CTN01A
+  - value_cn: 第一周期内中性粒细胞计数降低导致暂停用药
+    value_en: 第一周期内中性粒细胞计数降低导致暂停用药
+    decode_en: INT01A
+    decode_cn: INT01A
+  - value_cn: 第一周期内中性粒细胞计数降低导致剂量减少
+    value_en: 第一周期内中性粒细胞计数降低导致剂量减少
+    decode_en: REDU01A
+    decode_cn: REDU01A
+  - value_cn: 第一周期内中性粒细胞计数降低导致永久停药
+    value_en: 第一周期内中性粒细胞计数降低导致永久停药
+    decode_en: WD01A
+    decode_cn: WD01A
+  - value_cn: 第一周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+    value_en: 第一周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+    decode_en: TTFAE01A
+    decode_cn: TTFAE01A
+  - value_cn: 第一周期内>=3级中性粒细胞计数降低
+    value_en: 第一周期内>=3级中性粒细胞计数降低
+    decode_en: CTN02A
+    decode_cn: CTN02A
+  - value_cn: 第一周期内>=3级中性粒细胞计数降低导致暂停用药
+    value_en: 第一周期内>=3级中性粒细胞计数降低导致暂停用药
+    decode_en: INT02A
+    decode_cn: INT02A
+  - value_cn: 第一周期内>=3级中性粒细胞计数降低导致剂量减少
+    value_en: 第一周期内>=3级中性粒细胞计数降低导致剂量减少
+    decode_en: REDU02A
+    decode_cn: REDU02A
+  - value_cn: 第一周期内>=3级中性粒细胞计数降低导致永久停药
+    value_en: 第一周期内>=3级中性粒细胞计数降低导致永久停药
+    decode_en: WD02A
+    decode_cn: WD02A
+  - value_cn: 第一周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+    value_en: 第一周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+    decode_en: TTFAE02A
+    decode_cn: TTFAE02A
+  - value_cn: 第一周期内4级中性粒细胞计数降低
+    value_en: 第一周期内4级中性粒细胞计数降低
+    decode_en: CTN03A
+    decode_cn: CTN03A
+  - value_cn: 第一周期内4级中性粒细胞计数降低导致暂停用药
+    value_en: 第一周期内4级中性粒细胞计数降低导致暂停用药
+    decode_en: INT03A
+    decode_cn: INT03A
+  - value_cn: 第一周期内4级中性粒细胞计数降低导致剂量减少
+    value_en: 第一周期内4级中性粒细胞计数降低导致剂量减少
+    decode_en: REDU03A
+    decode_cn: REDU03A
+  - value_cn: 第一周期内4级中性粒细胞计数降低导致永久停药
+    value_en: 第一周期内4级中性粒细胞计数降低导致永久停药
+    decode_en: WD03A
+    decode_cn: WD03A
+  - value_cn: 第一周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+    value_en: 第一周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+    decode_en: TTFAE03A
+    decode_cn: TTFAE03A
+  - value_cn: 第一周期内发热性中性粒细胞减少症
+    value_en: 第一周期内发热性中性粒细胞减少症
+    decode_en: CTN04A
+    decode_cn: CTN04A
+  - value_cn: 第一周期内发热性中性粒细胞减少症导致暂停用药
+    value_en: 第一周期内发热性中性粒细胞减少症导致暂停用药
+    decode_en: INT04A
+    decode_cn: INT04A
+  - value_cn: 第一周期内发热性中性粒细胞减少症导致剂量减少
+    value_en: 第一周期内发热性中性粒细胞减少症导致剂量减少
+    decode_en: REDU04A
+    decode_cn: REDU04A
+  - value_cn: 第一周期内发热性中性粒细胞减少症导致永久停药
+    value_en: 第一周期内发热性中性粒细胞减少症导致永久停药
+    decode_en: WD04A
+    decode_cn: WD04A
+  - value_cn: 第一周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+    value_en: 第一周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+    decode_en: TTFAE04A
+    decode_cn: TTFAE04A
+  - value_cn: 第一周期使用升白一级预防
+    value_en: 第一周期使用升白一级预防
+    decode_en: GCSF1A
+    decode_cn: GCSF1A
+  - value_cn: 首次给药结束后<48小时使用升白一级预防
+    value_en: 首次给药结束后<48小时使用升白一级预防
+    decode_en: GCSF21A
+    decode_cn: GCSF21A
+  - value_cn: 首次给药结束后48-72小时使用升白一级预防
+    value_en: 首次给药结束后48-72小时使用升白一级预防
+    decode_en: GCSF31A
+    decode_cn: GCSF31A
+  - value_cn: 首次给药结束后>72小时使用升白一级预防
+    value_en: 首次给药结束后>72小时使用升白一级预防
+    decode_en: GCSF41A
+    decode_cn: GCSF41A
+  - value_cn: 前4个周期均在给药结束后>72小时使用预防性升白药物
+    value_en: 前4个周期均在给药结束后>72小时使用预防性升白药物
+    decode_en: GCSF1B
+    decode_cn: GCSF1B
+  - value_cn: 前4个周期内中性粒细胞计数降低
+    value_en: 前4个周期内中性粒细胞计数降低
+    decode_en: CTN01B
+    decode_cn: CTN01B
+  - value_cn: 前4个周期内中性粒细胞计数降低导致暂停用药
+    value_en: 前4个周期内中性粒细胞计数降低导致暂停用药
+    decode_en: INT01B
+    decode_cn: INT01B
+  - value_cn: 前4个周期内中性粒细胞计数降低导致剂量减少
+    value_en: 前4个周期内中性粒细胞计数降低导致剂量减少
+    decode_en: REDU01B
+    decode_cn: REDU01B
+  - value_cn: 前4个周期内中性粒细胞计数降低导致永久停药
+    value_en: 前4个周期内中性粒细胞计数降低导致永久停药
+    decode_en: WD01B
+    decode_cn: WD01B
+  - value_cn: 前4个周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+    value_en: 前4个周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+    decode_en: TTFAE01B
+    decode_cn: TTFAE01B
+  - value_cn: 前4个周期内>=3级中性粒细胞计数降低
+    value_en: 前4个周期内>=3级中性粒细胞计数降低
+    decode_en: CTN02B
+    decode_cn: CTN02B
+  - value_cn: 前4个周期内>=3级中性粒细胞计数降低导致暂停用药
+    value_en: 前4个周期内>=3级中性粒细胞计数降低导致暂停用药
+    decode_en: INT02B
+    decode_cn: INT02B
+  - value_cn: 前4个周期内>=3级中性粒细胞计数降低导致剂量减少
+    value_en: 前4个周期内>=3级中性粒细胞计数降低导致剂量减少
+    decode_en: REDU02B
+    decode_cn: REDU02B
+  - value_cn: 前4个周期内>=3级中性粒细胞计数降低导致永久停药
+    value_en: 前4个周期内>=3级中性粒细胞计数降低导致永久停药
+    decode_en: WD02B
+    decode_cn: WD02B
+  - value_cn: 前4个周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+    value_en: 前4个周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+    decode_en: TTFAE02B
+    decode_cn: TTFAE02B
+  - value_cn: 前4个周期内4级中性粒细胞计数降低
+    value_en: 前4个周期内4级中性粒细胞计数降低
+    decode_en: CTN03B
+    decode_cn: CTN03B
+  - value_cn: 前4个周期内4级中性粒细胞计数降低导致暂停用药
+    value_en: 前4个周期内4级中性粒细胞计数降低导致暂停用药
+    decode_en: INT03B
+    decode_cn: INT03B
+  - value_cn: 前4个周期内4级中性粒细胞计数降低导致剂量减少
+    value_en: 前4个周期内4级中性粒细胞计数降低导致剂量减少
+    decode_en: REDU03B
+    decode_cn: REDU03B
+  - value_cn: 前4个周期内4级中性粒细胞计数降低导致永久停药
+    value_en: 前4个周期内4级中性粒细胞计数降低导致永久停药
+    decode_en: WD03B
+    decode_cn: WD03B
+  - value_cn: 前4个周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+    value_en: 前4个周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+    decode_en: TTFAE03B
+    decode_cn: TTFAE03B
+  - value_cn: 前4个周期内发热性中性粒细胞减少症
+    value_en: 前4个周期内发热性中性粒细胞减少症
+    decode_en: CTN04B
+    decode_cn: CTN04B
+  - value_cn: 前4个周期内发热性中性粒细胞减少症导致暂停用药
+    value_en: 前4个周期内发热性中性粒细胞减少症导致暂停用药
+    decode_en: INT04B
+    decode_cn: INT04B
+  - value_cn: 前4个周期内发热性中性粒细胞减少症导致剂量减少
+    value_en: 前4个周期内发热性中性粒细胞减少症导致剂量减少
+    decode_en: REDU04B
+    decode_cn: REDU04B
+  - value_cn: 前4个周期内发热性中性粒细胞减少症导致永久停药
+    value_en: 前4个周期内发热性中性粒细胞减少症导致永久停药
+    decode_en: WD04B
+    decode_cn: WD04B
+  - value_cn: 前4个周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+    value_en: 前4个周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+    decode_en: TTFAE04B
+    decode_cn: TTFAE04B
+  - value_cn: 总共使用预防升白药物的周期数
+    value_en: 总共使用预防升白药物的周期数
+    decode_en: CYCLEN
+    decode_cn: CYCLEN
+TCMPARMN:
+  name_en: Time to Concomitant/Prior Medications Parameter Number
+  name_cn: 合并用药时间参数值
+  extensible: true
+  items:
+  - value_cn: 第一周期未使用升白一级预防
+    value_en: 第一周期未使用升白一级预防
+    decode_en: 101
+    decode_cn: 101
+  - value_cn: 第一周期内中性粒细胞计数降低
+    value_en: 第一周期内中性粒细胞计数降低
+    decode_en: 111
+    decode_cn: 111
+  - value_cn: 第一周期内中性粒细胞计数降低导致暂停用药
+    value_en: 第一周期内中性粒细胞计数降低导致暂停用药
+    decode_en: 112
+    decode_cn: 112
+  - value_cn: 第一周期内中性粒细胞计数降低导致剂量减少
+    value_en: 第一周期内中性粒细胞计数降低导致剂量减少
+    decode_en: 113
+    decode_cn: 113
+  - value_cn: 第一周期内中性粒细胞计数降低导致永久停药
+    value_en: 第一周期内中性粒细胞计数降低导致永久停药
+    decode_en: 114
+    decode_cn: 114
+  - value_cn: 第一周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+    value_en: 第一周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+    decode_en: 115
+    decode_cn: 115
+  - value_cn: 第一周期内>=3级中性粒细胞计数降低
+    value_en: 第一周期内>=3级中性粒细胞计数降低
+    decode_en: 121
+    decode_cn: 121
+  - value_cn: 第一周期内>=3级中性粒细胞计数降低导致暂停用药
+    value_en: 第一周期内>=3级中性粒细胞计数降低导致暂停用药
+    decode_en: 122
+    decode_cn: 122
+  - value_cn: 第一周期内>=3级中性粒细胞计数降低导致剂量减少
+    value_en: 第一周期内>=3级中性粒细胞计数降低导致剂量减少
+    decode_en: 123
+    decode_cn: 123
+  - value_cn: 第一周期内>=3级中性粒细胞计数降低导致永久停药
+    value_en: 第一周期内>=3级中性粒细胞计数降低导致永久停药
+    decode_en: 124
+    decode_cn: 124
+  - value_cn: 第一周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+    value_en: 第一周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+    decode_en: 125
+    decode_cn: 125
+  - value_cn: 第一周期内4级中性粒细胞计数降低
+    value_en: 第一周期内4级中性粒细胞计数降低
+    decode_en: 131
+    decode_cn: 131
+  - value_cn: 第一周期内4级中性粒细胞计数降低导致暂停用药
+    value_en: 第一周期内4级中性粒细胞计数降低导致暂停用药
+    decode_en: 132
+    decode_cn: 132
+  - value_cn: 第一周期内4级中性粒细胞计数降低导致剂量减少
+    value_en: 第一周期内4级中性粒细胞计数降低导致剂量减少
+    decode_en: 133
+    decode_cn: 133
+  - value_cn: 第一周期内4级中性粒细胞计数降低导致永久停药
+    value_en: 第一周期内4级中性粒细胞计数降低导致永久停药
+    decode_en: 134
+    decode_cn: 134
+  - value_cn: 第一周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+    value_en: 第一周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+    decode_en: 135
+    decode_cn: 135
+  - value_cn: 第一周期内发热性中性粒细胞减少症
+    value_en: 第一周期内发热性中性粒细胞减少症
+    decode_en: 141
+    decode_cn: 141
+  - value_cn: 第一周期内发热性中性粒细胞减少症导致暂停用药
+    value_en: 第一周期内发热性中性粒细胞减少症导致暂停用药
+    decode_en: 142
+    decode_cn: 142
+  - value_cn: 第一周期内发热性中性粒细胞减少症导致剂量减少
+    value_en: 第一周期内发热性中性粒细胞减少症导致剂量减少
+    decode_en: 143
+    decode_cn: 143
+  - value_cn: 第一周期内发热性中性粒细胞减少症导致永久停药
+    value_en: 第一周期内发热性中性粒细胞减少症导致永久停药
+    decode_en: 144
+    decode_cn: 144
+  - value_cn: 第一周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+    value_en: 第一周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+    decode_en: 145
+    decode_cn: 145
+  - value_cn: 第一周期使用升白一级预防
+    value_en: 第一周期使用升白一级预防
+    decode_en: 201
+    decode_cn: 201
+  - value_cn: 首次给药结束后<48小时使用升白一级预防
+    value_en: 首次给药结束后<48小时使用升白一级预防
+    decode_en: 211
+    decode_cn: 211
+  - value_cn: 首次给药结束后48-72小时使用升白一级预防
+    value_en: 首次给药结束后48-72小时使用升白一级预防
+    decode_en: 212
+    decode_cn: 212
+  - value_cn: 首次给药结束后>72小时使用升白一级预防
+    value_en: 首次给药结束后>72小时使用升白一级预防
+    decode_en: 213
+    decode_cn: 213
+  - value_cn: 前4个周期均在给药结束后>72小时使用预防性升白药物
+    value_en: 前4个周期均在给药结束后>72小时使用预防性升白药物
+    decode_en: 301
+    decode_cn: 301
+  - value_cn: 前4个周期内中性粒细胞计数降低
+    value_en: 前4个周期内中性粒细胞计数降低
+    decode_en: 311
+    decode_cn: 311
+  - value_cn: 前4个周期内中性粒细胞计数降低导致暂停用药
+    value_en: 前4个周期内中性粒细胞计数降低导致暂停用药
+    decode_en: 312
+    decode_cn: 312
+  - value_cn: 前4个周期内中性粒细胞计数降低导致剂量减少
+    value_en: 前4个周期内中性粒细胞计数降低导致剂量减少
+    decode_en: 313
+    decode_cn: 313
+  - value_cn: 前4个周期内中性粒细胞计数降低导致永久停药
+    value_en: 前4个周期内中性粒细胞计数降低导致永久停药
+    decode_en: 314
+    decode_cn: 314
+  - value_cn: 前4个周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+    value_en: 前4个周期内首次给药至首次中性粒细胞计数降低发生时间 (天)
+    decode_en: 315
+    decode_cn: 315
+  - value_cn: 前4个周期内>=3级中性粒细胞计数降低
+    value_en: 前4个周期内>=3级中性粒细胞计数降低
+    decode_en: 321
+    decode_cn: 321
+  - value_cn: 前4个周期内>=3级中性粒细胞计数降低导致暂停用药
+    value_en: 前4个周期内>=3级中性粒细胞计数降低导致暂停用药
+    decode_en: 322
+    decode_cn: 322
+  - value_cn: 前4个周期内>=3级中性粒细胞计数降低导致剂量减少
+    value_en: 前4个周期内>=3级中性粒细胞计数降低导致剂量减少
+    decode_en: 323
+    decode_cn: 323
+  - value_cn: 前4个周期内>=3级中性粒细胞计数降低导致永久停药
+    value_en: 前4个周期内>=3级中性粒细胞计数降低导致永久停药
+    decode_en: 324
+    decode_cn: 324
+  - value_cn: 前4个周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+    value_en: 前4个周期内首次给药至首次>=3级中性粒细胞计数降低发生时间 (天)
+    decode_en: 325
+    decode_cn: 325
+  - value_cn: 前4个周期内4级中性粒细胞计数降低
+    value_en: 前4个周期内4级中性粒细胞计数降低
+    decode_en: 331
+    decode_cn: 331
+  - value_cn: 前4个周期内4级中性粒细胞计数降低导致暂停用药
+    value_en: 前4个周期内4级中性粒细胞计数降低导致暂停用药
+    decode_en: 332
+    decode_cn: 332
+  - value_cn: 前4个周期内4级中性粒细胞计数降低导致剂量减少
+    value_en: 前4个周期内4级中性粒细胞计数降低导致剂量减少
+    decode_en: 333
+    decode_cn: 333
+  - value_cn: 前4个周期内4级中性粒细胞计数降低导致永久停药
+    value_en: 前4个周期内4级中性粒细胞计数降低导致永久停药
+    decode_en: 334
+    decode_cn: 334
+  - value_cn: 前4个周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+    value_en: 前4个周期内首次给药至首次4级中性粒细胞计数降低发生时间 (天)
+    decode_en: 335
+    decode_cn: 335
+  - value_cn: 前4个周期内发热性中性粒细胞减少症
+    value_en: 前4个周期内发热性中性粒细胞减少症
+    decode_en: 341
+    decode_cn: 341
+  - value_cn: 前4个周期内发热性中性粒细胞减少症导致暂停用药
+    value_en: 前4个周期内发热性中性粒细胞减少症导致暂停用药
+    decode_en: 342
+    decode_cn: 342
+  - value_cn: 前4个周期内发热性中性粒细胞减少症导致剂量减少
+    value_en: 前4个周期内发热性中性粒细胞减少症导致剂量减少
+    decode_en: 343
+    decode_cn: 343
+  - value_cn: 前4个周期内发热性中性粒细胞减少症导致永久停药
+    value_en: 前4个周期内发热性中性粒细胞减少症导致永久停药
+    decode_en: 344
+    decode_cn: 344
+  - value_cn: 前4个周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+    value_en: 前4个周期内首次给药至首次发热性中性粒细胞减少症发生时间 (天)
+    decode_en: 345
+    decode_cn: 345
+  - value_cn: 总共使用预防升白药物的周期数
+    value_en: 总共使用预防升白药物的周期数
+    decode_en: 401
+    decode_cn: 401
+HRCDK:
+  name_en: Randomization HR and CDK4/6
+  name_cn: 随机系统HR and CDK4/6结果
+  extensible: true
+  items:
+  - value_cn: HR and CDK4/6 (HR+(Have received CDK4/6 inhibitor treatment))
+    value_en: HR and CDK4/6 (HR+(Have received CDK4/6 inhibitor treatment))
+    decode_en: HR和CDK4/6 (HR+(接受过 CDK4/6抑制剂治疗))
+    decode_cn: HR和CDK4/6 (HR+(接受过 CDK4/6抑制剂治疗))
+  - value_cn: HR and CDK4/6 (HR+(Have not received CDK4/6 inhibitor treatment))
+    value_en: HR and CDK4/6 (HR+(Have not received CDK4/6 inhibitor treatment))
+    decode_en: HR和CDK4/6(HR+(未接受过 CDK4/6抑制剂治疗))
+    decode_cn: HR和CDK4/6(HR+(未接受过 CDK4/6抑制剂治疗))
+  - value_cn: HR and CDK4/6 (HR-)
+    value_en: HR and CDK4/6 (HR-)
+    decode_en: HR和CDK4/6 (HR-)
+    decode_cn: HR和CDK4/6 (HR-)
+HRCDKN:
+  name_en: Randomization HR and CDK4/6(N)
+  name_cn: 随机系统HR and CDK4/6结果(N)
+  extensible: true
+  items:
+  - value_cn: HR和CDK4/6 (HR+(接受过 CDK4/6抑制剂治疗))
+    value_en: HR和CDK4/6 (HR+(接受过 CDK4/6抑制剂治疗))
+    decode_en: '1'
+    decode_cn: '1'
+  - value_cn: HR和CDK4/6(HR+(未接受过 CDK4/6抑制剂治疗))
+    value_en: HR和CDK4/6(HR+(未接受过 CDK4/6抑制剂治疗))
+    decode_en: '2'
+    decode_cn: '2'
+  - value_cn: HR和CDK4/6 (HR-)
+    value_en: HR和CDK4/6 (HR-)
+    decode_en: '3'
+    decode_cn: '3'
+CHMLN:
+  name_en: Randomization Line Of Chemotherapy
+  name_cn: 随机系统化疗线数
+  extensible: true
+  items:
+  - value_cn: Line Of Chemotherapy (0)
+    value_en: Line Of Chemotherapy (0)
+    decode_en: 化疗线(0)
+    decode_cn: 化疗线(0)
+  - value_cn: Line Of Chemotherapy (1)
+    value_en: Line Of Chemotherapy (1)
+    decode_en: 化疗线(1)
+    decode_cn: 化疗线(1)
+CHMLNN:
+  name_en: Randomization Line Of Chemotherapy(N)
+  name_cn: 随机系统化疗线数(N)
+  extensible: true
+  items:
+  - value_cn: 化疗线(0)
+    value_en: 化疗线(0)
+    decode_en: '1'
+    decode_cn: '1'
+  - value_cn: 化疗线(1)
+    value_en: 化疗线(1)
+    decode_en: '2'
+    decode_cn: '2'
+HERRSLTN:
+  name_en: Her2 Result(N)
+  name_cn: Her2检测结果(N)
+  extensible: true
+  items:
+  - value_cn: HER2 (IHC 1 +)
+    value_en: HER2 (IHC 1 +)
+    decode_en: '1'
+    decode_cn: '1'
+  - value_cn: HER2 (IHC 2 +/ISH-)
+    value_en: HER2 (IHC 2 +/ISH-)
+    decode_en: '2'
+    decode_cn: '2'
+TRTN:
+  name_en: Treatment(N)
+  name_cn: 治疗
+  extensible: true
+  items:
+  - value_cn: A1811
+    value_en: A1811
+    decode_en: '1'
+    decode_cn: '1'
+  - value_cn: CAPE
+    value_en: CAPE
+    decode_en: '2'
+    decode_cn: '2'
+  - value_cn: ERIB
+    value_en: ERIB
+    decode_en: '3'
+    decode_cn: '3'
+  - value_cn: GEM21
+    value_en: GEM21
+    decode_en: '4'
+    decode_cn: '4'
+  - value_cn: GEM28
+    value_en: GEM28
+    decode_en: '5'
+    decode_cn: '5'
+  - value_cn: PA21
+    value_en: PA21
+    decode_en: '6'
+    decode_cn: '6'
+  - value_cn: PA7
+    value_en: PA7
+    decode_en: '7'
+    decode_cn: '7'
+  - value_cn: AP21D1
+    value_en: AP21D1
+    decode_en: '8'
+    decode_cn: '8'
+  - value_cn: AP21D1D8
+    value_en: AP21D1D8
+    decode_en: '9'
+    decode_cn: '9'
+  - value_cn: AP28
+    value_en: AP28
+    decode_en: '10'
+    decode_cn: '10'
+ISSPARM:
+  name_en: Immunogenicity Specimen Parameter Test Name
+  name_cn: 免疫原性参数名称
+  extensible: true
+  items:
+  - value_cn: 基线ADA阳性受试者
+    value_en: Baseline ADA-positive Subjects
+    decode_en: Baseline ADA-positive Subjects
+    decode_cn: 基线ADA阳性受试者
+  - value_cn: 基线或基线后ADA至少一次阳性受试者
+    value_en: Baseline or Post Baseline ADA-positive Subjects
+    decode_en: Baseline or Post Baseline ADA-positive Subjects
+    decode_cn: 基线或基线后ADA至少一次阳性受试者
+  - value_cn: 治疗引起的ADA阳性受试者
+    value_en: Treatment-induced ADA-positive Subjects
+    decode_en: Treatment-induced ADA-positive Subjects
+    decode_cn: 治疗引起的ADA阳性受试者
+  - value_cn: 治疗增强的ADA阳性受试者
+    value_en: Treatment-enhanced ADA-positive Subjects
+    decode_en: Treatment-enhanced ADA-positive Subjects
+    decode_cn: 治疗增强的ADA阳性受试者
+  - value_cn: NAb阳性受试者
+    value_en: NAb-Positive Subjects
+    decode_en: NAb-Positive Subjects
+    decode_cn: NAb阳性受试者
+  - value_cn: NAb不确定
+    value_en: NAb-Inconclusive Subjects
+    decode_en: NAb-Inconclusive Subjects
+    decode_cn: NAb不确定
+ISSPARCD:
+  name_en: Immunogenicity Specimen Parameter Test Code
+  name_cn: 免疫原性参数代码
+  extensible: true
+  items:
+  - value_cn: 基线ADA阳性受试者
+    value_en: Baseline ADA-positive Subjects
+    decode_en: ADABLP
+    decode_cn: ADABLP
+  - value_cn: 基线或基线后ADA至少一次阳性受试者
+    value_en: Baseline or Post Baseline ADA-positive Subjects
+    decode_en: ADABLPTN
+    decode_cn: ADABLPTN
+  - value_cn: 治疗引起的ADA阳性受试者
+    value_en: Treatment-induced ADA-positive Subjects
+    decode_en: ADAP1
+    decode_cn: ADAP1
+  - value_cn: 治疗增强的ADA阳性受试者
+    value_en: Treatment-enhanced ADA-positive Subjects
+    decode_en: ADAP2
+    decode_cn: ADAP2
+  - value_cn: NAb阳性受试者
+    value_en: NAb-Positive Subjects
+    decode_en: NABP
+    decode_cn: NABP
+  - value_cn: NAb不确定
+    value_en: NAb-Inconclusive Subjects
+    decode_en: NABUK
+    decode_cn: NABUK
+SSORRES:
+  name_en: Subject Status Response
+  name_cn: 受试者原始状态
+  nci_code: C124304
+  items:
+  - value_cn: 生存
+    value_en: Alive
+    decode_en: Alive
+    decode_cn: 生存
+    nci_code: C37987
+  - value_cn: 死亡
+    value_en: Dead
+    decode_en: Dead
+    decode_cn: 死亡
+    nci_code: C28554
+  - value_cn: 失访
+    value_en: Lost to Follow-up
+    decode_en: Lost to Follow-up
+    decode_cn: 失访
+    nci_code: C17998
+ISSTRESC:
+  name_en: Results or Findings in Standartd Units
+  name_cn: 标准结果
+  extensible: true
+  items:
+  - value_cn: 阴性
+    value_en: negative
+    decode_en: negative
+    decode_cn: 阴性
+  - value_cn: 阳性
+    value_en: positive
+    decode_en: positive
+    decode_cn: 阳性
+MHCT:
+  name_cn: 首次临床分期
+  extensible: true
+  items:
+  - value_cn: I
+    value_en: I
+    decode_en: I
+    decode_cn: I
+  - value_cn: IA
+    value_en: IA
+    decode_en: IA
+    decode_cn: IA
+  - value_cn: IB
+    value_en: IB
+    decode_en: IB
+    decode_cn: IB
+  - value_cn: II
+    value_en: II
+    decode_en: II
+    decode_cn: II
+  - value_cn: IIA
+    value_en: IIA
+    decode_en: IIA
+    decode_cn: IIA
+  - value_cn: IIB
+    value_en: IIB
+    decode_en: IIB
+    decode_cn: IIB
+  - value_cn: III
+    value_en: III
+    decode_en: III
+    decode_cn: III
+  - value_cn: IIIA
+    value_en: IIIA
+    decode_en: IIIA
+    decode_cn: IIIA
+  - value_cn: IIIB
+    value_en: IIIB
+    decode_en: IIIB
+    decode_cn: IIIB
+  - value_cn: IIIC
+    value_en: IIIC
+    decode_en: IIIC
+    decode_cn: IIIC
+  - value_cn: IV
+    value_en: IV
+    decode_en: IV
+    decode_cn: IV
+  - value_cn: 未知
+    value_en: 未知
+    decode_en: 未知
+    decode_cn: 未知

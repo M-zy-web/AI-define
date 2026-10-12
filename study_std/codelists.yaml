@@ -1,0 +1,2259 @@
+# 数据优先 codelists.yaml: 绑定←datasets/*.yaml · 值←xpt · 取舍←standard_codelist门控 · 类型←std.type · decoded含decode. 字母序.
+ACN:
+  name: 对研究治疗采取的措施
+  data_type: text
+  nci_code: C66767
+  type: enumerated
+  items:
+  - value: 不适用
+    nci_code: C48660
+  - value: 剂量不变
+    nci_code: C49504
+  - value: 剂量减少
+    nci_code: C49505
+  - value: 暂停用药
+    nci_code: C49501
+  - value: 永久停药
+    nci_code: C49502
+ADJ:
+  name: 剂量调节原因
+  data_type: text
+  type: enumerated
+  items:
+  - value: 不良事件
+    extended: true
+  - value: 其他
+    extended: true
+AEREL:
+  name: 因果关系
+  data_type: text
+  type: enumerated
+  items:
+  - value: 可能无关
+    extended: true
+  - value: 可能有关
+    extended: true
+  - value: 无法判定
+    extended: true
+  - value: 肯定无关
+    extended: true
+  - value: 肯定有关
+    extended: true
+AGEU:
+  name: 年龄单位
+  data_type: text
+  nci_code: C66781
+  type: enumerated
+  items:
+  - value: 岁
+    nci_code: C29848
+ARMNULRS:
+  name: 未分组原因
+  data_type: text
+  nci_code: C142179
+  type: enumerated
+  items:
+  - value: 已分组，未治疗
+    nci_code: C142238
+  - value: 筛选失败
+    nci_code: C49628
+BRDGMOOD:
+  name: BRIDG活动方式
+  data_type: text
+  nci_code: C125923
+  type: enumerated
+  items:
+  - value: 实际
+    nci_code: C38000
+  - value: 计划
+    nci_code: C125937
+CCCAT:
+  name: 临床分类类别
+  data_type: text
+  nci_code: C118971
+  type: enumerated
+  items:
+  - value: ECOG
+    nci_code: C102116
+CECAT:
+  name: 临床事件的类别
+  data_type: text
+  type: enumerated
+  items:
+  - value: 输液相关反应
+    extended: true
+CETOXGR:
+  name: 标准毒性等级
+  data_type: text
+  type: enumerated
+  items:
+  - value: '2'
+    extended: true
+CMCAT:
+  name: 药物分类
+  data_type: text
+  type: enumerated
+  items:
+  - value: 后续系统性抗肿瘤治疗
+    extended: true
+  - value: 既往及合并用药
+    extended: true
+  - value: 系统性抗肿瘤治疗史
+    extended: true
+CMINDC:
+  name: CM治疗方案设置
+  data_type: text
+  type: enumerated
+  items:
+  - value: 新辅助
+    extended: true
+  - value: 晚期/转移性
+    extended: true
+  - value: 辅助
+    extended: true
+CMOUT:
+  name: 治疗结局
+  data_type: text
+  type: enumerated
+  items:
+  - value: 其他
+    extended: true
+  - value: 出现不耐受的毒性
+    extended: true
+  - value: 完成治疗
+    extended: true
+  - value: 未知
+    nci_code: C17998
+  - value: 进展
+    extended: true
+CMREAS:
+  name: 用药原因
+  data_type: text
+  type: enumerated
+  items:
+  - value: 不良事件
+    extended: true
+  - value: 其他
+    extended: true
+  - value: 升白一级预防
+    extended: true
+  - value: 升白二级预防
+    extended: true
+  - value: 既往病史
+    extended: true
+CMSCAT:
+  name: 药物类型
+  data_type: text
+  type: enumerated
+  items:
+  - value: HER2 ADC
+    extended: true
+  - value: TROP2 ADC
+    extended: true
+  - value: 免疫治疗
+    extended: true
+  - value: 其他
+    extended: true
+  - value: 其他ADC
+    extended: true
+  - value: 其他靶向治疗
+    extended: true
+  - value: 内分泌治疗
+    extended: true
+  - value: 化疗
+    extended: true
+  - value: 辅助内分泌治疗后24个月内进展
+    extended: true
+  - value: 辅助化疗期间或辅助化疗后6个月内进展
+    extended: true
+  - value: 靶向治疗
+    extended: true
+  - value: 靶向治疗(CDK4/6)
+    extended: true
+CM_FREQ:
+  name: CM频率
+  data_type: text
+  nci_code: C71113
+  type: enumerated
+  items:
+  - value: 一次
+    nci_code: C64576
+  - value: 三周一次
+    nci_code: C64535
+  - value: 两周一次
+    nci_code: C71127
+  - value: 其他
+    extended: true
+  - value: 四周一次
+    nci_code: C64529
+  - value: 根据所需
+    nci_code: C64499
+  - value: 每周两次
+    nci_code: C64497
+  - value: 每周四次
+    nci_code: C64531
+  - value: 每天一次
+    nci_code: C25473
+  - value: 每天三次
+    nci_code: C64527
+  - value: 每天两次
+    nci_code: C64496
+  - value: 每天四次
+    nci_code: C64530
+  - value: 每月一次
+    nci_code: C64498
+  - value: 隔天一次
+    nci_code: C64525
+CM_FRM:
+  name: CM剂型
+  data_type: text
+  nci_code: C66726
+  type: enumerated
+  items:
+  - value: 乳膏
+    nci_code: C28944
+  - value: 其他
+    extended: true
+  - value: 喷雾
+    nci_code: C42989
+  - value: 散剂
+    nci_code: C42972
+  - value: 栓剂
+    nci_code: C42993
+  - value: 注射液
+    nci_code: C42946
+  - value: 液体制剂
+    nci_code: C42953
+  - value: 混悬剂
+    nci_code: C42994
+  - value: 滴丸
+    extended: true
+  - value: 片剂
+    nci_code: C42998
+  - value: 粉针剂
+    extended: true
+  - value: 胶囊
+    nci_code: C25158
+  - value: 软膏
+    nci_code: C42966
+  - value: 颗粒剂
+    nci_code: C42938
+CM_ROUTE:
+  name: CM给药途径
+  data_type: text
+  nci_code: C66729
+  type: enumerated
+  items:
+  - value: 其他
+    extended: true
+  - value: 口服
+    nci_code: C38288
+  - value: 呼吸道(吸入)
+    nci_code: C38216
+  - value: 局部
+    nci_code: C38304
+  - value: 皮下
+    nci_code: C38299
+  - value: 直肠
+    nci_code: C38295
+  - value: 眼内
+    nci_code: C38255
+  - value: 肌内
+    nci_code: C28161
+  - value: 舌下
+    nci_code: C38300
+  - value: 透皮
+    nci_code: C38305
+  - value: 静脉
+    nci_code: C38276
+  - value: 鼻腔
+    nci_code: C38284
+CM_UNIT:
+  name: CM单位
+  data_type: text
+  nci_code: C71620
+  type: enumerated
+  items:
+  - value: IU
+    nci_code: C48579
+  - value: g
+    nci_code: C48155
+  - value: mL
+    nci_code: C28254
+  - value: mg
+    nci_code: C28253
+  - value: ug
+    nci_code: C48152
+  - value: 其他
+    extended: true
+  - value: 滴
+    nci_code: C69441
+  - value: 片
+    nci_code: C48542
+  - value: 胶囊
+    nci_code: C48480
+CTCAE:
+  name: 不良事件通用术语评价标准
+  data_type: text
+  type: external
+  dictionary: CTCAE
+  version: '5.0'
+  href: https://ctep.cancer.gov/protocoldevelopment/electronic_applications/ctc.htm#ctc_60
+CVMETHOD:
+  name: CV方法
+  data_type: text
+  nci_code: C85492
+  type: enumerated
+  items:
+  - value: 心脏放射性核素扫描
+    nci_code: C38073
+  - value: 超声心动图
+    nci_code: C16525
+CVTEST:
+  name: 心血管检查名称
+  data_type: text
+  nci_code: C101846
+  type: enumerated
+  items:
+  - value: 左心室射血分数
+    nci_code: C99524
+CVTESTCD:
+  name: 心血管检查代码
+  data_type: text
+  nci_code: C101847
+  type: enumerated
+  items:
+  - value: LVEF
+    nci_code: C99524
+CV_UNIT:
+  name: CV单位
+  data_type: text
+  nci_code: C71620
+  type: enumerated
+  items:
+  - value: '%'
+    nci_code: C25613
+CX_FRM:
+  name: 剂型
+  data_type: text
+  nci_code: C66726
+  type: enumerated
+  items:
+  - value: 注射液
+    extended: true
+  - value: 粉针剂
+    extended: true
+CX_ROUTE:
+  name: 给药途径
+  data_type: text
+  nci_code: C66729
+  type: enumerated
+  items:
+  - value: 输液
+    extended: true
+  - value: 静脉
+    extended: true
+CX_UNIT:
+  name: 药物暴露单位
+  data_type: text
+  type: enumerated
+  items:
+  - value: mg
+    extended: true
+DOMAIN:
+  name: SDTM域缩写
+  data_type: text
+  nci_code: C66734
+  type: enumerated
+  items:
+  - value: AE
+    nci_code: C49562
+  - value: CE
+    nci_code: C85441
+  - value: CM
+    nci_code: C49568
+  - value: CV
+    nci_code: C102605
+  - value: DC
+    extended: true
+  - value: DD
+    nci_code: C95087
+  - value: DM
+    nci_code: C49572
+  - value: DS
+    nci_code: C49576
+  - value: DV
+    nci_code: C49585
+  - value: EC
+    nci_code: C117466
+  - value: EG
+    nci_code: C49626
+  - value: EX
+    nci_code: C49587
+  - value: IE
+    nci_code: C61536
+  - value: IS
+    nci_code: C112320
+  - value: LB
+    nci_code: C49592
+  - value: MB
+    nci_code: C49602
+  - value: MH
+    nci_code: C49603
+  - value: MI
+    nci_code: C95095
+  - value: PC
+    nci_code: C49606
+  - value: PE
+    nci_code: C49608
+  - value: PR
+    nci_code: C102700
+  - value: RP
+    extended: true
+  - value: RS
+    nci_code: C107097
+  - value: SE
+    nci_code: C49616
+  - value: SS
+    nci_code: C117655
+  - value: SV
+    nci_code: C49617
+  - value: TA
+    nci_code: C49618
+  - value: TE
+    nci_code: C49619
+  - value: TI
+    nci_code: C49620
+  - value: TR
+    nci_code: C106578
+  - value: TS
+    nci_code: C53483
+  - value: TU
+    nci_code: C106577
+  - value: TV
+    nci_code: C49621
+  - value: VS
+    nci_code: C49622
+DSCAT:
+  name: 受试者分布事件类别
+  data_type: text
+  nci_code: C74558
+  type: enumerated
+  items:
+  - value: 受试者分布事件
+    nci_code: C74590
+  - value: 方案里程碑
+    nci_code: C74588
+DSIADRS:
+  name: 延迟/未给药原因
+  data_type: text
+  type: enumerated
+  items:
+  - value: 延迟给药
+    extended: true
+  - value: 未给药
+    extended: true
+DSRSFHR:
+  name: 分层因素(EDC)
+  data_type: text
+  type: enumerated
+  items:
+  - value: HR和CDK4/6 (HR+(接受过 CDK4/6抑制剂治疗))
+    extended: true
+  - value: HR和CDK4/6 (HR-)
+    extended: true
+  - value: HR和CDK4/6(HR+(未接受过 CDK4/6抑制剂治疗))
+    extended: true
+DSRSFLNE:
+  name: 化疗线数
+  data_type: text
+  type: enumerated
+  items:
+  - value: 化疗线(0)
+    extended: true
+  - value: 化疗线(1)
+    extended: true
+DSSCAT:
+  name: 受试者分布事件子类
+  data_type: text
+  nci_code: C170443
+  type: enumerated
+  items:
+  - value: 入组
+    extended: true
+  - value: 疾病进展后
+    extended: true
+  - value: 研究参与
+    nci_code: C170569
+  - value: 研究结束
+    extended: true
+DTHDX:
+  name: 死亡诊断和细节名称
+  data_type: text
+  nci_code: C116107
+  type: enumerated
+  items:
+  - value: 主要死亡原因
+    nci_code: C99531
+DTHDXCD:
+  name: 死亡诊断和细节代码
+  data_type: text
+  nci_code: C116108
+  type: enumerated
+  items:
+  - value: PRCDTH
+    nci_code: C99531
+DTHRS:
+  name: 死亡原因
+  data_type: text
+  type: enumerated
+  items:
+  - value: 不良事件
+    extended: true
+  - value: 其他
+    extended: true
+  - value: 疾病进展
+    extended: true
+ECOG101STR:
+  name: ECOG评分结果
+  data_type: text
+  nci_code: C179944
+  type: enumerated
+  items:
+  - value: '0'
+    nci_code: C180255
+  - value: '1'
+    nci_code: C180256
+ECOG1TC:
+  name: 东部肿瘤协作组体能状态问卷代码
+  data_type: text
+  nci_code: C101815
+  type: enumerated
+  items:
+  - value: ECOG101
+    nci_code: C102408
+ECOG1TN:
+  name: 东部肿瘤协作组体能状态问卷名称
+  data_type: text
+  nci_code: C101816
+  type: enumerated
+  items:
+  - value: 体力状况评分值
+    nci_code: C102408
+EGMETHOD:
+  name: 心电图检查方法
+  data_type: text
+  nci_code: C71151
+  type: enumerated
+  items:
+  - value: 12导联心电图
+    nci_code: C71102
+EGTEST:
+  name: 心电图检查名称
+  data_type: text
+  nci_code: C71152
+  type: enumerated
+  items:
+  - value: PR
+    extended: true
+  - value: QT
+    extended: true
+  - value: QTcF间期(汇总)
+    nci_code: C117787
+  - value: 临床意义
+    nci_code: C41255
+  - value: 心率
+    extended: true
+EGTESTCD:
+  name: 心电图检查代码
+  data_type: text
+  nci_code: C71153
+  type: enumerated
+  items:
+  - value: EGHR
+    extended: true
+  - value: INTP
+    nci_code: C41255
+  - value: PR
+    extended: true
+  - value: QT
+    extended: true
+  - value: QTCFAG
+    nci_code: C117786
+EG_UNIT:
+  name: EG单位
+  data_type: text
+  nci_code: C71620
+  type: enumerated
+  items:
+  - value: beats/min
+    nci_code: C49673
+  - value: ms
+    nci_code: C41140
+ELEMENT:
+  name: 元素描述
+  data_type: text
+  type: enumerated
+  items:
+  - value: 筛选
+    extended: true
+  - value: 随访
+    extended: true
+EPOCH:
+  name: 时期
+  data_type: text
+  nci_code: C99079
+  type: enumerated
+  items:
+  - value: 治疗期
+    nci_code: C101526
+  - value: 筛选期
+    nci_code: C202487
+  - value: 随访期
+    nci_code: C202578
+ETCD:
+  name: 元素编码
+  data_type: text
+  type: enumerated
+  items:
+  - value: FU
+    extended: true
+  - value: SCRN
+    extended: true
+ETHNICC:
+  name: 收集族群
+  data_type: text
+  nci_code: C128690
+  type: enumerated
+  items:
+  - value: 其他
+    extended: true
+  - value: 壮族
+    extended: true
+  - value: 汉族
+    nci_code: C158158
+IECAT:
+  name: 入选/排除标准类别
+  data_type: text
+  nci_code: C66797
+  type: enumerated
+  items:
+  - value: 入选标准
+    nci_code: C25532
+  - value: 排除标准
+    nci_code: C25370
+INTMODEL:
+  name: 干预模型
+  data_type: text
+  nci_code: C99076
+  type: enumerated
+  items:
+  - value: PARALLEL
+    nci_code: C82639
+INTTYPE:
+  name: 干预类型
+  data_type: text
+  nci_code: C99078
+  type: enumerated
+  items:
+  - value: DRUG
+    nci_code: C1909
+ISO3166:
+  name: ISO3166
+  data_type: text
+  type: external
+  dictionary: ISO 3166-1 Alpha-3
+  version: '2013-11-15'
+  href: https://www.iso.org/obp/ui/#search
+ISSTRESC:
+  name: 标准结果
+  data_type: text
+  type: enumerated
+  items:
+  - value: 阳性
+    extended: true
+  - value: 阴性
+    extended: true
+ISTEST:
+  name: 免疫原性检测名称
+  data_type: text
+  nci_code: C120526
+  type: enumerated
+  items:
+  - value: 免疫检测
+    extended: true
+  - value: 结合抗药抗体
+    nci_code: C147272
+ISTESTCD:
+  name: 免疫原性检测代码
+  data_type: text
+  nci_code: C120525
+  type: enumerated
+  items:
+  - value: ADA_BAB
+    nci_code: C147272
+  - value: ISALL
+    extended: true
+ISTSTOPO:
+  name: 检测操作目的
+  data_type: text
+  type: enumerated
+  items:
+  - value: CONFIRM
+    extended: true
+  - value: SCREEN
+    extended: true
+LBCAT:
+  name: 实验室检查分类
+  data_type: text
+  type: enumerated
+  items:
+  - value: 24h尿蛋白定量
+    extended: true
+  - value: 凝血功能
+    extended: true
+  - value: 大便潜血
+    extended: true
+  - value: 妊娠试验
+    extended: true
+  - value: 尿液分析
+    extended: true
+  - value: 心肌酶谱
+    extended: true
+  - value: 甲状腺功能
+    extended: true
+  - value: 血常规
+    extended: true
+  - value: 血生化
+    extended: true
+LBCLSIG:
+  name: 临床意义采集
+  data_type: text
+  type: enumerated
+  items:
+  - value: 异常无临床意义
+    extended: true
+  - value: 异常有临床意义
+    extended: true
+  - value: 正常
+    extended: true
+LBSPECTY:
+  name: 样本种类
+  data_type: text
+  type: enumerated
+  items:
+  - value: 尿样
+    extended: true
+  - value: 粪便
+    extended: true
+  - value: 血样
+    extended: true
+  - value: 血浆
+    extended: true
+  - value: 血清
+    extended: true
+LBTEST:
+  name: 实验室检查名称
+  data_type: text
+  nci_code: C67154
+  type: enumerated
+  items:
+  - value: pH
+    nci_code: C45997
+  - value: 三碘甲状腺原氨酸
+    nci_code: C74747
+  - value: 丙氨酸氨基转移酶
+    nci_code: C64433
+  - value: 中性粒细胞绝对值
+    nci_code: C63321
+  - value: 乳酸脱氢酶
+    nci_code: C64855
+  - value: 亚硝酸盐
+    nci_code: C64810
+  - value: 促甲状腺激素
+    nci_code: C64813
+  - value: 凝血酶原时间
+    nci_code: C62656
+  - value: 凝血酶时间
+    nci_code: C80365
+  - value: 单核细胞绝对值
+    nci_code: C64823
+  - value: 嗜碱性粒细胞绝对值
+    nci_code: C64470
+  - value: 嗜酸性粒细胞绝对值
+    nci_code: C64550
+  - value: 国际标准化比值
+    nci_code: C64805
+  - value: 天门冬氨酸氨基转移酶
+    nci_code: C64467
+  - value: 尿比重
+    nci_code: C64832
+  - value: 尿素
+    nci_code: C64815
+  - value: 尿素氮
+    nci_code: C125949
+  - value: 尿胆原
+    nci_code: C64816
+  - value: 尿酸
+    nci_code: C64814
+  - value: 总胆红素
+    nci_code: C38037
+  - value: 氨基末端脑钠尿肽
+    nci_code: C96610
+  - value: 氯
+    nci_code: C64854
+  - value: 活化部分凝血活酶时间
+    nci_code: C38462
+  - value: 淀粉酶
+    nci_code: C64434
+  - value: 淋巴细胞绝对值
+    nci_code: C51949
+  - value: 游离三碘甲状腺原氨酸
+    nci_code: C74787
+  - value: 游离甲状腺素
+    nci_code: C74786
+  - value: 潜血
+    nci_code: C74686
+  - value: 甘油三酯
+    nci_code: C64812
+  - value: 甲状腺激素
+    nci_code: C74794
+  - value: 白细胞计数
+    nci_code: C51948
+  - value: 白蛋白
+    nci_code: C64431
+  - value: 直接胆红素
+    nci_code: C64481
+  - value: 碱性磷酸酶
+    nci_code: C64432
+  - value: 磷
+    nci_code: C64857
+  - value: 红细胞压积
+    nci_code: C64796
+  - value: 红细胞计数
+    nci_code: C51946
+  - value: 纤维蛋白原
+    nci_code: C64606
+  - value: 绒毛膜促性腺激素
+    nci_code: C64851
+  - value: 肌酐
+    nci_code: C64547
+  - value: 肌酸激酶
+    nci_code: C64489
+  - value: 肌酸激酶同工酶
+    nci_code: C64491
+  - value: 肌钙蛋白I
+    nci_code: C74749
+  - value: 肌钙蛋白T
+    nci_code: C74750
+  - value: 胆固醇
+    nci_code: C105586
+  - value: 脂肪酶
+    nci_code: C117748
+  - value: 脑钠肽
+    nci_code: C74735
+  - value: 葡萄糖
+    nci_code: C105585
+  - value: 蛋白质
+    nci_code: C64858
+  - value: 血小板计数
+    nci_code: C51951
+  - value: 血红蛋白
+    nci_code: C64848
+  - value: 谷氨酰转肽酶
+    nci_code: C64847
+  - value: 超敏肌钙蛋白I
+    nci_code: C74749
+  - value: 超敏肌钙蛋白T
+    nci_code: C74750
+  - value: 酮体
+    nci_code: C64854
+  - value: 钙
+    nci_code: C64488
+  - value: 钠
+    nci_code: C64809
+  - value: 钾
+    nci_code: C64853
+  - value: 镁
+    nci_code: C64840
+  - value: 间接胆红素
+    nci_code: C64483
+LBTESTCD:
+  name: 实验室检查代码
+  data_type: text
+  nci_code: C65047
+  type: enumerated
+  items:
+  - value: ALB
+    nci_code: C64431
+  - value: ALP
+    nci_code: C64432
+  - value: ALT
+    nci_code: C64433
+  - value: AMYLASE
+    nci_code: C64434
+  - value: APTT
+    nci_code: C38462
+  - value: AST
+    nci_code: C64467
+  - value: BASO
+    nci_code: C64470
+  - value: BILDIR
+    nci_code: C64481
+  - value: BILI
+    nci_code: C38037
+  - value: BILIND
+    nci_code: C64483
+  - value: BNP
+    nci_code: C74735
+  - value: BNPPRONT
+    nci_code: C96610
+  - value: CA
+    nci_code: C64488
+  - value: CHOL
+    nci_code: C105586
+  - value: CK
+    nci_code: C64489
+  - value: CKMB
+    nci_code: C64491
+  - value: CL
+    nci_code: C64495
+  - value: CREAT
+    nci_code: C64547
+  - value: EOS
+    nci_code: C64550
+  - value: FIBRINO
+    nci_code: C64606
+  - value: GGT
+    nci_code: C64847
+  - value: GLUC
+    nci_code: C105585
+  - value: HCG
+    nci_code: C64851
+  - value: HCT
+    nci_code: C64796
+  - value: HGB
+    nci_code: C64848
+  - value: HTROPONI
+    nci_code: C74749
+  - value: HTROPONT
+    nci_code: C74750
+  - value: INR
+    nci_code: C64805
+  - value: K
+    extended: true
+  - value: KETONE
+    extended: true
+  - value: LDH
+    nci_code: C64855
+  - value: LIPASET
+    nci_code: C117748
+  - value: LYM
+    nci_code: C51949
+  - value: MG
+    nci_code: C64840
+  - value: MONO
+    nci_code: C64823
+  - value: NEUT
+    nci_code: C63321
+  - value: NITRITE
+    nci_code: C64810
+  - value: OCCBLD
+    nci_code: C74686
+  - value: PH
+    nci_code: C45997
+  - value: PHOS
+    nci_code: C64857
+  - value: PLAT
+    nci_code: C51951
+  - value: PROT
+    nci_code: C64858
+  - value: PT
+    nci_code: C62656
+  - value: RBC
+    nci_code: C51946
+  - value: SODIUM
+    nci_code: C64809
+  - value: SPGRAV
+    nci_code: C64832
+  - value: T3
+    nci_code: C74747
+  - value: T3FR
+    nci_code: C74787
+  - value: T4
+    nci_code: C74794
+  - value: T4FR
+    nci_code: C74786
+  - value: TRIG
+    nci_code: C64812
+  - value: TROPONI
+    nci_code: C74749
+  - value: TROPONT
+    nci_code: C74750
+  - value: TSH
+    nci_code: C64813
+  - value: TT
+    nci_code: C80365
+  - value: URATE
+    nci_code: C64814
+  - value: UREA
+    nci_code: C64815
+  - value: UREAN
+    nci_code: C125949
+  - value: UROBIL
+    nci_code: C64816
+  - value: WBC
+    nci_code: C51948
+MBCAT:
+  name: 微生物检查分类
+  data_type: text
+  type: enumerated
+  items:
+  - value: 丙型肝炎病毒定量检测
+    extended: true
+  - value: 乙型肝炎病毒定量检测
+    extended: true
+  - value: 病毒检测
+    extended: true
+MBFTSDTL:
+  name: 测量，检测或检查详情
+  data_type: text
+  nci_code: C174225
+  type: enumerated
+  items:
+  - value: 测定
+    nci_code: C174330
+  - value: 病毒载量
+    nci_code: C174331
+MBORRES:
+  name: 结果或发现
+  data_type: text
+  type: enumerated
+  items:
+  - value: 阳性
+    extended: true
+  - value: 阴性
+    extended: true
+MBTEST:
+  name: 微生物检查名称
+  data_type: text
+  nci_code: C120528
+  type: enumerated
+  items:
+  - value: 丙型肝炎病毒RNA
+    extended: true
+  - value: 丙型肝炎病毒抗体
+    extended: true
+  - value: 乙型肝炎病毒DNA
+    nci_code: C103404
+  - value: 乙肝病毒e抗体
+    extended: true
+  - value: 乙肝病毒e抗原
+    nci_code: C96663
+  - value: 乙肝病毒核心抗体
+    extended: true
+  - value: 乙肝病毒表面抗体
+    extended: true
+  - value: 乙肝病毒表面抗原
+    nci_code: C64850
+  - value: 人类免疫缺陷病毒抗体
+    extended: true
+MBTESTCD:
+  name: 微生物检查代码
+  data_type: text
+  nci_code: C120527
+  type: enumerated
+  items:
+  - value: HBCAB
+    extended: true
+  - value: HBDNA
+    extended: true
+  - value: HBEAB
+    extended: true
+  - value: HBEAG
+    extended: true
+  - value: HBSAB
+    extended: true
+  - value: HBSAG
+    extended: true
+  - value: HCAB
+    extended: true
+  - value: HCRNA
+    extended: true
+  - value: HIVAB
+    extended: true
+MB_UNIT:
+  name: MB单位
+  data_type: text
+  nci_code: C71620
+  type: enumerated
+  items:
+  - value: IU/mL
+    nci_code: C67377
+MEDDRACT:
+  name: 字典名称
+  data_type: text
+  type: external
+  dictionary: MEDDRA
+  version: '28.0'
+  href: https://www.meddra.org
+MEDEVAL:
+  name: 评估人员代码
+  data_type: text
+  nci_code: C96777
+  type: enumerated
+  items:
+  - value: R1
+    extended: true
+  - value: R2
+    extended: true
+MHCAT:
+  name: 既往病史分类
+  data_type: text
+  type: enumerated
+  items:
+  - value: 既往病史
+    extended: true
+  - value: 肿瘤诊断
+    extended: true
+MHCT:
+  name: 首次临床分期
+  data_type: text
+  type: enumerated
+  items:
+  - value: IA
+    extended: true
+  - value: II
+    extended: true
+  - value: IIA
+    extended: true
+  - value: IIB
+    extended: true
+  - value: IIIA
+    extended: true
+  - value: IIIC
+    extended: true
+  - value: IV
+    extended: true
+  - value: 未知
+    extended: true
+MHEDTTYP:
+  name: 既往病史日期类型
+  data_type: text
+  nci_code: C124301
+  type: enumerated
+  items:
+  - value: 诊断
+    nci_code: C15220
+MHHG:
+  name: 首次组织学分级
+  data_type: text
+  type: enumerated
+  items:
+  - value: II
+    extended: true
+  - value: III
+    extended: true
+  - value: 未知
+    extended: true
+MHRM:
+  name: 复发/转移情况
+  data_type: text
+  type: enumerated
+  items:
+  - value: 复发
+    extended: true
+  - value: 复发和转移
+    extended: true
+  - value: 转移
+    extended: true
+MHTERM:
+  name: 病史报告术语
+  data_type: text
+  type: enumerated
+  items:
+  - value: 乳腺癌
+    extended: true
+MHTNMUN:
+  name: TNM分期
+  data_type: text
+  type: enumerated
+  items:
+  - value: M0
+    extended: true
+  - value: M1
+    extended: true
+  - value: N0
+    extended: true
+  - value: N1
+    extended: true
+  - value: N1a
+    extended: true
+  - value: N1mi
+    extended: true
+  - value: N2
+    extended: true
+  - value: N2a
+    extended: true
+  - value: N3
+    extended: true
+  - value: N3b
+    extended: true
+  - value: N3c
+    extended: true
+  - value: Nx
+    extended: true
+  - value: T0
+    extended: true
+  - value: T1
+    extended: true
+  - value: T1c
+    extended: true
+  - value: T2
+    extended: true
+  - value: T3
+    extended: true
+  - value: T4
+    extended: true
+  - value: T4b
+    extended: true
+  - value: Tx
+    extended: true
+  - value: 未知
+    extended: true
+MICAT:
+  name: 显微镜发现的类别
+  data_type: text
+  type: enumerated
+  items:
+  - value: 病理
+    extended: true
+MIMETHOD:
+  name: 显微镜发现样本方法
+  data_type: text
+  type: enumerated
+  items:
+  - value: IHC
+    extended: true
+  - value: ISH
+    extended: true
+MIORRES:
+  name: 微观发现原始结果
+  data_type: text
+  type: enumerated
+  items:
+  - value: 未知
+    extended: true
+  - value: 阳性
+    extended: true
+  - value: 阴性
+    extended: true
+MISPECTY:
+  name: 显微镜发现样本类别
+  data_type: text
+  type: enumerated
+  items:
+  - value: 肿瘤组织
+    extended: true
+MISTRESC:
+  name: 微观发现标准结果
+  data_type: text
+  type: enumerated
+  items:
+  - value: 未知
+    extended: true
+  - value: 阳性
+    extended: true
+  - value: 阴性
+    extended: true
+MITS:
+  name: 微观发现检测名称
+  data_type: text
+  nci_code: C132262
+  type: enumerated
+  items:
+  - value: 人表皮生长因子受体-2
+    nci_code: C112312
+  - value: 孕激素受体状态(PR)
+    nci_code: C117846
+  - value: 雌激素受体状态(ER)
+    nci_code: C112274
+MITSCD:
+  name: 微观发现检测代码
+  data_type: text
+  nci_code: C132263
+  type: enumerated
+  items:
+  - value: ESTRCPT
+    nci_code: C112274
+  - value: HER2
+    nci_code: C112312
+  - value: PROGESTR
+    nci_code: C117846
+MI_LOC:
+  name: 显微镜发现检测位置
+  data_type: text
+  type: enumerated
+  items:
+  - value: 原发病灶
+    extended: true
+  - value: 复发/转移病灶
+    extended: true
+ND:
+  name: 未查
+  data_type: text
+  nci_code: C66789
+  type: enumerated
+  items:
+  - value: NOT DONE
+    nci_code: C49484
+NRIND:
+  name: 相比参考范围
+  data_type: text
+  nci_code: C78736
+  type: enumerated
+  items:
+  - value: HIGH
+    nci_code: C78800
+  - value: LOW
+    nci_code: C78801
+  - value: NORMAL
+    nci_code: C78727
+NY:
+  name: 是非应答
+  data_type: text
+  nci_code: C66742
+  type: enumerated
+  items:
+  - value: N
+    nci_code: C49487
+  - value: Y
+    nci_code: C49488
+NY_N:
+  name: 是非应答（否的子集）
+  data_type: text
+  nci_code: C66742
+  type: enumerated
+  items:
+  - value: N
+    nci_code: C49487
+NY_NY:
+  name: 是非应答（是/否的子集）
+  data_type: text
+  nci_code: C66742
+  type: enumerated
+  items:
+  - value: N
+    nci_code: C49487
+  - value: Y
+    nci_code: C49488
+NY_Y:
+  name: 是非应答（是的子集）
+  data_type: text
+  nci_code: C66742
+  type: enumerated
+  items:
+  - value: Y
+    nci_code: C49488
+ONCRSCAT:
+  name: 肿瘤反应评价分类
+  data_type: text
+  nci_code: C124298
+  type: enumerated
+  items:
+  - value: RECIST 1.1
+    nci_code: C124415
+ONCRSR:
+  name: 肿瘤反应评价结果
+  data_type: text
+  nci_code: C96785
+  type: enumerated
+  items:
+  - value: CR
+    nci_code: C4870
+  - value: EQUIVOCAL
+    nci_code: C86071
+  - value: NE
+    nci_code: C62222
+  - value: NED
+    nci_code: C40413
+  - value: NON-CR/NON-PD
+    nci_code: C96700
+  - value: PD
+    nci_code: C35571
+  - value: PR
+    nci_code: C18058
+  - value: SD
+    nci_code: C18213
+  - value: UNEQUIVOCAL
+    nci_code: C123645
+ONCRTS:
+  name: 肿瘤反应评价名称
+  data_type: text
+  nci_code: C96781
+  type: enumerated
+  items:
+  - value: 整体疗效评估
+    nci_code: C96613
+  - value: 新病灶指标
+    nci_code: C142362
+  - value: 新病灶进展
+    nci_code: C103420
+  - value: 非靶病灶疗效评估
+    nci_code: C94535
+  - value: 靶病灶疗效评估
+    nci_code: C94534
+ONCRTSCD:
+  name: 肿瘤反应评价代码
+  data_type: text
+  nci_code: C96782
+  type: enumerated
+  items:
+  - value: NEWLIND
+    nci_code: C142362
+  - value: NEWLPROG
+    nci_code: C103420
+  - value: NTRGRESP
+    nci_code: C94535
+  - value: OVRLRESP
+    nci_code: C96613
+  - value: TRGRESP
+    nci_code: C94534
+OUT:
+  name: 事件转归
+  data_type: text
+  nci_code: C66768
+  type: enumerated
+  items:
+  - value: 恢复/解决
+    nci_code: C49498
+  - value: 恢复中
+    nci_code: C49496
+  - value: 未恢复/未解决
+    nci_code: C49494
+  - value: 死亡
+    nci_code: C48275
+PCSPECTY:
+  name: PC样本种类
+  data_type: text
+  type: enumerated
+  items:
+  - value: 血浆
+    extended: true
+  - value: 血清
+    extended: true
+PCTPT:
+  name: 计划时点名称
+  data_type: text
+  type: enumerated
+  items:
+  - value: 给药前2h
+    extended: true
+  - value: 给药后2h
+    extended: true
+  - value: 给药后5min
+    extended: true
+PC_SUNIT:
+  name: PC标准单位
+  data_type: text
+  type: enumerated
+  items:
+  - value: μg/mL
+    extended: true
+PC_UNIT:
+  name: PC原始单位
+  data_type: text
+  type: enumerated
+  items:
+  - value: ug/L
+    extended: true
+  - value: μg/mL
+    extended: true
+PEORRES:
+  name: 字面检查结果
+  data_type: text
+  type: enumerated
+  items:
+  - value: 异常
+    extended: true
+  - value: 正常
+    extended: true
+PETEST:
+  name: 身体检查名称
+  data_type: text
+  type: enumerated
+  items:
+  - value: 一般状况
+    extended: true
+  - value: 呼吸系统
+    extended: true
+  - value: 头颈部
+    extended: true
+  - value: 心血管系统
+    extended: true
+  - value: 淋巴结
+    extended: true
+  - value: 皮肤
+    extended: true
+  - value: 眼睛
+    extended: true
+  - value: 精神状况
+    extended: true
+  - value: 肌肉骨骼
+    extended: true
+  - value: 胸部(心脏和肺脏)
+    extended: true
+  - value: 腹部
+    extended: true
+PETESTCD:
+  name: 身体检查代码
+  data_type: text
+  type: enumerated
+  items:
+  - value: ABDOMEN
+    extended: true
+  - value: CARDSYS
+    extended: true
+  - value: CHEST
+    extended: true
+  - value: EYES
+    extended: true
+  - value: GENESTAT
+    extended: true
+  - value: HEADNECK
+    extended: true
+  - value: LYMPHNOD
+    extended: true
+  - value: MENTSTAT
+    extended: true
+  - value: MUSCUL
+    extended: true
+  - value: RESPSYS
+    extended: true
+  - value: SKIN
+    extended: true
+  - value: URGESYS
+    extended: true
+PRCAT:
+  name: 步骤分类
+  data_type: text
+  type: enumerated
+  items:
+  - value: 后续放疗
+    extended: true
+  - value: 放疗史
+    extended: true
+  - value: 既往及合并非药物治疗/操作
+    extended: true
+  - value: 肿瘤影像学
+    extended: true
+  - value: 肿瘤手术史
+    extended: true
+PRINDC:
+  name: 适应症
+  data_type: text
+  type: enumerated
+  items:
+  - value: 其他
+    extended: true
+  - value: 姑息
+    extended: true
+  - value: 根治
+    extended: true
+  - value: 辅助
+    extended: true
+PRREAS:
+  name: 治疗原因
+  data_type: text
+  type: enumerated
+  items:
+  - value: 不良事件
+    extended: true
+  - value: 其他
+    extended: true
+PRTORRES:
+  name: 肿瘤疗效
+  data_type: text
+  type: enumerated
+  items:
+  - value: NE
+    extended: true
+  - value: 未知
+    extended: true
+PRTRT:
+  name: 诊疗操作名称
+  data_type: text
+  type: enumerated
+  items:
+  - value: CT增强
+    extended: true
+  - value: CT平扫
+    extended: true
+  - value: MRI增强
+    extended: true
+  - value: MRI平扫
+    extended: true
+  - value: 放疗
+    extended: true
+  - value: 骨扫描
+    extended: true
+PR_LOC:
+  name: 诊疗操作部位
+  data_type: text
+  nci_code: C74456
+  type: enumerated
+  items:
+  - value: 乳腺
+    nci_code: C12367
+  - value: 其他
+    extended: true
+  - value: 多个
+    extended: true
+  - value: 淋巴结
+    nci_code: C12745
+  - value: 脑
+    nci_code: C12439
+PR_UNIT:
+  name: 剂量单位
+  data_type: text
+  nci_code: C71620
+  type: enumerated
+  items:
+  - value: Gy
+    nci_code: C18063
+  - value: cGy
+    nci_code: C64693
+  - value: 未知
+    extended: true
+RACE:
+  name: 种族
+  data_type: text
+  nci_code: C74457
+  type: enumerated
+  items:
+  - value: 亚洲人
+    nci_code: C41260
+RPTEST:
+  name: 生殖系统检查名称
+  data_type: text
+  nci_code: C106478
+  type: enumerated
+  items:
+  - value: 生育能力
+    nci_code: C106508
+RPTESTCD:
+  name: 生殖系统检查代码
+  data_type: text
+  nci_code: C106479
+  type: enumerated
+  items:
+  - value: CHILDPOT
+    nci_code: C106508
+SEX:
+  name: 性别
+  data_type: text
+  nci_code: C66731
+  type: enumerated
+  items:
+  - value: 女
+    nci_code: C16576
+SEXPOP:
+  name: 参加者性别
+  data_type: text
+  nci_code: C66732
+  type: enumerated
+  items:
+  - value: F
+    nci_code: C16576
+SPECCOND:
+  name: 样本状态
+  data_type: text
+  nci_code: C78733
+  type: enumerated
+  items:
+  - value: 石蜡包埋
+    nci_code: C19597
+SSORRES:
+  name: 受试者原始状态
+  data_type: text
+  nci_code: C124304
+  type: enumerated
+  items:
+  - value: 死亡
+    nci_code: C28554
+  - value: 生存
+    nci_code: C37987
+SSTATRS:
+  name: 受试者状态
+  data_type: text
+  nci_code: C124304
+  type: enumerated
+  items:
+  - value: 死亡
+    nci_code: C28554
+  - value: 生存
+    nci_code: C37987
+SSTEST:
+  name: 受试者状态评估名称
+  data_type: text
+  nci_code: C124306
+  type: enumerated
+  items:
+  - value: 生存状态
+    nci_code: C25717
+SSTESTCD:
+  name: 受试者状态评估简称
+  data_type: text
+  nci_code: C124305
+  type: enumerated
+  items:
+  - value: SURVSTAT
+    nci_code: C25717
+STENRF:
+  name: 与参考时间的关系
+  data_type: text
+  nci_code: C66728
+  type: enumerated
+  items:
+  - value: 仍持续
+    nci_code: C53279
+STYPE:
+  name: 研究类型
+  data_type: text
+  nci_code: C99077
+  type: enumerated
+  items:
+  - value: INTERVENTIONAL
+    nci_code: C98388
+TBLIND:
+  name: 试验盲态计划
+  data_type: text
+  nci_code: C66735
+  type: enumerated
+  items:
+  - value: OPEN LABEL
+    nci_code: C49659
+TCNTRL:
+  name: 对照类型
+  data_type: text
+  nci_code: C66785
+  type: enumerated
+  items:
+  - value: ACTIVE
+    nci_code: C49649
+TINDTP:
+  name: 试验目标类型
+  data_type: text
+  nci_code: C66736
+  type: enumerated
+  items:
+  - value: TREATMENT
+    nci_code: C49656
+TPHASE:
+  data_type: text
+  nci_code: C66737
+  type: enumerated
+  items:
+  - value: PHASE III TRIAL
+    extended: true
+TRMETHOD:
+  name: 肿瘤方法
+  data_type: text
+  nci_code: C85492
+  type: enumerated
+  items:
+  - value: CT增强
+    nci_code: C137805
+  - value: CT平扫
+    nci_code: C137806
+  - value: MRI增强
+    nci_code: C46087
+  - value: MRI平扫
+    nci_code: C114184
+  - value: 常规CT
+    nci_code: C17204
+  - value: 骨扫描
+    extended: true
+TRPROPRS:
+  name: 肿瘤/损伤性质结果
+  data_type: text
+  nci_code: C124309
+  type: enumerated
+  items:
+  - value: 存在
+    nci_code: C25626
+  - value: 无法确定
+    nci_code: C86071
+  - value: 消失
+    nci_code: C48190
+  - value: 进展
+    nci_code: C123645
+TRTEST:
+  name: 肿瘤/损伤评估名称
+  data_type: text
+  nci_code: C96778
+  type: enumerated
+  items:
+  - value: 与基线SOD的百分比变化
+    nci_code: C112370
+  - value: 与最低点SOD相比的绝对变化
+    nci_code: C112218
+  - value: 单个非靶病灶评估
+    extended: true
+  - value: 最低点直径之和
+    extended: true
+  - value: 直径
+    nci_code: C25285
+  - value: 直径之和
+    nci_code: C96631
+  - value: 相对于SOD最低点的百分比变化
+    nci_code: C112373
+  - value: 结节靶病灶直径之和
+    extended: true
+  - value: 肿瘤状态
+    nci_code: C96643
+  - value: 非结节靶病灶直径之和
+    nci_code: C103441
+TRTESTCD:
+  name: 肿瘤/损伤评估代码
+  data_type: text
+  nci_code: C96779
+  type: enumerated
+  items:
+  - value: ACNSD
+    nci_code: C112218
+  - value: DIAMETER
+    nci_code: C25285
+  - value: NSD
+    extended: true
+  - value: PCBSD
+    nci_code: C112370
+  - value: PCNSD
+    nci_code: C112373
+  - value: SNTLEF
+    extended: true
+  - value: SUMDIAM
+    nci_code: C96631
+  - value: SUMLNLD
+    extended: true
+  - value: SUMNLNLD
+    nci_code: C103441
+  - value: TUMSTATE
+    nci_code: C96643
+TR_UNIT:
+  name: TR单位
+  data_type: text
+  nci_code: C71620
+  type: enumerated
+  items:
+  - value: '%'
+    nci_code: C25613
+  - value: mm
+    nci_code: C28251
+TSPARM:
+  name: 试验概要参数名称
+  data_type: text
+  nci_code: C67152
+  type: enumerated
+  items:
+  - value: Actual Number of Subjects
+    nci_code: C98703
+  - value: Adaptive Design
+    nci_code: C146995
+  - value: Added on to Existing Treatments
+    nci_code: C49703
+  - value: Clinical Study Sponsor
+    nci_code: C70793
+  - value: Comparative Treatment Name
+    nci_code: C68612
+  - value: Confirmed Response Minimum Duration
+    nci_code: C98715
+  - value: Control Type
+    nci_code: C49647
+  - value: Data Cutoff Date
+    nci_code: C98717
+  - value: Data Cutoff Description
+    nci_code: C98718
+  - value: Diagnosis Group
+    nci_code: C49650
+  - value: Extension Trial Indicator
+    nci_code: C139274
+  - value: FDA Technical Specification
+    nci_code: C156603
+  - value: Healthy Subject Indicator
+    nci_code: C98737
+  - value: Intervention Model
+    nci_code: C98746
+  - value: Intervention Type
+    nci_code: C98747
+  - value: Investigational Therapy or Treatment
+    nci_code: C41161
+  - value: Number of Groups/Cohorts
+    nci_code: C126063
+  - value: Ongoing Study Indicator
+    nci_code: C204699
+  - value: Other Outcome Measure
+    extended: true
+  - value: Pediatric Investigation Plan Indicator
+    nci_code: C126069
+  - value: Pediatric Postmarket Study Indicator
+    nci_code: C123631
+  - value: Pediatric Study Indicator
+    nci_code: C123632
+  - value: Pharmacologic Class
+    nci_code: C98768
+  - value: Planned Country of Investigational Sites
+    nci_code: C98770
+  - value: Planned Maximum Age of Subjects
+    nci_code: C49694
+  - value: Planned Minimum Age of Subjects
+    nci_code: C49693
+  - value: Planned Number of Arms
+    nci_code: C98771
+  - value: Planned Number of Subjects
+    nci_code: C49692
+  - value: Primary Outcome Measure
+    nci_code: C98772
+  - value: Randomization Quotient
+    nci_code: C98775
+  - value: Rare Disease Indicator
+    nci_code: C126070
+  - value: Registry Identifier
+    nci_code: C98714
+  - value: SDTM IG Version
+    nci_code: C156604
+  - value: SDTM Version
+    nci_code: C156605
+  - value: Secondary Outcome Measure
+    nci_code: C98781
+  - value: Sex of Participants
+    nci_code: C49696
+  - value: Stable Disease Minimum Duration
+    nci_code: C98783
+  - value: Stratification Factor
+    nci_code: C16153
+  - value: Study End Date
+    nci_code: C90462
+  - value: Study Start Date
+    nci_code: C69208
+  - value: Study Stop Rules
+    nci_code: C49698
+  - value: Study Type
+    nci_code: C142175
+  - value: Therapeutic Area
+    nci_code: C101302
+  - value: Trial Blinding Schema
+    nci_code: C49658
+  - value: Trial Disease/Condition Indication
+    nci_code: C112038
+  - value: Trial Intent Type
+    nci_code: C49652
+  - value: Trial Is Randomized
+    extended: true
+  - value: Trial Length
+    nci_code: C49697
+  - value: Trial Phase Classification
+    nci_code: C48281
+  - value: Trial Primary Objective
+    nci_code: C85826
+  - value: Trial Secondary Objective
+    nci_code: C85827
+  - value: Trial Title
+    nci_code: C49802
+  - value: Trial Type
+    nci_code: C49660
+TSPARMCD:
+  name: 试验概要参数代码
+  data_type: text
+  nci_code: C66738
+  type: enumerated
+  items:
+  - value: ACTSUB
+    extended: true
+  - value: ADAPT
+    extended: true
+  - value: ADDON
+    extended: true
+  - value: AGEMAX
+    extended: true
+  - value: AGEMIN
+    extended: true
+  - value: COMPTRT
+    extended: true
+  - value: CRMDUR
+    extended: true
+  - value: DCUTDESC
+    extended: true
+  - value: DCUTDTC
+    extended: true
+  - value: EXTTIND
+    extended: true
+  - value: FCNTRY
+    extended: true
+  - value: FDATCHSP
+    extended: true
+  - value: HLTSUBJI
+    extended: true
+  - value: INDIC
+    extended: true
+  - value: INTMODEL
+    extended: true
+  - value: INTTYPE
+    extended: true
+  - value: LENGTH
+    extended: true
+  - value: NARMS
+    extended: true
+  - value: NCOHORT
+    extended: true
+  - value: OBJPRIM
+    extended: true
+  - value: OBJSEC
+    extended: true
+  - value: ONGOSIND
+    extended: true
+  - value: OUTMSOTH
+    extended: true
+  - value: OUTMSPRI
+    extended: true
+  - value: OUTMSSEC
+    extended: true
+  - value: PCLAS
+    extended: true
+  - value: PDPSTIND
+    extended: true
+  - value: PDSTIND
+    extended: true
+  - value: PIPIND
+    extended: true
+  - value: PLANSUB
+    extended: true
+  - value: RANDOM
+    extended: true
+  - value: RANDQT
+    extended: true
+  - value: RDIND
+    extended: true
+  - value: REGID
+    extended: true
+  - value: SDMDUR
+    extended: true
+  - value: SDTIGVER
+    extended: true
+  - value: SDTMVER
+    extended: true
+  - value: SENDTC
+    extended: true
+  - value: SEXPOP
+    extended: true
+  - value: SPONSOR
+    extended: true
+  - value: SSTDTC
+    extended: true
+  - value: STOPRULE
+    extended: true
+  - value: STRATFCT
+    extended: true
+  - value: STYPE
+    extended: true
+  - value: TBLIND
+    extended: true
+  - value: TCNTRL
+    extended: true
+  - value: TDIGRP
+    extended: true
+  - value: THERAREA
+    extended: true
+  - value: TINDTP
+    extended: true
+  - value: TITLE
+    extended: true
+  - value: TPHASE
+    extended: true
+  - value: TRT
+    extended: true
+  - value: TTYPE
+    extended: true
+TTYPE:
+  name: 试验类型
+  data_type: text
+  nci_code: C66739
+  type: enumerated
+  items:
+  - value: EFFICACY
+    nci_code: C49666
+  - value: IMMUNOGENICITY
+    nci_code: C120842
+  - value: PHARMACOKINETIC
+    nci_code: C49663
+  - value: SAFETY
+    nci_code: C49667
+TUIDRS:
+  name: 肿瘤/损伤ID结果
+  data_type: text
+  nci_code: C123650
+  type: enumerated
+  items:
+  - value: 新病灶
+    nci_code: C94522
+  - value: 非靶病灶
+    nci_code: C94521
+  - value: 靶病灶
+    nci_code: C94520
+TUMETHOD:
+  name: 肿瘤影像学方法
+  data_type: text
+  nci_code: C85492
+  type: enumerated
+  items:
+  - value: BoneScan,CT SCAN
+    extended: true
+  - value: BoneScan,CT SCAN,MRI
+    extended: true
+  - value: CT SCAN,MRI
+    extended: true
+  - value: CT增强
+    nci_code: C137805
+  - value: CT平扫
+    nci_code: C137806
+  - value: MRI
+    nci_code: C16809
+  - value: MRI增强
+    nci_code: C46087
+  - value: 常规CT
+    nci_code: C17204
+  - value: 骨扫描
+    extended: true
+TUTEST:
+  name: 肿瘤/损伤ID名称
+  data_type: text
+  nci_code: C96783
+  type: enumerated
+  items:
+  - value: 肿瘤识别
+    nci_code: C94523
+TUTESTCD:
+  name: 肿瘤/损伤ID简称
+  data_type: text
+  nci_code: C96784
+  type: enumerated
+  items:
+  - value: TUMIDENT
+    nci_code: C94523
+TU_EVAL:
+  name: 影像学评估者
+  data_type: text
+  nci_code: C78735
+  type: enumerated
+  items:
+  - value: 独立评估员
+    nci_code: C78720
+  - value: 研究者
+    nci_code: C25936
+TU_LOC:
+  name: 肿瘤影像解剖学位置
+  data_type: text
+  nci_code: C74456
+  type: enumerated
+  items:
+  - value: 乳腺
+    nci_code: C12367
+  - value: 其他
+    extended: true
+  - value: 心包积液
+    extended: true
+  - value: 淋巴结
+    nci_code: C12745
+  - value: 肝
+    nci_code: C12392
+  - value: 肺
+    nci_code: C12468
+  - value: 胸腔积液
+    extended: true
+  - value: 胸膜
+    nci_code: C12469
+  - value: 脑
+    nci_code: C12439
+  - value: 腹膜
+    nci_code: C12770
+  - value: 软组织
+    nci_code: C12471
+  - value: 骨
+    nci_code: C12366
+VSCAT:
+  name: 生命体征分类
+  data_type: text
+  type: enumerated
+  items:
+  - value: 体重
+    extended: true
+  - value: 氧饱和度
+    extended: true
+  - value: 生命体征
+    extended: true
+  - value: 身高
+    extended: true
+VSRESU:
+  name: 生命体征结果单位
+  data_type: text
+  nci_code: C66770
+  type: enumerated
+  items:
+  - value: '%'
+    nci_code: C25613
+  - value: C
+    nci_code: C42559
+  - value: beats/min
+    nci_code: C49673
+  - value: breaths/min
+    nci_code: C49674
+  - value: cm
+    nci_code: C49668
+  - value: kg
+    nci_code: C28252
+  - value: mmHg
+    nci_code: C49670
+VSTEST:
+  name: 生命体征检查名称
+  data_type: text
+  nci_code: C67153
+  type: enumerated
+  items:
+  - value: 体温
+    nci_code: C174446
+  - value: 体重
+    nci_code: C25208
+  - value: 呼吸频率
+    nci_code: C49678
+  - value: 收缩压
+    nci_code: C25298
+  - value: 氧饱和度
+    nci_code: C60832
+  - value: 脉搏
+    nci_code: C49676
+  - value: 舒张压
+    nci_code: C25299
+  - value: 身高
+    nci_code: C25347
+VSTESTCD:
+  name: 生命体征检查代码
+  data_type: text
+  nci_code: C66741
+  type: enumerated
+  items:
+  - value: DIABP
+    nci_code: C25299
+  - value: HEIGHT
+    nci_code: C25347
+  - value: OXYSAT
+    nci_code: C60832
+  - value: PULSE
+    nci_code: C49676
+  - value: RESP
+    nci_code: C49678
+  - value: SYSBP
+    nci_code: C25298
+  - value: TEMP
+    nci_code: C174446
+  - value: WEIGHT
+    nci_code: C25208

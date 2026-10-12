@@ -1,0 +1,18 @@
+{
+  "html": 2,
+  "mydata": 2,
+  "markdown": 2,
+  "yaml": 2,
+  "Py": 1,
+  "Py-yaml": 2,
+  "Py-pathlib": 2,
+  "Py-collections": 2,
+  "Py-openpyxl": 2,
+  "Py-re": 1,
+  "Py-pyreadstat": 2,
+  "Py-itertools": 2,
+  "Py-os": 2,
+  "Py-sys": 2,
+  "Py-docx": 2,
+  "Py-traceback": 2
+}

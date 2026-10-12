@@ -1,0 +1,546 @@
+# WhereClause 提取自 dept_std\valuelevel-studyname_sdtm_v1.1.xlsx(key=WhereClauseOID, 值=条件列表; 多条件即 AND, IN 多值折叠为 values; 已剔除 QNAM)。
+WC.APRP.RPTESTCD.DATE:
+- dataset: APRP
+  variable: RPTESTCD
+  comparator: IN
+  values:
+  - LMPSTDTC
+  - PRGENDTC
+WC.APRP.RPTESTCD.DATEC:
+- dataset: APRP
+  variable: RPTESTCD
+  comparator: IN
+  values:
+  - LMPSTDTC
+  - PRGENDTC
+WC.APRP.RPTESTCD.TEXT:
+- dataset: APRP
+  variable: RPTESTCD
+  comparator: EQ
+  values:
+  - PRGOUT
+WC.APRP.RPTESTCD.TEXTC:
+- dataset: APRP
+  variable: RPTESTCD
+  comparator: EQ
+  values:
+  - PRGOUT
+WC.DS.DSCAT.COMP:
+- dataset: DS
+  variable: DSCAT
+  comparator: EQ
+  values:
+  - DISPOSITION EVENT
+WC.DS.DSCAT.PMST:
+- dataset: DS
+  variable: DSCAT
+  comparator: EQ
+  values:
+  - PROTOCOL MILESTONE
+WC.EG.EGORRES.ECG1:
+- dataset: EG
+  variable: EGCAT
+  comparator: EQ
+  values:
+  - '12-lead Electrocardiogram '
+- dataset: EG
+  variable: EGTESTCD
+  comparator: EQ
+  values:
+  - INTP
+WC.EG.EGORRES.ECG3:
+- dataset: EG
+  variable: EGCAT
+  comparator: EQ
+  values:
+  - '12-lead Electrocardiogram '
+- dataset: EG
+  variable: EGTESTCD
+  comparator: IN
+  values:
+  - EGHRMN
+  - PRAG
+  - QTAG
+WC.EG.EGSTRESC.ECG1:
+- dataset: EG
+  variable: EGCAT
+  comparator: EQ
+  values:
+  - '12-lead Electrocardiogram '
+- dataset: EG
+  variable: EGTESTCD
+  comparator: EQ
+  values:
+  - INTP
+WC.EG.EGSTRESC.ECG2:
+- dataset: EG
+  variable: EGCAT
+  comparator: EQ
+  values:
+  - '12-lead Electrocardiogram '
+- dataset: EG
+  variable: EGTESTCD
+  comparator: EQ
+  values:
+  - QTCFAG
+WC.EG.EGSTRESC.ECG3:
+- dataset: EG
+  variable: EGCAT
+  comparator: EQ
+  values:
+  - '12-lead Electrocardiogram '
+- dataset: EG
+  variable: EGTESTCD
+  comparator: IN
+  values:
+  - EGHRMN
+  - PRAG
+  - QTAG
+WC.RP.RPTESTCD.DATE:
+- dataset: RP
+  variable: RPTESTCD
+  comparator: IN
+  values:
+  - LMPSTDTC
+  - PRGENDTC
+WC.RP.RPTESTCD.DATEC:
+- dataset: RP
+  variable: RPTESTCD
+  comparator: IN
+  values:
+  - LMPSTDTC
+  - PRGENDTC
+WC.RP.RPTESTCD.TEXT:
+- dataset: RP
+  variable: RPTESTCD
+  comparator: IN
+  values:
+  - CHILDPOT
+- dataset: RP
+  variable: RPTESTCD
+  comparator: EQ
+  values:
+  - PRGOUT
+WC.RP.RPTESTCD.TEXTC:
+- dataset: RP
+  variable: RPTESTCD
+  comparator: IN
+  values:
+  - CHILDPOT
+- dataset: RP
+  variable: RPTESTCD
+  comparator: EQ
+  values:
+  - PRGOUT
+WC.RS.RSCAT.CCCAT.RSCAT:
+- dataset: RS
+  variable: RSCAT
+  comparator: EQ
+  values:
+  - ECOG
+WC.RS.RSCAT.CCCAT.RSDTC:
+- dataset: RS
+  variable: RSCAT
+  comparator: EQ
+  values:
+  - ECOG
+WC.RS.RSCAT.CCCAT.RSORRES:
+- dataset: RS
+  variable: RSCAT
+  comparator: EQ
+  values:
+  - ECOG
+WC.RS.RSCAT.CCCAT.RSSTRESC:
+- dataset: RS
+  variable: RSCAT
+  comparator: EQ
+  values:
+  - ECOG
+WC.RS.RSCAT.CCCAT.RSTEST:
+- dataset: RS
+  variable: RSCAT
+  comparator: EQ
+  values:
+  - ECOG
+WC.RS.RSCAT.CCCAT.RSTESTCD:
+- dataset: RS
+  variable: RSCAT
+  comparator: EQ
+  values:
+  - ECOG
+WC.RS.RSCAT.ONCRSCAT.RSCAT:
+- dataset: RS
+  variable: RSCAT
+  comparator: EQ
+  values:
+  - RECIST 1.1
+WC.RS.RSCAT.ONCRSCAT.RSDTC:
+- dataset: RS
+  variable: RSCAT
+  comparator: EQ
+  values:
+  - RECIST 1.1
+WC.RS.RSCAT.ONCRSCAT.RSTEST:
+- dataset: RS
+  variable: RSCAT
+  comparator: EQ
+  values:
+  - RECIST 1.1
+WC.RS.RSCAT.ONCRSCAT.RSTESTCD:
+- dataset: RS
+  variable: RSCAT
+  comparator: EQ
+  values:
+  - RECIST 1.1
+WC.RS.RSTESTCD.NY.RSORRES:
+- dataset: RS
+  variable: RSTESTCD
+  comparator: EQ
+  values:
+  - NEWLIND
+WC.RS.RSTESTCD.NY.RSSTRESC:
+- dataset: RS
+  variable: RSTESTCD
+  comparator: EQ
+  values:
+  - NEWLIND
+WC.RS.RSTESTCD.ONCRSR.RSORRES:
+- dataset: RS
+  variable: RSTESTCD
+  comparator: IN
+  values:
+  - TRGRESP
+  - NTRGRESP
+  - OVRLRESP
+WC.RS.RSTESTCD.ONCRSR.RSSTRESC:
+- dataset: RS
+  variable: RSTESTCD
+  comparator: IN
+  values:
+  - TRGRESP
+  - NTRGRESP
+  - OVRLRESP
+WC.SE.ETCD.FU:
+- dataset: SE
+  variable: ETCD
+  comparator: EQ
+  values:
+  - FU
+WC.SE.ETCD.SCRN:
+- dataset: SE
+  variable: ETCD
+  comparator: EQ
+  values:
+  - SCRN
+WC.SE.ETCD.TRT:
+- dataset: SE
+  variable: ETCD
+  comparator: IN
+  values:
+  - TRT
+WC.TS.TSPARMCD.ACTSUB:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - ACTSUB
+WC.TS.TSPARMCD.ADAPT:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - ADAPT
+WC.TS.TSPARMCD.ADDON:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - ADDON
+WC.TS.TSPARMCD.AGEMAX:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - AGEMAX
+WC.TS.TSPARMCD.AGEMIN:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - AGEMIN
+WC.TS.TSPARMCD.COMPTRT:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - COMPTRT
+WC.TS.TSPARMCD.CURTRT:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - CURTRT
+WC.TS.TSPARMCD.DCUTDESC:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - DCUTDESC
+WC.TS.TSPARMCD.DCUTDTC:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - DCUTDTC
+WC.TS.TSPARMCD.EXTTIND:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - EXTTIND
+WC.TS.TSPARMCD.FCNTRY:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - FCNTRY
+WC.TS.TSPARMCD.HLTSUBJI:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - HLTSUBJI
+WC.TS.TSPARMCD.INDIC:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - INDIC
+WC.TS.TSPARMCD.INTMODEL:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - INTMODEL
+WC.TS.TSPARMCD.INTTYPE:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - INTTYPE
+WC.TS.TSPARMCD.LENGTH:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - LENGTH
+WC.TS.TSPARMCD.NARMS:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - NARMS
+WC.TS.TSPARMCD.NCOHORT:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - NCOHORT
+WC.TS.TSPARMCD.OBJEXP:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - OBJEXP
+WC.TS.TSPARMCD.OBJPRIM:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - OBJPRIM
+WC.TS.TSPARMCD.OBJSEC:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - OBJSEC
+WC.TS.TSPARMCD.OUTMSEXP:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - OUTMSEXP
+WC.TS.TSPARMCD.OUTMSPRI:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - OUTMSPRI
+WC.TS.TSPARMCD.OUTMSSEC:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - OUTMSSEC
+WC.TS.TSPARMCD.PCLAS:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - PCLAS
+WC.TS.TSPARMCD.PDPSTIND:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - PDPSTIND
+WC.TS.TSPARMCD.PDSTIND:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - PDSTIND
+WC.TS.TSPARMCD.PIPIND:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - PIPIND
+WC.TS.TSPARMCD.PLANSUB:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - PLANSUB
+WC.TS.TSPARMCD.RANDOM:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - RANDOM
+WC.TS.TSPARMCD.RANDQT:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - RANDQT
+WC.TS.TSPARMCD.RDIND:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - RDIND
+WC.TS.TSPARMCD.REGID:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - REGID
+WC.TS.TSPARMCD.SDTIGVER:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - SDTIGVER
+WC.TS.TSPARMCD.SDTMVER:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - SDTMVER
+WC.TS.TSPARMCD.SENDTC:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - SENDTC
+WC.TS.TSPARMCD.SEXPOP:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - SEXPOP
+WC.TS.TSPARMCD.SPONSOR:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - SPONSOR
+WC.TS.TSPARMCD.SSTDTC:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - SSTDTC
+WC.TS.TSPARMCD.STOPRULE:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - STOPRULE
+WC.TS.TSPARMCD.STRATFCT:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - STRATFCT
+WC.TS.TSPARMCD.STYPE:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - STYPE
+WC.TS.TSPARMCD.TBLIND:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - TBLIND
+WC.TS.TSPARMCD.TCNTRL:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - TCNTRL
+WC.TS.TSPARMCD.TDIGRP:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - TDIGRP
+WC.TS.TSPARMCD.THERAREA:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - THERAREA
+WC.TS.TSPARMCD.TINDTP:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - TINDTP
+WC.TS.TSPARMCD.TITLE:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - TITLE
+WC.TS.TSPARMCD.TPHASE:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - TPHASE
+WC.TS.TSPARMCD.TRT:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - TRT
+WC.TS.TSPARMCD.TTYPE:
+- dataset: TS
+  variable: TSPARMCD
+  comparator: EQ
+  values:
+  - TTYPE
