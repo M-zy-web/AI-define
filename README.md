@@ -23,20 +23,20 @@
 
 ## 目录结构
 
-| 目录/文件 | 说明 |
-|---|---|
-| `build_define_v2.ipynb` | 主流水线 Notebook（当前版本） |
-| `config.yaml` | 项目配置：研究号、语言、输入输出路径 |
-| `dept_std/` | 部门级标准库（SDTM CT 包、计算方法、值级元数据、注释库） |
-| `study_std/` | 研究级文件（SDTM 规格书、标准码表） |
-| `m5/datasets/tabulations/sdtm/` | SDTM XPT 数据集与注释版 aCRF（本地数据，不入库） |
-| `datasets/` | 各域 YAML 中间产物（运行时生成） |
-| `define.xml` | 最终产物（Define-XML 2.1） |
-| `define2-1.xsl` | Define-XML 2.1 官方渲染样式表（浏览器查看用） |
-| `define_src/` | YAML 源文件设计（source-of-truth 方案，见下文） |
-| `guidance/新手学习指导.md` | 新成员入门文档（环境准备、运行步骤、常见问题） |
-| `archive/` | 历史版本与参考文件（旧版 Notebook、P21 一致性规则等） |
-| `demo/` | 演示视频（体积过大，不入库） |
+| 目录/文件                         | 说明                                                     |
+| --------------------------------- | -------------------------------------------------------- |
+| `build_define_v2.ipynb`         | 主流水线 Notebook（当前版本）                            |
+| `config.yaml`                   | 项目配置：研究号、语言、输入输出路径                     |
+| `dept_std/`                     | 部门级标准库（SDTM CT 包、计算方法、值级元数据、注释库） |
+| `study_std/`                    | 研究级文件（SDTM 规格书、标准码表）                      |
+| `m5/datasets/tabulations/sdtm/` | SDTM XPT 数据集与注释版 aCRF（本地数据，不入库）         |
+| `datasets/`                     | 各域 YAML 中间产物（运行时生成）                         |
+| `define.xml`                    | 最终产物（Define-XML 2.1）                               |
+| `define2-1.xsl`                 | Define-XML 2.1 官方渲染样式表（浏览器查看用）            |
+| `define_src/`                   | YAML 源文件设计（source-of-truth 方案，见下文）          |
+| `guidance/新手学习指导.md`      | 新成员入门文档（环境准备、运行步骤、常见问题）           |
+| `archive/`                      | 历史版本与参考文件（旧版 Notebook、P21 一致性规则等）    |
+| `demo/`                         | 演示视频（体积过大，不入库）                             |
 
 ## 快速开始
 
